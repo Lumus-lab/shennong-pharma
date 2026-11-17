@@ -1,7 +1,8 @@
 # 《太虛神農紀：雙極靈樞》（Shennong Pharma）
 
 > **純靜態前端自主神經藥理學互動輕小說遊戲（Phase 1＋Phase 2 全四卷 Ch.06–Ch.09 完整版）**  
-> Zero-backend vanilla HTML5 + CSS3 + ES6+ JavaScript + JSON interactive pharmacology visual novel.
+> Zero-backend vanilla HTML5 + CSS3 + ES6+ JavaScript + JSON interactive pharmacology visual novel.  
+> 🌐 **GitHub Pages 線上遊玩**：https://lumus-lab.github.io/shennong-pharma/
 
 ---
 

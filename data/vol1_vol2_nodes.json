@@ -1542,7 +1542,7 @@
                   "nextStepId": "__EVENT_COMPLETE__",
                   "feedback": {
                     "speakerName": "弘岳真人",
-                    "text": "「精準無誤！虹膜括約肌 M₃ 收縮將虹膜拉離隅角解急圍，待眼壓穩妥立刻行雷射虹膜穿孔術打通前後房壓力，方能永絕後患。」",
+                    "text": "「精準無誤！虹膜呱約肌 M₃ 收縮將虹膜拉離隅角解急圍，待眼壓穩妥立刻行雷射虹膜穿孔術打通前後房壓力，方能永絕後患。」",
                     "delta": { "yin": 3, "yang": 1 },
                     "unlockCodex": [26],
                     "vitals": { "iop": 16, "pupilMm": 2.2, "ciliary": "縮瞳拉開小樑網", "badges": ["房水排出恢復 (16 mmHg)"] }
@@ -1868,10 +1868,10 @@
                   "nextStepId": "__EVENT_COMPLETE__",
                   "feedback": {
                     "speakerName": "弘岳真人",
-                    "text": "「破謎完美！LES 僅在吞嚥時短暫由 NANC 釋放 NO 放行食物，平時全靠 M₃ 收縮守護食道免遭胃酸灼傷；其餘內臟平滑肌括約肌則走 NANC（nNOS→NO/VIP/ATP）放鬆通道。」",
+                    "text": "「破謎完美！LES 僅在吞嚥時短暫由 NANC 釋放 NO 放行食物，平時全靠 M₃ 收縮守護食道免遭胃酸灼傷；其餘內臟平滑肌呱約肌則走 NANC（nNOS→NO/VIP/ATP）放鬆通道。」",
                     "delta": { "yin": 2, "yang": 1 },
                     "unlockCodex": [31],
-                    "grantItem": { "id": "nanc_needle", "name": "NANC 銀針", "desc": "貫通內臟括約肌 NO/VIP/ATP 舒張法" }
+                    "grantItem": { "id": "nanc_needle", "name": "NANC 銀針", "desc": "貫通內臟呱約肌 NO/VIP/ATP 舒張法" }
                   }
                 },
                 {

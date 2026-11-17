@@ -2,7 +2,8 @@
   'use strict';
 
   const META_KEY = 'taixu_shennong_meta_v1';
-  const SAVE_KEY = 'taixu_shennong_save_v1';
+  const LEGACY_SAVE_KEY = 'taixu_shennong_save_v1';
+  const SAVES_V2_KEY = 'taixu_shennong_saves_v2';
 
   const DEFAULT_VITALS = {
     subject: '林玄（試煉基準態）',
@@ -10,6 +11,8 @@
     sbp: 118,
     dbp: 76,
     iop: 15,
+    tempC: 36.8,
+    potassium: 4.2,
     rhythm: 'normal',
     rhythmText: '竇性節律（迷走張力主導）',
     pupilMm: 3.5,
@@ -18,6 +21,8 @@
     secretion: '正常潤澤',
     nmj: 50,
     nmjLabel: '穩健有力',
+    tofPattern: 'normal',
+    tofNote: 'TOF 100%（無衰減）',
     badges: []
   };
 
@@ -55,6 +60,26 @@
 
   let metaState = Object.assign(defaultMeta(), safeReadStorage(META_KEY, {}));
   let runState = null;
+
+  function readAllSaves() {
+    const v2 = safeReadStorage(SAVES_V2_KEY, null);
+    if (v2 && typeof v2 === 'object') {
+      return v2;
+    }
+    const slots = {};
+    const legacy = safeReadStorage(LEGACY_SAVE_KEY, null);
+    if (legacy && legacy.mode && legacy.seed) {
+      const slotId = legacy.mode === 'story' ? 'story' : 'roguelike';
+      legacy.slotId = slotId;
+      slots[slotId] = legacy;
+      safeWriteStorage(SAVES_V2_KEY, slots);
+    }
+    return slots;
+  }
+
+  function writeAllSaves(slots) {
+    safeWriteStorage(SAVES_V2_KEY, slots || {});
+  }
 
   function saveMeta() {
     safeWriteStorage(META_KEY, metaState);
@@ -113,8 +138,8 @@
       metaState.wrongNotes.unshift(
         Object.assign({ count: 1, timestamp: Date.now() }, note)
       );
-      if (metaState.wrongNotes.length > 80) {
-        metaState.wrongNotes.length = 80;
+      if (metaState.wrongNotes.length > 120) {
+        metaState.wrongNotes.length = 120;
       }
     }
     saveMeta();
@@ -131,14 +156,18 @@
 
   function createNewRun(config) {
     const isStory = config.mode === 'story';
+    const slotId = config.slotId || (isStory ? 'story' : 'roguelike');
     runState = {
+      slotId,
       mode: isStory ? 'story' : 'roguelike',
-      route: config.route || 'taiyin',
+      route: config.route || 'all_mixed',
+      storyScope: config.storyScope || 'full',
+      rogueLength: config.rogueLength || 6,
       seed: String(config.seed || 'TX-4072').trim(),
       yin: 50,
       yang: 50,
-      guardPills: isStory ? 4 : 3,
-      maxGuardPills: isStory ? 4 : 3,
+      guardPills: isStory ? (config.storyScope === 'full' ? 5 : 4) : 3,
+      maxGuardPills: isStory ? (config.storyScope === 'full' ? 5 : 4) : 3,
       riskScore: 0,
       crisisCount: 0,
       rescuedCount: 0,
@@ -149,7 +178,7 @@
       eventPlan: config.eventPlan || [],
       currentEventIndex: 0,
       currentEventId: null,
-      currentVariantId: null,
+      currentVariantIndex: 0,
       currentStepIndex: 0,
       resolvedVariants: config.resolvedVariants || {},
       hubState: config.hubState || null,
@@ -159,6 +188,11 @@
       pendingTransition: null,
       etymologyDone: false,
       alchemyState: { betaMethyl: false, carbamoyl: false },
+      nmjLab: { blocker: 'sch_phase1', action: 'baseline' },
+      tyramineMeal: { selected: ['pickled_herring', 'aged_cheese'] },
+      catecholSar: { rGroup: 'H', removeRingOh: false, addAlphaMethyl: false },
+      sympathoLab: { drug: 'ne', alphaBlocked: false },
+      adhdLab: { state: 'baseline' },
       vitals: Object.assign({}, DEFAULT_VITALS),
       updatedAt: Date.now()
     };
@@ -172,35 +206,111 @@
     return runState;
   }
 
-  function saveRun() {
+  function saveRun(customSlotId) {
     if (!runState) return;
     runState.updatedAt = Date.now();
-    safeWriteStorage(SAVE_KEY, runState);
+    const targetSlot = customSlotId || runState.slotId || (runState.mode === 'story' ? 'story' : 'roguelike');
+    const slots = readAllSaves();
+    const snapshot = JSON.parse(JSON.stringify(runState));
+    snapshot.slotId = targetSlot;
+    slots[targetSlot] = snapshot;
+    writeAllSaves(slots);
+    if (targetSlot !== 'bookmark') {
+      safeWriteStorage(LEGACY_SAVE_KEY, snapshot);
+    }
   }
 
-  function loadSavedRun() {
-    const saved = safeReadStorage(SAVE_KEY, null);
-    if (!saved || !saved.mode || !saved.seed) return null;
-    runState = saved;
+  function saveBookmarkSnapshot(label) {
+    if (!runState) return false;
+    const slots = readAllSaves();
+    const snapshot = JSON.parse(JSON.stringify(runState));
+    snapshot.slotId = 'bookmark';
+    snapshot.bookmarkLabel = label || '中繼修煉書籤';
+    snapshot.updatedAt = Date.now();
+    slots.bookmark = snapshot;
+    writeAllSaves(slots);
+    return true;
+  }
+
+  function formatScopeLabel(saved) {
+    if (saved.mode === 'story') {
+      if (saved.storyScope === 'part1') return '章回篇・上篇（一二卷）';
+      if (saved.storyScope === 'part2') return '章回篇・下篇（三四卷）';
+      return '章回篇・全四卷貫通';
+    }
+    return `速行篇（${saved.route || '混戰'}）`;
+  }
+
+  function listSavedSlots() {
+    const slots = readAllSaves();
+    const order = ['story', 'bookmark', 'roguelike'];
+    const result = [];
+    order.forEach((slotId) => {
+      const s = slots[slotId];
+      if (!s || !s.mode || !s.seed) return;
+      const done = Array.isArray(s.completedEvents) ? s.completedEvents.length : 0;
+      const total = Array.isArray(s.eventPlan) ? s.eventPlan.length : 18;
+      result.push({
+        slotId,
+        title: slotId === 'bookmark'
+          ? `書籤暫存：${s.bookmarkLabel || formatScopeLabel(s)}`
+          : slotId === 'story'
+            ? `長篇進度：${formatScopeLabel(s)}`
+            : `速行進度：${formatScopeLabel(s)}`,
+        summary: `籤號 ${s.seed}｜關卡 ${Math.min(done + 1, total)}/${total}（已完成 ${done} 關）｜護心丹 ${s.guardPills ?? 3}/${s.maxGuardPills ?? 3}`,
+        updatedAt: s.updatedAt || 0,
+        data: s
+      });
+    });
+    return result;
+  }
+
+  function loadSavedRun(slotId) {
+    const slots = readAllSaves();
+    const target = slotId ? slots[slotId] : (slots.story || slots.roguelike || slots.bookmark);
+    if (!target || !target.mode || !target.seed) return null;
+    runState = Object.assign(
+      {
+        storyScope: 'full',
+        nmjLab: { blocker: 'sch_phase1', action: 'baseline' },
+        tyramineMeal: { selected: ['pickled_herring', 'aged_cheese'] },
+        catecholSar: { rGroup: 'H', removeRingOh: false, addAlphaMethyl: false },
+        sympathoLab: { drug: 'ne', alphaBlocked: false },
+        adhdLab: { state: 'baseline' }
+      },
+      target
+    );
+    runState.vitals = Object.assign({}, DEFAULT_VITALS, runState.vitals || {});
     return runState;
   }
 
-  function clearSavedRun() {
-    runState = null;
-    try {
-      global.localStorage.removeItem(SAVE_KEY);
-    } catch (_err) {
-      // ignore storage errors
+  function deleteSavedSlot(slotId) {
+    const slots = readAllSaves();
+    delete slots[slotId];
+    writeAllSaves(slots);
+    if (runState && runState.slotId === slotId) {
+      runState = null;
+    }
+  }
+
+  function clearSavedRun(slotId) {
+    const targetSlot = slotId || (runState && runState.slotId) || null;
+    if (targetSlot) {
+      deleteSavedSlot(targetSlot);
+    } else {
+      runState = null;
+      try {
+        global.localStorage.removeItem(LEGACY_SAVE_KEY);
+      } catch (_err) {
+        // ignore storage errors
+      }
     }
   }
 
   function peekSavedRunSummary() {
-    const saved = safeReadStorage(SAVE_KEY, null);
-    if (!saved || !saved.mode) return null;
-    const modeName = saved.mode === 'story' ? '章回篇' : '速行篇';
-    const done = Array.isArray(saved.completedEvents) ? saved.completedEvents.length : 0;
-    const total = Array.isArray(saved.eventPlan) ? saved.eventPlan.length : 18;
-    return `${modeName}・${saved.seed}・進度 ${done}/${total}`;
+    const items = listSavedSlots();
+    if (items.length === 0) return null;
+    return items[0].summary;
   }
 
   function grantPouchItem(item) {
@@ -254,7 +364,10 @@
     createNewRun,
     getRun,
     saveRun,
+    saveBookmarkSnapshot,
+    listSavedSlots,
     loadSavedRun,
+    deleteSavedSlot,
     clearSavedRun,
     peekSavedRunSummary,
     grantPouchItem,

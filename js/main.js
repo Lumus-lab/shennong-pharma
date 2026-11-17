@@ -2,6 +2,8 @@
   'use strict';
 
   let gameBundle = null;
+  let expansionsCfg = null;
+  const moduleCache = {};
 
   async function loadJson(path) {
     const res = await fetch(path, { cache: 'no-cache' });
@@ -9,53 +11,155 @@
     return res.json();
   }
 
-  async function loadGameData() {
+  function uniqueConcat(a, b) {
+    const out = Array.isArray(a) ? a.slice() : [];
+    const seen = new Set(out);
+    (b || []).forEach((item) => {
+      if (!seen.has(item)) {
+        seen.add(item);
+        out.push(item);
+      }
+    });
+    return out;
+  }
+
+  function mergeLoadedModules() {
     if (global.__TAIXU_EMBEDDED_DATA__) {
       return global.__TAIXU_EMBEDDED_DATA__;
     }
+
+    const orderedMods =
+      (expansionsCfg && Array.isArray(expansionsCfg.modules) && expansionsCfg.modules.filter((m) => m.status === 'active')) || [
+        { id: 'vol1_vol2', nodesFile: 'data/vol1_vol2_nodes.json', deckFile: 'data/vol1_vol2_deck.json' },
+        { id: 'vol3_vol4', nodesFile: 'data/vol3_vol4_nodes.json', deckFile: 'data/vol3_vol4_deck.json' }
+      ];
+
+    const mergedNodes = { events: {} };
+    const mergedDeck = {
+      roguelike: { prologuePool: [], bossPool: [], routes: {} },
+      story: { chapters: [] }
+    };
+
+    orderedMods.forEach((mod) => {
+      const b = moduleCache[mod.id];
+      if (!b) return;
+      if (b.nodes && b.nodes.events) {
+        Object.assign(mergedNodes.events, b.nodes.events);
+      }
+      if (b.deck) {
+        if (b.deck.roguelike) {
+          const dr = b.deck.roguelike;
+          if (Array.isArray(dr.prologuePool)) {
+            mergedDeck.roguelike.prologuePool = uniqueConcat(mergedDeck.roguelike.prologuePool, dr.prologuePool);
+          }
+          if (Array.isArray(dr.bossPool)) {
+            mergedDeck.roguelike.bossPool = uniqueConcat(mergedDeck.roguelike.bossPool, dr.bossPool);
+          }
+          if (dr.routes && typeof dr.routes === 'object') {
+            Object.keys(dr.routes).forEach((rk) => {
+              const src = dr.routes[rk];
+              const dst = mergedDeck.roguelike.routes[rk];
+              if (!dst) {
+                mergedDeck.roguelike.routes[rk] = JSON.parse(JSON.stringify(src));
+              } else {
+                dst.pool = uniqueConcat(dst.pool || [], src.pool || []);
+                dst.bossPool = uniqueConcat(dst.bossPool || [], src.bossPool || []);
+                if (src.prologuePool) {
+                  dst.prologuePool = uniqueConcat(dst.prologuePool || [], src.prologuePool);
+                }
+                dst.weights = Object.assign({}, dst.weights || {}, src.weights || {});
+              }
+            });
+          }
+        }
+        if (b.deck.story && Array.isArray(b.deck.story.chapters)) {
+          mergedDeck.story.chapters = mergedDeck.story.chapters.concat(b.deck.story.chapters);
+        }
+      }
+    });
+
+    gameBundle.nodes = mergedNodes;
+    gameBundle.deck = mergedDeck;
+    return gameBundle;
+  }
+
+  function resolveRequiredModules(mode, route, storyScope, eventPlan) {
+    const needed = new Set();
+    if (Array.isArray(eventPlan) && eventPlan.length > 0) {
+      eventPlan.forEach((eid) => {
+        const num = Number(String(eid || '').replace(/^E/i, ''));
+        if (num >= 19) needed.add('vol3_vol4');
+        else if (num >= 1) needed.add('vol1_vol2');
+      });
+    }
+    if (mode === 'story') {
+      if (storyScope === 'part1') needed.add('vol1_vol2');
+      else if (storyScope === 'part2') needed.add('vol3_vol4');
+      else {
+        needed.add('vol1_vol2');
+        needed.add('vol3_vol4');
+      }
+    } else if (route === 'taiyin' || route === 'liangyi') {
+      needed.add('vol1_vol2');
+    } else if (route === 'xuanming' || route === 'taiyang') {
+      needed.add('vol3_vol4');
+    } else {
+      needed.add('vol1_vol2');
+      needed.add('vol3_vol4');
+    }
+    return Array.from(needed);
+  }
+
+  async function ensureModulesLoaded(moduleIds) {
+    if (global.__TAIXU_EMBEDDED_DATA__) {
+      return global.__TAIXU_EMBEDDED_DATA__;
+    }
+    const orderedMods =
+      (expansionsCfg && Array.isArray(expansionsCfg.modules) && expansionsCfg.modules.filter((m) => m.status === 'active')) || [
+        { id: 'vol1_vol2', nodesFile: 'data/vol1_vol2_nodes.json', deckFile: 'data/vol1_vol2_deck.json' },
+        { id: 'vol3_vol4', nodesFile: 'data/vol3_vol4_nodes.json', deckFile: 'data/vol3_vol4_deck.json' }
+      ];
+
+    const targets = moduleIds.filter((id) => !moduleCache[id]);
+    if (targets.length > 0) {
+      await Promise.all(
+        targets.map(async (id) => {
+          const mod = orderedMods.find((m) => m.id === id);
+          if (!mod) return;
+          const [nodes, deck] = await Promise.all([loadJson(mod.nodesFile), loadJson(mod.deckFile)]);
+          moduleCache[id] = { nodes, deck };
+        })
+      );
+    }
+
+    const updated = mergeLoadedModules();
+    if (global.TaixuEngine && typeof global.TaixuEngine.setBundleData === 'function') {
+      global.TaixuEngine.setBundleData(updated);
+    }
+    return updated;
+  }
+
+  async function loadInitialMetadata() {
+    if (global.__TAIXU_EMBEDDED_DATA__) {
+      return global.__TAIXU_EMBEDDED_DATA__;
+    }
+
     let expansions = null;
     try {
       expansions = await loadJson('data/expansions.json');
     } catch (_err) {
       expansions = null;
     }
+    expansionsCfg = expansions;
 
-    const activeModules =
-      (expansions &&
-        Array.isArray(expansions.modules) &&
-        expansions.modules.filter((m) => m.status === 'active')) || [
-        {
-          id: 'vol1_vol2',
-          nodesFile: 'data/vol1_vol2_nodes.json',
-          deckFile: 'data/vol1_vol2_deck.json'
-        }
-      ];
-
-    const [codex, endings, ...modBundles] = await Promise.all([
+    const [codex, endings] = await Promise.all([
       loadJson('data/codex_entries.json'),
-      loadJson('data/endings.json'),
-      ...activeModules.map(async (m) => ({
-        nodes: await loadJson(m.nodesFile),
-        deck: await loadJson(m.deckFile)
-      }))
+      loadJson('data/endings.json')
     ]);
 
-    const mergedNodes = { events: {} };
-    let mergedDeck = null;
-    modBundles.forEach((b) => {
-      if (b.nodes && b.nodes.events) {
-        Object.assign(mergedNodes.events, b.nodes.events);
-      }
-      if (!mergedDeck && b.deck) {
-        mergedDeck = b.deck;
-      } else if (mergedDeck && b.deck && b.deck.story && Array.isArray(b.deck.story.chapters)) {
-        mergedDeck.story.chapters = mergedDeck.story.chapters.concat(b.deck.story.chapters);
-      }
-    });
-
     return {
-      nodes: mergedNodes,
-      deck: mergedDeck || {},
+      nodes: { events: {} },
+      deck: { roguelike: { prologuePool: [], bossPool: [], routes: {} }, story: { chapters: [] } },
       codex,
       endings,
       expansions
@@ -89,13 +193,25 @@
 
     const isPlaying = screenId === 'screen-play';
     const seedChip = document.getElementById('topbar-seed-chip');
+    const bookmarkBtn = document.getElementById('btn-save-bookmark');
     const mobileMonitorBtn = document.getElementById('btn-toggle-monitor-mobile');
     if (seedChip) seedChip.hidden = !isPlaying;
+    if (bookmarkBtn) bookmarkBtn.hidden = !isPlaying;
     if (mobileMonitorBtn) mobileMonitorBtn.hidden = !isPlaying;
 
     if (!isPlaying) {
       global.TaixuPulseMonitor.stop();
     }
+  }
+
+  async function resumeSlot(slotId) {
+    const saved = global.TaixuState.loadSavedRun(slotId);
+    if (!saved) return;
+    const modIds = resolveRequiredModules(saved.mode, saved.route, saved.storyScope, saved.eventPlan);
+    await ensureModulesLoaded(modIds);
+    document.getElementById('topbar-seed-value').textContent = saved.seed;
+    showScreen('screen-play');
+    global.TaixuEngine.resumeCurrentRun();
   }
 
   function refreshTitleScreen() {
@@ -105,15 +221,47 @@
       seedInput.value = meta.lastSeed || global.TaixuRNG.generateSeedCode();
     }
 
-    const resumeBtn = document.getElementById('btn-resume-save');
-    const resumeSummary = document.getElementById('resume-summary');
-    const summaryText = global.TaixuState.peekSavedRunSummary();
-    if (resumeBtn && resumeSummary) {
-      if (summaryText) {
-        resumeBtn.hidden = false;
-        resumeSummary.textContent = summaryText;
+    const panel = document.getElementById('saved-runs-panel');
+    const listEl = document.getElementById('saved-runs-list');
+    const slots = global.TaixuState.listSavedSlots();
+    if (panel && listEl) {
+      if (slots.length === 0) {
+        panel.hidden = true;
+        listEl.innerHTML = '';
       } else {
-        resumeBtn.hidden = true;
+        panel.hidden = false;
+        listEl.innerHTML = '';
+        slots.forEach((slot) => {
+          const row = document.createElement('div');
+          row.className = 'save-slot-row';
+          row.setAttribute('data-slot-id', slot.slotId);
+          row.innerHTML = `
+            <div class="save-slot-meta">
+              <span class="save-slot-title">${escapeHtml(slot.title)}</span>
+              <span class="save-slot-desc">${escapeHtml(slot.summary)}</span>
+            </div>
+            <div class="save-slot-actions">
+              <button type="button" class="btn-primary btn-resume-slot" data-resume-slot="${escapeHtml(slot.slotId)}">繼續此進度</button>
+              <button type="button" class="btn-del-save" data-delete-slot="${escapeHtml(slot.slotId)}" title="清除此存檔槽位">清除</button>
+            </div>
+          `;
+          listEl.appendChild(row);
+        });
+
+        listEl.querySelectorAll('[data-resume-slot]').forEach((btn) => {
+          btn.addEventListener('click', () => {
+            resumeSlot(btn.getAttribute('data-resume-slot')).catch((err) => {
+              alert(`讀取進度失敗：${err.message}`);
+            });
+          });
+        });
+
+        listEl.querySelectorAll('[data-delete-slot]').forEach((btn) => {
+          btn.addEventListener('click', () => {
+            global.TaixuState.deleteSavedSlot(btn.getAttribute('data-delete-slot'));
+            refreshTitleScreen();
+          });
+        });
       }
     }
     global.TaixuCodex.refreshCounters();
@@ -123,7 +271,15 @@
     showScreen('screen-ending');
     document.getElementById('ending-seal').textContent = summary.ending.seal || '太虛印可';
     document.getElementById('ending-title').textContent = summary.ending.title;
-    document.getElementById('ending-subtitle').textContent = `${summary.mode === 'story' ? '全卷章回篇' : 'Roguelike 速行篇'}｜天機籤號：${summary.seed}`;
+    const scopeName =
+      summary.mode === 'story'
+        ? summary.storyScope === 'part1'
+          ? '上篇重溫（一二卷）'
+          : summary.storyScope === 'part2'
+            ? '下篇直入（三四卷）'
+            : '全四卷大貫通'
+        : `Roguelike 速行篇 (${summary.route || '混戰'})`;
+    document.getElementById('ending-subtitle').textContent = `${scopeName}｜天機籤號：${summary.seed}`;
     document.getElementById('ending-narrative').innerHTML = `<p>${escapeHtml(summary.ending.narrative)}</p><p style="color:var(--ink-secondary);margin-top:8px;">${escapeHtml(summary.ending.summary)}</p>`;
 
     const acc = summary.totalAnswered > 0 ? Math.round((summary.correctFirstTry / summary.totalAnswered) * 100) : 100;
@@ -156,20 +312,40 @@
     // Mode card toggles
     const modeRadios = document.querySelectorAll('input[name="game-mode"]');
     const routeBox = document.getElementById('roguelike-route-box');
+    const storyScopeBox = document.getElementById('story-scope-box');
     modeRadios.forEach((radio) => {
       radio.addEventListener('change', () => {
         document.getElementById('card-mode-roguelike').classList.toggle('selected', radio.value === 'roguelike' && radio.checked);
         document.getElementById('card-mode-story').classList.toggle('selected', radio.value === 'story' && radio.checked);
         if (routeBox) routeBox.hidden = radio.value !== 'roguelike';
+        if (storyScopeBox) storyScopeBox.hidden = radio.value !== 'story';
       });
     });
 
-    // Route pills
-    document.querySelectorAll('input[name="rogue-route"]').forEach((radio) => {
+    // Route pills & Story scope pills
+    document.querySelectorAll('#roguelike-route-box input[name="rogue-route"]').forEach((radio) => {
       radio.addEventListener('change', () => {
-        document.querySelectorAll('.route-pill').forEach((pill) => {
+        document.querySelectorAll('#roguelike-route-box .route-pill').forEach((pill) => {
           const inp = pill.querySelector('input');
-          pill.classList.toggle('selected', inp && inp.checked);
+          pill.classList.toggle('selected', Boolean(inp && inp.checked));
+        });
+      });
+    });
+
+    document.querySelectorAll('#story-scope-box input[name="story-scope"]').forEach((radio) => {
+      radio.addEventListener('change', () => {
+        document.querySelectorAll('#story-scope-box .route-pill').forEach((pill) => {
+          const inp = pill.querySelector('input');
+          pill.classList.toggle('selected', Boolean(inp && inp.checked));
+        });
+      });
+    });
+
+    document.querySelectorAll('input[name="rogue-length"]').forEach((radio) => {
+      radio.addEventListener('change', () => {
+        document.querySelectorAll('.sub-chip').forEach((chip) => {
+          const inp = chip.querySelector('input');
+          chip.classList.toggle('selected', Boolean(inp && inp.checked));
         });
       });
     });
@@ -179,30 +355,57 @@
       document.getElementById('input-seed').value = global.TaixuRNG.generateSeedCode();
     });
 
-    // Start new game
-    document.getElementById('btn-start-new').addEventListener('click', () => {
+    // Start new game (with on-demand module loading)
+    const startBtn = document.getElementById('btn-start-new');
+    startBtn.addEventListener('click', async () => {
       const modeEl = document.querySelector('input[name="game-mode"]:checked');
       const routeEl = document.querySelector('input[name="rogue-route"]:checked');
+      const scopeEl = document.querySelector('input[name="story-scope"]:checked');
+      const lenEl = document.querySelector('input[name="rogue-length"]:checked');
       const seedEl = document.getElementById('input-seed');
 
       const mode = modeEl ? modeEl.value : 'roguelike';
-      const route = routeEl ? routeEl.value : 'taiyin';
+      const route = routeEl ? routeEl.value : 'all_mixed';
+      const storyScope = scopeEl ? scopeEl.value : 'full';
+      const rogueLength = lenEl ? Number(lenEl.value) : 6;
       const seed = (seedEl && seedEl.value.trim()) || global.TaixuRNG.generateSeedCode();
       if (seedEl) seedEl.value = seed;
 
-      document.getElementById('topbar-seed-value').textContent = seed;
-      showScreen('screen-play');
-      global.TaixuEngine.startNewRun(mode, route, seed);
+      const origText = startBtn.textContent;
+      startBtn.disabled = true;
+      startBtn.textContent = '載入丹卷中…';
+      try {
+        const needed = resolveRequiredModules(mode, route, storyScope);
+        await ensureModulesLoaded(needed);
+        document.getElementById('topbar-seed-value').textContent = seed;
+        showScreen('screen-play');
+        global.TaixuEngine.startNewRun({ mode, route, rogueLength, storyScope, seed });
+      } catch (err) {
+        alert(`資料載入失敗：${err.message}`);
+      } finally {
+        startBtn.disabled = false;
+        startBtn.textContent = origText;
+      }
     });
 
-    // Resume saved game
-    document.getElementById('btn-resume-save').addEventListener('click', () => {
-      const saved = global.TaixuState.loadSavedRun();
-      if (!saved) return;
-      document.getElementById('topbar-seed-value').textContent = saved.seed;
-      showScreen('screen-play');
-      global.TaixuEngine.resumeCurrentRun();
-    });
+    // Manual Bookmark Save
+    const bookmarkBtn = document.getElementById('btn-save-bookmark');
+    if (bookmarkBtn) {
+      bookmarkBtn.addEventListener('click', () => {
+        const run = global.TaixuState.getRun();
+        if (!run) return;
+        const loc = (document.getElementById('crumb-location') && document.getElementById('crumb-location').textContent) || '';
+        const lbl = `${run.mode === 'story' ? '章回' : '速行'}・${loc || run.currentEventId || '中繼'} (${run.seed})`;
+        global.TaixuState.saveBookmarkSnapshot(lbl);
+        const span = bookmarkBtn.querySelector('span');
+        if (span) {
+          span.textContent = '已存書籤 ✓';
+          setTimeout(() => {
+            span.textContent = '存書籤';
+          }, 1800);
+        }
+      });
+    }
 
     // Feedback Next
     document.getElementById('btn-feedback-next').addEventListener('click', () => {
@@ -212,6 +415,9 @@
 
     // Topbar buttons
     document.getElementById('btn-home-logo').addEventListener('click', () => {
+      if (global.TaixuState.getRun()) {
+        global.TaixuState.saveRun();
+      }
       showScreen('screen-title');
       refreshTitleScreen();
     });
@@ -312,7 +518,7 @@
     applyAudioLabel(meta.audioEnabled);
 
     try {
-      gameBundle = await loadGameData();
+      gameBundle = await loadInitialMetadata();
       global.TaixuCodex.init(gameBundle.codex, gameBundle.endings);
       global.TaixuEngine.init(gameBundle, showEndingScreen);
       bindUi();

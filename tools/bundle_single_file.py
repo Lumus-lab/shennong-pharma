@@ -24,6 +24,16 @@ def load_json(path: Path) -> object:
     return json.loads(path.read_text(encoding="utf-8"))
 
 
+def _unique_concat(a: list, b: list) -> list:
+    out = list(a or [])
+    seen = set(out)
+    for item in b or []:
+        if item not in seen:
+            seen.add(item)
+            out.append(item)
+    return out
+
+
 def build_embedded_data() -> dict:
     expansions_path = ROOT_DIR / "data" / "expansions.json"
     expansions = load_json(expansions_path) if expansions_path.exists() else None
@@ -41,23 +51,44 @@ def build_embedded_data() -> dict:
     )
 
     merged_nodes: dict = {"events": {}}
-    merged_deck: dict | None = None
+    merged_deck: dict = {
+        "roguelike": {"prologuePool": [], "bossPool": [], "routes": {}},
+        "story": {"chapters": []},
+    }
 
     for mod in active_modules:
         n_data = load_json(ROOT_DIR / mod["nodesFile"])
         d_data = load_json(ROOT_DIR / mod["deckFile"])
         if isinstance(n_data, dict) and isinstance(n_data.get("events"), dict):
             merged_nodes["events"].update(n_data["events"])
-        if merged_deck is None:
-            merged_deck = d_data if isinstance(d_data, dict) else {}
-        elif isinstance(d_data, dict):
+        if isinstance(d_data, dict):
+            dr = d_data.get("roguelike") or {}
+            merged_deck["roguelike"]["prologuePool"] = _unique_concat(
+                merged_deck["roguelike"]["prologuePool"], dr.get("prologuePool") or []
+            )
+            merged_deck["roguelike"]["bossPool"] = _unique_concat(
+                merged_deck["roguelike"]["bossPool"], dr.get("bossPool") or []
+            )
+            for rk, rsrc in (dr.get("routes") or {}).items():
+                if rk not in merged_deck["roguelike"]["routes"]:
+                    merged_deck["roguelike"]["routes"][rk] = json.loads(json.dumps(rsrc))
+                else:
+                    dst = merged_deck["roguelike"]["routes"][rk]
+                    dst["pool"] = _unique_concat(dst.get("pool") or [], rsrc.get("pool") or [])
+                    dst["bossPool"] = _unique_concat(dst.get("bossPool") or [], rsrc.get("bossPool") or [])
+                    if rsrc.get("prologuePool"):
+                        dst["prologuePool"] = _unique_concat(dst.get("prologuePool") or [], rsrc["prologuePool"])
+                    merged_w = dict(dst.get("weights") or {})
+                    merged_w.update(rsrc.get("weights") or {})
+                    dst["weights"] = merged_w
+
             extra_ch = d_data.get("story", {}).get("chapters", [])
             if extra_ch:
-                merged_deck.setdefault("story", {}).setdefault("chapters", []).extend(extra_ch)
+                merged_deck["story"]["chapters"].extend(extra_ch)
 
     return {
         "nodes": merged_nodes,
-        "deck": merged_deck or {},
+        "deck": merged_deck,
         "codex": load_json(ROOT_DIR / "data" / "codex_entries.json"),
         "endings": load_json(ROOT_DIR / "data" / "endings.json"),
         "expansions": expansions,

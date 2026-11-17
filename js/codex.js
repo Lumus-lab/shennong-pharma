@@ -4,6 +4,7 @@
   let codexData = { entries: [], referenceTables: [] };
   let endingsData = [];
   let activeTab = 'cards';
+  let activeVol = 'all';
   let activeScroll = 'all';
   let searchQuery = '';
   let previewAllTables = false;
@@ -13,7 +14,11 @@
     scroll_2: '突觸與阻斷',
     scroll_3: '膽鹼酯與生物鹼',
     scroll_4: '臨床症候與 AChEI',
-    scroll_5: '有機磷毒理'
+    scroll_5: '有機磷毒理',
+    scroll_6: '抗M與神經節',
+    scroll_7: '肌鬆與解痙',
+    scroll_8: '擬交感與酪胺',
+    scroll_9: 'α/β阻斷・頭青救'
   };
 
   function init(data, endings) {
@@ -39,6 +44,16 @@
           const isAct = t === btn;
           t.classList.toggle('active', isAct);
           t.setAttribute('aria-selected', String(isAct));
+        });
+        render();
+      });
+    });
+
+    document.querySelectorAll('#vol-filters .filter-chip').forEach((chip) => {
+      chip.addEventListener('click', () => {
+        activeVol = chip.getAttribute('data-vol') || 'all';
+        document.querySelectorAll('#vol-filters .filter-chip').forEach((c) => {
+          c.classList.toggle('active', c === chip);
         });
         render();
       });
@@ -70,14 +85,18 @@
 
   function refreshCounters() {
     const meta = global.TaixuState.getMeta();
-    const total = codexData.entries ? codexData.entries.length : 36;
+    const total = codexData.entries ? codexData.entries.length : 75;
     const unlocked = meta.unlockedCodex.length;
+    const endingTotal = endingsData.length || 9;
 
     const badge = document.getElementById('codex-progress-badge');
     if (badge) badge.textContent = `${unlocked}/${total}`;
 
     const summary = document.getElementById('codex-unlock-summary');
     if (summary) summary.textContent = `已解鎖 ${unlocked} / ${total} 項核心考點（隨劇情自動拓印保存）`;
+
+    const tabCardsBtn = document.getElementById('tab-cards-btn');
+    if (tabCardsBtn) tabCardsBtn.textContent = `核心考點 (${total})`;
 
     const wrongCount = document.getElementById('tab-wrong-count');
     if (wrongCount) wrongCount.textContent = `(${meta.wrongNotes.length})`;
@@ -86,7 +105,7 @@
     if (statCodex) statCodex.textContent = `${unlocked} / ${total}`;
 
     const statEndings = document.getElementById('stat-endings-count');
-    if (statEndings) statEndings.textContent = `${meta.unlockedEndings.length} / ${endingsData.length || 7}`;
+    if (statEndings) statEndings.textContent = `${meta.unlockedEndings.length} / ${endingTotal}`;
 
     const statWrong = document.getElementById('stat-wrong-count');
     if (statWrong) statWrong.textContent = String(meta.wrongNotes.length);
@@ -136,6 +155,7 @@
     const entries = codexData.entries || [];
 
     const filtered = entries.filter((entry) => {
+      if (activeVol !== 'all' && String(entry.vol) !== String(activeVol)) return false;
       if (activeScroll !== 'all' && entry.scroll !== activeScroll) return false;
       if (!searchQuery) return true;
       const hay = [
@@ -152,7 +172,7 @@
     });
 
     if (filtered.length === 0) {
-      container.innerHTML = '<p style="color:var(--ink-muted)">查無符合條件的丹譜條目，請嘗試更換關鍵字或卷宗分類。</p>';
+      container.innerHTML = '<p style="color:var(--ink-muted)">查無符合條件的丹譜條目，請嘗試更換關鍵字、卷別或主題分類。</p>';
       return;
     }
 

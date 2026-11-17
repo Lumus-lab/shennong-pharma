@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>太虛神農紀：雙極靈樞｜自主神經藥理學互動輕小說</title>
-  <meta name="description" content="改編自《太虛神農紀：雙極天道與百草靈樞》第一、二卷（Ch.06–Ch.07）之純前端自主神經藥理學互動劇情遊戲，含短局 Roguelike、全卷章回、SVG 內景脈象儀、錯藥真實演繹與靈樞丹譜圖鑑。">
+  <meta name="description" content="改編自《太虛神農紀：雙極天道與百草靈樞》全四卷（Ch.06–Ch.09）之純前端自主神經藥理學互動劇情遊戲，涵蓋 75 項核心考點、短局 Roguelike、全四卷連貫章回、SVG 內景脈象儀（ECG／體溫／血鉀／TOF）、錯藥真實演繹與靈樞丹譜圖鑑。">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@500;700;900&display=swap" rel="stylesheet">
@@ -17,7 +17,7 @@
     <!-- 頂部導覽列 -->
     <header class="topbar" id="app-topbar">
       <div class="topbar-brand">
-        <button type="button" class="brand-btn" id="btn-home-logo" title="返回太虛山門主頁">
+        <button type="button" class="brand-btn" id="btn-home-logo" title="返回太虛山門主頁（自動保存進度）">
           <svg class="brand-crest" viewBox="0 0 40 40" width="32" height="32" aria-hidden="true">
             <circle cx="20" cy="20" r="18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-dasharray="3 2"/>
             <path d="M20 4 A16 16 0 0 1 20 36 A8 8 0 0 1 20 20 A8 8 0 0 0 20 4 Z" fill="var(--yin-color)" opacity="0.88"/>
@@ -27,7 +27,7 @@
           </svg>
           <span class="brand-text">
             <span class="brand-title">太虛神農紀：雙極靈樞</span>
-            <span class="brand-sub">Ch.06–07 自主神經藥理修煉錄</span>
+            <span class="brand-sub">Ch.06–09 自主神經藥理全四卷修煉錄</span>
           </span>
         </button>
       </div>
@@ -38,6 +38,10 @@
           <code id="topbar-seed-value">TX-0000</code>
         </div>
 
+        <button type="button" class="btn-tool" id="btn-save-bookmark" hidden title="手動將目前局勢另存至進度書籤，可隨時讀取">
+          <span>存書籤</span>
+        </button>
+
         <button type="button" class="btn-tool" id="btn-toggle-monitor-mobile" hidden aria-expanded="false">
           <span class="tool-dot" id="mobile-monitor-dot"></span>
           <span>內景脈象</span>
@@ -45,7 +49,7 @@
 
         <button type="button" class="btn-tool" id="btn-open-codex">
           <span>靈樞丹譜</span>
-          <span class="badge-count" id="codex-progress-badge">0/36</span>
+          <span class="badge-count" id="codex-progress-badge">0/75</span>
         </button>
 
         <button type="button" class="btn-tool" id="btn-toggle-audio" aria-pressed="false" title="切換脈象與翻頁音效">
@@ -79,7 +83,6 @@
               <circle cx="110" cy="205" r="3" fill="var(--yin-color)"/>
               <circle cx="15" cy="110" r="3" fill="var(--yang-color)"/>
             </g>
-            <!-- 雙極太極 -->
             <path d="M110 58 A52 52 0 0 1 110 162 A26 26 0 0 1 110 110 A26 26 0 0 0 110 58 Z" fill="var(--yin-color)" opacity="0.92"/>
             <path d="M110 162 A52 52 0 0 1 110 58 A26 26 0 0 1 110 110 A26 26 0 0 0 110 162 Z" fill="var(--yang-color)" opacity="0.92"/>
             <circle cx="110" cy="84" r="7" fill="var(--surface-paper)"/>
@@ -90,19 +93,19 @@
         </div>
 
         <div class="hero-copy">
-          <p class="hero-kicker">太虛醫宗・內景藥理試煉系統（第一、二卷）</p>
+          <p class="hero-kicker">太虛醫宗・自主神經藥理實戰系統（全四卷 Ch.06–09）</p>
           <h1 class="hero-title">《太虛神農紀：雙極靈樞》</h1>
           <p class="hero-desc">
-            你乃身懷「陰陽雙極混元靈根」的太虛新徒林玄。隨掌律長老<strong>弘岳真人</strong>、衝動直覺派師兄<strong>陸離</strong>與細心毒舌藥童<strong>蘇苓</strong>踏入臨床與毒理試煉——選錯靈丹不會只跳冷冰冰的叉叉，而是真實觸發支氣管痙攣、AChE 老化與 <code>Asystole</code> 危機，考驗你能否臨危救回病患！
+            身懷陰陽雙極靈根的<strong>林玄</strong>，與掌律長老<strong>弘岳真人</strong>、熱血誘答王<strong>陸離</strong>及毒舌藥童<strong>蘇苓</strong>，從總論築基與太陰擬膽鹼，直入玄冥抗膽鹼肌鬆解痙與太陽擬交感破陽止戈！選錯丹方會真實演繹惡性高熱、燒傷高血鉀、嗜鉻血壓危象或 β 阻斷休克，唯靠精準機制補救方能破關！
           </p>
 
           <div class="meta-stats-bar" id="title-meta-stats">
             <div class="meta-stat">
-              <span class="meta-stat-num" id="stat-codex-count">0 / 36</span>
+              <span class="meta-stat-num" id="stat-codex-count">0 / 75</span>
               <span class="meta-stat-lbl">靈樞丹譜解鎖</span>
             </div>
             <div class="meta-stat">
-              <span class="meta-stat-num" id="stat-endings-count">0 / 7</span>
+              <span class="meta-stat-num" id="stat-endings-count">0 / 9</span>
               <span class="meta-stat-lbl">修煉結局收集</span>
             </div>
             <div class="meta-stat">
@@ -117,7 +120,7 @@
       <section class="setup-panel" aria-labelledby="setup-heading">
         <div class="setup-header">
           <h2 id="setup-heading">擇定修煉法門與天機籤號</h2>
-          <p class="setup-sub">相同「天機籤號」將抽取完全一致的事件卡池與題組變體，方便同門切磋對照。</p>
+          <p class="setup-sub">短局速行與長篇連貫章回「分別自動保存」，切換遊玩也不互相覆蓋進度。</p>
         </div>
 
         <div class="mode-grid" role="radiogroup" aria-label="遊玩模式選擇">
@@ -128,35 +131,77 @@
               <span class="mode-seal">速行篇</span>
             </div>
             <h3>太虛試煉・Roguelike 速行篇</h3>
-            <p>序章覺醒 1 關 ＋ 依修煉路線隨機抽出 4 場病案／破陣 ＋ 1 場高危 Boss 急症戰。單輪聚焦 ~25–30% 精選考點，適合考前多輪刷題解鎖圖鑑。</p>
+            <p>依所選修煉路線抽出序章 ＋ 4 或 6 場高危臨床病案／實驗破陣 ＋ 1 場急症 Boss 戰。適合零碎時間分卷專攻或四卷混戰刷題。</p>
           </label>
 
           <label class="mode-card" id="card-mode-story">
             <input type="radio" name="game-mode" value="story">
             <div class="mode-card-head">
-              <span class="mode-tag mode-tag-long">模式 B・約 30–45 分鐘</span>
+              <span class="mode-tag mode-tag-long">模式 B・完整連貫章回</span>
               <span class="mode-seal">章回篇</span>
             </div>
-            <h3>神農紀實・全卷章回篇</h3>
-            <p>完整貫穿 Ch.06–07 五大章回、完整覆蓋 36 項核心考點！第 2 與第 4 章可自由選擇接診順序，隨身丹囊道具將改寫後續線索，仍帶隨機變體抽題。</p>
+            <h3>神農紀實・連貫章回篇</h3>
+            <p>完整貫通 Ch.06–09 全十章 37 關（覆蓋全部 75 項考點），或擇上篇／下篇啟程；遇自由接診樞紐可先取隨身丹囊改變解法，支援隨時斷點續玩。</p>
           </label>
         </div>
 
-        <!-- 模式 A 路線選擇 -->
+        <!-- 模式 A 路線與局數選擇 -->
         <div class="route-box" id="roguelike-route-box">
-          <span class="field-label">選擇優先修煉路線（影響事件卡池權重）：</span>
+          <span class="field-label">選擇優先修煉路線（影響事件卡池權重與動態載入模組）：</span>
           <div class="route-pills" role="radiogroup" aria-label="速行篇路線選擇">
             <label class="route-pill selected">
-              <input type="radio" name="rogue-route" value="taiyin" checked>
-              <span>太陰丹房路線（偏重 Ch.07 擬膽鹼與 AChEI）</span>
+              <input type="radio" name="rogue-route" value="all_mixed" checked>
+              <span>四卷全脈混戰（Ch.06–09 隨機精選）</span>
+            </label>
+            <label class="route-pill">
+              <input type="radio" name="rogue-route" value="xuanming">
+              <span>玄冥封脈路線（Ch.08 抗膽鹼／肌鬆解痙）</span>
+            </label>
+            <label class="route-pill">
+              <input type="radio" name="rogue-route" value="taiyang">
+              <span>太陽烈火路線（Ch.09 擬交感／α・β 阻斷）</span>
+            </label>
+            <label class="route-pill">
+              <input type="radio" name="rogue-route" value="taiyin">
+              <span>太陰丹房路線（Ch.07 擬膽鹼與 AChEI）</span>
             </label>
             <label class="route-pill">
               <input type="radio" name="rogue-route" value="liangyi">
-              <span>兩儀總論路線（偏重 Ch.06 神經傳導與受體）</span>
+              <span>兩儀總論路線（Ch.06 神經傳導與受體）</span>
             </label>
             <label class="route-pill">
               <input type="radio" name="rogue-route" value="toxic_er">
-              <span>毒理急診混合（高危中毒與危機搶救）</span>
+              <span>全毒理急診混合（高危中毒與危機搶救）</span>
+            </label>
+          </div>
+          <div class="sub-option-row">
+            <span class="sub-opt-lbl">速行節奏：</span>
+            <label class="sub-chip selected">
+              <input type="radio" name="rogue-length" value="6" checked>
+              <span>標準 6 關（約 10–15 分鐘）</span>
+            </label>
+            <label class="sub-chip">
+              <input type="radio" name="rogue-length" value="8">
+              <span>強化 8 關（深度複習約 18 分鐘）</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- 模式 B 篇章範圍選擇 -->
+        <div class="route-box" id="story-scope-box" hidden>
+          <span class="field-label">選擇長篇章回起訖範圍（隨時自動存檔，亦可於跨卷時留存書籤）：</span>
+          <div class="route-pills" role="radiogroup" aria-label="長篇範圍選擇">
+            <label class="route-pill selected">
+              <input type="radio" name="story-scope" value="full" checked>
+              <span>全四卷大貫通（Ch.06–09・全 10 章 37 關・75 考點）</span>
+            </label>
+            <label class="route-pill">
+              <input type="radio" name="story-scope" value="part2">
+              <span>下篇直入：三、四卷（Ch.08–09・第 6–10 章 19 關・39 考點）</span>
+            </label>
+            <label class="route-pill">
+              <input type="radio" name="story-scope" value="part1">
+              <span>上篇重溫：一、二卷（Ch.06–07・第 1–5 章 18 關・36 考點）</span>
             </label>
           </div>
         </div>
@@ -172,10 +217,13 @@
           </div>
           <div class="start-actions">
             <button type="button" class="btn-primary" id="btn-start-new">踏入太虛試煉</button>
-            <button type="button" class="btn-resume" id="btn-resume-save" hidden>
-              接續上次進度（<span id="resume-summary"></span>）
-            </button>
           </div>
+        </div>
+
+        <!-- 分流存檔續玩列表（長篇／速行／書籤獨立保存） -->
+        <div class="saved-runs-panel" id="saved-runs-panel" hidden>
+          <span class="field-label">已保存進度（短局與長篇獨立保存，點擊直接續玩）：</span>
+          <div class="saved-runs-list" id="saved-runs-list"></div>
         </div>
       </section>
     </main>
@@ -214,7 +262,7 @@
             <span class="crumb-location" id="crumb-location">玄階廣場</span>
           </div>
 
-          <!-- 自由接診／破陣選擇器（第2章、第4章樞紐） -->
+          <!-- 自由接診／破陣選擇器 -->
           <section class="hub-panel" id="hub-panel" hidden>
             <div class="hub-header">
               <h2 id="hub-title">百脈諸神殿・自由破陣</h2>
@@ -253,7 +301,7 @@
               <p id="pouch-hint-text"></p>
             </aside>
 
-            <!-- 互動小實驗室（E01 真言碑 / E09 膽鹼酯煉丹 / E13 內皮開關） -->
+            <!-- 互動小實驗室（Ch.06–09 各式交互實驗台） -->
             <section class="interactive-lab" id="interactive-lab" hidden></section>
 
             <!-- 選項與推進區 -->
@@ -310,7 +358,7 @@
                 <div class="bp-bar-wrap">
                   <div class="bp-bar-fill" id="bar-bp" style="width: 48%"></div>
                 </div>
-                <span class="metric-sub" id="val-map">MAP 90 mmHg</span>
+                <span class="metric-sub" id="val-map">MAP 90・脈壓 42</span>
               </div>
               <div class="bp-item">
                 <span class="metric-label">眼內壓 (IOP)</span>
@@ -319,6 +367,22 @@
                   <div class="bp-bar-fill iop-fill" id="bar-iop" style="width: 30%"></div>
                 </div>
                 <span class="metric-sub" id="val-iop-note">房水通暢 (10–20)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 核心體溫與血鉀雙代謝指標 -->
+          <div class="monitor-block metab-block">
+            <div class="bp-grid">
+              <div class="bp-item" id="temp-item">
+                <span class="metric-label">核心體溫 (Temp)</span>
+                <span class="metric-value"><strong id="val-temp">36.8</strong> <small>°C</small></span>
+                <span class="metric-sub" id="val-temp-note">體溫恆定</span>
+              </div>
+              <div class="bp-item" id="k-item">
+                <span class="metric-label">血清血鉀 (K⁺)</span>
+                <span class="metric-value"><strong id="val-k">4.2</strong> <small>mEq/L</small></span>
+                <span class="metric-sub" id="val-k-note">正常範圍 (3.5–5.0)</span>
               </div>
             </div>
           </div>
@@ -354,19 +418,31 @@
             </div>
           </div>
 
-          <!-- 肌終板張力條 + 特規警報標籤 -->
+          <!-- 肌終板張力條 + TOF 四連刺激監測 SVG -->
           <div class="monitor-block nmj-block">
             <div class="metric-row">
-              <span class="metric-label">骨骼肌終板張力 (N<sub>M</sub>)</span>
+              <span class="metric-label">肌終板張力 (N<sub>M</sub>) / 四連肌振 (TOF)</span>
               <span class="metric-sub" id="val-nmj-label">穩健有力</span>
             </div>
             <div class="nmj-meter">
               <div class="nmj-marker" id="nmj-marker" style="left: 50%"></div>
             </div>
-            <div class="nmj-scale">
-              <span>弛緩麻痺</span>
-              <span>常態</span>
-              <span>震顫／去極阻斷</span>
+            <div class="nmj-tof-row">
+              <svg class="tof-svg" id="svg-tof" viewBox="0 0 96 34" width="96" height="34" role="img" aria-label="四連刺激 TOF 波形">
+                <line x1="2" y1="30" x2="94" y2="30" stroke="var(--monitor-baseline)" stroke-width="1"/>
+                <rect id="tof-b1" x="8" y="6" width="14" height="24" rx="2" fill="var(--monitor-trace)"/>
+                <rect id="tof-b2" x="30" y="6" width="14" height="24" rx="2" fill="var(--monitor-trace)"/>
+                <rect id="tof-b3" x="52" y="6" width="14" height="24" rx="2" fill="var(--monitor-trace)"/>
+                <rect id="tof-b4" x="74" y="6" width="14" height="24" rx="2" fill="var(--monitor-trace)"/>
+              </svg>
+              <div class="tof-meta">
+                <span class="tof-readout" id="val-tof-note">TOF 100%（無衰減）</span>
+                <div class="nmj-scale">
+                  <span>弛緩麻痺</span>
+                  <span>常態</span>
+                  <span>顫動／去極</span>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -410,27 +486,38 @@
     <div class="codex-header">
       <div>
         <h2 id="codex-heading">靈樞丹譜・修煉總庫</h2>
-        <p class="codex-sub" id="codex-unlock-summary">已解鎖 0 / 36 項核心考點</p>
+        <p class="codex-sub" id="codex-unlock-summary">已解鎖 0 / 75 項核心考點</p>
       </div>
       <button type="button" class="btn-icon-close" id="btn-close-codex" aria-label="關閉靈樞丹譜">✕</button>
     </div>
 
     <div class="codex-tabs" role="tablist">
-      <button type="button" class="codex-tab active" data-tab="cards" role="tab" aria-selected="true">核心考點 (36)</button>
+      <button type="button" class="codex-tab active" data-tab="cards" role="tab" aria-selected="true" id="tab-cards-btn">核心考點 (75)</button>
       <button type="button" class="codex-tab" data-tab="tables" role="tab" aria-selected="false">完整比較總表</button>
       <button type="button" class="codex-tab" data-tab="wrong" role="tab" aria-selected="false">錯題筆記 <span id="tab-wrong-count">(0)</span></button>
       <button type="button" class="codex-tab" data-tab="endings" role="tab" aria-selected="false">結局殿堂</button>
     </div>
 
     <div class="codex-toolbar" id="codex-toolbar">
-      <input type="search" id="codex-search" class="codex-search" placeholder="搜尋藥名、受體、機轉（如 M3, 2-PAM, Cevimeline）">
+      <input type="search" id="codex-search" class="codex-search" placeholder="搜尋藥名、受體、機轉（如 Sugammadex, IFIS, Glucagon, 2-PAM）">
+      <div class="scroll-filters vol-filters" id="vol-filters">
+        <button type="button" class="filter-chip active" data-vol="all">全部四卷</button>
+        <button type="button" class="filter-chip" data-vol="1">第一卷 Ch.06</button>
+        <button type="button" class="filter-chip" data-vol="2">第二卷 Ch.07</button>
+        <button type="button" class="filter-chip" data-vol="3">第三卷 Ch.08</button>
+        <button type="button" class="filter-chip" data-vol="4">第四卷 Ch.09</button>
+      </div>
       <div class="scroll-filters" id="scroll-filters">
-        <button type="button" class="filter-chip active" data-scroll="all">全部五卷</button>
-        <button type="button" class="filter-chip" data-scroll="scroll_1">總論與受體</button>
-        <button type="button" class="filter-chip" data-scroll="scroll_2">突觸與阻斷</button>
-        <button type="button" class="filter-chip" data-scroll="scroll_3">膽鹼酯與生物鹼</button>
-        <button type="button" class="filter-chip" data-scroll="scroll_4">臨床症候與AChEI</button>
+        <button type="button" class="filter-chip active" data-scroll="all">全部主題</button>
+        <button type="button" class="filter-chip" data-scroll="scroll_1">總論受體</button>
+        <button type="button" class="filter-chip" data-scroll="scroll_2">突觸阻斷</button>
+        <button type="button" class="filter-chip" data-scroll="scroll_3">膽鹼生物鹼</button>
+        <button type="button" class="filter-chip" data-scroll="scroll_4">臨床 AChEI</button>
         <button type="button" class="filter-chip" data-scroll="scroll_5">有機磷毒理</button>
+        <button type="button" class="filter-chip" data-scroll="scroll_6">抗M與神經節</button>
+        <button type="button" class="filter-chip" data-scroll="scroll_7">肌鬆與解痙</button>
+        <button type="button" class="filter-chip" data-scroll="scroll_8">擬交感與酪胺</button>
+        <button type="button" class="filter-chip" data-scroll="scroll_9">αβ阻斷・頭青救</button>
       </div>
     </div>
 

@@ -1,5 +1,5 @@
 {
-  "activeModules": ["vol1_vol2"],
+  "activeModules": ["vol1_vol2", "vol3_vol4"],
   "modules": [
     {
       "id": "vol1_vol2",
@@ -14,10 +14,10 @@
       "id": "vol3_vol4",
       "phase": 2,
       "title": "第三、四卷：玄冥封脈篇 & 太陽烈火篇（Ch.08–09）",
-      "status": "reserved",
+      "status": "active",
       "nodesFile": "data/vol3_vol4_nodes.json",
       "deckFile": "data/vol3_vol4_deck.json",
-      "codexRange": [37, 72]
+      "codexRange": [37, 75]
     }
   ]
 }

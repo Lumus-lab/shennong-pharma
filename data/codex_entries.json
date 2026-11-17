@@ -507,6 +507,552 @@
       ],
       "drugs": ["Atropine + 2-PAM (DuoDote® 2.1mg/600mg)", "Pyridostigmine (戰前卡位護周邊)"],
       "trapAlert": "急救有機磷中毒時，2-PAM 無法代替 Atropine！必須先除污與維持氣道，再以足量 Atropine 搶救蕈毒鹼窒息，並於老化前投予 2-PAM 救回菸鹼終板肌力。"
+    },
+    {
+      "num": 37,
+      "vol": 3,
+      "scroll": "scroll_6",
+      "title": "茄科植物宗譜與顛茄／天仙子生物鹼立體異構",
+      "summary": "辨識四大茄科植物（Solanaceae）所含代表性生物鹼，以及 Atropine 左旋／外消旋效價倍數與文藝復興典故。",
+      "keyPoints": [
+        "茄科四花草：辣椒 Capsicum annuum（Capsaicin）、菸草 Nicotiana tabacum（Nicotine）、顛茄 Atropa belladonna / 曼陀羅 Datura stramonium（含 Hyoscyamine → 外消旋 d,l-hyoscyamine 即 Atropine）、天仙子 Hyoscyamus niger（Scopolamine / Hyoscine）。",
+        "立體異構關鍵：天然存於植物之 Atropine 與 Scopolamine 皆為左旋 l(-) 型；Atropine 易消旋化，其中 l(-) 異構物阻斷 M 受體效價至少為 d(+) 異構物的 100 倍以上！",
+        "名號典故：belladonna 源自文藝復興時期義大利女性點眼散瞳自稱「美女 (Beautiful lady)」，亦稱致命龍葵 (Deadly nightshade)。"
+      ],
+      "drugs": ["l(-)-Hyoscyamine [Levsin]", "Atropine (d,l-Hyoscyamine)", "Scopolamine (Hyoscine)"],
+      "trapAlert": "Atropine 外消旋化後雖為 d,l-混合物，但實際抗蕈毒鹼活性幾乎全由左旋 l(-)-hyoscyamine 貢獻（>100× d(+)）！"
+    },
+    {
+      "num": 38,
+      "vol": 3,
+      "scroll": "scroll_6",
+      "title": "Atropine、Scopolamine、Homatropine SAR 與反向致效劑機轉",
+      "summary": "解析位置[1]環氧橋與位置[2]酸端對穿腦力與藥效時間的決定性差異，以及 M 受體第 3 穿膜區 Asp 結合機轉。",
+      "keyPoints": [
+        "位置［1］鹼基端：Scopolamine 具 Scopine 環氧橋 (Epoxide oxygen bridge)，穿透 BBB 能力遠強於 Tropine（Atropine），故常規治療劑量即生中樞鎮靜與失憶 (Amnesia)。",
+        "位置［2］酸端：Atropine 與 Scopolamine 均帶 Tropic acid 羥甲基 (-CH2OH)；Homatropine 將其改為 Mandelic acid (-OH)，散瞳時間自 5–6 天縮短為 12–24 小時。",
+        "分子作用機轉：與 ACh 競爭結合 M 受體第 3 穿膜區的天門冬胺酸 (Aspartate) 殘基（可逆競爭拮抗）；因 M 受體具基礎活性，實質屬反向致效劑 (Inverse agonist)。"
+      ],
+      "drugs": ["Atropine (Tropine+Tropic)", "Scopolamine (Scopine+Tropic)", "Homatropine (Tropine+Mandelic)"],
+      "trapAlert": "臨床看到手術前／動暈症常規劑量即造成鎮靜、遺忘記憶，關鍵就在 Scopolamine 位置[1]的「環氧橋」增強穿透 BBB！"
+    },
+    {
+      "num": 39,
+      "vol": 3,
+      "scroll": "scroll_6",
+      "title": "M₁–M₅ 受體拮抗劑分布與 Pirenzepine 相對親和力譜",
+      "summary": "掌握 M1–M5 亞型在人體之主要分布、對應代表性拮抗劑與 Atropine : Pirenzepine 相對親和力差距。",
+      "keyPoints": [
+        "M₁（神經/胃壁/腸神經，Gq）：Pirenzepine（親和力比 25 vs Atropine 1）、Telenzepine、Dicyclomine（亦抗 M4 治 IBS）、Trihexyphenidyl、Benztropine。",
+        "M₂（心房 SA/AV/突觸前，Gi）：Gallamine（強阻 M₂）、Methoctramine、AF-DX 116（Pirenzepine 親和比 300）。",
+        "M₃（外分泌腺/平滑肌，Gq）：4-DAMP、Darifenacin、Solifenacin、Oxybutynin、Tolterodine、Tiotropium（Pirenzepine 親和比 500 最弱）；M₄ 為 AF-DX 384/PCS1055 (17)，M₅ 為 Xanomeline/ML381 (100)。"
+      ],
+      "drugs": ["Pirenzepine (M1)", "Dicyclomine (M1/M4治IBS)", "Gallamine (M2)", "Darifenacin / Tiotropium (M3)"],
+      "trapAlert": "大腸激躁症用藥 Dicyclomine 是競爭性 M1 與 M4 拮抗劑；研究題常考 Pirenzepine 親和力 M1 (25) 遠高於 M2 (300) 與 M3 (500)。"
+    },
+    {
+      "num": 40,
+      "vol": 3,
+      "scroll": "scroll_6",
+      "title": "Atropine 四階劑量反應、敏感順序與小兒顛茄熱 (Atropine fever)",
+      "summary": "牢記各組織對抗 M 藥敏感度排序、低劑量 0.5 mg 心跳微慢弔詭現象，以及兒童致命的顛茄熱。",
+      "keyPoints": [
+        "組織敏感順序（高→低）：1. 唾液腺／支氣管腺／汗腺（最敏） → 2. 心臟／眼睛 → 3. 膀胱／胃腸平滑肌 → 4. 胃壁細胞泌酸（最不敏感）。",
+        "四階劑量：0.5 mg（阻突觸前 M1 自體受體反而輕微心跳變慢＋微口乾）；2.0 mg（心跳加快/散瞳/近物模糊）；5.0 mg（排尿困難/無汗皮膚乾熱/便祕）；>10.0 mg（幻覺、譫妄、昏迷）。",
+        "兒科警訊｜顛茄熱 (Atropine fever)：嬰幼兒體溫調節極度依賴交感膽鹼性汗腺排汗散熱，即便給予「常規劑量」Atropine 亦可誘發危險高燒！"
+      ],
+      "drugs": ["Atropine 0.5mg / 2mg / 5mg / >10mg"],
+      "trapAlert": "考題問給低劑量 Atropine (0.5 mg) 為何脈搏反而變慢？正解是「優先阻斷副交感突觸前自體抑制性 M1 受體，使 ACh 釋放短暫微升」！"
+    },
+    {
+      "num": 41,
+      "vol": 3,
+      "scroll": "scroll_6",
+      "title": "眼科五大抗 M 散瞳藥比較與葡萄膜炎虹膜防沾黏",
+      "summary": "對比五種眼科抗蕈毒鹼三級胺作用時效、葡萄膜炎首選用藥與單純眼底檢查用藥原則。",
+      "keyPoints": [
+        "五大眼科用藥時效：Atropine（5–6 days 最久，幼童屈光驗光/防沾黏）＞ Scopolamine（3–7 days）＞ Homatropine（12–24 hours，2–5%）＞ Cyclopentolate（3–6 hours）＞ Tropicamide（15–60 min 最短，日常眼底散瞳檢查）。",
+        "葡萄膜炎 (Uveitis) 與虹膜炎 (Iritis)：葡萄膜涵蓋虹膜、睫狀體、脈絡膜；特別愛用 Homatropine 鬆弛痙攣睫狀肌止痛，並藉散瞳預防虹膜與水晶體產生後沾黏 (Synechia formation)。",
+        "單純眼底檢查原則：不須睫狀肌麻痺者首選 α1 致效劑 Phenylephrine（不傷近距離調節）；前房隅角狹窄者禁用抗 M 散瞳劑以免急性青光眼。"
+      ],
+      "drugs": ["Tropicamide [Mydriacyl] (15–60m)", "Cyclopentolate [Cyclogyl] (3–6h)", "Homatropine (12–24h 葡萄膜炎)", "Atropine (5–6d)"],
+      "trapAlert": "Atropine 雖全身作用半衰期僅數小時，但在眼睛的睫狀肌麻痺與散瞳效果卻長達 5–6 天；Tropicamide 則是臨床最快散瞳最快速消退的選擇。"
+    },
+    {
+      "num": 42,
+      "vol": 3,
+      "scroll": "scroll_6",
+      "title": "中樞抗膽鹼應用：動暈症雙機轉與抗精神病藥 EPS",
+      "summary": "釐清動暈症本質流口水 vs 藥物口乾對比、Scopolamine 前庭雙機轉及 Benztropine 處理 EPS。",
+      "keyPoints": [
+        "動暈症 (Motion Sickness)：前庭系統真實輸入與預期訊號不匹配（涉及 M1 與組織胺 H1）；注意症狀本身會引起「↑↑大量流口水（Salivation）」，而治療藥則造成口乾。",
+        "Scopolamine 貼片 [Transderm Scōp]：出發前 ≥1 小時貼耳後可維持 48–72 hours；除了競爭阻斷中樞 M1 受體外，另在 CNS 兼具「5-HT3 受體拮抗」雙重防暈止吐機轉！",
+        "巴金森氏症與錐體外症候群 (EPS)：腦內 DA 不足致 ACh 相對亢進，可用三級胺 Benztropine [Cogentin] 或 Trihexyphenidyl（選擇性阻斷紋狀體 M1）校正平衡。"
+      ],
+      "drugs": ["Scopolamine patch [Transderm Scōp] (48–72h)", "Benztropine [Cogentin]", "Trihexyphenidyl"],
+      "trapAlert": "別被題目誘導！「動暈症發作本身」的症狀清單包含大量流口水 ↑Salivation，並不是口乾；口乾是貼了 Scopolamine 之後的藥物副作用！"
+    },
+    {
+      "num": 43,
+      "vol": 3,
+      "scroll": "scroll_6",
+      "title": "SAMA vs. LAMA 四級胺吸入劑與動力學選擇性 (Kinetic selectivity)",
+      "summary": "掌握 COPD 吸入型四級胺藥物半衰期、給藥頻率，以及為何 Tiotropium 不會因阻 M2 而誘發支氣管收縮。",
+      "keyPoints": [
+        "皆為極性四級胺：吸入幾乎不全身吸收且不穿過 BBB，局部舒張氣喘／COPD 氣道且鮮少口乾。",
+        "動力學選擇性 (Kinetic selectivity)：Tiotropium 與 Umeclidinium 從突觸前自體抑制性 M2 解離極快（保留剎車），卻從支氣管平滑肌 M3 極緩慢解離（長效支氣管擴張）！",
+        "藥物半衰期對比：Ipratropium [Atrovent] t1/2 2h (qid 短效 SAMA)；長效 LAMA：Tiotropium [Spiriva] 25h (QD)、Umeclidinium 11h (QD)、Aclidinium [Tudorza] 6h (BID)、Glycopyrrolate [Seebri] 1.2h (BID)。"
+      ],
+      "drugs": ["Ipratropium [Atrovent HFA]", "Tiotropium [Spiriva] (25h QD)", "Aclidinium [Tudorza]", "Glycopyrrolate [Seebri]"],
+      "trapAlert": "Tiotropium 與 Umeclidinium 的「M3 選擇性」其實主要不是靠親和力差異，而是靠對 M2 解離快、對 M3 解離極慢的「動力學選擇性 (Kinetic selectivity)」！"
+    },
+    {
+      "num": 44,
+      "vol": 3,
+      "scroll": "scroll_6",
+      "title": "三大尿失禁分型與 OAB 藥物：Fesoterodine vs. Tolterodine / Trospium",
+      "summary": "分辨三大尿失禁禁忌、比較 CYP2D6 依賴的 Tolterodine 與酯酶前驅藥 Fesoterodine，並掌握隨堂考題。",
+      "keyPoints": [
+        "三大尿失禁：① 應力性（大笑咳嗽漏尿，骨盆底肌問題）；② 急迫性（OAB 逼尿肌不自主收縮 → M3 拮抗劑主力）；③ 滿溢性（BPH 等出口阻塞致滲漏 → 阻塞未解前絕對禁用抗 M 藥！）。",
+        "Tolterodine [Detrol] (log P 1.81, M2/M3) 需靠肝臟 CYP2D6 轉為活性代謝物 5-HMT (log P 0.73) 與 CYP3A4 去活化；Fesoterodine [Toviaz] (log P 5.7, M3) 則是 5-HMT 前驅藥，不依賴 CYP2D6，由血漿非特異性酯酶直接水解活化！",
+        "隨堂考題重點：Darifenacin [Enablex] 與 Solifenacin [Vesicare] 對 M3 選擇性最高且長效每日一次 (QD)；Trospium 是唯一用於 OAB 的四級胺（中樞副作用最少）；Oxybutynin [Ditropan/Oxytrol] 經皮貼片局部常致搔癢。"
+      ],
+      "drugs": ["Darifenacin [Enablex] (M3 QD)", "Solifenacin [Vesicare] (M3 QD)", "Fesoterodine [Toviaz] (酯酶前驅藥)", "Trospium (唯一四級胺OAB藥)"],
+      "trapAlert": "病患若為 CYP2D6 慢代謝者或併用 CYP2D6 抑制劑，改選由非特異性「酯酶」活化的 Fesoterodine 比 Tolterodine 更不受基因多型性影響！"
+    },
+    {
+      "num": 45,
+      "vol": 3,
+      "scroll": "scroll_6",
+      "title": "【Case Study 1】攝護腺切除術後急迫性尿失禁 (63 歲建築師 JH)",
+      "summary": "完整解析 JH 攝護腺切除術後為何不減反頻尿漏尿，排除要點與建議藥品劑量方案。",
+      "keyPoints": [
+        "病理機制：63 歲建築師 JH（高血壓用 Thiazide+ACEI）因長期 BPH 出口阻塞對抗高阻力，引發膀胱逼尿肌代償性不穩定（Instability of the detrusor muscle），阻塞在術後雖解除，逼尿肌過度敏感仍在。",
+        "評估與衛教：須先排除泌尿道感染 (UTI) 或術後殘餘阻塞，並安撫衛教病患隨著術後逼尿肌不穩定逐漸消退，急迫症狀將自然減輕。",
+        "第一線藥物：選用每日一次長效緩釋劑型 Extended-release tolterodine (4 mg/d)、Extended-release oxybutynin (5–10 mg/d) 或 Oxybutynin 經皮貼片 (3.9 mg/d)。"
+      ],
+      "drugs": ["ER Tolterodine (4 mg/d)", "ER Oxybutynin (5–10 mg/d)", "Oxybutynin patch (3.9 mg/d)"],
+      "trapAlert": "JH 已完成「攝護腺切除術」解除了機械阻塞！此時並非滿溢性尿失禁禁忌，而是術後殘存之「逼尿肌不穩定」造成的急迫性尿失禁，正適合長效抗 M 藥治療。"
+    },
+    {
+      "num": 46,
+      "vol": 3,
+      "scroll": "scroll_6",
+      "title": "N_M vs. N_N 五聚體次單元結構與離子通透順位對比",
+      "summary": "深入 N_M 與 N_N 次單元分子組成，必背兩個五聚體活化後通透陽離子的黃金順序差異。",
+      "keyPoints": [
+        "共通骨架：分子量約 250,000 Da 的五聚體配體閘控陽離子通道，每個次單元各具 M1–M4 穿膜螺旋，並由 5 個 M2 螺旋共同圍出中央孔洞。",
+        "N_M (骨骼肌終板)：異質五聚體 (α1)2β1δγ（胎兒/去神經）或 (α1)2β1δε（成人成熟型）；兩個 ACh 結合於 α1–γ/ε 與 α1–δ 交界。主要通透順序：Na⁺ 排第一，其次 Ca²⁺！",
+        "N_N (CNS/自主神經節)：僅由 α 與 β 構成——CNS 最常見 (α4)2(β2)3 與神經節 α3α5(β2)3（各 2 位點），另有同質五聚體 (α7)5（具 5 個結合位點）。主要通透順序：Ca²⁺ 排第一，其次 Na⁺！"
+      ],
+      "drugs": ["N_M: (α1)2β1δε (Na⁺ > Ca²⁺)", "N_N: (α4)2(β2)3 / α3α5(β2)3 / (α7)5 (Ca²⁺ > Na⁺)"],
+      "trapAlert": "考題最愛對調這兩個順位：肌肉終板 N_M 是 Na⁺ 第一、Ca²⁺ 第二；神經元型 N_N 則是 Ca²⁺ 第一、Na⁺ 第二！"
+    },
+    {
+      "num": 47,
+      "vol": 3,
+      "scroll": "scroll_6",
+      "title": "尼古丁成癮四階段、中毒急救與戒菸首選 Varenicline（隨堂考題 2）",
+      "summary": "追蹤吸菸過程 α₄β₂ 受體開閉上調演化、尼古丁中毒「先興奮後抑制」急救，及 Varenicline 雙機轉與心理警訊。",
+      "keyPoints": [
+        "成癮四階段：作用於 VTA→伏隔核多巴胺系統 α₄β₂ 受體：① 渴求期（關閉、DA 低） → ② 吸菸（開啟、DA 爆發） → ③ 剛抽完（去敏感化 Desensitized 關閉） → ④ 長期吸菸（受體數量代償性上調 Upregulation）。",
+        "急性中毒（先活化後抑制）：先見交感升壓與副交感吐瀉、中樞劇烈痙攣抽搐（用 Diazepam 治療），緊接陷入昏迷與終板 N_M 去極化麻痺引發呼吸衰竭（須立即機械通氣支持！）。",
+        "三大戒菸法：NRT（維持持續去敏感化）；Varenicline [Chantix]（隨堂考題 2：中樞 α₄β₂ 部分致效劑，非抗 M 藥！緩解戒斷同時阻斷抽菸 DA 爆發，療效勝 Bupropion [Zyban/Wellbutrin]）；副作用警覺噁心、失眠、焦慮與憂鬱！"
+      ],
+      "drugs": ["Varenicline [Chantix] (α4β2 partial agonist)", "Bupropion [Zyban] (NDRI)", "Nicotine NRT", "Diazepam (救中毒抽搐)"],
+      "trapAlert": "隨堂考題 2 陷阱：Chantix (Varenicline) 不是蕈毒鹼拮抗劑，而是中樞 α₄β₂ 菸鹼受體「部分致效劑」；高風險患者須監測焦慮與憂鬱自傷傾向。"
+    },
+    {
+      "num": 48,
+      "vol": 3,
+      "scroll": "scroll_6",
+      "title": "神經節阻斷劑 (C6 / Mecamylamine) 與器官「優勢張力決定論」",
+      "summary": "解析同時切斷交感與副交感節後，十一個系統如何依平時優勢張力顯現結果（含散熱驚奇特例）。",
+      "keyPoints": [
+        "代表藥物：非去極化競爭型 TEA、Trimethaphan；直接塞住離子通道之非競爭型 Hexamethonium (C6，兩四級銨隔 6 碳；隔 10 碳為 Decamethonium C10)、Mecamylamine（二級胺可穿透 BBB）。",
+        "交感優勢器官（阻斷後依失去交感呈現）：小動脈與靜脈（顯著擴張 → 嚴重姿勢性低血壓）、心室（收縮力 ↓）、汗腺（無汗症 Anhidrosis，交感膽鹼 M3 特例！）。",
+        "副交感優勢器官（阻斷後失去迷走煞車呈現抗膽鹼狀）：心房 SA 結（中度心搏過速）、虹膜（散瞳）、睫狀肌（麻痺無近調）、胃腸（嚴重便祕）、膀胱（尿滯留）、唾液（口乾）、生殖（勃起＋射精雙廢）。"
+      ],
+      "drugs": ["Hexamethonium (C6)", "Mecamylamine (二級胺入CNS)", "Trimethaphan / TEA"],
+      "trapAlert": "國考極愛問特例！神經節阻斷雖透過阻斷交感膽鹼神經節造成無汗症，但高體溫（Hyperthermia）通常「不會」成為問題，因為同時擴張了皮膚血管（Cutaneous vasodilation）足以協助散熱！"
+    },
+    {
+      "num": 49,
+      "vol": 3,
+      "scroll": "scroll_7",
+      "title": "骨骼肌鬆弛劑三大臨床分類與 NMB 結構系譜",
+      "summary": "精準切割神經肌肉阻斷劑 (NMB)、解痙劑 (Spasmolytics) 與抗痙攣劑 (Antispasmodics) 適應症及化學骨架。",
+      "keyPoints": [
+        "三大類分工：① 神經肌肉阻斷劑 NMBs（麻醉插管，阻斷周邊 NMJ）；② 解痙劑 Spasmolytics（治療腦中風、脊髓損傷、腦麻或 MS 等上運動神經元病變之慢性肌痙攣 spasticity）；③ 抗痙攣劑 Antispasmodics（中樞緩解拉傷發炎之急性局部 spasm）。",
+        "NMBs 共同化學構造：仿雙乙醯膽鹼鏈狀距離並含 1–2 個永久正電四級銨氮（口服不吸收、不穿過 BBB）。",
+        "三化學分支：去極化型 Succinylcholine（雙乙醯膽鹼，兩分子 ACh 透過乙酸甲基連接）；非去極化異喹啉類（Tubocurarine, Atracurium, Cisatracurium, Mivacurium）；非去極化類固醇字尾 -curonium 類（Pancuronium, Vecuronium, Pipecuronium, Rocuronium）。"
+      ],
+      "drugs": ["Succinylcholine (去極化)", "Cisatracurium [Nimbex] (異喹啉)", "Rocuronium / Vecuronium / Pancuronium (-curonium類固醇)"],
+      "trapAlert": "記字尾就秒殺：-curonium（Pancuronium, Vecuronium, Rocuronium）是類固醇骨架，唯獨這類才能被 Sugammadex 包覆抓走！"
+    },
+    {
+      "num": 50,
+      "vol": 3,
+      "scroll": "scroll_7",
+      "title": "去極化型 Phase I / II vs. 非去極化型 NMB 與 TOF/Neostigmine 反應",
+      "summary": "徹悟講義 p.36 最核心雙相比較表：為何 Neostigmine 能救 Rocuronium 與 Phase II，卻徹底惡化 Phase I！",
+      "keyPoints": [
+        "非去極化型 (如 Rocuronium)：競爭阻斷（高劑量同時塞孔）；無初始顫動；TOF 呈現漸進衰減 (Fade)；具強直後促進現象；Neostigmine 可拮抗逆轉！",
+        "Succinylcholine Phase I（去極化期）：先引發明顯肌束顫動 (Fasciculations)；持續去極化鎖死鄰近 Na⁺ 通道無法再極化重整 (Repriming)；TOF 等比縮小「無衰減 (No fade)」；無強直後促進；Tubocurarine 可拮抗減輕；給予 Neostigmine 反使阻斷「增強惡化 (Augmented)」！",
+        "Succinylcholine Phase II（去敏感化期）：長時間持續暴露後終板膜恢復再極化，但 N_M 受體轉為去敏感化，出現 TOF Fade 與強直後促進，此時反而「可被 Neostigmine 拮抗逆轉」！恢復亦延遲 (>20 min)。"
+      ],
+      "drugs": ["Rocuronium (Fade/Neostigmine逆轉)", "SCh Phase I (Fasciculations/No fade/Neostigmine惡化)", "SCh Phase II (Reverted/Fade)"],
+      "trapAlert": "對調大陷阱：Succinylcholine Phase I（<8 分鐘期）千萬不可給 Neostigmine！不僅無法逆轉，還會因抑制假性膽鹼酯酶與堆積 ACh 而讓去極化麻痺越救越深！"
+    },
+    {
+      "num": 51,
+      "vol": 3,
+      "scroll": "scroll_7",
+      "title": "八大 NMB 動力學排除、Cisatracurium、BuChE 變異與插管痙攣",
+      "summary": "依肝腎衰竭、ICU 長用與組織胺危險挑選肌鬆劑，兼顧 Dibucaine number 與麻醉最常見氣道併發症。",
+      "keyPoints": [
+        "排除四路徑：腎排長效（Pancuronium 80% 兼中度阻 M2 心跳快；Tubocurarine 40% 中度放組織胺降壓；Gallamine 100% 強阻 M2 心跳極快）；肝膽排除（Rocuronium 1 min 非去極起效最快、Vecuronium 75–90% 膽排，適合腎衰竭）。",
+        "自發降解 Hofmann elimination：Atracurium（產 Laudanosine 高量致癲癇、微放組織胺） vs Cisatracurium [Nimbex]（不依賴肝腎、零組織胺釋放、極少 Laudanosine，ICU 多重器官衰竭首選！）。",
+        "Succinylcholine 100% 靠血漿假性膽鹼酯酶 (BuChE) 水解 (<8 min)；若基因變異使 Dibucaine number 下降將致數小時長效呼吸麻痺！另：全麻誘導後最常引起支氣管痙攣之主因＝置入氣管內管的機械性刺激！"
+      ],
+      "drugs": ["Cisatracurium [Nimbex] (ICU首選)", "Rocuronium (1 min最快起效)", "Pancuronium (腎排/阻M2)", "Tubocurarine (放Histamine)", "BuChE / Dibucaine #"],
+      "trapAlert": "考題問全麻誘導剛打完某劑卻見嚴重支氣管痙攣，先想到除了藥物釋放組織胺（Tubocurarine），臨床最常見真正兇手其實是「置入氣管內管」的機械性刺激！"
+    },
+    {
+      "num": 52,
+      "vol": 3,
+      "scroll": "scroll_7",
+      "title": "Succinylcholine 重大危機 I：RyR1 惡性高熱與 IV Dantrolene",
+      "summary": "解析骨骼肌 SR RyR1 突變雙重觸發機轉、五大致命徵象（40°C 高燒／強直／深色尿）與專一解毒藥 IV Dantrolene。",
+      "keyPoints": [
+        "致病機轉：患者具骨骼肌肌漿網 (SR) 雷諾定受體第 1 型 (RyR1) 基因突變；並用強力開關 Succinylcholine ＋ 揮發性鹵化烴吸入麻醉劑（Halothane / Isoflurane / Sevoflurane 放大反應） → SR 無止境湧出 Ca²⁺！",
+        "五大臨床表現：(1) 肌肉強直僵硬 (Muscle rigidity / 咬肌痙攣)；(2) 急速飆升之高體溫（可達 40°C+）；(3) ECG 心搏過速；(4) 發紺 (Cyanosis) 與代謝性酸中毒；(5) 橫紋肌溶解致深色肌紅素尿與高血鉀。",
+        "搶救標準：立即停用吸入麻醉劑與 SCh，速予靜脈注射專一性解毒劑 Dantrolene（直接阻斷骨骼肌 SR RyR1 鈣通道），並積極降溫與糾正酸鉀（另有 Aminoglycosides 會抑突觸前 Ca²⁺ 內流而加深 NMB 麻痺）。"
+      ],
+      "drugs": ["Succinylcholine + Halothane/Isoflurane (觸發)", "IV Dantrolene (RyR1 專一解毒劑)", "Aminoglycosides (加深NMB)"],
+      "trapAlert": "手術台上剛推 Succinylcholine 併發體溫狂飆 40°C、全身僵直與深色茶尿，絕對不是感染敗血症，而是遺傳 RyR1 突變的「惡性高熱」！唯一專一救星為 IV Dantrolene！"
+    },
+    {
+      "num": 53,
+      "vol": 3,
+      "scroll": "scroll_7",
+      "title": "Succinylcholine 危機 II：燒燙傷／去神經 α₇AChR「一石二鳥」與高血鉀急救",
+      "summary": "透過未成熟突觸外受體與 α₇AChR 理論「一石二鳥」解開兩大矛盾，並熟記高血鉀三步驟救命先後。",
+      "keyPoints": [
+        "一石二鳥核心機轉：燒燙傷、大面積創傷或去神經數天後，骨骼肌整片肌膜大量增生胎兒型 γ 次單元受體與特殊同質五聚體 α₇AChR（連代謝物膽鹼 Choline 都能使 α₇AChR 強烈持久去極化！）。",
+        "一石二鳥雙現象：① 對非去極化 NMBs 產生「抗性（Resistance）」，需大幅加量；② 若給予 Succinylcholine，整條肌膜同時敞開讓細胞內 K⁺ 瞬間狂洩入血 → 致命性高血鉀（尖高 T 波）與心搏停止！",
+        "高血鉀三步急救順序：1. 穩定心肌膜電位（最優先救命：IV Calcium gluconate 或 Calcium chloride）；2. 將 K⁺ 趕回細胞內（Insulin+Glucose、NaHCO₃、β₂ 致效劑 Albuterol）；3. 增加排出（Loop 利尿劑、Kayexalate、血液透析）。"
+      ],
+      "drugs": ["Calcium gluconate/chloride (最先穩膜)", "Insulin + Glucose / NaHCO3 / Albuterol", "α7AChR (連Choline都開!)"],
+      "trapAlert": "大面積燒傷三天後清創插管「絕對禁用 Succinylcholine」！若真的誤推導致 K⁺ 飆至 7.4 mEq/L 併尖高 T 波，第一秒搶救先推「Calcium 鈣鹽」保護心肌膜，不是先推利尿劑或胰島素！"
+    },
+    {
+      "num": 54,
+      "vol": 3,
+      "scroll": "scroll_7",
+      "title": "麻痺恢復順序、Glycopyrrolate 與 Case Study 2（Sugammadex 7天避孕）",
+      "summary": "記憶橫膈肌「最後麻痺、最先恢復」，比較傳統 AChEI 配伍與 Case Study 2 Sugammadex CICV 衛教要點。",
+      "keyPoints": [
+        "麻痺與恢復逆序：眼皮／臉手等小快速肌先麻 → 軀幹 → 橫膈肌「最後才麻痺」；停藥恢復順序完全相反，橫膈肌「最先恢復」自主呼吸，手眼小肌最後復原。",
+        "傳統逆轉配伍 Neostigmine ＋ Glycopyrrolate [Robinul]：選四級胺 Glycopyrrolate 因其極少通過 BBB 無中樞譫妄，且藥動起效與持續時間精準匹配 Neostigmine 以防心搏過緩、氣道收縮與流涎；缺點為無法迅速逆轉深度阻斷。",
+        "Case Study 2（35歲 BMI 32 服用 OCP 難插管 CICV 給 Rocuronium）：首選高劑量 Sugammadex [Bridion] (16 mg/kg，1.5–3 分鐘 γ-環糊精 1:1 包覆 Rocuronium)；重度腎衰者可透析移除，嚴防過敏性休克，並「必須衛教未來 7 天加採非荷爾蒙避孕措施」（會螯合黃體素降低口服避孕藥效）！"
+      ],
+      "drugs": ["Sugammadex [Bridion] (16 mg/kg)", "Neostigmine + Glycopyrrolate [Robinul]", "Rocuronium (CICV逆轉)"],
+      "trapAlert": "Case Study 2 女病患搶救成功後最常忘記的高價值臨床衛教：「Sugammadex 會結合口服避孕藥裡的黃體素與雌激素成分，術後 7 天內必須額外使用非荷爾蒙避孕措施（如保險套）！」"
+    },
+    {
+      "num": 55,
+      "vol": 3,
+      "scroll": "scroll_7",
+      "title": "脊髓伸張反射弧與三大中樞解痙劑 (Diazepam / Baclofen / Tizanidine)",
+      "summary": "釐清膝跳伸張反射之麩胺酸／GABA 雙路，比較三大作用於脊髓之中樞解痙劑受體、優缺點與驟停危象。",
+      "keyPoints": [
+        "脊髓伸張反射弧：肌梭 (γ-運動調整) → Ia 傳入纖維入脊髓 → 釋放興奮性 Glutamate 促伸肌 α 運動神經元收縮 ＋ 同步活化抑制性中間神經元 (GABA/Glycine) 鬆弛拮抗屈肌。",
+        "Diazepam (BDZ)：活化 GABA_A 配體閘控 Cl⁻ 通道促氯內流過極化；中樞嗜睡鎮靜感顯著。",
+        "Baclofen：活化 GABA_B (Gi 蛋白) 使突觸後 K⁺ 外流過極化，突觸前關閉 Ca²⁺ 通道降 Glu/Substance P；可口服或脊髓腔內幫浦輸注，鎮靜較輕；突然停藥將引發嚴重反彈式痙攣與癲癇！Tizanidine 為脊髓 α2 致效劑（降壓僅 Clonidine 1/10–1/15，經 CYP1A2 代謝，驟停致反彈高血壓）。"
+      ],
+      "drugs": ["Diazepam (GABA_A Cl⁻)", "Baclofen (GABA_B K⁺/Ca²⁺ 忌驟停)", "Tizanidine (脊髓 α2 CYP1A2)"],
+      "trapAlert": "長期使用脊髓腔內 Baclofen 幫浦者若發生導管脫落或突然斷藥，會爆發致命的反彈式高熱與全面肌肉強直性痙攣！"
+    },
+    {
+      "num": 56,
+      "vol": 3,
+      "scroll": "scroll_7",
+      "title": "BTX-A vs. BTX-B 分子切割、Dantrolene 肝毒、ALS Riluzole 與抗痙攣劑",
+      "summary": "鎖定肉毒桿菌 A/B 型切割不同 SNARE 蛋白、Riluzole 三重機轉護脊髓神經元，與第四級管制抗痙攣藥考點。",
+      "keyPoints": [
+        "肉毒桿菌毒素 (BTX 鋅蛋白酶)：BTX-A/E 專切突觸前膜「SNAP-25 與 Syntaxin」；BTX-B/D/F 專切囊泡膜「Synaptobrevin (VAMP)」。用於除皺(1–3m)、痙攣、OAB、慢性偏頭痛、多汗；黑框警語：毒素擴散致吞嚥/呼吸麻痺！",
+        "口服 Dantrolene 用於慢性上運動神經元痙攣時，攜帶 FDA 黑框警語「肝毒性 (Hepatotoxicity)」，須定期追蹤肝功能。",
+        "漸凍人症 (ALS) Riluzole 三重機轉：(1) 阻斷突觸前 Na⁺ 通道降 Glu 釋放；(2) 非競爭抑制突觸後 NMDA/AMPA 受體；(3) 促進神經膠細胞再回收 Glu。抗痙攣劑：Cyclobenzaprine（結構似 TCA 強抗 M 與鎮靜）；Carisoprodol（代謝為 Meprobamate 具成癮戒斷列第 IV 級管制藥）。"
+      ],
+      "drugs": ["BTX-A (SNAP-25/Syntaxin)", "BTX-B (Synaptobrevin/VAMP)", "Riluzole (ALS 三重機轉)", "Carisoprodol → Meprobamate (Schedule IV)"],
+      "trapAlert": "國考分子題最愛考：同是切 SNARE，BTX-A 切「SNAP-25（及 Syntaxin）」，BTX-B 則是切囊泡上的「Synaptobrevin / VAMP」；二者千萬別寫反！"
+    },
+    {
+      "num": 57,
+      "vol": 4,
+      "scroll": "scroll_8",
+      "title": "交感兩發源 (髓質 80% Epi / 20% NE) 與擬交感三大分類",
+      "summary": "對照腎上腺髓質內分泌比例與節後突觸神經傳導差異，系統分類直接、間接（置換／再回收）及混合作用擬交感藥。",
+      "keyPoints": [
+        "兩大發源對照：腎上腺髓質由節前 ACh→N_N 刺激直接入血，分泌 80% Epinephrine 與 20% Norepinephrine；交感神經節後神經元則直接釋放 NE 到效應器官突觸間隙。",
+        "直接作用型：α₁ (Phenylephrine)、α₂ (Clonidine)、非選 β (Isoproterenol)、β₁ (Dobutamine)、β₂ (Albuterol)。",
+        "間接與混合型：釋放促進／囊泡置換劑（Amphetamine, Tyramine）；再回收抑制劑（Cocaine, TCAs, SNRIs）；混合作用型同時直活受體與促釋 NE（Ephedrine 麻黃鹼）。"
+      ],
+      "drugs": ["Epi (80%) / NE (20%)", "Phenylephrine / Dobutamine / Albuterol", "Amphetamine / Cocaine", "Ephedrine (混合型)"],
+      "trapAlert": "考擬交感分類時，Ephedrine 是典型「混合作用型」（直接刺激 α/β ＋ 間接置換釋放 NE），Tyramine 與 Amphetamine 則屬於純「間接釋放／置換劑」。"
+    },
+    {
+      "num": 58,
+      "vol": 4,
+      "scroll": "scroll_8",
+      "title": "兒茶酚胺主次生合成路徑 (Tyramine→Octopamine) 與 VMA/HVA 匯流",
+      "summary": "掌握 Tyrosine 兩條分化命運、速率決定酶 TH、肝腎上腺轉化步驟，以及 VMA/HVA 臨床診斷價值。",
+      "keyPoints": [
+        "主要生合成鏈：Tyrosine —(TH 速率決定步驟，Metyrosine 抑)→ Dopa —(Dopa decarboxylase)→ Dopamine —(VMAT 入小泡，Reserpine 抑; 泡內 DBH)→ Norepinephrine —(PNMT，主存腎上腺髓質)→ Epinephrine。",
+        "次要替代旁路（虛線）：Tyrosine —(L-Amino acid decarboxylase)→ Tyramine —(DBH)→ Octopamine（章魚胺，偽神經傳導物質） → NE（肝羥化酶）。服 MAOI 時食物酪胺無法分解便循此大增！",
+        "代謝終點匯流（MAO + COMT）：Epi/NE 經中間體 Metanephrine/Normetanephrine 共同匯流為尿中 VMA（香草扁桃酸）排出；DA 經 DOPAC / 3-Methoxytyramine 匯流為 HVA（高香草酸）。"
+      ],
+      "drugs": ["Metyrosine (抑 TH)", "PNMT (髓質將NE→Epi)", "Tyramine → Octopamine", "VMA & HVA (嗜鉻細胞瘤指標)"],
+      "trapAlert": "看到酪胺 (Tyramine) 不止直接進入末梢置換囊泡內生性 NE，還會經 DBH 轉化為偽神經傳導物質「Octopamine (章魚胺)」一起擠爆囊泡！"
+    },
+    {
+      "num": 59,
+      "vol": 4,
+      "scroll": "scroll_8",
+      "title": "富含酪胺 (Tyramine) 九大食物與 MAOI「起司效應」急救",
+      "summary": "精確區分 MAOI 下高危、中低危酪胺食物毫克數，與不含大量酪胺卻同樣致命升壓的兩大陷阱食物。",
+      "keyPoints": [
+        "起司效應 (Cheese reaction)：不可逆 MAO 抑制劑（如 Phenelzine/Tranylcypromine）使腸肝首渡代謝癱瘓，一餐僅需 20–50 mg Tyramine 即湧入循環經 NET 擠出海量 NE 爆發極端高血壓！急救首選靜脈推注 α 阻斷劑 Phentolamine。",
+        "持續高危險食物：煙燻／醃漬魚類如醃鯡魚（0–198 mg 單份最高！）、熟成起司 Cheddar/Gruyère/Stilton（0–130 mg）、發酵香腸（0–74 mg）、濃縮啤酒酵母（2–68 mg）。中低風險：啤酒(4–45 mg)、雞肝(0–9 mg 視新鮮度)、紅酒(0–3 mg)。",
+        "兩大特別警示（酪胺極微仍須防！）：蠶豆 (Broad / Fava beans) 富含天然多巴胺前驅物 L-DOPA；巧克力含有苯乙胺 (Phenylethylamine)，大量仍可能引發升壓危機！"
+      ],
+      "drugs": ["Tyramine (醃魚 198mg 最高!)", "Phentolamine (急救降壓)", "蠶豆 (L-DOPA)", "巧克力 (Phenylethylamine)"],
+      "trapAlert": "問卷陷阱：MAOI 飲食禁忌中，「單份 Tyramine 含量上限最高」的不是起司而是「煙燻／醃漬魚類 (0–198 mg)」！而蠶豆陷阱是因為含 L-DOPA 不是因為含酪胺！"
+    },
+    {
+      "num": 60,
+      "vol": 4,
+      "scroll": "scroll_8",
+      "title": "微觀訊號：Gq 五縮血管受體、Gs 心收縮 vs 平滑肌舒張與 β₂ 手抖／低血鉀",
+      "summary": "從受體偶聯深入磷酸肌醇與 PKA 標的差異，秒懂為何 cAMP 上升讓心臟猛跳卻令氣管膀胱舒張，以及 β₂ 副作用分子原兇。",
+      "keyPoints": [
+        "α₁ 隨堂考題陷阱：α₁ 使血管、豎毛肌、攝護腺與「膀胱內括約肌」收縮，但絕「不會」收縮膀胱逼尿肌（逼尿肌靠 M3 收縮、β2/β3 舒張）！血管平滑肌共有五種 Gq→PLC→IP3/DAG 縮血管受體：α₁、AT₁、ET_A、V₁ 與 M₃（無內皮時）。",
+        "為何同為 Gs↑cAMP 卻一收一舒？在心肌 (β₁) 經 PKA 磷酸化 L-type Ca²⁺ 通道促鈣內流而「強化收縮」；在平滑肌 (β₂, β₃, D₁) 經 PKA 磷酸化「抑制 MLCK（肌球蛋白輕鏈激酶）」導致無法磷酸化 MLC 而「全面舒張」！",
+        "骨骼肌 β₂ 兩大效應：PKA 磷酸化調節蛋白 FXYD1 活化 Na⁺/K⁺-ATPase，加乘 ERK 活化 NKCC，大舉將鉀打入細胞致「低血鉀」；同時 PKA 磷酸化 t-小管 DHPR、SR RyR1 與 Phospholamban (PLB) 產生肌漿 Ca²⁺ 震盪引發「手抖 Tremors」！"
+      ],
+      "drugs": ["Gq 五縮血管 (α1/AT1/ET_A/V1/M3)", "Gs 平滑肌抑 MLCK", "FXYD1 + NKCC (低血鉀)", "DHPR/RyR1/PLB (手抖)"],
+      "trapAlert": "高血鉀急性救命會噴高劑量 β₂ Albuterol（經 FXYD1 促 Na⁺/K⁺-ATPase ＋ NKCC 趕鉀入胞），而正常病人用 β₂ 常見的「低血鉀＋手抖」正是來自 PKA 的這兩串分子磷酸化！"
+    },
+    {
+      "num": 61,
+      "vol": 4,
+      "scroll": "scroll_8",
+      "title": "α/β 親和力排序、IV 四大擬交感胺血流動力學＆Fenoldopam",
+      "summary": "讀懂靜脈輸注四大胺類的動脈壓脈壓圖曲線，必考為何 Norepinephrine 反讓心跳下降而 Epinephrine 使舒張壓掉落。",
+      "keyPoints": [
+        "親和力順位：α 為 Epinephrine ≥ Norepinephrine ≫ Isoproterenol；β 為 Isoproterenol ＞ Epinephrine ≥ Norepinephrine（其中 NE 對 β₂ 幾乎無親和力！）。",
+        "血流動力學三大黃金鍵：(1) 舒張壓反映 TPR；(2) Norepinephrine 缺乏 β₂ 舒張緩衝致 TPR↑↑↑，收縮壓／舒張壓雙升引發強烈「迷走感壓反射」，反而蓋過直接 β₁ 加速而使「心跳淨值明顯下降 (↓↓)」！；(3) Epinephrine 低中劑量優先擴張骨骼肌 β₂ 使 TPR↓、DBP↓，並伴 β₁ 正性肌力令脈壓大大拓寬 (↑↑)、心率上升！",
+        "Phenylephrine（純 α₁ 縮血管平行升壓、脈壓幾乎不變、強反射性心搏過緩）；Isoproterenol（純 β₁/β₂ 使 TPR↓↓、DBP↓↓、MAP↓、脈壓極大寬、HR↑↑↑）；另 D₁ 致效劑 Fenoldopam 治高血壓急症但會升高眼內壓 (IOP)。"
+      ],
+      "drugs": ["Phenylephrine (α1)", "Norepinephrine (MAP↑↑ HR↓↓)", "Epinephrine (DBP↓ 脈壓↑↑)", "Isoproterenol (MAP↓ HR↑↑↑)", "Fenoldopam (D1 ↑IOP)"],
+      "trapAlert": "國考最愛出無標記四組血流動力曲線圖配對：只要看到「收縮壓升、舒張壓升、脈搏反而明顯往下掉」就是缺 β₂ 緩衝的 Norepinephrine（或純 α₁ Phenylephrine）！"
+    },
+    {
+      "num": 62,
+      "vol": 4,
+      "scroll": "scroll_8",
+      "title": "姿勢性低血壓 (JAMA 2026)、衣架痛與 Midodrine / Droxidopa",
+      "summary": "跟隨 JAMA 2026 最新姿勢性低血壓診斷與處置標準，辨析 Midodrine 脫甘胺酸前驅藥與 Droxidopa 直接變 NE。",
+      "keyPoints": [
+        "JAMA 2026 定義與表徵：站立 3 分鐘內 SBP 下降 ≥ 20 mmHg 或 DBP 下降 ≥ 10 mmHg，因下肢靜脈滯留致腦灌流不足，出現頭暈、視野黑矇與典型後頸雙肩痛「衣架痛 (Coat-hanger pain)」。",
+        "基礎處置：日常每日飲水 2–2.5 L、攝鈉 6–10 g、穿及腰彈性襪與腹帶。",
+        "前驅藥隨堂考：(1) Midodrine 口服後經酵素水解「脫去甘胺酸 (Glycine)」轉為活性選擇性 α₁ 致效劑 Desglymidodrine（注意平躺性高血壓 Supine hypertension、豎毛起雞皮疙瘩與尿滯留）；(2) Droxidopa (L-DOPS) 經芳香族 L-胺基酸脫羧酶直接變回生體內生性 Norepinephrine！"
+      ],
+      "drugs": ["Midodrine → Desglymidodrine (脫Glycine)", "Droxidopa (L-DOPS → NE)"],
+      "trapAlert": "防昏倒前驅藥雙傑必分清：Midodrine 脫甘胺酸變 α₁ 致效劑 Desglymidodrine；Droxidopa 則經 Dopa-decarboxylase 直接轉化為正腎上腺素 NE！"
+    },
+    {
+      "num": 63,
+      "vol": 4,
+      "scroll": "scroll_8",
+      "title": "直接 α₁/α₂ 與 β₁/β₂ 專精用藥 (Oxymetazoline / Methyldopa / Ultra-LABA)",
+      "summary": "匯集藥物性鼻炎反彈、妊娠高血壓首選、ICU 不抑呼吸鎮靜，及 COPD 每日一次超長效 β₂ 致效劑。",
+      "keyPoints": [
+        "局部 α₁：Phenylephrine（單羥基抗 COMT；鼻噴與藉升壓反射迷走止 PSVT）；Oxymetazoline（α₁+α₂A 通鼻點眼，連用 >3–5 天驟停必爆嚴重反彈充血「藥物性鼻炎 Rhinitis medicamentosa」！）。",
+        "中樞 α₂（抑交感輸出）：Clonidine（治高血壓及鴉片/酒精戒斷，驟停反彈高血壓）；α-Methyldopa（轉為偽傳導物 α-Methylnorepinephrine，孕婦妊娠高血壓最安全首選！）；Dexmedetomidine（ICU 鎮靜，不抑呼吸且省鴉片止痛量）。",
+        "選擇性 β₁ Dobutamine（正性變力 ＞ 正性變時，治急衰竭短期 IV）；超長效 β₂（Ultralong β₂, QD 治 COPD）：Indacaterol、Olodaterol、Vilanterol（相較 SABA 含安胎 Ritodrine）。"
+      ],
+      "drugs": ["Oxymetazoline (反彈鼻炎)", "α-Methyldopa (孕婦高壓首選)", "Dexmedetomidine (ICU不抑呼吸)", "Dobutamine (β1)", "Indacaterol / Olodaterol / Vilanterol"],
+      "trapAlert": "看到孕婦妊娠高血壓（慢性維持）首選中樞前驅藥 α-Methyldopa（急症可配 IV Labetalol）；通鼻噴霧連用一週停用反而鼻塞爆腫＝Oxymetazoline 反彈充血！"
+    },
+    {
+      "num": 64,
+      "vol": 4,
+      "scroll": "scroll_8",
+      "title": "JAMA 2025 膀胱過動症 (OAB) 對決：Oxybutynin CNS 譫妄 vs. β₃ Mirabegron",
+      "summary": "結合 JAMA 2025 實證比較六大抗 M 藥與兩大 β₃ 致效劑療效、副作用、Oxybutynin 中樞風險及 Mirabegron 血壓禁用界線。",
+      "keyPoints": [
+        "JAMA 2025 OAB 兩大壁壘（皆須 4–6 週才顯完全療效）：(1) 抗 M 藥阻斷收縮；(2) β₃ 致效劑主動放鬆逼尿肌（Mirabegron 25–50 mg QD 半衰期長達 50 h；Vibegron 75 mg QD）。",
+        "抗 M 風險標靶：口乾 (20–70%)、便祕 (9–15%)；Oxybutynin 雖然減少 UI 次數 (-19.4/wk) 最多，卻帶有「最高的中樞神經不良反應風險（嗜睡、頭暈、譫妄 Delirium、老人認知退化）」！不入 CNS 選 Trospium。",
+        "β₃ 致效劑核心禁忌：不造成口乾與認知障礙（老人友善），但會使血壓上升約 8%–11%；故「Mirabegron 絕對禁用於嚴重未控制之高血壓患者，且用藥須追蹤血壓」！"
+      ],
+      "drugs": ["Oxybutynin (最高CNS譫妄風險)", "Mirabegron [Myrbetriq] (50h, 忌重度高血壓)", "Vibegron [Gemtesa]"],
+      "trapAlert": "78 歲合併輕度失智且嚴重未控制高血壓的長輩患 OAB：用 Oxybutynin 會惡化譫妄，但改用 Mirabegron 卻撞上「未控制高血壓禁用」！臨床須改採四級胺 Trospium 或高選 M3 Darifenacin！"
+    },
+    {
+      "num": 65,
+      "vol": 4,
+      "scroll": "scroll_8",
+      "title": "非兒茶酚胺 SAR、冰毒與麻黃 (Ephedrine) ＆五大興奮劑單胺轉運矩陣",
+      "summary": "掌握兩大結構改造成口服入腦、麻黃鹼三機轉、冰毒非法提煉源頭，以及安非他命/MDMA/古柯鹼/Modafinil/利他能轉運體差異。",
+      "keyPoints": [
+        "非兒茶酚胺兩步強效改造：① 去除苯環 3,4-OH → 不被 COMT 分解、脂溶性大增能口服及進 BBB；② α-碳加上甲基 (-CH₃) → 阻斷 MAO 分解、半衰期暴增！",
+        "麻黃 vs 冰毒：Ephedrine 中西整合（通鼻 α₁ / 平喘 β₂ / 利水 D₁）；感冒藥 Ephedrine/Pseudoephedrine 經簡單「去 β-羥基 (dehydroxylation)」即變 Methamphetamine（惡名副作用為牙齦牙齒腐爛「冰毒嘴 Meth mouth」）。",
+        "單胺轉運體矩陣：受質＋囊泡 VMAT 反向轉運釋放（Amphetamine/Meth 強 DAT/NET；MDMA 最強 SERT 大釋 5-HT！） vs 純再回收抑制無 VMAT 反向轉運（Modafinil 治伴猝倒症之猝睡症；Methylphenidate 強抑 DAT/NET；Cocaine 三重 SNDRI 兼局麻 Na⁺ 阻斷）。另減肥藥 Sibutramine 因 NEJM SCOUT 增心肌梗塞與中風下市。"
+      ],
+      "drugs": ["Ephedrine (去β-OH變冰毒)", "Amphetamine / MDMA (有VMAT反向轉運)", "Modafinil / Methylphenidate / Cocaine (純抑制無VMAT)", "Sibutramine (SCOUT下市)"],
+      "trapAlert": "講義 p.28 矩陣精髓：Modafinil 與 Methylphenidate 雖增強單胺卻「對 VMAT 無作用、沒有反向轉運」；唯有 Amphetamine/Meth 與 MDMA 才當受質鑽進囊泡把單胺逆向擠出！"
+    },
+    {
+      "num": 66,
+      "vol": 4,
+      "scroll": "scroll_8",
+      "title": "ADHD 前額葉 (PFC) HCN 通道「訊號與雜訊」及 Atomoxetine / Guanfacine",
+      "summary": "解析極精妙的前額葉樹突棘 HCN 通道相反調控，理解為何僅抑制 NET 的 Atomoxetine 居然雙升 NE 與 DA。",
+      "keyPoints": [
+        "PFC 樹突棘 HCN 通道（由 cAMP 直接開啟，打開則使電訊號漏失）：(1) NE → α₂A (Gi) → ↓cAMP →「關閉 HCN 通道」鎖住目標主幹電位 → 強化有效訊號 (Signal ↑↑)；(2) DA → D₁ (Gs) → ↑cAMP →「打開雜訊刺 HCN 通道」洩走干擾 → 降低背景雜訊 (Noise ↓↓)！",
+        "Atomoxetine（非興奮劑・選擇性 NET 抑制劑）大驚奇：前額葉皮質 DAT 極稀少，故 NET 同時回收 NE 與 DA！單抑 NET 便能在 PFC 雙重拉升 NE＋DA（兼強化訊號與消雜訊），且在紋狀體依核不增 DA 故無成癮性！",
+        "α₂ 藥物差異：Guanfacine 高度專一 α₂A；Clonidine 非選擇兼催 α₂B/α₂C 與咪唑啉受體，更易導致嗜睡鎮靜與低血壓。（另有 Viloxazine 及三重抑 Centanafadine）。"
+      ],
+      "drugs": ["Atomoxetine [Strattera] (抑PFC NET雙升NE+DA)", "Guanfacine [Intuniv] (高選α2A)", "Clonidine (較易鎮靜低壓)"],
+      "trapAlert": "考倒大半考生：前額葉中靠 α₂A「關閉」HCN 強訊號，靠 D₁「打開」無關分支 HCN 消雜訊——兩者開關方向剛好相反！而 Atomoxetine 只抑制 NET 卻能在 PFC 同時升高 NE 和 DA！"
+    },
+    {
+      "num": 67,
+      "vol": 4,
+      "scroll": "scroll_9",
+      "title": "α 阻斷劑突觸前 α₂ 差異：Phentolamine 心搏過速 vs. Prazosin 與腎上腺素反轉",
+      "summary": "透視保留突觸前 α₂ 煞車的重要性，並親見 α 阻斷後靜注腎上腺素的血壓反轉墜崖效應。",
+      "keyPoints": [
+        "為何 Phentolamine (α₁=α₂) 引起極嚴重心搏過速而 Prazosin (α₁⋙α₂) 較輕微？Phentolamine 連突觸前 α₂ 負回饋自體受體一同封鎖，使末梢失控噴出大量 NE 狠催心臟 β₁；Prazosin 則單阻 α₁ 而完整保留 α₂ 剎車。",
+        "Prazosin 兼治創傷後壓力症候群 (PTSD) 相關之驚醒惡夢。",
+        "腎上腺素反轉 (Epinephrine Reversal)：若預先給予 α 阻斷劑（如 Phentolamine / Phenoxybenzamine）鎖死 α₁ 縮血管，此時再給予 Epinephrine，僅餘血管 β₂ 舒張效力，原本升高的血壓瞬間反轉暴跌！（Norepinephrine 無明顯 β₂ 故不會反轉下降）。"
+      ],
+      "drugs": ["Phentolamine (α1=α2 嚴重心搏過速)", "Prazosin (α1選 / PTSD惡夢)", "Epinephrine reversal (α阻後改給Epi反降壓)"],
+      "trapAlert": "腎上腺素反轉考題變形：α 阻斷劑只會讓「Epinephrine」的血壓由升轉為大降；若換成 Norepinephrine，因其幾乎不激發 β₂，只會在 α 被封後血壓升幅縮小但不至於反轉急跌！"
+    },
+    {
+      "num": 68,
+      "vol": 4,
+      "scroll": "scroll_9",
+      "title": "嗜鉻細胞瘤：不可逆 Phenoxybenzamine、先 α 後 β 鐵律與 Metyrosine",
+      "summary": "解析腎上腺髓質兒茶酚胺腫瘤表現、術前準備用藥機制，以及違反先 α 後 β 原則之瞬殺高血壓危象。",
+      "keyPoints": [
+        "嗜鉻細胞瘤 (Pheochromocytoma)：釋放大量 Epi/NE 引發陣發或持續高血壓、劇烈頭痛、心悸與大量出汗（檢驗尿 VMA/Metanephrines）。",
+        "術前兩寶：(1) Phenoxybenzamine（不可逆共價烷基化 α₁>α₂，作用長達 14–48 小時須重合成新受體，防手術觸碰腫瘤狂噴腎上腺素爆發危機）或 Phentolamine；(2) Metyrosine（抑 TH 限速步驟，穿透 BBB 減少腦 DA 可致錐體外症候群 EPS、低壓與結晶尿 Crystalluria！）。",
+        "致命鐵律｜必須先 α 後 β：絕不可單獨先給 β 阻斷劑壓心跳！因為封死血管 β₂ 舒張會讓海量兒茶酚胺毫無緩衝地狂催 α₁ 縮血管，引爆致命高血壓危象與肺水腫！"
+      ],
+      "drugs": ["Phenoxybenzamine (不可逆共價)", "Metyrosine (抑TH/EPS/結晶尿)", "致命鐵律：先α後β！"],
+      "trapAlert": "急診嗜鉻細胞瘤病人心跳 145 bpm、血壓 220/130 mmHg，千萬不可先推 Propranolol 降心率！務必先推 Phentolamine 或先給 Phenoxybenzamine 完成 α 阻斷後才可加 β 阻斷劑！"
+    },
+    {
+      "num": 69,
+      "vol": 4,
+      "scroll": "scroll_9",
+      "title": "JAMA 2025 BPH 三大類用藥與 114 國考 Tamsulosin 虹膜鬆脫 IFIS",
+      "summary": "貫通動態 α₁A、靜態 5α-還原酶 (PSA×2 校正) 與 PDE5 阻塞解法，兼精解 114 年醫師／藥師國考必考 IFIS 題。",
+      "keyPoints": [
+        "動態 α₁-Blockers：Tamsulosin (α₁A=α₁D>α₁B) 與 Silodosin（起效 3–7 天；逆行性射精 8–28% 最高！）；非選擇 Doxazosin / Terazosin / Prazosin / Alfuzosin（2–4 週；前兩者姿勢性低血壓最高）。",
+        "114 年第二次國考真題｜IFIS：70 歲男性白內障手術出現「術中虹膜鬆脫症候群 (Intraoperative floppy iris syndrome, IFIS)」，元兇最可能就是平時服用的 BPH 藥 Tamsulosin（強力阻斷虹膜開大肌 α₁A 受體使虹膜軟塌飄動、瞳孔緊縮難以放大）！",
+        "靜態 5α-還原酶抑制劑（Finasteride / Dutasteride）：阻斷轉化為 DHT 縮小攝護腺體積，起效最慢需 3–6 個月，會使血清 PSA 降約 50%（判讀須將數值 ×2！）；PDE5 抑制劑 Tadalafil (5 mg/d) 禁併用 Nitrates！"
+      ],
+      "drugs": ["Tamsulosin [Harnalidge] (114考題 IFIS!)", "Silodosin (最高逆行性射精)", "Finasteride / Dutasteride (PSA −50%)", "Tadalafil [Cialis] (忌Nitrates)"],
+      "trapAlert": "兩大必考數字：(1) 5α-還原酶抑制劑會使 PSA 假性減半 (-50%)；(2) 白內障手術遇術中虹膜鬆脫 IFIS，優先停問 Tamsulosin (α₁A 拮抗) 用藥史！"
+    },
+    {
+      "num": 70,
+      "vol": 4,
+      "scroll": "scroll_9",
+      "title": "β 阻斷劑兩大特質：ISA（偏頭痛無效）與局部麻醉（Propranolol 禁點眼）",
+      "summary": "記清具 ISA 部分致效與局部麻醉（膜穩定）兩批名單，以及為何同為非選擇一代，Timolol 可點眼而 Propranolol 卻絕對禁忌。",
+      "keyPoints": [
+        "內生性擬交感活性 (ISA / 部分致效劑)：代表藥 Acebutolol、Carteolol、Celiprolol、Labetalol、Penbutolol、Pindolol。不易致明顯心搏過緩與支氣管緊縮或擾亂血脂，但「對預防偏頭痛完全無效 (禁忌建議)！」",
+        "局部麻醉作用（膜穩定作用／阻斷 Na⁺ 通道）：代表藥 Propranolol、Metoprolol、Acebutolol、Labetalol、Pindolol。",
+        "眼科絕對禁忌：雖然 Timolol 與 Propranolol 均非選擇阻 β，但 Propranolol 因具顯著局部麻醉作用「絕對禁用於局部點眼治青光眼」，否則將麻醉角膜喪失保護性眨眼反射而引發嚴重角膜潰瘍！點眼改選無局麻之 Timolol 或僅微弱兼 β₁ 選之 Betaxolol。"
+      ],
+      "drugs": ["Timolol (無局麻可點眼)", "Propranolol (強局麻禁點眼)", "Pindolol / Acebutolol (ISA 無效於偏頭痛)"],
+      "trapAlert": "記憶雙煞：青光眼點眼禁 Propranolol（怕麻醉角膜潰瘍）；偏頭痛預防禁含 ISA 的 Pindolol/Acebutolol（因保有部分激發活性無法壓制發作）！"
+    },
+    {
+      "num": 71,
+      "vol": 4,
+      "scroll": "scroll_9",
+      "title": "三代 β 阻斷劑分類、10 分鐘超短效 Esmolol 與 Nebivolol",
+      "summary": "橫向比較一／二／三代 β 阻斷劑於心衰竭 (HF)、氣喘、糖尿病低血糖掩蔽及術中急症之最適人選。",
+      "keyPoints": [
+        "第一代 (β₁=β₂)：Propranolol（最高脂溶兼治門脈高壓防食道曲張出血與甲狀腺風暴）、Nadolol (14–24h)、Timolol、Pindolol (ISA)、Sotalol（另延 K⁺ 長 QT）。",
+        "第二代 (β₁ 選擇性，較不掩蔽肝臟靠 β₂ 介導的糖質新生與升糖復原，對 DM、氣喘、PVD 較安全)：Atenolol、Acebutolol (ISA)；慢性心衰竭降低死亡率三大巨頭之二：Bisoprolol、Metoprolol Succinate；超短效 IV Esmolol（酯鍵被紅血球酯酶水解，t1/2 僅 10 minutes 治術中高壓與搏過速！）。",
+        "第三代 (擴血管)：非選 Carvedilol（β+α₁+抗氧化，慢性 HF 降死亡率；禁急失代償）、Labetalol（β+α₁，高壓急症／妊高壓）；β₁ 選擇＋擴血管 Betaxolol (兼 CCB 可點眼) 與 Nebivolol（對 β₁ 選擇性最高、11–30h 最長、激發內皮 β₃ 釋放 NO、抗氧化兼增胰島素敏感）！"
+      ],
+      "drugs": ["Esmolol (紅血球酯酶 10m)", "Bisoprolol / Metoprolol Succinate / Carvedilol (HF三傑)", "Labetalol (高壓急症)", "Nebivolol (β3放NO+最高β1選)"],
+      "trapAlert": "糖尿病友用 Propranolol 有雙重殺傷：(1) 阻 β₁ 遮蔽低血糖心跳快警訊；(2) 阻肝臟 β₂ 阻礙肝醣分解與自低血糖復原（出汗因屬交感膽鹼 M3 不會被掩蓋，反成為唯一剩餘警訊！）。"
+    },
+    {
+      "num": 72,
+      "vol": 4,
+      "scroll": "scroll_9",
+      "title": "偏頭痛 (Migraine) 四期、CSD/CGRP 中樞敏感化與 2022 台灣治療指引",
+      "summary": "結合 PUMA 特徵、皮質傳播抑制與 CGRP 全身中樞敏感化 Allodynia，系統整理 2022 台灣頭痛學會預防／急性指南。",
+      "keyPoints": [
+        "四期病程：前驅期 → 預兆期 (5–60 min 可逆視覺閃光/暗點) → 頭痛期 (4–72 h，口訣 PUMA：Pulsatile 搏動、Unilateral 單側、Moderate/severe、Aggravation 活動加劇) → 恢復期。",
+        "機轉：皮質傳播抑制 (CSD)＋三叉神經血管學說釋放 CGRP/Sub P/NKA 致腦膜發炎擴張 → 進而發展出中樞敏感化伴隨「表皮異感痛 (Allodynia，梳頭吹風亦痛，此時急性藥已來不及需趁早期下藥！)」。",
+        "台灣指引 (Acta Neurol Taiwan 2022)：陣發預防用無 ISA β-blockers (Propranolol/Metoprolol)、Topiramate (瘦身結石忌孕)、Valproate (胖掉髮/孕婦絕對禁用致畸胎)、Flunarizine (台灣首選，老人防 EPS/憂鬱)、CGRP 單抗 (Galcanezumab/Fremanezumab)；慢性 ≥15d 用 OnabotulinumtoxinA (155–195U)；急性輕中用 Acetaminophen (孕婦兒童首選!)/NSAIDs，中重用 Triptans/Ergots（懷孕與心血管病變禁忌！）。"
+      ],
+      "drugs": ["Propranolol (無ISA預防)", "Flunarizine (防老人EPS)", "Topiramate / Valproate (忌孕)", "Sumatriptan (5-HT1B/1D忌心血管)", "Acetaminophen (孕婦首選)"],
+      "trapAlert": "孕婦偏頭痛三道分際：急性用 Acetaminophen；預防絕對禁用 Valproate（強致畸胎）與禁用 Triptans/Ergotamine（強血管收縮危害胎盤與心血管）！"
+    },
+    {
+      "num": 73,
+      "vol": 4,
+      "scroll": "scroll_9",
+      "title": "隅角開放性青光眼六大類點眼藥物機轉與副作用比較",
+      "summary": "區別減少房水生成與增加小樑網／葡萄膜鞏膜排出之六大家族點眼藥，並掌握第一線前列腺素特有美容／變色副作用。",
+      "keyPoints": [
+        "減少房水生成：(1) β 阻斷劑（Timolol, Betaxolol；禁用於氣喘與心搏過緩）；(2) 碳酸酐酶抑制劑（局部 Dorzolamide, Brinzolamide；口服 Acetazolamide 易致肢端麻木與腎結石）。",
+        "雙重減生＋增排：α₂ 致效劑（Apraclonidine、Brimonidine——同時抑睫狀上皮分泌又促葡萄膜鞏膜排出）。",
+        "增加房水排出：(1) 前列腺素 F2α 類似物（Latanoprost, Bimatoprost 一線首選！特殊副作用：虹膜棕色色素沉著加深、睫毛變長變濃密，故 Bimatoprost 兼作 Latisse 生睫毛液！）；(2) 擬膽鹼藥（Pilocarpine 眉骨痛）；(3) Rho 激酶抑制劑 Netarsudil。"
+      ],
+      "drugs": ["Latanoprost / Bimatoprost (PGF2α一線)", "Timolol / Betaxolol (降生成)", "Brimonidine (雙重)", "Dorzolamide / Acetazolamide", "Netarsudil (ROCK抑制劑)"],
+      "trapAlert": "青光眼第一線首選已改為每日睡前一次的前列腺素 F2α 類似物（如 Latanoprost），考題最常問其無害但特殊的外觀變化：「虹膜變黑與眼睫毛變長濃密」。"
+    },
+    {
+      "num": 74,
+      "vol": 4,
+      "scroll": "scroll_9",
+      "title": "β 阻斷劑長期降腎素 (Renin) 機轉與運動禁藥名單 (WADA)",
+      "summary": "點出慢性 β 阻斷為何能降低整體周邊阻力，以及射箭／射擊等項目將 β 阻斷劑列為全天候禁藥的運動醫學原理。",
+      "keyPoints": [
+        "慢性降壓與血管阻力密碼：剛開始給 β 阻斷劑時心輸出量下降反而令 TPR 短暫反射上升，但長期慢性投藥會「抑制腎臟近球細胞 β₁ 受體減少腎素 (Renin) 釋放」，切斷 RAAS 血管張力素 II 收縮，終令長期周邊阻力逐步下降。",
+        "WADA 運動禁藥分類：因 β-blockers 可穩住 β₂ 骨骼肌手抖、抑 β₁ 心跳加速並緩解臨場焦慮，對極需精準定力之項目形成不公優勢！",
+        "全天候（賽內＋賽外皆禁用）：射箭 (Archery)、射擊 (Shooting)、水下運動 (Underwater sports)；僅賽內禁用：賽車、撞球、飛鏢、高爾夫、滑雪跳台。"
+      ],
+      "drugs": ["Propranolol / Metoprolol (降Renin)", "WADA 射箭／射擊全時禁藥"],
+      "trapAlert": "運動藥理題常問：何種自主神經藥物因能鎮靜心跳與手部微顫，被射箭與射擊運動列為賽內與賽外全面禁藥？正解就是「β 阻斷劑 (Beta-blockers)」！"
+    },
+    {
+      "num": 75,
+      "vol": 4,
+      "scroll": "scroll_9",
+      "title": "【四卷壓軸】β 阻斷劑過量中毒解毒劑：升糖素 (Glucagon) 繞道救援",
+      "summary": "解析為何大劑量腎上腺素也打不破 β 阻斷劑過量休克，唯一能直接從心肌獨立受體繞道激活 cAMP 的救命解藥。",
+      "keyPoints": [
+        "過量危象表徵：過量 β 阻斷劑全面佔領心肌 β₁ 受體，導致嚴重難治性心搏過緩、AV 阻滯、極端低血壓休克與心源性昏厥；此時常規靜注 Epinephrine 或 Isoproterenol 因 β₁ 被死鎖佔據而無力回天！",
+        "高劑量升糖素 (IV Glucagon) 繞道神機：心肌細胞膜上擁有獨立的「升糖素受體 (Glucagon receptor)」，與 β₁ 同樣偶聯 Gs 蛋白！Glucagon 可徹底繞過被封死的 β₁ 受體，直接活化腺苷酸環化酶 (Adenylyl cyclase)！",
+        "急救結果：細胞內 ATP → ↑cAMP → 打開 PKA 與鈣通道提升細胞內 ↑Ca²⁺ 濃度，迅速拉回心跳速率 (Positive chronotropy) 與心肌收縮力 (Positive inotropy)，達成起死回生！"
+      ],
+      "drugs": ["IV Glucagon (高劑量繞道Gs)", "Calcium / High-dose Insulin (輔助)"],
+      "trapAlert": "終極壓軸必殺考點：治療嚴重 β-blocker overdose 低血壓心搏過緩，為何選用高劑量 Glucagon？精準機制在於「繞過被阻斷的 β 受體，藉心肌獨立 Glucagon Gs 受體直接提升細胞內 cAMP」！"
     }
   ],
   "referenceTables": [
@@ -606,6 +1152,102 @@
         ["Amifampridine / 4-AP", "Firdapse, Ruzurgi / Ampyra", "突觸前 K⁺ 通道阻斷劑（2.5 h）", "LEMS 首選；絕對禁用於癲癇史、AFib 或長 QT 症候群"],
         ["Parathion / Malathion / Sarin", "—", "不可逆有機磷（共價磷酸化 Ser-OH）", "Malathion 哺乳類經羧酸酯酶快速解毒（安全治頭蝨）；Sarin 毒氣"],
         ["Pralidoxime (2-PAM) / DAM", "Protopam / DuoDote®", "肟類 AChE 再生劑（老化前有效）", "2-PAM 四級胺不入 CNS 救周邊 NMJ；DAM 不帶電可穿 BBB 救 CNS；DuoDote 含 2.1mg Atropine + 600mg 2-PAM"]
+      ]
+    },
+    {
+      "id": "tbl_antimuscarinic",
+      "title": "八、第三卷（Ch.08）抗蕈毒鹼藥物結構、受體、眼科時效與 OAB 對照表",
+      "headers": ["分類／藥物", "化學／受體／時間特性", "臨床核心適應症", "國考陷阱與禁忌註記"],
+      "rows": [
+        ["Atropine (d,l-Hyoscyamine)", "Tropine (無氧橋) + Tropic acid；l(-) 效價 >100× d(+)；眼科 5–6 days", "有機磷解毒、心搏過緩、幼童屈光散瞳與虹膜沾黏", "0.5mg 阻突觸前 M1 反微降心跳；兒童防「顛茄熱」Atropine fever"],
+        ["Scopolamine [Transderm Scōp]", "Scopine (位置[1]含環氧橋易過 BBB) + Tropic acid；眼科 3–7d", "動暈症貼片 (48–72h) 防 M1 + 5-HT3 嘔吐；術前失憶", "動暈症本身會大量流口水 ↑Salivation；Scopolamine 才會致口乾"],
+        ["Homatropine / Cyclopentolate / Tropicamide", "Homatropine 改 Mandelic acid (12–24h)；Cyclopentolate (3–6h)；Tropicamide (15–60m)", "Homatropine 葡萄膜炎防虹膜沾黏；Tropicamide 眼底鏡檢查", "純眼底鏡無須睫狀肌麻痺時首選 Phenylephrine；前房窄禁抗 M 藥"],
+        ["Ipratropium / Tiotropium / Umeclidinium", "合成四級胺不入 CNS；Tiotropium 25h QD (動力學選擇性快離 M2 慢離 M3)", "COPD 與氣喘支氣管擴張維持（SAMA qid / LAMA QD–BID）", "動力學選擇性：從突觸前 M2 解離極快、從氣道平滑肌 M3 解離極慢"],
+        ["Dicyclomine / Benztropine / Trihexyphenidyl", "Dicyclomine (M1/M4 拮抗)；Benztropine/Trihexyphenidyl (M1 三級胺)", "Dicyclomine 治大腸激躁症 IBS；後兩者治巴金森氏症／抗精神病 EPS", "Pirenzepine 親和力：M1 (25) ≫ M2 (300) / M3 (500)"],
+        ["Tolterodine / Fesoterodine / Darifenacin / Trospium", "Tolterodine 經 CYP2D6 轉 5-HMT；Fesoterodine 經酯酶轉 5-HMT；Darifenacin/Solifenacin (M3 QD)；Trospium (四級胺)", "急迫性尿失禁 (OAB)；Case Study 1 攝護腺切除後逼尿肌不穩定", "BPH 未切除之「滿溢性尿失禁」絕對禁用抗 M 藥；Trospium 中樞副作用最少"]
+      ]
+    },
+    {
+      "id": "tbl_nm_nn_ganglion",
+      "title": "九、菸鹼受體（N_M vs N_N）、戒菸藥物與神經節阻斷優勢張力全表",
+      "headers": ["系統／藥物項目", "分子結構／受體機轉", "優勢張力／電生理變化", "臨床應用與特殊考試結論"],
+      "rows": [
+        ["N_M 受體（骨骼肌運動終板）", "五聚體：胎兒 (α1)2β1δγ / 成人 (α1)2β1δε；結合於 α1-γ/ε 與 α1-δ", "★ 陽離子通透順位：Na⁺ 排第一，其次 Ca²⁺", "成人成熟型於出生後由 γ 換為 ε 次單元"],
+        ["N_N 受體（CNS／自主神經節）", "僅 α/β：CNS (α4)2(β2)3、神經節 α3α5(β2)3、同質 (α7)5", "★ 陽離子通透順位：Ca²⁺ 排第一，其次 Na⁺", "燒燙傷去神經增生 α7AChR 連膽鹼都可打開致高血鉀"],
+        ["Varenicline [Chantix] vs Bupropion", "Varenicline：中樞 α4β2 部分致效劑；Bupropion：NDRI+非競爭抑 N", "吸菸四階段：渴求→開釋DA→去敏感→上調數量；Chantix 兼抗渴求與阻爆", "隨堂考題 2：Varenicline 療效優於 Bupropion，留意噁心失眠與焦慮憂鬱"],
+        ["Hexamethonium (C6) / Mecamylamine", "非競爭塞住 N_N 通道；C6 為雙四級胺（6 碳）；Mecamylamine 為二級胺穿 BBB", "小動脈靜脈/心室/汗腺屬「交感優勢」；SA結/眼/腸胃/膀胱/唾液屬「副交感優勢」", "★ 必考特例：汗腺無汗 Anhidrosis，但因皮膚血管擴張散熱，通常不會致高體溫！"]
+      ]
+    },
+    {
+      "id": "tbl_nmb_phases_pk",
+      "title": "十、肌肉鬆弛劑雙相鎖（Phase I/II vs Rocuronium）與八大 NMB 動力學總表",
+      "headers": ["藥物與時期分類", "對 Neostigmine／Tubocurarine 反應", "肌顫動／TOF 衰減／強直後促進", "代謝排除途徑與自體受體／組織胺影響"],
+      "rows": [
+        ["Rocuronium [Zemuron] (類固醇 -curonium)", "Neostigmine 拮抗逆轉；Sugammadex 16mg/kg 1.5–3m 螯合逆轉", "無肌束顫動；TOF 明顯衰減 (Fade)；有強直後促進", "肝膽排泄 75–90%（適合腎衰竭）；Onset 1 min 非去極最快；微阻 M2"],
+        ["Vecuronium / Pancuronium (類固醇 -curonium)", "Neostigmine 逆轉；Vecuronium 可被 Sugammadex 螯合", "同非去極化型 TOF Fade；長效 Pancuronium (>35m)", "Vecuronium 75–90% 肝膽排（極潔淨）；Pancuronium 80% 腎排兼中度阻 M2 (↑HR)"],
+        ["Cisatracurium [Nimbex] / Atracurium / Tubocurarine", "同非去極化型（Atracurium 產 Laudanosine 過量致癲癇）", "Cisatracurium 3 min 起效、25–44 min 中效", "Cisatracurium 靠 Hofmann 自發降解、不依賴肝腎、零組織胺（ICU 器官衰竭首選！）；Tubocurarine 40% 腎排＋中度放組織胺降壓"],
+        ["Succinylcholine Phase I (<8 min 去極化期)", "★ 給予 Neostigmine 反「增強惡化」阻斷！Tubocurarine 可預減輕", "有明顯肌束顫動；TOF 等比縮小「無衰減 (No fade)」；無強直後促進", "100% 由血漿假性膽鹼酯酶 (BuChE) 水解（Dibucaine number 變異延長麻痺）；刺激 N_N 與心臟 M2 (↓HR)"],
+        ["Succinylcholine Phase II (>20 min 去敏感期)", "膜已再極化，此時「可被 Neostigmine 拮抗逆轉」！", "無初始顫動；TOF 轉呈「漸進衰減 (Fade)」＋ 有強直後促進", "橫膈肌麻痺順序：最後麻痺、最先恢復！全麻氣管痙攣最常見原因＝置入氣管內管刺激"]
+      ]
+    },
+    {
+      "id": "tbl_spasmolytics_bt",
+      "title": "十一、解痙劑（Spasmolytics）、抗痙攣劑、BTX-A/B 與 ALS Riluzole 總表",
+      "headers": ["藥物與臨床類別", "受體／分子標靶機轉", "主要適應症", "重大黑框警語、停藥危機與管制分級"],
+      "rows": [
+        ["Diazepam / Baclofen / Tizanidine (中樞解痙劑)", "Diazepam (GABA_A ↑Cl⁻)；Baclofen (GABA_B ↑K⁺/↓Ca²⁺)；Tizanidine (脊髓 α2)", "上運動神經元病變慢性肌痙攣 (Spasticity：中風/SCI/腦麻/MS)", "Baclofen 驟停爆反彈重症痙攣；Tizanidine 經 CYP1A2 代謝且驟停反彈高血壓"],
+        ["Botulinum toxin A vs BTX-B (直接周邊)", "Zn²⁺ 蛋白酶：BTX-A/E 切突觸前膜「SNAP-25/Syntaxin」；BTX-B/D/F 切囊泡「Synaptobrevin/VAMP」", "除皺(1–3m)、斜頸/痙攣、OAB、慢性偏頭痛、多汗症", "黑框警語：毒素遠處擴散引起全身肌無力、吞嚥困難與呼吸衰竭"],
+        ["Dantrolene (直接骨骼肌 SR)", "專一阻斷骨骼肌肌漿網 (SR) RyR1 鈣通道（不影響心肌 RyR2）", "IV 搶救「惡性高熱」（SCh + Halothane/Sevoflurane）；口服治慢性痙攣", "口服慢性使用攜帶 FDA 黑框警語：致死性「肝毒性 (Hepatotoxicity)」"],
+        ["Riluzole (ALS 漸凍人症用藥)", "三重抗麩胺酸：①阻突觸前 Na⁺ 降釋放 ②抑突觸後 NMDA/AMPA ③促膠細胞再回收 Glu", "肌萎縮側索硬化症 (ALS) 延緩病程與延長存活期", "須監測肝指數 AST/ALT 與嗜中性白血球減少"],
+        ["Cyclobenzaprine / Carisoprodol (抗痙攣劑 Antispasmodics)", "中樞腦幹脊髓抑制（Cyclobenzaprine 結構似 TCA 強抗 M）", "周邊肌肉骨骼拉傷外傷或發炎之「急性局部肌肉痙攣」", "Carisoprodol 在體內代謝為 Meprobamate 具成癮戒斷風險，列為第 IV 級管制藥"]
+      ]
+    },
+    {
+      "id": "tbl_tyramine_foods",
+      "title": "十二、富含酪胺（Tyramine）發酵食物毫克數與「起司效應」危險分級表",
+      "headers": ["食物種類（不可逆 MAOI 用藥指引）", "單份 Tyramine 含量", "臨床風險分級", "藥理機制與隱藏 Traps 解析"],
+      "rows": [
+        ["煙燻或醃漬魚類（如醃鯡魚 Pickled herring）", "0–198 mg（單份上限最高！）", "🔴 持續高危險性", "高蛋白魚肉經發酵細菌脫羧累積最高量 Tyramine；服 MAOI 禁用"],
+        ["天然或熟成起司（Cheddar, Gruyère, Stilton）", "0–130 mg", "🔴 持續高危險性", "一餐 20–50 mg 即可避開首渡 MAO，經 NET 入神經轉 Octopamine 擠爆 NE"],
+        ["發酵香腸（Salami, Pepperoni）", "0–74 mg", "🔴 持續高危險性", "風乾與細菌熟成過程中大量酪胺酸脫羧化"],
+        ["酵母補充品（濃縮啤酒酵母 Brewer's yeast）", "2–68 mg", "🔴 持續高危險性", "濃縮酵母製品含極高酪胺；急救「起司效應」首選靜注 α 阻斷劑 Phentolamine"],
+        ["啤酒 / 未冷藏雞肝 / 適量紅酒", "啤酒 4–45 / 雞肝 0–9 / 紅酒 0–3 mg", "🟡 中度至🟢 低風險", "未過濾生啤與隔夜腐敗雞肝偏高；紅酒適量僅 0–3 mg"],
+        ["蠶豆 (Fava beans) / 大量巧克力", "Tyramine 極微 (<1 mg)", "⚠️ 特殊胺類前驅物警示", "蠶豆含天然多巴胺前驅物 L-DOPA；巧克力含苯乙胺 PEA，大量均一樣升壓！"]
+      ]
+    },
+    {
+      "id": "tbl_sympatho_hemo",
+      "title": "十三、四大擬交感胺靜脈輸注（PE / NE / Epi / Iso）血流動力學總表",
+      "headers": ["生理測量指標", "Phenylephrine (純 α1)", "Norepinephrine (α1,α2,β1；無 β2)", "Epinephrine (α1,α2,β1,β2)", "Isoproterenol (純 β1,β2；無 α)"],
+      "rows": [
+        ["骨骼肌／總周邊阻力 (TPR)", "↑↑↑（全面 α1 縮血管）", "↑↑↑（無 β2 舒張緩衝）", "↓（輸注劑量 β2 舒張勝出）", "↓↓（純 β2 全身強擴血管）"],
+        ["收縮壓 (SBP) / 舒張壓 (DBP)", "SBP ↑↑ / DBP ↑↑", "SBP ↑↑ / DBP ↑↑", "SBP ↑↑（強β1）/ DBP ↓（β2）", "SBP 0或微動 / DBP ↓↓"],
+        ["平均動脈壓 (MAP) / 脈壓 (PP)", "MAP ↑↑ / 脈壓 0（平行升）", "MAP ↑↑ / 脈壓略 ↑", "MAP 輕↑ / 脈壓 ↑↑ 大幅變寬", "MAP ↓ / 脈壓 ↑↑↑ 極度變寬"],
+        ["心跳速率（直接 β1 vs 迷走反射）", "↓↓（強烈迷走感壓反射）", "★ ↓↓（感壓反射蓋過直接 β1！）", "↑（直接 β1 加速勝出）", "↑↑↑（β1 + 低壓交感雙加速）"],
+        ["α 阻斷劑後（「腎上腺素反轉」）", "幾乎無反應 (0)", "略 ↑（因缺 β2 故「不反轉降壓」！）", "★ 血壓遽降 ↓↓（僅餘 β2 擴血管！）", "反應不變（本無 α 作用）"]
+      ]
+    },
+    {
+      "id": "tbl_oab_bph_trials",
+      "title": "十四、JAMA 2025/2026 實證：姿勢性低血壓、OAB、BPH 與五大興奮劑轉運矩陣",
+      "headers": ["專科領域／臨床實證", "核心機轉與代表藥物", "關鍵量化數字／起效時間", "臨床警訊、禁忌症與國考高頻題"],
+      "rows": [
+        ["JAMA 2026 姿勢性低血壓 (OH)", "Midodrine (脫甘胺酸→Desglymidodrine, α1) / Droxidopa (脫羧→NE)", "站立 3 min 內 SBP↓≥20 或 DBP↓≥10；水 2–2.5L + 鈉 6–10g", "典型雙肩後頸「衣架痛 (Coat-hanger pain)」；防平躺性高血壓與豎毛"],
+        ["JAMA 2025 OAB 治療比較", "抗 M 類 vs β3 致效劑 (Mirabegron 50h / Vibegron 75mg)", "皆需 4–6 週完全見效；Oxybutynin UI -19.4 最強", "★ Oxybutynin 中樞譫妄最高；Mirabegron 升壓 8–11%「嚴重未控制高血壓禁用」"],
+        ["JAMA 2025 BPH 三大藥物", "α1 阻斷劑 / 5α-還原酶抑制劑 (抑 DHT) / PDE5i (Tadalafil)", "α1A選 (Tamsulosin/Silodosin) 3–7d (IPSS -9.6)；5α-RI 需 3–6 月", "★ 114 國考：Tamsulosin 致白內障術中 IFIS 虹膜鬆脫；Finasteride/Dutasteride 使 PSA 降 50% (讀值×2)"],
+        ["五大興奮劑單胺轉運矩陣", "受質+VMAT 反向轉運 (Amphetamine/Meth 強DAT/NET；MDMA 最強 SERT) vs 純再回收抑制無 VMAT", "Ephedrine 去β-OH 可非法製冰毒（Meth mouth 牙齦腐爛）", "Modafinil/Methylphenidate/Cocaine 無 VMAT 反向轉運；Sibutramine 因 SCOUT 增 MI/中風下市"],
+        ["ADHD 前額葉 (PFC) HCN 模型", "NE→α2A(Gi→↓cAMP→關 HCN 強訊號)；DA→D1(Gs→↑cAMP→開雜訊 HCN 去雜訊)", "PFC 極缺 DAT，NET 同收 NE 與 DA → Atomoxetine 單抑 NET 雙升 NE+DA！", "Guanfacine 高度專一 α2A（較少鎮靜低壓）；Atomoxetine 不增紋狀體 DA 無成癮性"]
+      ]
+    },
+    {
+      "id": "tbl_beta_migraine_glaucoma",
+      "title": "十五、三代 β 阻斷劑（ISA/MSA）、偏頭痛台灣指引、青光眼六類與升糖素解毒表",
+      "headers": ["分類／臨床主題", "代表藥物與關鍵分子性質", "臨床首選與適應症", "絕對禁忌、運動禁藥與救命機轉"],
+      "rows": [
+        ["三代 β 阻斷劑與兩大特質", "1代：Propranolol/Timolol；2代 β1：Metoprolol Succinate/Bisoprolol/Esmolol (紅血球酯酶 10m)；3代：Carvedilol/Labetalol/Nebivolol (NO/β3)", "慢性 HF 降死亡率三傑：Bisoprolol, Metoprolol Succinate, Carvedilol（加 Nebivolol）", "★ 局麻 MSA Propranolol「禁點眼」恐麻痺角膜潰瘍！Diabetes 抑肝 β2 掩心悸僅留交感膽鹼 M3 出汗"],
+        ["偏頭痛 2022 台灣治療指引", "陣發 (<15d) 預防：Propranolol/Metoprolol/Topiramate/Valproate/Flunarizine/CGRP mAb；慢性：BoNT-A 155-195U；急性：Triptans/Acetaminophen", "PUMA + CSD/CGRP → 中樞敏感化「表皮異感痛 Allodynia」須早期阻斷", "★ ISA (Pindolol/Acebutolol) 預防無效；孕婦急性首選 Acetaminophen，禁用 Valproate（致畸胎）與 Triptans"],
+        ["隅角開放性青光眼六類點眼", "增排出：PGF2α (Latanoprost/Bimatoprost 一線)、M 致效劑 (Pilocarpine)、ROCKi (Netarsudil)；降生成：Timolol/Betaxolol、CAI；雙效：Brimonidine", "PGF2α 為每日一次一線首選；Brimonidine 同降生成兼促葡萄膜鞏膜排出", "Latanoprost/Bimatoprost 致虹膜棕黑沉著與睫毛變長濃密 (Latisse)；口服 Acetazolamide 致腎結石"],
+        ["WADA 運動禁藥 & 壓軸解毒劑", "β-blockers（抑微顫/心跳/焦慮）；中毒急救：高劑量靜脈注射「升糖素 IV Glucagon」", "射箭、射擊、水下運動「賽內＋賽外全時禁用」β-blockers", "★ β-blocker 過量致休克時，Glucagon 繞過被死鎖 β1，直活心肌獨立 Glucagon (Gs) 受體→↑cAMP→↑Ca²⁺ 起死回生！"]
       ]
     }
   ]

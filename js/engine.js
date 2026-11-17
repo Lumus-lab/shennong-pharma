@@ -26,32 +26,64 @@
   };
 
   function init(bundle, endingCb) {
-    nodesData = bundle.nodes || { events: {} };
-    deckData = bundle.deck || {};
-    codexData = bundle.codex || { entries: [], referenceTables: [] };
-    endingsData = bundle.endings || [];
+    setBundleData(bundle);
     onEndingCallback = endingCb;
   }
 
-  function startNewRun(mode, route, seed) {
+  function setBundleData(bundle) {
+    nodesData = (bundle && bundle.nodes) || { events: {} };
+    deckData = (bundle && bundle.deck) || {};
+    codexData = (bundle && bundle.codex) || { entries: [], referenceTables: [] };
+    endingsData = (bundle && bundle.endings) || [];
+  }
+
+  function getStoryChaptersForScope(scope) {
+    const allChapters = (deckData.story && deckData.story.chapters) || [];
+    if (scope === 'part1') {
+      return allChapters.filter((ch) => (ch.volPart || 1) === 1);
+    }
+    if (scope === 'part2') {
+      return allChapters.filter((ch) => ch.volPart === 2);
+    }
+    return allChapters.slice();
+  }
+
+  function startNewRun(modeOrOpts, routeArg, seedArg) {
+    const opts =
+      typeof modeOrOpts === 'object' && modeOrOpts !== null
+        ? modeOrOpts
+        : { mode: modeOrOpts, route: routeArg, seed: seedArg };
+
+    const mode = opts.mode === 'story' ? 'story' : 'roguelike';
+    const route = opts.route || 'all_mixed';
+    const storyScope = opts.storyScope || 'full';
+    const rogueLength = Number(opts.rogueLength) === 8 ? 8 : 6;
+    const seed = String(opts.seed || 'TX-4072').trim();
+
     const rng = global.TaixuRNG.createMulberry32(seed);
     const resolvedVariants = {};
     let eventPlan = [];
     let hubState = null;
 
     if (mode === 'roguelike') {
-      const rCfg = deckData.roguelike;
-      const routeCfg = (rCfg.routes && rCfg.routes[route]) || rCfg.routes.taiyin;
-      const prologueId = rng.pick(rCfg.prologuePool || ['E01', 'E02']);
+      const rCfg = deckData.roguelike || {};
+      const routeCfg = (rCfg.routes && rCfg.routes[route]) || Object.values(rCfg.routes || {})[0] || {};
+      const pPool = routeCfg.prologuePool || rCfg.prologuePool || ['E01', 'E02'];
+      const prologueId = rng.pick(pPool.filter((id) => Boolean(nodesData.events[id]))) || Object.keys(nodesData.events)[0];
 
-      const midPool = (routeCfg.pool || []).slice();
+      const midPool = (routeCfg.pool || []).filter((id) => Boolean(nodesData.events[id]));
       const midWeights = routeCfg.weights || {};
-      const drawnMid = rng.weightedSample(midPool, 4, (id) => midWeights[id] || 1);
+      const midCount = rogueLength === 8 ? 6 : 4;
+      const drawnMid = rng.weightedSample(midPool, midCount, (id) => midWeights[id] || 1);
 
-      const bossPool = routeCfg.bossPool || rCfg.bossPool || ['E15', 'E16', 'E17', 'E18'];
-      const bossId = rng.weightedSample(bossPool, 1, (id) => midWeights[id] || 1)[0];
+      const bossCandidates = (routeCfg.bossPool || rCfg.bossPool || ['E15', 'E16', 'E17', 'E18']).filter((id) =>
+        Boolean(nodesData.events[id])
+      );
+      const bossId =
+        rng.weightedSample(bossCandidates, 1, (id) => midWeights[id] || 1)[0] ||
+        bossCandidates[0];
 
-      eventPlan = [prologueId].concat(drawnMid).concat([bossId]);
+      eventPlan = [prologueId].concat(drawnMid).concat(bossId ? [bossId] : []).filter(Boolean);
 
       eventPlan.forEach((eid) => {
         const ev = nodesData.events[eid];
@@ -61,9 +93,9 @@
         }
       });
     } else {
-      const chapters = (deckData.story && deckData.story.chapters) || [];
+      const chapters = getStoryChaptersForScope(storyScope);
       chapters.forEach((ch) => {
-        eventPlan = eventPlan.concat(ch.events || []);
+        eventPlan = eventPlan.concat((ch.events || []).filter((id) => Boolean(nodesData.events[id])));
       });
 
       eventPlan.forEach((eid) => {
@@ -86,6 +118,8 @@
     const run = global.TaixuState.createNewRun({
       mode,
       route,
+      storyScope,
+      rogueLength,
       seed,
       eventPlan,
       resolvedVariants,
@@ -122,15 +156,22 @@
 
   function advanceStoryProgress() {
     const run = global.TaixuState.getRun();
-    const chapters = (deckData.story && deckData.story.chapters) || [];
+    const chapters = getStoryChaptersForScope(run.storyScope || 'full');
     const doneSet = new Set(run.completedEvents || []);
 
     for (let i = 0; i < chapters.length; i++) {
       const ch = chapters[i];
-      const remaining = (ch.events || []).filter((id) => !doneSet.has(id));
+      const remaining = (ch.events || []).filter((id) => !doneSet.has(id) && Boolean(nodesData.events[id]));
       if (remaining.length === 0) continue;
 
+      const prevChIdx = run.hubState ? run.hubState.chapterIndex : 0;
       run.hubState.chapterIndex = i;
+
+      // 在全四卷長篇跨入第三卷或第四卷時，自動生成中繼書籤以防迷失或想分段重溫
+      if ((run.storyScope || 'full') === 'full' && i > prevChIdx && (ch.id === 'ch6' || ch.id === 'ch9')) {
+        global.TaixuState.saveBookmarkSnapshot(ch.id === 'ch6' ? '進入第三卷・玄冥篇起點' : '進入第四卷・太陽篇起點');
+      }
+
       if (ch.freeOrder && remaining.length > 1) {
         run.hubState.activeHubChapterId = ch.id;
         run.currentEventId = null;
@@ -475,6 +516,412 @@
           renderInteractiveLab(step, run);
         });
       });
+    } else if (step.widget === 'nmj_phase_lab') {
+      const lab = run.nmjLab || { blocker: 'sch_phase1', action: 'baseline' };
+      run.nmjLab = lab;
+
+      const computeNmjState = (curLab) => {
+        const blockerMeta = {
+          rocuronium: {
+            title: 'Rocuronium（非去極化競爭型）',
+            onset: '無肌束顫動（直接弛緩麻痺）',
+            tof: '出現衰減 (Fade) ＋ 有強直後促進',
+            tofPattern: 'fade',
+            tofNote: '非去極化：TOF T4/T1 明顯衰減 (Fade)'
+          },
+          sch_phase1: {
+            title: 'Succinylcholine Phase I（去極化阻斷）',
+            onset: '有明顯肌束顫動 (Fasciculations)',
+            tof: '張力維持、振幅等比縮小（無衰減），無強直後促進',
+            tofPattern: 'depolarized',
+            tofNote: 'Phase I：等比縮小（無 Fade）'
+          },
+          sch_phase2: {
+            title: 'Succinylcholine Phase II（去敏感化阻斷）',
+            onset: '膜已再極化，但 N_M 受體去敏感化',
+            tof: '轉為漸進衰減 (Fade) ＋ 恢復慢 (>20 min)',
+            tofPattern: 'fade',
+            tofNote: 'Phase II：類非去極化衰減 (Fade)'
+          }
+        }[curLab.blocker] || {};
+
+        let actionResult = '觀察單獨阻斷下之 TOF 波形與初始肌象變化。';
+        let appliedTof = blockerMeta.tofPattern;
+        let appliedTofNote = blockerMeta.tofNote;
+        let appliedNmj = 18;
+        let appliedNmjLabel = 'N_M 阻斷鬆弛';
+
+        if (curLab.action === 'neostigmine') {
+          if (curLab.blocker === 'rocuronium') {
+            actionResult = '拮抗／逆轉阻斷！ACh 大增把競爭型的 Rocuronium 擠出 N_M 受體。';
+            appliedTof = 'normal';
+            appliedTofNote = 'TOF 逐步回升至 4/4（逆轉成功）';
+            appliedNmj = 48;
+            appliedNmjLabel = '肌力恢復中';
+          } else if (curLab.blocker === 'sch_phase1') {
+            actionResult = '【危險惡化】增強去極化阻斷 (Augmented)！Neostigmine 增加 ACh 又抑假性膽鹼酯酶，讓 Na⁺ 通道更難恢復！';
+            appliedTof = 'deep';
+            appliedTofNote = 'Phase I + Neostigmine → 阻斷加深至 0/4';
+            appliedNmj = 8;
+            appliedNmjLabel = '深度加重麻痺！';
+          } else {
+            actionResult = '可部份逆轉 (Antagonistic)！Phase II 終板膜已再極化，表現接近非去極化，提高 ACh 有助喚醒受體。';
+            appliedTof = 'normal';
+            appliedTofNote = 'Phase II 獲部分喚醒';
+            appliedNmj = 42;
+            appliedNmjLabel = '部分逆轉恢復';
+          }
+        } else if (curLab.action === 'tubocurarine') {
+          if (curLab.blocker === 'rocuronium') {
+            actionResult = '加成阻斷 (Additive)！兩者皆為非去極化競爭型，且 Tubocurarine 兼促組織胺釋放易降壓。';
+            appliedTof = 'deep';
+            appliedTofNote = '雙重非去極化加成深度麻痺';
+            appliedNmj = 8;
+            appliedNmjLabel = '雙重非去極加成阻斷';
+          } else if (curLab.blocker === 'sch_phase1') {
+            actionResult = '拮抗減輕去極化 (Antagonistic)！少量非去極化 precurarization 可阻擋 SCh 過度去極化，減輕肌束顫動。';
+            appliedTof = 'depolarized';
+            appliedTofNote = 'Precurarization 減輕顫動';
+            appliedNmj = 30;
+            appliedNmjLabel = '抗去極減輕顫動';
+          } else {
+            actionResult = '增強阻斷 (Augmented)！在去敏感期加入非去極化劑會讓神經傳導進一步失靈。';
+            appliedTof = 'deep';
+            appliedTofNote = 'Phase II + 非去極化深度加重';
+            appliedNmj = 8;
+            appliedNmjLabel = '深度加重阻斷';
+          }
+        } else if (curLab.action === 'sugammadex') {
+          if (curLab.blocker === 'rocuronium') {
+            actionResult = '★ 神效逆轉（1.5–3 分鐘）！Sugammadex (16 mg/kg) 1:1 精準包覆類固醇骨架 Rocuronium 並排入尿液，即使深度阻斷也能瞬間解鎖（須衛教服口服避孕藥者 7 天採替代避孕）！';
+            appliedTof = 'normal';
+            appliedTofNote = 'TOF 100%（γ-環糊精瞬時螯合逆轉）';
+            appliedNmj = 52;
+            appliedNmjLabel = '瞬間完全恢復';
+          } else {
+            actionResult = '【完全無效】Sugammadex 僅能包覆「類固醇類」NMB（Rocuronium / Vecuronium），對雙乙醯膽鹼鏈狀結構的 Succinylcholine 完全抓不住！';
+            appliedNmjLabel = '螯合無效（非類固醇 NMB）';
+          }
+        }
+
+        return { blockerMeta, actionResult, appliedTof, appliedTofNote, appliedNmj, appliedNmjLabel };
+      };
+
+      const { blockerMeta, actionResult, appliedTof, appliedTofNote } = computeNmjState(lab);
+
+      const tofHeights = appliedTof === 'normal' ? [24, 24, 24, 24]
+        : appliedTof === 'depolarized' ? [11, 11, 11, 11]
+        : appliedTof === 'deep' ? [2, 1, 1, 1]
+        : [22, 15, 9, 4];
+
+      labEl.innerHTML = `
+        <h3 class="lab-title">NMJ 陰陽雙相鎖與四連刺激 (TOF) 逆轉模擬台</h3>
+        <div class="lab-controls">
+          <button type="button" class="lab-toggle ${lab.blocker === 'rocuronium' ? 'active' : ''}" data-nmj-b="rocuronium">Rocuronium（非去極化）</button>
+          <button type="button" class="lab-toggle ${lab.blocker === 'sch_phase1' ? 'active' : ''}" data-nmj-b="sch_phase1">SCh Phase I（去極化）</button>
+          <button type="button" class="lab-toggle ${lab.blocker === 'sch_phase2' ? 'active' : ''}" data-nmj-b="sch_phase2">SCh Phase II（去敏感）</button>
+        </div>
+        <div class="lab-controls">
+          <button type="button" class="lab-toggle ${lab.action === 'baseline' ? 'active' : ''}" data-nmj-a="baseline">單獨觀察基態</button>
+          <button type="button" class="lab-toggle ${lab.action === 'neostigmine' ? 'active' : ''}" data-nmj-a="neostigmine">+ Neostigmine (AChEI)</button>
+          <button type="button" class="lab-toggle ${lab.action === 'tubocurarine' ? 'active' : ''}" data-nmj-a="tubocurarine">+ Tubocurarine</button>
+          <button type="button" class="lab-toggle ${lab.action === 'sugammadex' ? 'active' : ''}" data-nmj-a="sugammadex">+ Sugammadex 16mg/kg</button>
+        </div>
+        <div class="lab-inline-tof">
+          <svg viewBox="0 0 96 34" width="84" height="30" aria-hidden="true">
+            <line x1="2" y1="30" x2="94" y2="30" stroke="rgba(255,255,255,0.25)" stroke-width="1"/>
+            ${tofHeights.map((h, i) => `<rect x="${8 + i * 22}" y="${30 - h}" width="14" height="${h}" rx="2" fill="hsl(166,68%,54%)"/>`).join('')}
+          </svg>
+          <span><strong>${escapeHtml(appliedTofNote)}</strong></span>
+        </div>
+        <div class="lab-readout">
+          <div class="lab-kv"><span>初始骨骼肌反應</span><strong>${escapeHtml(blockerMeta.onset)}</strong></div>
+          <div class="lab-kv"><span>強直／TOF 特徵</span><strong>${escapeHtml(blockerMeta.tof)}</strong></div>
+          <div class="lab-kv"><span>併用介入實測結論</span><strong>${escapeHtml(actionResult)}</strong></div>
+        </div>
+      `;
+
+      const syncNmjVitals = (curLab) => {
+        const st = computeNmjState(curLab);
+        global.TaixuState.updateVitals({
+          nmj: st.appliedNmj,
+          nmjLabel: st.appliedNmjLabel,
+          tofPattern: st.appliedTof,
+          tofNote: st.appliedTofNote,
+          badges: curLab.action === 'neostigmine' && curLab.blocker === 'sch_phase1'
+            ? ['去極化阻斷惡化']
+            : curLab.action === 'sugammadex' && curLab.blocker === 'rocuronium'
+              ? ['Sugammadex 瞬時螯合']
+              : ['TOF 監測中']
+        });
+        global.TaixuPulseMonitor.update(run.vitals);
+      };
+
+      labEl.querySelectorAll('[data-nmj-b]').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          lab.blocker = btn.getAttribute('data-nmj-b');
+          lab.action = 'baseline';
+          syncNmjVitals(lab);
+          renderInteractiveLab(step, run);
+        });
+      });
+      labEl.querySelectorAll('[data-nmj-a]').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          lab.action = btn.getAttribute('data-nmj-a');
+          syncNmjVitals(lab);
+          renderInteractiveLab(step, run);
+        });
+      });
+    } else if (step.widget === 'tyramine_table_lab') {
+      const meal = run.tyramineMeal || { selected: ['pickled_herring', 'aged_cheese'] };
+      run.tyramineMeal = meal;
+      const foods = [
+        { id: 'pickled_herring', name: '煙燻／醃漬鯡魚', mg: '0–198 mg (最高)', mid: 95, cls: 'danger', note: '持續高危險：魚肉蛋白發酵含極高酪胺。' },
+        { id: 'aged_cheese', name: '熟成起司 (Cheddar)', mg: '0–130 mg', mid: 65, cls: 'danger', note: '持續高危險：「起司效應」主因。' },
+        { id: 'fermented_sausage', name: '發酵香腸 (Salami)', mg: '0–74 mg', mid: 38, cls: 'danger', note: '持續高危險：風乾發酵累積大量酪胺。' },
+        { id: 'yeast_extract', name: '濃縮啤酒酵母補充品', mg: '2–68 mg', mid: 35, cls: 'danger', note: '持續高危險：服不可逆 MAOI 絕對禁忌。' },
+        { id: 'beer', name: '未過濾生啤酒', mg: '4–45 mg', mid: 20, cls: 'warn', note: '中度風險：部份精釀生啤酪胺偏高。' },
+        { id: 'chicken_liver', name: '雞肝（視新鮮度）', mg: '0–9 mg', mid: 5, cls: 'warn', note: '低至中度風險：隔夜未冷藏含量劇增。' },
+        { id: 'red_wine', name: '適量紅酒', mg: '0–3 mg', mid: 2, cls: 'safe', note: '低風險：一般適量含酪胺極少。' },
+        { id: 'fava_beans', name: '蠶豆 (Broad/Fava)', mg: '酪胺極微 (L-DOPA!)', mid: 0, cls: 'warn', note: '⚠️ 含天然多巴胺前驅物 L-DOPA，一樣致命升壓！' },
+        { id: 'chocolate', name: '大量巧克力', mg: '酪胺極微 (PEA!)', mid: 0, cls: 'warn', note: '⚠️ 含苯乙胺 (Phenylethylamine)，大量仍易促釋 NE！' }
+      ];
+      const selSet = new Set(meal.selected || []);
+      let totalMg = 0;
+      const specialFlags = [];
+      foods.forEach((f) => {
+        if (selSet.has(f.id)) {
+          totalMg += f.mid;
+          if (f.id === 'fava_beans') specialFlags.push('L-DOPA 前驅物風險');
+          if (f.id === 'chocolate') specialFlags.push('苯乙胺 PEA 促釋風險');
+        }
+      });
+
+      const isCrisis = totalMg >= 25 || selSet.has('fava_beans');
+      const isBorder = !isCrisis && (totalMg >= 10 || selSet.has('chocolate'));
+      const verdict = isCrisis
+        ? `【致命高血壓危象】推估酪胺 ${totalMg} mg（>20–50 mg 即爆發）${specialFlags.length ? '＋ ' + specialFlags.join('、') : ''}！避開首渡 MAO 後經 NET 進入末梢→轉化章魚胺/置換囊泡大量 NE→極須 Phentolamine 急救！`
+        : isBorder
+          ? `【中度警示】預估酪胺 ${totalMg} mg${specialFlags.length ? '＋ ' + specialFlags.join('、') : ''}；若雞肝不新鮮或過量仍可能升壓。`
+          : `【安全飲食】酪胺負荷僅 ${totalMg} mg，無特別胺類前驅物負荷，服不可逆 MAOI 下脈壓平穩。`;
+
+      labEl.innerHTML = `
+        <h3 class="lab-title">不可逆 MAOI「起司效應」餐盤推演台（點擊加減食物，觀察 Tyramine 負荷）</h3>
+        <div class="lab-food-grid">
+          ${foods
+            .map(
+              (f) => `
+            <button type="button" class="lab-food-btn ${f.cls === 'safe' ? 'safe' : ''} ${selSet.has(f.id) ? 'active' : ''}" data-food="${f.id}">
+              <span>${selSet.has(f.id) ? '✓ ' : ''}${escapeHtml(f.name)}</span>
+              <small>${escapeHtml(f.mg)}</small>
+            </button>`
+            )
+            .join('')}
+        </div>
+        <div class="lab-readout">
+          <div class="lab-kv"><span>推估餐食負荷</span><strong>~${totalMg} mg Tyramine${specialFlags.length ? ' + 特規胺' : ''}</strong></div>
+          <div class="lab-kv"><span>預估血壓／脈象</span><strong>${isCrisis ? '214/126 mmHg（嚴重頭痛・血管炸裂）' : isBorder ? '148/92 mmHg（輕度升壓）' : '118/76 mmHg（安全平穩）'}</strong></div>
+        </div>
+        <div class="lab-note-box">${escapeHtml(verdict)}</div>
+      `;
+
+      labEl.querySelectorAll('[data-food]').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const id = btn.getAttribute('data-food');
+          if (selSet.has(id)) selSet.delete(id);
+          else selSet.add(id);
+          meal.selected = Array.from(selSet);
+          let sum = 0;
+          foods.forEach((f) => {
+            if (selSet.has(f.id)) sum += f.mid;
+          });
+          const danger = sum >= 25 || selSet.has('fava_beans');
+          global.TaixuState.updateVitals({
+            hr: danger ? 54 : sum >= 10 ? 78 : 74,
+            sbp: danger ? 214 : sum >= 10 ? 148 : 118,
+            dbp: danger ? 126 : sum >= 10 ? 92 : 76,
+            rhythmText: danger ? '酪胺暴走高血壓＋反射性心搏過緩' : '竇性節律',
+            badges: danger ? ['起司效應高血壓危機'] : []
+          });
+          global.TaixuPulseMonitor.update(run.vitals);
+          renderInteractiveLab(step, run);
+        });
+      });
+    } else if (step.widget === 'catechol_sar_lab') {
+      const sar = run.catecholSar || { rGroup: 'H', removeRingOh: false, addAlphaMethyl: false };
+      run.catecholSar = sar;
+
+      const rLabels = { H: 'R = -H (極小)', CH3: 'R = -CH₃ (甲基)', ISO: 'R = -CH(CH₃)₂ (異丙基)' };
+      let baseName = sar.rGroup === 'H' ? 'Norepinephrine (α₁,α₂,β₁；極少 β₂)' : sar.rGroup === 'CH3' ? 'Epinephrine (α₁,α₂,β₁,β₂ 全致效)' : 'Isoproterenol (純 β₁,β₂；無 α 作用)';
+      if (sar.removeRingOh && !sar.addAlphaMethyl) {
+        baseName = sar.rGroup === 'CH3' ? '類似 Phenylephrine 單羥化改造（失 β 傾 α₁ 且抗 COMT）' : '去鄰二酚羥基非兒茶酚胺（口服可用＋進腦）';
+      } else if (sar.removeRingOh && sar.addAlphaMethyl) {
+        baseName = sar.rGroup === 'H' ? 'Amphetamine 骨架（高脂溶穿 BBB ＋ 同時抗 COMT 與 MAO）' : sar.rGroup === 'CH3' ? 'Ephedrine / Methamphetamine 骨架（長效進腦）' : '超長效 β₂/非兒茶酚擬交感胺';
+      }
+
+      const betaAff = sar.rGroup === 'H' ? '較弱（β₁ 可、β₂ 幾近無）' : sar.rGroup === 'CH3' ? '強（β₁ ≈ β₂）' : '最強！（異丙基大幅強化 β，幾無 α）';
+      const comtText = sar.removeRingOh ? '完全抵抗 COMT（缺鄰二酚 -OH；極性↓ 可口服進 BBB）' : '快速被 COMT 甲基化失活（口服生體可用率極差）';
+      const maoText = sar.addAlphaMethyl ? '阻擋 MAO 氧化去胺！（半衰期大幅延長，多作長效／中樞藥）' : '易被腸道與肝臟 MAO 分解（短效）';
+
+      labEl.innerHTML = `
+        <h3 class="lab-title">兒茶酚胺構效關係 (SAR) 煉丹改造台（切換 R 基與去酚/α-甲基）</h3>
+        <div class="lab-controls">
+          ${Object.keys(rLabels)
+            .map(
+              (rk) => `<button type="button" class="lab-toggle ${sar.rGroup === rk ? 'active' : ''}" data-sar-r="${rk}">${escapeHtml(rLabels[rk])}</button>`
+            )
+            .join('')}
+        </div>
+        <div class="lab-controls">
+          <button type="button" class="lab-toggle ${sar.removeRingOh ? 'active' : ''}" id="btn-sar-ringoh">${sar.removeRingOh ? '✓ ' : ''}去除苯環 3,4-鄰二酚羥基 (-OH)</button>
+          <button type="button" class="lab-toggle ${sar.addAlphaMethyl ? 'active' : ''}" id="btn-sar-alphame">${sar.addAlphaMethyl ? '✓ ' : ''}α-碳導入甲基 (-CH₃)</button>
+        </div>
+        <div class="lab-readout">
+          <div class="lab-kv"><span>對應藥理原型</span><strong>${escapeHtml(baseName)}</strong></div>
+          <div class="lab-kv"><span>β 受體親和力變化</span><strong>${escapeHtml(betaAff)}</strong></div>
+          <div class="lab-kv"><span>COMT 代謝與 BBB 穿透</span><strong>${escapeHtml(comtText)}</strong></div>
+          <div class="lab-kv"><span>MAO 抗性與藥效時間</span><strong>${escapeHtml(maoText)}</strong></div>
+        </div>
+      `;
+      labEl.querySelectorAll('[data-sar-r]').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          sar.rGroup = btn.getAttribute('data-sar-r');
+          global.TaixuState.saveRun();
+          renderInteractiveLab(step, run);
+        });
+      });
+      labEl.querySelector('#btn-sar-ringoh').addEventListener('click', () => {
+        sar.removeRingOh = !sar.removeRingOh;
+        global.TaixuState.saveRun();
+        renderInteractiveLab(step, run);
+      });
+      labEl.querySelector('#btn-sar-alphame').addEventListener('click', () => {
+        sar.addAlphaMethyl = !sar.addAlphaMethyl;
+        global.TaixuState.saveRun();
+        renderInteractiveLab(step, run);
+      });
+    } else if (step.widget === 'sympatho_hemo') {
+      const sl = run.sympathoLab || { drug: 'ne', alphaBlocked: false };
+      run.sympathoLab = sl;
+
+      const profiles = {
+        pe: {
+          title: 'Phenylephrine（純 α₁）',
+          normal: { tpr: '↑↑↑', sbpText: '↑↑', dbpText: '↑↑', mapText: '↑↑', pp: '0（平行上升）', hrText: '↓↓ 迷走感壓反射勝出', vitals: { hr: 50, sbp: 170, dbp: 108, pupilMm: 6.0, airway: 100, rhythmText: 'α₁ 升壓 → 強烈迷走感壓反射心搏過緩', badges: ['感壓反射心搏過緩'] } },
+          blocked: { tpr: '0（α₁ 被封鎖）', sbpText: '0', dbpText: '0', mapText: '0', pp: '0', hrText: '無反射波動', vitals: { hr: 76, sbp: 112, dbp: 72, pupilMm: 3.5, airway: 100, rhythmText: 'α 阻斷下純 α₁ 致效劑無處施力', badges: ['α₁ 路徑已被阻斷'] } }
+        },
+        ne: {
+          title: 'Norepinephrine（α₁, α₂, β₁；無 β₂）',
+          normal: { tpr: '↑↑↑（無 β₂ 緩衝）', sbpText: '↑↑', dbpText: '↑↑', mapText: '↑↑', pp: '↑ 略寬', hrText: '↓↓ 感壓反射蓋過直接 β₁！', vitals: { hr: 54, sbp: 174, dbp: 108, pupilMm: 5.5, airway: 100, rhythmText: '靜注 NE：SBP/DBP↑↑，感壓反射令脈搏反降！', badges: ['NE 反射性心搏過緩'] } },
+          blocked: { tpr: '0 / 微降', sbpText: '↑（僅餘 β₁）', dbpText: '0', mapText: '微 ↑', pp: '略 ↑', hrText: '↑ 直接 β₁ 顯現（不逆轉降壓因無 β₂！）', vitals: { hr: 96, sbp: 126, dbp: 74, pupilMm: 3.5, airway: 102, rhythmText: 'α 阻斷下 NE 僅現微弱 β₁，無腎上腺素反轉', badges: ['NE 無明顯 β₂ 故不反轉'] } }
+        },
+        epi: {
+          title: 'Epinephrine（α₁, α₂, β₁, β₂ 全致效）',
+          normal: { tpr: '↓（輸注劑量 β₂ 舒張骨骼肌勝出）', sbpText: '↑↑', dbpText: '↓', mapText: '↑ 輕升', pp: '↑↑ 大幅變寬！', hrText: '↑ 直接 β₁ 加速＋弱反射', vitals: { hr: 106, sbp: 158, dbp: 62, pupilMm: 5.8, airway: 126, rhythmText: '低中劑量 Epi：SBP↑↑、DBP↓、脈壓大寬', badges: ['β₂ 舒張使 DBP 下降'] } },
+          blocked: { tpr: '↓↓（僅餘 β₂）', sbpText: '↓↓ 反轉下降！', dbpText: '↓↓ 劇降！', mapText: '↓↓ 腎上腺素反轉！', pp: '微寬後低灌流', hrText: '↑↑ β₁＋交感雙重加速', vitals: { hr: 124, sbp: 86, dbp: 44, pupilMm: 3.5, airway: 128, rhythmText: '★ 腎上腺素反轉：α₁ 被封僅餘 β₂ 致血壓遽降！', badges: ['腎上腺素反轉危機'] } }
+        },
+        iso: {
+          title: 'Isoproterenol（純 β₁, β₂；無 α）',
+          normal: { tpr: '↓↓（純 β₂ 全身骨骼肌擴張）', sbpText: '0 / 微波動', dbpText: '↓↓', mapText: '↓（因 DBP 大降）', pp: '↑↑↑ 極度變寬', hrText: '↑↑↑ 直接 β₁ ＋ 低壓交感反射', vitals: { hr: 132, sbp: 120, dbp: 48, pupilMm: 3.6, airway: 128, rhythmText: '純 β 作用：TPR↓↓、DBP↓↓、HR↑↑↑', badges: ['β₁/β₂ 純 β 脈象'] } },
+          blocked: { tpr: '↓↓（不受 α 阻斷影響）', sbpText: '0 / 微降', dbpText: '↓↓', mapText: '↓', pp: '↑↑↑', hrText: '↑↑↑ 同樣劇烈加速', vitals: { hr: 132, sbp: 118, dbp: 48, pupilMm: 3.6, airway: 128, rhythmText: 'Isoproterenol 本無 α 作用，α 阻斷不改變波形', badges: ['β₁/β₂ 不受 α 阻斷影響'] } }
+        }
+      };
+
+      const prof = profiles[sl.drug] || profiles.ne;
+      const st = sl.alphaBlocked ? prof.blocked : prof.normal;
+
+      labEl.innerHTML = `
+        <h3 class="lab-title">四大擬交感胺 IV 血流動力學＆「腎上腺素反轉」模擬器（同步驅動右側 SVG 脈象儀）</h3>
+        <div class="lab-controls">
+          <button type="button" class="lab-toggle ${sl.drug === 'pe' ? 'active' : ''}" data-symp="pe">Phenylephrine (α₁)</button>
+          <button type="button" class="lab-toggle ${sl.drug === 'ne' ? 'active' : ''}" data-symp="ne">Norepinephrine (α+β₁)</button>
+          <button type="button" class="lab-toggle ${sl.drug === 'epi' ? 'active' : ''}" data-symp="epi">Epinephrine (α+β₁+β₂)</button>
+          <button type="button" class="lab-toggle ${sl.drug === 'iso' ? 'active' : ''}" data-symp="iso">Isoproterenol (β₁+β₂)</button>
+        </div>
+        <div class="lab-controls">
+          <button type="button" class="lab-toggle ${sl.alphaBlocked ? 'active' : ''}" id="btn-symp-ablock">
+            ${sl.alphaBlocked ? '✓ ' : ''}預先投入 α 阻斷劑（如 Phentolamine）觀察「反轉效應」
+          </button>
+        </div>
+        <div class="lab-readout">
+          <div class="lab-kv"><span>總周邊阻力 (TPR)</span><strong>${escapeHtml(st.tpr)}</strong></div>
+          <div class="lab-kv"><span>收縮壓 / 舒張壓</span><strong>SBP ${escapeHtml(st.sbpText)} / DBP ${escapeHtml(st.dbpText)}</strong></div>
+          <div class="lab-kv"><span>平均動脈壓 / 脈壓</span><strong>MAP ${escapeHtml(st.mapText)}｜PP ${escapeHtml(st.pp)}</strong></div>
+          <div class="lab-kv"><span>心跳淨效應 (β₁ vs 迷走)</span><strong>${escapeHtml(st.hrText)}</strong></div>
+        </div>
+      `;
+
+      const applySympVitals = (vObj) => {
+        global.TaixuState.updateVitals(vObj);
+        global.TaixuPulseMonitor.update(run.vitals);
+      };
+
+      labEl.querySelectorAll('[data-symp]').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          sl.drug = btn.getAttribute('data-symp');
+          const p = profiles[sl.drug];
+          applySympVitals((sl.alphaBlocked ? p.blocked : p.normal).vitals);
+          renderInteractiveLab(step, run);
+        });
+      });
+      labEl.querySelector('#btn-symp-ablock').addEventListener('click', () => {
+        sl.alphaBlocked = !sl.alphaBlocked;
+        const p = profiles[sl.drug];
+        applySympVitals((sl.alphaBlocked ? p.blocked : p.normal).vitals);
+        renderInteractiveLab(step, run);
+      });
+    } else if (step.widget === 'adhd_pfc_lab') {
+      const adhd = run.adhdLab || { state: 'baseline' };
+      run.adhdLab = adhd;
+      const info = {
+        baseline: {
+          title: 'ADHD 前額葉基態（兒茶酚胺不足）',
+          rec: 'α₂A 與 D₁ 未充分調節 HCN 通道',
+          camp: '訊號樹突棘微漏、背景雜訊持續干擾',
+          result: 'Signal ↓ / Noise ↑（工作記憶渙散、易衝動分心）'
+        },
+        ne_a2a: {
+          title: 'NE / Guanfacine（突觸後 α₂A 致效）',
+          rec: 'α₂A 偶聯 G_i 蛋白 → ↓ cAMP',
+          camp: '★ 關閉 (Close) 正向主幹樹突棘之 HCN 通道，封堵訊號漏電！',
+          result: '有效訊號強化 (Signal ↑↑)；Guanfacine 專一 α₂A 較 Clonidine 少鎮靜與低血壓！'
+        },
+        da_d1: {
+          title: 'DA 調控背景（突觸後 D₁ 適度活化）',
+          rec: 'D₁ 偶聯 G_s 蛋白 → ↑ cAMP',
+          camp: '★ 打開 (Open) 處理無關雜訊分支上的 HCN 通道，讓干擾漏出消散！',
+          result: '背景雜訊消弭 (Noise ↓↓)，突出目標訊息對比度！'
+        },
+        atomoxetine: {
+          title: 'Atomoxetine（非中樞興奮劑・選擇性 NET 抑制）',
+          rec: '★ 前額葉皮質 DAT 極少，NET 同時負責回收 NE 與 DA！',
+          camp: '單純抑制 NET 即可於前額葉同時↑NE（關 HCN 強訊號）＋↑DA（開 HCN 減雜訊）',
+          result: '雙效強化 PFC 功能，且不升高依核紋狀體 DA → 無成癮濫用風險！'
+        }
+      }[adhd.state] || {};
+
+      labEl.innerHTML = `
+        <h3 class="lab-title">前額葉皮質 (PFC) HCN 通道「訊號 vs. 雜訊」調控模擬台</h3>
+        <div class="lab-controls">
+          <button type="button" class="lab-toggle ${adhd.state === 'baseline' ? 'active' : ''}" data-adhd="baseline">ADHD 基態</button>
+          <button type="button" class="lab-toggle ${adhd.state === 'ne_a2a' ? 'active' : ''}" data-adhd="ne_a2a">NE / Guanfacine (α₂A)</button>
+          <button type="button" class="lab-toggle ${adhd.state === 'da_d1' ? 'active' : ''}" data-adhd="da_d1">DA (D₁ 開通道去雜訊)</button>
+          <button type="button" class="lab-toggle ${adhd.state === 'atomoxetine' ? 'active' : ''}" data-adhd="atomoxetine">Atomoxetine (NET 雙收)</button>
+        </div>
+        <div class="lab-readout">
+          <div class="lab-kv"><span>目前路徑</span><strong>${escapeHtml(info.title)}</strong></div>
+          <div class="lab-kv"><span>G 蛋白／cAMP 方向</span><strong>${escapeHtml(info.rec)}</strong></div>
+          <div class="lab-kv"><span>HCN 通道開關</span><strong>${escapeHtml(info.camp)}</strong></div>
+          <div class="lab-kv"><span>臨床認知淨效應</span><strong>${escapeHtml(info.result)}</strong></div>
+        </div>
+      `;
+      labEl.querySelectorAll('[data-adhd]').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          adhd.state = btn.getAttribute('data-adhd');
+          global.TaixuState.saveRun();
+          renderInteractiveLab(step, run);
+        });
+      });
     }
   }
 
@@ -731,7 +1178,7 @@
       run.failedRescueCount += 1;
       global.TaixuState.applyDelta({ guardPills: -1, riskScore: 3 });
 
-      if (ev.isBoss || ev.chapter === 5) {
+      if (ev.isBoss) {
         forceEndId = 'qi_reversal';
       } else if (run.guardPills <= 0) {
         forceEndId = 'reincarnate';
@@ -889,6 +1336,7 @@
     const total = Math.max(1, run.totalAnswered);
     const acc = run.correctFirstTry / total;
     const balanceDiff = Math.abs((run.yin || 50) - (run.yang || 50));
+    const riskThreshold = total >= 35 ? 10 : total >= 16 ? 8 : 6;
 
     if (run.failedRescueCount > 0 && run.guardPills <= 0) {
       return endingsData.find((e) => e.id === 'reincarnate') || endingsData[0];
@@ -899,11 +1347,26 @@
     if (run.crisisCount > 0 && run.rescuedCount >= run.crisisCount && run.failedRescueCount === 0) {
       return endingsData.find((e) => e.id === 'crisis_master') || endingsData[0];
     }
-    if (run.riskScore >= 6) {
+    if (run.riskScore >= riskThreshold) {
       return endingsData.find((e) => e.id === 'toxic_elder') || endingsData[0];
     }
-    if (run.mode === 'story' && acc >= 0.9 && balanceDiff <= 18) {
+    if (
+      run.mode === 'story' &&
+      (run.storyScope || 'full') === 'full' &&
+      total >= 30 &&
+      acc >= 0.88 &&
+      balanceDiff <= 24
+    ) {
+      return endingsData.find((e) => e.id === 'grand_perfection') || endingsData.find((e) => e.id === 'shennong_heir') || endingsData[0];
+    }
+    if (run.mode === 'story' && acc >= 0.9 && balanceDiff <= 20) {
       return endingsData.find((e) => e.id === 'shennong_heir') || endingsData[0];
+    }
+    if (
+      (run.route === 'xuanming' || run.route === 'taiyang' || run.storyScope === 'part2' || (run.yang - run.yin) >= 12) &&
+      acc >= 0.7
+    ) {
+      return endingsData.find((e) => e.id === 'xuanming_taiyang_master') || endingsData[0];
     }
     if ((run.route === 'taiyin' || (run.yin - run.yang) >= 12) && acc >= 0.7) {
       return endingsData.find((e) => e.id === 'taiyin_grandmaster') || endingsData[0];
@@ -912,7 +1375,7 @@
       return endingsData.find((e) => e.id === 'flawless_sage') || endingsData[0];
     }
     if (acc >= 0.65) {
-      return endingsData.find((e) => e.id === 'taiyin_grandmaster') || endingsData[0];
+      return endingsData.find((e) => e.id === ((run.yang > run.yin) ? 'xuanming_taiyang_master' : 'taiyin_grandmaster')) || endingsData[0];
     }
     return endingsData.find((e) => e.id === 'toxic_elder') || endingsData[0];
   }
@@ -926,6 +1389,8 @@
     const summary = {
       ending,
       mode: run.mode,
+      storyScope: run.storyScope || 'full',
+      route: run.route,
       seed: run.seed,
       yin: run.yin,
       yang: run.yang,
@@ -939,7 +1404,7 @@
       wrongNotes: run.runWrongNotes || []
     };
 
-    global.TaixuState.clearSavedRun();
+    global.TaixuState.clearSavedRun(run.slotId);
     if (typeof onEndingCallback === 'function') {
       onEndingCallback(summary);
     }
@@ -977,7 +1442,8 @@
     const done = run.completedEvents ? run.completedEvents.length : 0;
     const progEl = document.getElementById('hud-progress');
     if (progEl) {
-      const modeTag = run.mode === 'story' ? '章回篇' : '速行篇';
+      const scopeTag = run.storyScope === 'part1' ? '上篇' : run.storyScope === 'part2' ? '下篇' : '全四卷';
+      const modeTag = run.mode === 'story' ? `章回・${scopeTag}` : '速行篇';
       progEl.textContent = `${modeTag}・${Math.min(done + 1, totalEvents)}/${totalEvents}`;
     }
 
@@ -1000,6 +1466,7 @@
 
   global.TaixuEngine = {
     init,
+    setBundleData,
     startNewRun,
     resumeCurrentRun,
     continueFromFeedback,

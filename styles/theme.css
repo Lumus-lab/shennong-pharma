@@ -1714,6 +1714,210 @@ code {
   color: var(--ink-secondary);
 }
 
+/* Phase 2 擴充樣式：分卷節奏、分流存檔清單、體溫血鉀與 TOF 監測、新增互動實驗台 */
+.sub-option-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px dashed var(--border-hairline);
+}
+
+.sub-opt-lbl {
+  font-size: 0.8rem;
+  color: var(--ink-muted);
+  font-weight: 600;
+}
+
+.sub-chip {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 11px;
+  border-radius: 99px;
+  border: 1px solid var(--border-hairline);
+  background: var(--surface-card);
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.sub-chip input {
+  position: absolute;
+  opacity: 0;
+}
+
+.sub-chip.selected {
+  border-color: var(--cinnabar);
+  background: var(--cinnabar-soft);
+  color: var(--cinnabar);
+  font-weight: 700;
+}
+
+.saved-runs-panel {
+  margin-top: 16px;
+  padding: 13px 16px;
+  border-radius: var(--radius-md);
+  background: var(--surface-paper);
+  border: 1px solid var(--border-hairline);
+}
+
+.saved-runs-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.save-slot-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding: 9px 12px;
+  border-radius: var(--radius-sm);
+  background: var(--surface-card);
+  border: 1px solid var(--border-hairline);
+}
+
+.save-slot-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.save-slot-title {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--ink-primary);
+}
+
+.save-slot-desc {
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  font-family: var(--font-mono);
+}
+
+.save-slot-actions {
+  display: flex;
+  gap: 6px;
+}
+
+.btn-del-save {
+  padding: 6px 10px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-hairline);
+  background: var(--surface-paper);
+  color: var(--ink-muted);
+  font-size: 0.78rem;
+  cursor: pointer;
+}
+
+.btn-del-save:hover {
+  border-color: var(--cinnabar);
+  color: var(--cinnabar);
+}
+
+.bp-item.is-danger .metric-value strong {
+  color: hsl(7, 84%, 64%);
+}
+
+.bp-item.is-warn .metric-value strong {
+  color: hsl(36, 92%, 62%);
+}
+
+.nmj-tof-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.tof-svg {
+  flex-shrink: 0;
+  background: hsla(200, 30%, 6%, 0.65);
+  border-radius: 5px;
+  border: 1px solid var(--monitor-border);
+}
+
+.tof-meta {
+  flex: 1;
+  min-width: 0;
+}
+
+.tof-readout {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: var(--monitor-text);
+  margin-bottom: 3px;
+}
+
+.vol-filters {
+  margin-bottom: 8px;
+  padding-bottom: 8px;
+  border-bottom: 1px dashed var(--border-hairline);
+}
+
+.lab-food-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(175px, 1fr));
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.lab-food-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  padding: 7px 10px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-hairline);
+  background: var(--surface-card);
+  color: var(--ink-primary);
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.lab-food-btn small {
+  font-size: 0.72rem;
+  color: var(--ink-muted);
+}
+
+.lab-food-btn.active {
+  border-color: var(--cinnabar);
+  background: var(--cinnabar-soft);
+}
+
+.lab-food-btn.safe.active {
+  border-color: var(--jade-ok);
+  background: var(--jade-soft);
+}
+
+.lab-inline-tof {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 12px;
+  margin-bottom: 10px;
+  border-radius: var(--radius-sm);
+  background: var(--monitor-bg);
+  color: var(--monitor-text);
+  font-size: 0.82rem;
+}
+
+.lab-note-box {
+  margin-top: 8px;
+  padding: 8px 11px;
+  border-radius: var(--radius-sm);
+  background: var(--yang-soft);
+  font-size: 0.84rem;
+  color: var(--ink-primary);
+}
+
 /* 響應式：平板／手機 */
 @media (max-width: 960px) {
   .hero-scroll {

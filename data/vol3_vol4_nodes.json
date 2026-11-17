@@ -1,0 +1,3349 @@
+{
+  "events": {
+    "E19": {
+      "id": "E19",
+      "chapter": 6,
+      "chapterTitle": "第 6 章・茄科萬毒圃與五靈分樞",
+      "location": "玄冥封脈殿・茄科萬毒圃",
+      "title": "茄科妖花、鏡像對掌與反向雙鎖",
+      "hubSummary": "辨識茄科植物與 l(-)-Hyoscyamine 立體效價、Scopolamine 環氧橋穿腦 SAR 與 M1–M5 Pirenzepine 親和力。",
+      "codexIds": [37, 38, 39],
+      "unlockTables": ["tbl_antimuscarinic"],
+      "storyMode": "one",
+      "variants": [
+        {
+          "variantId": "A",
+          "steps": [
+            {
+              "id": "e19a_s1",
+              "speaker": "hongyue",
+              "speakerName": "弘岳真人",
+              "speakerTag": "第三卷・玄冥封脈啟程",
+              "text": "寒霧漫過玄冥封脈殿前的「茄科萬毒圃」。紅果顛茄（*Atropa belladonna*）與天仙子（*Hyoscyamus niger*）正微吐紫光。\n弘岳真人：「顛茄含 **`Atropine`**（天然實為左旋 `l(-)-hyoscyamine`），製藥時消旋成 `d,l` 外消旋體；但究竟哪一旋光異構物貢獻了核心阻斷藥效？且它與 `ACh` 在受體上有何分子關係？」",
+              "vitals": {
+                "subject": "林玄（玄冥毒圃測脈態）",
+                "hr": 74,
+                "sbp": 118,
+                "dbp": 76,
+                "iop": 15,
+                "tempC": 36.8,
+                "potassium": 4.2,
+                "rhythm": "normal",
+                "rhythmText": "竇性節律（雙極初入玄冥）",
+                "pupilMm": 3.5,
+                "ciliary": "適度平衡",
+                "airway": 100,
+                "secretion": "正常潤澤",
+                "nmj": 50,
+                "nmjLabel": "穩健有力",
+                "tofPattern": "normal",
+                "tofNote": "TOF 100%（無衰減）",
+                "badges": ["進入第三卷・玄冥封脈篇"]
+              },
+              "choices": [
+                {
+                  "id": "c_hyo_ok",
+                  "label": "l(-)-hyoscyamine 對 M 受體阻斷效價至少為 d(+) 的 100 倍以上；結合 M 受體第 3 穿膜區 Asp 殘基，屬可逆競爭性「反向致效劑 (Inverse agonist)」",
+                  "sublabel": "將具自發基礎活性的 M 受體平衡推向不活化狀態；belladonna 亦源自女性點眼散瞳自稱「美女」",
+                  "outcome": "correct",
+                  "nextStepId": "e19a_s2",
+                  "feedback": {
+                    "speakerName": "弘岳真人",
+                    "text": "「一擊中的！外消旋混合物裡真正披掛上陣的正是 `l(-)-hyoscyamine`。此外，辣椒（*Capsicum*）產辣椒鹼、菸草產 Nicotine、曼陀羅（*Datura*）與顛茄皆屬茄科（Solanaceae）同宗！」",
+                    "delta": { "yin": -2, "yang": 2 },
+                    "unlockCodex": [37]
+                  }
+                },
+                {
+                  "id": "c_hyo_wrong1",
+                  "label": "d(+)-hyoscyamine 才是高活性主體；且與 M 受體以共價鍵形成不可逆沉默拮抗",
+                  "sublabel": "陸離：「右旋寫起來較順手，大概是不可逆吧？」",
+                  "outcome": "wrong",
+                  "feedback": {
+                    "speakerName": "蘇苓師妹",
+                    "text": "「錯了兩個基本考點！植物天然產物活性向來偏 `l(-)` 左旋（效價 >100 倍 d(+)），且 Atropine 與 M 受體第 3 穿膜區天門冬胺酸是『可逆性』結合，實質還把基礎活性壓下去，屬『反向致效劑 (Inverse agonist)』！」",
+                    "delta": { "yang": 1 }
+                  }
+                },
+                {
+                  "id": "c_hyo_wrong2",
+                  "label": "d(-) 與 l(+) 各貢獻 50% 效價，僅差別在是否能進入大腦",
+                  "sublabel": "混淆立體異構物親和力差異",
+                  "outcome": "wrong",
+                  "feedback": {
+                    "speakerName": "弘岳真人",
+                    "text": "「左旋與右旋和受體立體口袋契合度天差地別——l(-) 至少強上百倍；能否穿過血腦障壁主要看三級胺脂溶性與結構基團，非單純旋光各半！」",
+                    "delta": { "yin": 1 }
+                  }
+                }
+              ]
+            },
+            {
+              "id": "e19a_s2",
+              "speaker": "suling",
+              "speakerName": "蘇苓師妹",
+              "speakerTag": "茄科三丹 SAR 鑑別",
+              "text": "藥櫃同時陳列三枚三級胺白瓶：**`Atropine`**、**`Scopolamine`** 與 **`Homatropine`**。\n蘇苓考問：「為何 `Scopolamine` 在**常規治療劑量**下就比 `Atropine` 更易直透 BBB 產生中樞鎮靜與**失憶 (Amnesia)**？而將 `Atropine` 酸端改為扁桃酸的 `Homatropine` 點眼又有何差異？」",
+              "choices": [
+                {
+                  "id": "c_sar_ok",
+                  "label": "Scopolamine 位置［1］具「氧原子環氧橋 (Epoxide bridge)」大幅強化 BBB 穿透；Homatropine 改為 Mandelic acid (-OH) 使散瞳時間由 5–6 天縮短為 12–24 小時",
+                  "sublabel": "同步區分 M1（Pirenzepine 25 / Dicyclomine 治 IBS）、M2（Gallamine / 300）與 M3（Darifenacin / 500）",
+                  "outcome": "correct",
+                  "nextStepId": "__EVENT_COMPLETE__",
+                  "feedback": {
+                    "speakerName": "弘岳真人",
+                    "text": "「絕佳！位置［1］那座氧原子環氧橋讓 Scopine 鹼基穿透中樞能力暴增；位置［2］把 `-CH₂OH` 換成 `-OH`（扁桃酸）則讓 Homatropine 剛剛好適合葡萄膜炎維持 12–24 小時防沾黏！」",
+                    "delta": { "yin": -1, "yang": 3 },
+                    "unlockCodex": [38, 39],
+                    "vitals": {
+                      "pupilMm": 5.4,
+                      "ciliary": "Scopine 中樞結界演示",
+                      "badges": ["茄科三丹 SAR 已破"]
+                    }
+                  }
+                },
+                {
+                  "id": "c_sar_wrong1",
+                  "label": "因為 Scopolamine 是極性四級胺被主動轉運入腦；Homatropine 則讓散瞳延長至 14 天",
+                  "sublabel": "四級胺永不穿 BBB，扁桃酸反縮短時效",
+                  "outcome": "wrong",
+                  "feedback": {
+                    "speakerName": "蘇苓師妹",
+                    "text": "「四級胺怎麼可能進腦！三者『通通是三級胺』，差異是 Scopolamine 鹼基端多個環氧橋大幅親腦致鎮靜失憶；Homatropine 時效是縮短到 12–24 小時（Atropine 才是 5–6 天）！」",
+                    "delta": { "yin": 2 }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "variantId": "B",
+          "steps": [
+            {
+              "id": "e19b_s1",
+              "speaker": "hongyue",
+              "speakerName": "弘岳真人",
+              "speakerTag": "M₁–M₅ 亞型親和矩陣",
+              "text": "大腸激躁症（IBS）弟子捧腹求診，另有研究陣盤浮現 `Atropine : Pirenzepine` 親和力譜。\n弘岳真人：「若以選擇性工具 `Pirenzepine` 與腸道抗痙攣藥 `Dicyclomine` 鑑別五類受體，何組論述精準合度？」",
+              "vitals": {
+                "subject": "IBS 求診弟子",
+                "hr": 76,
+                "sbp": 116,
+                "dbp": 74,
+                "iop": 15,
+                "tempC": 36.8,
+                "potassium": 4.2,
+                "rhythm": "normal",
+                "rhythmText": "竇性節律",
+                "pupilMm": 3.5,
+                "ciliary": "適度平衡",
+                "airway": 100,
+                "secretion": "正常潤澤",
+                "nmj": 50,
+                "nmjLabel": "穩健有力",
+                "tofPattern": "normal",
+                "tofNote": "TOF 100%（無衰減）",
+                "badges": ["M1–M5 受體鑑別中"]
+              },
+              "choices": [
+                {
+                  "id": "c_m15_ok",
+                  "label": "Pirenzepine 對 Gq 偶聯之 M₁ 親和力最高 (25 vs M₂ 300 / M₃ 500)；治 IBS 的 Dicyclomine 專拮抗 M₁ 與 M₄",
+                  "sublabel": "同時牢記心臟 M₂ 強阻斷者曾見肌鬆劑 Gallamine，而 Scopolamine 位置［1］環氧橋易過 BBB 兼抗 M₁",
+                  "outcome": "correct",
+                  "nextStepId": "__EVENT_COMPLETE__",
+                  "feedback": {
+                    "speakerName": "弘岳真人",
+                    "text": "「精確！Pirenzepine 對 `M₁` (25) 與 `M₄` (17) 遠比 `M₂` (300) / `M₃` (500) 敏銳；臨床治腸絞痛的 `Dicyclomine` 也正是拮抗 `M₁` 與 `M₄`，再配 `l(-)-hyoscyamine` 左旋與 Inverse agonist 概念即全破本關！」",
+                    "delta": { "yin": 2, "yang": 2 },
+                    "unlockCodex": [37, 38, 39]
+                  }
+                },
+                {
+                  "id": "c_m15_wrong",
+                  "label": "Pirenzepine 專一最高親和 M₃（治療 OAB 首選），而 Dicyclomine 主要是 M₂ 致效劑",
+                  "sublabel": "完全混淆研究用 M1 拮抗劑與 M3 泌尿選擇劑",
+                  "outcome": "wrong",
+                  "feedback": {
+                    "speakerName": "蘇苓師妹",
+                    "text": "「M₃ 最高親和的代表是 `Darifenacin / Solifenacin / Tiotropium`；`Pirenzepine` 對 M₃ 親和比差到 500，它是標準的 `M₁`（兼顧 M₄）選擇性拮抗劑喔！」",
+                    "delta": { "yang": 1 }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "E20": {
+      "id": "E20",
+      "chapter": 6,
+      "chapterTitle": "第 6 章・茄科萬毒圃與五靈分樞",
+      "location": "玄冥封脈殿・四階劑量室＆瞳樞閣",
+      "title": "低劑量脈慢謎、顛茄熱與五靈封瞳",
+      "hubSummary": "解謎 Atropine 0.5mg 弔詭慢脈與小兒顛茄熱危象；辨析五種眼科散瞳藥與狹窄前房青光眼禁忌。",
+      "codexIds": [40, 41],
+      "unlockTables": ["tbl_antimuscarinic"],
+      "storyMode": "all",
+      "variants": [
+        {
+          "variantId": "A",
+          "steps": [
+            {
+              "id": "e20a_s1",
+              "speaker": "suling",
+              "speakerName": "蘇苓師妹",
+              "speakerTag": "四階劑量臨床謎題",
+              "text": "藥壇第一榻躺著輕度口乾試藥弟子，剛靜注了極小劑量 **`0.5 mg Atropine`**；奇怪的是脈象儀的心跳數竟從 `74 bpm` 微落至 `64 bpm`！\n一旁另有四歲男童準備麻醉前用藥。關於組織敏感序、這道「0.5 mg 脈慢弔詭」及男童風險，何者為真？",
+              "vitals": {
+                "subject": "試藥弟子（Atropine 0.5 mg 觀察）",
+                "hr": 64,
+                "sbp": 116,
+                "dbp": 74,
+                "iop": 15,
+                "tempC": 36.9,
+                "potassium": 4.2,
+                "rhythm": "brady",
+                "rhythmText": "0.5 mg 弔詭輕微竇緩",
+                "pupilMm": 3.6,
+                "ciliary": "近調仍存",
+                "airway": 100,
+                "secretion": "唾液微減",
+                "nmj": 50,
+                "nmjLabel": "穩健",
+                "tofPattern": "normal",
+                "badges": ["0.5 mg Atropine 脈慢觀察"]
+              },
+              "choices": [
+                {
+                  "id": "c_dose_ok",
+                  "label": "0.5 mg 優先阻斷副交感末梢突觸前 M₁ 自體抑制受體，使 ACh 釋放短暫微升致心跳變慢；唾液／支氣管／汗腺最敏感而胃酸最鈍；兒童常規量亦須嚴防抑汗致「顛茄熱 (Atropine fever)」",
+                  "sublabel": "2.0mg 才加速散瞳模糊；5.0mg 排尿難／無汗乾熱；>10mg 幻覺譫妄昏迷",
+                  "outcome": "correct",
+                  "nextStepId": "__EVENT_COMPLETE__",
+                  "feedback": {
+                    "speakerName": "弘岳真人",
+                    "text": "「絲毫不差！低劑量先摘突觸前 M₁ 剎車反增 ACh 讓心率微降，待 2 mg 以上直接佔據 SA 結 M₂ 心率才大幅竄升；而幼兒散熱極度依賴交感膽鹼汗腺（M₃），常規量也絕不可大意引發顛茄熱！」",
+                    "delta": { "yin": 2, "yang": 2 },
+                    "unlockCodex": [40],
+                    "vitals": {
+                      "hr": 74,
+                      "tempC": 36.8,
+                      "secretion": "散熱與泌涎評估安全",
+                      "badges": ["四階劑量與顛茄熱通曉"]
+                    }
+                  }
+                },
+                {
+                  "id": "c_dose_crisis",
+                  "label": "採信陸離：「心跳才 64 太慢了！給那發燒四歲男童加推 2 mg Atropine 並加蓋厚棉被暖身兼壓胃酸！」",
+                  "sublabel": "無視嬰幼兒無汗散熱障壁，常規劑量下直接鎖死小汗腺 M₃",
+                  "outcome": "crisis",
+                  "nextStepId": "__EVENT_COMPLETE__",
+                  "crisis": {
+                    "title": "小兒顛茄熱（Atropine Fever）與全腺體鎖死危象！",
+                    "mechanism": "嬰幼兒體溫調節高度依賴「交感膽鹼神經元→ACh→汗腺 `M₃`」排汗散熱！推注 Atropine 後，汗腺／唾液腺最先全面鎖死加上棉被悶熱，體溫狂飆至 **`39.8 °C`**，面頰潮紅皮膚乾燙、心跳暴衝 `148 bpm` 併譫妄！",
+                    "vitals": {
+                      "subject": "4 歲發燒男童（Atropine fever 危象！）",
+                      "hr": 148,
+                      "sbp": 112,
+                      "dbp": 66,
+                      "tempC": 39.8,
+                      "rhythm": "tachy",
+                      "rhythmText": "無汗高熱・極度竇性過速",
+                      "pupilMm": 7.0,
+                      "ciliary": "近物全盲・譫妄躁動",
+                      "airway": 118,
+                      "secretion": "皮膚乾燙徹絕排汗",
+                      "badges": ["顛茄熱 (Atropine fever)", "極度高溫危機"]
+                    },
+                    "rescuePrompt": "男童體溫已竄上 39.8 °C 並乾熱譫妄，該立刻執行何種急救？",
+                    "rescueChoices": [
+                      {
+                        "id": "rc_fever_ok",
+                        "label": "立刻撤除棉被積極物理冰敷散熱、停用一切抗膽鹼藥 ＋ 補充靜脈輸液（極重度譫妄抽搐才慎重滴定極低劑量 Physostigmine）",
+                        "sublabel": "立即解除環境悶熱並中止 M₃ 汗腺阻斷來源",
+                        "isSuccess": true,
+                        "feedbackText": "迅速掀除悶熱被褥搭配冷水擦浴降溫與輸液補充後，男童體溫逐漸跌回 37.4 °C，譫妄躁動平息！弘岳真人嚴誡：「兒科用 Atropine 永遠先問體溫與排汗散熱！」",
+                        "delta": { "yin": 2 },
+                        "vitals": {
+                          "hr": 98,
+                          "tempC": 37.4,
+                          "rhythm": "normal",
+                          "secretion": "漸復微濕散熱",
+                          "badges": ["物理降溫成功退燒"]
+                        }
+                      },
+                      {
+                        "id": "rc_fever_fail",
+                        "label": "誤判為術前發炎敗血症，再補第二支 Scopolamine 與口服 Oxybutynin 鎮靜防抽筋",
+                        "sublabel": "疊加中樞與周邊強抗膽鹼藥只會讓高熱譫妄直接破 41 °C",
+                        "isSuccess": false,
+                        "feedbackText": "Scopolamine 更強化中樞譫妄與全面閉汗！男童體溫飆破 41 °C 陷於熱痙攣，弘岳真人急以冰水浸浴與三級胺解毒劑搶介入才救回，判本局救援失利！",
+                        "vitals": { "tempC": 41.2, "hr": 168, "badges": ["熱痙攣危象失控"] }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "id": "c_dose_wrong",
+                  "label": "胃酸分泌對 Atropine 最敏感，0.5 mg 就能完全止酸且心跳立刻破百",
+                  "sublabel": "與敏感度順位完全顛倒",
+                  "outcome": "wrong",
+                  "feedback": {
+                    "speakerName": "蘇苓師妹",
+                    "text": "「完全反了！胃壁細胞泌酸對 Atropine 是『最不敏感』的，要用高到吃不消的劑量才壓得住；『最敏感』的是唾液、支氣管與汗腺！且 0.5 mg 因阻突觸前 M₁ 心跳反而微慢喔。」",
+                    "delta": { "yang": 1 }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "variantId": "B",
+          "steps": [
+            {
+              "id": "e20b_s1",
+              "speaker": "hongyue",
+              "speakerName": "弘岳真人",
+              "speakerTag": "瞳樞閣五靈點眼陣",
+              "text": "瞳樞閣兩位患者同時就診：甲君僅須 20 分鐘快速視網膜眼底檢查（不需睫狀肌麻痺）；乙君罹患嚴重**急性前葡萄膜炎（Uveitis / 虹膜炎）**，亟需鬆弛睫狀肌止痛並預防虹膜後沾黏（Synechia）數至一兩日，另前房偶測僅呈極狹窄角！\n你當分別如何點藥？",
+              "vitals": {
+                "subject": "甲君（眼底）＆乙君（葡萄膜炎／狹窄隅角警示）",
+                "hr": 74,
+                "sbp": 122,
+                "dbp": 76,
+                "iop": 20,
+                "tempC": 36.8,
+                "rhythm": "normal",
+                "rhythmText": "竇性節律",
+                "pupilMm": 3.4,
+                "ciliary": "葡萄膜炎睫狀體痙攣痛",
+                "airway": 100,
+                "secretion": "正常",
+                "nmj": 50,
+                "nmjLabel": "穩健",
+                "tofPattern": "normal",
+                "badges": ["葡萄膜炎／前房角評估中"]
+              },
+              "choices": [
+                {
+                  "id": "c_eye_ok",
+                  "label": "一般純眼底鏡無須睫麻首選 α₁ 致效劑 Phenylephrine（抗 M 最短效則用 Tropicamide 15–60 min）；葡萄膜炎止痛防沾黏選用 Homatropine (12–24 h)——且前房隅角狹窄者絕對禁用強散瞳劑！",
+                  "sublabel": "對比 Cyclopentolate (3–6h)、Scopolamine (3–7d)、Atropine（雖全身短但眼效長達 5–6 days！）",
+                  "outcome": "correct",
+                  "nextStepId": "__EVENT_COMPLETE__",
+                  "feedback": {
+                    "speakerName": "弘岳真人",
+                    "text": "「妙極！葡萄膜包含虹膜、睫狀體與脈絡膜，Homatropine (12–24h) 最常奉為鬆肌防沾黏經典；純檢查不須睫狀肌麻痺即挑 Phenylephrine（或最短抗 M 的 Tropicamide）；唯有幼童驗光方須祭出 5–6 天的 Atropine。」",
+                    "delta": { "yin": 2, "yang": 2 },
+                    "unlockCodex": [41],
+                    "vitals": {
+                      "iop": 16,
+                      "pupilMm": 4.8,
+                      "ciliary": "Homatropine 鬆解睫狀痛・避開狹窄眼壓",
+                      "badges": ["五靈眼科藥效分明"]
+                    }
+                  }
+                },
+                {
+                  "id": "c_eye_crisis",
+                  "label": "不測前房隅角深淺，直接對狹窄隅角眼滴入最高濃度 1% Atropine（號稱效期 5 天一勞永逸）",
+                  "sublabel": "虹膜一旦大幅散瞳捲縮至周邊，立刻堵死狹窄隅角小樑網出口",
+                  "outcome": "crisis",
+                  "nextStepId": "__EVENT_COMPLETE__",
+                  "crisis": {
+                    "title": "急性隅角閉鎖性青光眼危象（IOP 暴衝 50 mmHg）！",
+                    "mechanism": "前房狹窄眼中滴入強效且長達 **5–6 天** 的 `1% Atropine`，散大的虹膜周邊完全塞死隅角房水排出通道！數分鐘內眼壓劇升至 `50 mmHg`、劇烈眼痛頭痛吐嘔！",
+                    "vitals": {
+                      "subject": "狹窄前房病患（急性隅角閉鎖危象！）",
+                      "hr": 106,
+                      "sbp": 156,
+                      "dbp": 94,
+                      "iop": 50,
+                      "rhythm": "tachy",
+                      "rhythmText": "劇痛反射性心搏加速",
+                      "pupilMm": 7.6,
+                      "ciliary": "麻痺 5–6d・角膜水腫霧視",
+                      "badges": ["急性隅角閉鎖青光眼", "眼壓爆表危象"]
+                    },
+                    "rescuePrompt": "病患眼壓飆破 50 mmHg、角膜混濁劇痛欲嘔，急診眼科該立刻下哪組急救治療？",
+                    "rescueChoices": [
+                      {
+                        "id": "rc_aacg_ok",
+                        "label": "高劑量抗房水生成（IV Acetazolamide + 點眼 Timolol）＋ 高滲透壓脫水 Mannitol ＋ 適時 Pilocarpine 縮瞳拉開隅角（併評估雷射虹膜造口術）",
+                        "sublabel": "多管齊下截斷房水製造並急拉回周邊虹膜排泄口",
+                        "isSuccess": true,
+                        "feedbackText": "高滲透壓甘露醇與靜脈碳酸酐酶抑制劑迅速拉低後房壓力後，Pilocarpine 終於成功縮小瞳孔打開房水隅角，眼壓漸回 18 mmHg！日後切記狹窄前房禁散瞳！",
+                        "delta": { "yin": 2 },
+                        "vitals": {
+                          "iop": 18,
+                          "pupilMm": 2.6,
+                          "hr": 76,
+                          "sbp": 122,
+                          "badges": ["房水隅角緊急疏通"]
+                        }
+                      },
+                      {
+                        "id": "rc_aacg_fail",
+                        "label": "改加滴 Tropicsmide 與口服 Prednisolone 類固醇眼藥試圖消腫視神經",
+                        "sublabel": "類固醇反而更易升高眼壓，且未降低眼前房劇漲房水壓力",
+                        "isSuccess": false,
+                        "feedbackText": "錯誤疊加散瞳兼類固醇讓眼壓維持在 52 mmHg 損及視神經盤！弘岳真人急運強心甘露醇接手減壓，本輪救援宣告失敗！",
+                        "vitals": { "iop": 54, "badges": ["視神經高壓受損危機"] }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "id": "c_eye_wrong",
+                  "label": "Tropicamide 散瞳效果長達 5–6 天，所以平常眼底檢查首選高濃度 Homatropine 最快消退",
+                  "sublabel": "最長與最短效藥名對調",
+                  "outcome": "wrong",
+                  "feedback": {
+                    "speakerName": "蘇苓師妹",
+                    "text": "「完全寫反了！`Tropicamide`（15–60 min）才是臨床最快消退、日常門診眼底檢查最常用的短效抗 M 藥；`Atropine` 才會拖上 5–6 days 讓病人幾乎整週無法看近字！」",
+                    "delta": { "yang": 1 }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "E21": {
+      "id": "E21",
+      "chapter": 6,
+      "chapterTitle": "第 6 章・茄科萬毒圃與五靈分樞",
+      "location": "玄冥封脈殿・靜風眩樓＆玄氣肺壇",
+      "title": "暈船涎湧、中樞 EPS 與動力學選擇氣管",
+      "hubSummary": "辨明動暈症「流口水」反差、Scopolamine M1+5-HT3 雙機轉、Benztropine 治 EPS，與 Tiotropium 動力學選擇性。",
+      "codexIds": [42, 43],
+      "unlockTables": ["tbl_antimuscarinic"],
+      "storyMode": "one",
+      "variants": [
+        {
+          "variantId": "A",
+          "steps": [
+            {
+              "id": "e21a_s1",
+              "speaker": "suling",
+              "speakerName": "蘇苓師妹",
+              "speakerTag": "內耳前庭與錐體外症候",
+              "text": "樓船幻陣晃動不已，暈船弟子臉色慘白冒冷汗、竟**口水直流**；旁床另有服過量 Haloperidol（抗精神病藥）引發急性肌張力不全斜頸（EPS）的武修！\n蘇苓指著暈船者：「師兄別被直覺騙了！動暈症（Motion Sickness）本身其實會使唾液分泌如何變化？若出發前 1 小時貼 **`Scopolamine`** 貼片又靠哪兩個中樞受體防暈？順便救一下這位 EPS 武修！」",
+              "vitals": {
+                "subject": "暈船弟子（前庭失衡）／EPS 武修",
+                "hr": 82,
+                "sbp": 114,
+                "dbp": 72,
+                "iop": 15,
+                "tempC": 36.8,
+                "rhythm": "normal",
+                "rhythmText": "前庭自律反應・唾液大量分泌",
+                "pupilMm": 3.4,
+                "ciliary": "空間眩暈晃動",
+                "airway": 96,
+                "secretion": "動暈本身大量流口水 ↑↑Salivation",
+                "nmj": 72,
+                "nmjLabel": "EPS 斜頸肌張力偏高",
+                "tofPattern": "spastic",
+                "tofNote": "EPS 錐體外肌張力亢進",
+                "badges": ["前庭 M1/H1 不匹配", "EPS ACh 相對過高"]
+              },
+              "choices": [
+                {
+                  "id": "c_ms_ok",
+                  "label": "動暈症本身典型伴隨「大量流口水 ↑Salivation」（口乾是貼藥副作用）；Scopolamine 耳後貼片 (48–72h) 同阻中樞 M₁ 與 5-HT₃ 受體；EPS 武修則給入腦三級胺 Benztropine 或 Trihexyphenidyl 拮抗 M₁",
+                  "sublabel": "動暈口訣：症發湧涎，用藥方乾；抗精神病 EPS 本質是阻 D₂ 致紋狀體 ACh 相對亢進",
+                  "outcome": "correct",
+                  "nextStepId": "e21a_s2",
+                  "feedback": {
+                    "speakerName": "弘岳真人",
+                    "text": "「完美破解雙陷阱！許多考生錯把 Scopolamine 貼片的『口乾副作用』當成動暈症本症——其實暈車船前本身恰是胃噁心兼『大量流涎 ↑Salivation』！這枚《茄科破障琉璃鏡》收好！」",
+                    "delta": { "yin": 2, "yang": 1 },
+                    "unlockCodex": [42],
+                    "grantItem": {
+                      "id": "pouch_antimuscarinic_lens",
+                      "name": "茄科破障琉璃鏡",
+                      "desc": "刻有 M1/M3 親和與四級胺 BBB 鑑別訣：不穿 BBB 者零中樞譫妄，專看尿出口阻塞與 TOF 藥理。"
+                    },
+                    "vitals": {
+                      "secretion": "貼片控涎・微感口乾 (48–72h)",
+                      "nmj": 50,
+                      "nmjLabel": "Benztropine 緩解 EPS 肌張",
+                      "tofPattern": "normal",
+                      "badges": ["動暈 M1+5-HT3 雙阻斷", "EPS M1 平衡調控"]
+                    }
+                  }
+                },
+                {
+                  "id": "c_ms_wrong1",
+                  "label": "動暈症本質就會嚴重口乾；貼片只阻 H₁ 沒碰 5-HT₃，且治 EPS 應給不入腦的 Glycopyrrolate",
+                  "sublabel": "連錯動暈症狀、受體與血腦障壁特性",
+                  "outcome": "wrong",
+                  "feedback": {
+                    "speakerName": "蘇苓師妹",
+                    "text": "「錯透啦！動暈發作會噁心冷汗加『大量流口水 ↑Salivation』；Scopolamine 除 `M₁` 外還額外拮抗中樞 `5-HT₃`；治腦內基底核的 EPS 一定要用可入 BBB 的三級胺 **`Benztropine` / `Trihexyphenidyl`**，四級胺進不去腦袋啦！」",
+                    "delta": { "yin": -1 }
+                  }
+                }
+              ]
+            },
+            {
+              "id": "e21a_s2",
+              "speaker": "hongyue",
+              "speakerName": "弘岳真人",
+              "speakerTag": "玄氣肺壇・SAMA vs LAMA",
+              "text": "玄氣肺壇中一位 COPD 老者咳喘不止。案上擺著吸入型 `Ipratropium`、`Tiotropium` 與 `Umeclidinium`（皆**合成四級胺**）。\n弘岳真人：「既然 `Tiotropium` 對副交感突觸前會抑制 ACh 剎車的 **`M₂`** 受體也有結合力，為何吸入後**不會**讓氣喘加劇，反而一日一次長效舒張支氣管整整 `25 小時`？」",
+              "vitals": {
+                "subject": "COPD 老者（支氣管痙攣評估）",
+                "hr": 84,
+                "sbp": 126,
+                "dbp": 78,
+                "airway": 54,
+                "secretion": "黏液阻塞氣道",
+                "nmj": 50,
+                "rhythm": "normal",
+                "rhythmText": "呼氣費力伴哮鳴音",
+                "badges": ["氣道阻力升高・LAMA 篩選"]
+              },
+              "choices": [
+                {
+                  "id": "c_kinetic_ok",
+                  "label": "具「動力學選擇性 (Kinetic selectivity)」：從突觸前 M₂ 解離極快（保留剎車），卻從平滑肌 M₃ 解離極慢；且四級胺不全身吸收不入 BBB",
+                  "sublabel": "半衰期比較：Ipratropium (2h QID SAMA) vs Tiotropium (25h QD) / Umeclidinium (11h QD) / Aclidinium (6h BID) / Glycopyrrolate (1.2h BID)",
+                  "outcome": "correct",
+                  "nextStepId": "__EVENT_COMPLETE__",
+                  "feedback": {
+                    "speakerName": "弘岳真人",
+                    "text": "「正中玄機！並非它碰不到 `M₂`，而是『來得快、走得極快』不搶佔自體剎車；一抓住氣道平滑肌 `M₃` 便纏綿長達十數至廿五小時不放——此即 **`Kinetic selectivity`**！」",
+                    "delta": { "yin": 1, "yang": 3 },
+                    "unlockCodex": [43],
+                    "vitals": {
+                      "airway": 112,
+                      "secretion": "黏液微斂・通氣暢達",
+                      "badges": ["Kinetic selectivity 擴張成功"]
+                    }
+                  }
+                },
+                {
+                  "id": "c_kinetic_wrong",
+                  "label": "因為 Tiotropium 是三級胺先進入大腦關掉迷走神經核，且從 M₃ 解離極快才叫動力學選擇性",
+                  "sublabel": "把解離快慢與劑型電荷完全倒置",
+                  "outcome": "wrong",
+                  "feedback": {
+                    "speakerName": "蘇苓師妹",
+                    "text": "「吸這藥要是會入大腦還得了！所有 SAMA/LAMA 通通是『帶永久正電的四級胺』只在局部氣道作用不進 BBB；解離方向也是從 `M₂` 極快脫離、死死黏在 `M₃` 緩慢解離啦！」",
+                    "delta": { "yin": -1 }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "E22": {
+      "id": "E22",
+      "chapter": 6,
+      "chapterTitle": "第 6 章・茄科萬毒圃與五靈分樞",
+      "location": "百草堂・泌尿分診房",
+      "title": "三型漏尿、前驅脂酶與建築師迷案",
+      "hubSummary": "辨明滿溢性尿失禁絕對禁忌、比較 Tolterodine(CYP2D6) vs Fesoterodine(酯酶)/Trospium，並實戰 Case Study 1 63 歲建築師 JH。",
+      "codexIds": [44, 45],
+      "unlockTables": ["tbl_antimuscarinic"],
+      "storyMode": "all",
+      "variants": [
+        {
+          "variantId": "A",
+          "steps": [
+            {
+              "id": "e22a_s1",
+              "speaker": "patient",
+              "speakerName": "七旬高老伯",
+              "speakerTag": "未手術・重度攝護腺肥大",
+              "text": "七旬高老伯膀胱鼓脹如球，卻每隔半小時便**一點一滴滲漏出少許尿液**（直腸指診確認重度良性攝護腺肥大 `BPH` 尚未治療）。\n陸離摸著下巴：「整天都在漏尿，這不就是該吃 `Oxybutynin` 或 `Tolterodine` 把逼尿肌按住別收縮嗎？」你的診斷與處方為何？",
+              "vitals": {
+                "subject": "高老伯（重度未解 BPH 膀胱過脹）",
+                "hr": 88,
+                "sbp": 144,
+                "dbp": 88,
+                "iop": 15,
+                "tempC": 36.8,
+                "rhythm": "normal",
+                "rhythmText": "交感緊繃伴排尿阻力升高",
+                "pupilMm": 3.5,
+                "ciliary": "正常",
+                "airway": 100,
+                "secretion": "正常",
+                "nmj": 50,
+                "nmjLabel": "正常",
+                "tofPattern": "normal",
+                "badges": ["出口機械阻塞滲漏鑑別"]
+              },
+              "choices": [
+                {
+                  "id": "c_ui_ok",
+                  "label": "此為出口阻塞所致之「滿溢性尿失禁 (Overflow)」，阻塞未解前絕對禁用抗 M 藥！另針對真 OAB：Fesoterodine 直接經酯酶水解為 5-HMT 不需 CYP2D6；Darifenacin/Solifenacin M₃ 選擇最高、Trospium 為四級胺極少中樞作用",
+                  "sublabel": "區別應力性（骨盆底肌大笑漏尿）、急迫性（OAB 逼尿肌不自主收縮→抗M主力）、滿溢性（阻塞滲漏）",
+                  "outcome": "correct",
+                  "nextStepId": "__EVENT_COMPLETE__",
+                  "feedback": {
+                    "speakerName": "弘岳真人",
+                    "text": "「明察秋毫！下水口死堵只剩滿溢滲滴，這時再用 M₃ 阻斷劑放鬆逼尿肌等於徹底封門！真正急迫性 OAB 中，選不靠 CYP2D6 的酯酶前驅藥 `Fesoterodine`，抑或一天一次高 M₃ 選擇的 `Darifenacin / Solifenacin` 及純周邊 `Trospium`，方是正道！」",
+                    "delta": { "yin": 2, "yang": 2 },
+                    "unlockCodex": [44],
+                    "vitals": {
+                      "hr": 76,
+                      "sbp": 124,
+                      "dbp": 78,
+                      "badges": ["避開滿溢性尿失禁禁忌"]
+                    }
+                  }
+                },
+                {
+                  "id": "c_ui_crisis",
+                  "label": "附議陸離！為「滿溢性漏尿」的高老伯開立強效三級胺抗 M 藥 Oxybutynin 5mg TID 止漏",
+                  "sublabel": "誤將出口阻塞當成膀胱過動症抑制逼尿肌收縮",
+                  "outcome": "crisis",
+                  "nextStepId": "__EVENT_COMPLETE__",
+                  "crisis": {
+                    "title": "急性完全性尿滯留暨膀胱脹裂高壓危象！",
+                    "mechanism": "出口已被肥大攝護腺死死卡住（滿溢性尿失禁），再予強力 `M₃` 拮抗劑徹底癱瘓逼尿肌收縮力，一滴尿都擠不出！膀胱內壓力狂飆逼近腎盂回流、下腹劇痛冒冷汗，血壓飆上 `178/104 mmHg` 併老人輕微抗膽鹼譫妄！",
+                    "vitals": {
+                      "subject": "高老伯（急性尿滯留劇痛危象！）",
+                      "hr": 112,
+                      "sbp": 178,
+                      "dbp": 104,
+                      "rhythm": "tachy",
+                      "rhythmText": "急性疼痛交感飆壓",
+                      "pupilMm": 5.2,
+                      "secretion": "重度口乾譫妄躁動",
+                      "badges": ["急性尿滯留爆發", "滿溢性尿失禁禁忌"]
+                    },
+                    "rescuePrompt": "老伯下腹緊繃劇痛無法解尿一滴、血壓狂飆且出現譫妄，緊急處置步驟為何？",
+                    "rescueChoices": [
+                      {
+                        "id": "rc_ui_ok",
+                        "label": "立刻停用 Oxybutynin ＋ 緊急經尿道導尿 (Foley catheterization) 減壓釋放滯留尿液，再安排 α₁A 阻斷放鬆出口",
+                        "sublabel": "機械阻塞或急性滯留第一時間務必立即機械引流減壓",
+                        "isSuccess": true,
+                        "feedbackText": "導尿管順暢引流出 950 mL 滯留尿液後，老伯劇痛瞬間舒緩、血壓心率回穩！日後切記區分三大尿失禁，未暢通出口前嚴禁下抗 M 藥！",
+                        "delta": { "yin": 2 },
+                        "vitals": {
+                          "hr": 76,
+                          "sbp": 128,
+                          "dbp": 78,
+                          "rhythm": "normal",
+                          "badges": ["導尿成功解除滯留"]
+                        }
+                      },
+                      {
+                        "id": "rc_ui_fail",
+                        "label": "把 Oxybutynin 改成更強的 Fesoterodine 8 mg 加壓止漏，並先開強效 Loop 利尿劑沖腎臟",
+                        "sublabel": "出口仍封死時給利尿劑製造更多尿液將撐爆膀胱",
+                        "isSuccess": false,
+                        "feedbackText": "膀胱未導流卻硬生生多灌出大量尿液！膀胱壓力劇增引發自律神經反射失調與急性腎水腫，弘岳真人急搶導尿接手，判本次搶救失格！",
+                        "vitals": { "sbp": 196, "hr": 126, "badges": ["膀胱脹裂腎水腫危急"] }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "id": "c_ui_wrong",
+                  "label": "Fesoterodine 高度依賴肝臟 CYP2D6 才能產生活性，而 Trospium 最常滲進 CNS 引發失智譫妄",
+                  "sublabel": "代謝酵素與四級胺腦滲透性完全弄反",
+                  "outcome": "wrong",
+                  "feedback": {
+                    "speakerName": "蘇苓師妹",
+                    "text": "「寫反囉！依賴 CYP2D6 轉 `5-HMT` 的是 **`Tolterodine`**；`Fesoterodine` 設計成不看 CYP2D6 臉色，直接被血漿非特異性**酯酶 (Esterase)** 劈成 `5-HMT`！而 **`Trospium`** 是唯一『四級胺』，腦副作用最少！」",
+                    "delta": { "yang": 1 }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "variantId": "B",
+          "steps": [
+            {
+              "id": "e22b_s1",
+              "speaker": "patient",
+              "speakerName": "63 歲建築師 JH",
+              "speakerTag": "Case Study 1・攝護腺切除術後",
+              "text": "建築師 **JH**（63 歲，高血壓穩定用 Thiazide+ACEI），此前因長期 BPH 已完成**攝護腺切除術（Prostatectomy）**徹底解除了尿道阻塞；誰知術後卻反被突如其來的強烈尿急感、頻尿與急迫性漏尿困擾。\n林玄應如何判斷其病因、先排除何事，並建議何種一日一次治療方案？",
+              "vitals": {
+                "subject": "JH（63歲建築師・已除 BPH 阻塞術後）",
+                "hr": 74,
+                "sbp": 124,
+                "dbp": 78,
+                "iop": 15,
+                "tempC": 36.8,
+                "rhythm": "normal",
+                "rhythmText": "術後血壓受控・急迫頻尿不適",
+                "pupilMm": 3.5,
+                "ciliary": "平衡",
+                "airway": 100,
+                "secretion": "正常",
+                "nmj": 50,
+                "nmjLabel": "穩健",
+                "tofPattern": "normal",
+                "badges": ["Case Study 1: 建築師 JH"]
+              },
+              "choices": [
+                {
+                  "id": "c_jh_ok",
+                  "label": "長期 BPH 對抗高阻致「膀胱逼尿肌不穩定」引發術後急迫性尿失禁！先排除泌尿道感染 (UTI) 或殘餘阻塞、衛教症狀會隨時間消退，並開立每日一次 ER Tolterodine (4mg/d) 或 ER Oxybutynin (5–10mg/d / patch 3.9mg/d)",
+                  "sublabel": "機械阻塞既已藉手術解除，不再是滿溢性禁忌，改用長效緩釋抗 M 穩定逼尿肌",
+                  "outcome": "correct",
+                  "nextStepId": "__EVENT_COMPLETE__",
+                  "feedback": {
+                    "speakerName": "弘岳真人",
+                    "text": "「太完美了！前關高老伯因『未開刀阻塞』絕對禁用抗 M；本案建築師 `JH` 則因『已手術打通』，留下長年累月練出的逼尿肌過度敏感不穩定！排除 UTI／殘餘阻塞後予每日一次 ER Tolterodine 或緩釋/貼片 Oxybutynin 即見成效！」",
+                    "delta": { "yin": 2, "yang": 2 },
+                    "unlockCodex": [45]
+                  }
+                },
+                {
+                  "id": "c_jh_wrong",
+                  "label": "立刻補開 Bethanechol 猛烈收縮膀胱擠尿，且絕不可碰任何抗蕈毒鹼藥物",
+                  "sublabel": "誤將已術後的逼尿肌過度不穩定當成排尿無力",
+                  "outcome": "wrong",
+                  "feedback": {
+                    "speakerName": "蘇苓師妹",
+                    "text": "「JH 已經開完刀解除阻塞了，現在是逼尿肌『太容易抽動過動』造成急迫性尿失禁！給 Bethanechol 會讓他膀胱抽痛到爆炸，要改給 ER Tolterodine 4mg/d 才對啦！」",
+                    "delta": { "yang": 1 }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "E23": {
+      "id": "E23",
+      "chapter": 7,
+      "chapterTitle": "第 7 章・菸鹼五聚殿與百痙破陣（自由試煉）",
+      "location": "玄冥封脈殿・雙陣五聚門",
+      "title": "五聚順位、紫煙戒癮與截節散熱謎",
+      "hubSummary": "辨明 N_M vs N_N 五聚體陽離子通透順位、尼古丁四階與 Varenicline (隨堂考題 2)，及神經節阻斷「無汗卻不發高熱」之優勢張力論。",
+      "codexIds": [46, 47, 48],
+      "unlockTables": ["tbl_nm_nn_ganglion"],
+      "storyMode": "all",
+      "variants": [
+        {
+          "variantId": "A",
+          "steps": [
+            {
+              "id": "e23a_s1",
+              "speaker": "hongyue",
+              "speakerName": "弘岳真人",
+              "speakerTag": "雙陣五聚門・離子順位考驗",
+              "text": "殿中央兩座五元陣法旋轉：左側骨骼肌終板 **`N_M`** 呈 `(α₁)₂β₁δγ/ε`（胎兒型 `γ`、成人成熟型 `ε`）；右側大腦與神經節 **`N_N`** 則為 `(α₄)₂(β₂)₃`、`α₃α₅(β₂)₃` 或同質五聚體 `(α₇)₅`。\n弘岳真人：「五條 `M2` 螺旋構成陽離子門孔——開啟後，`N_M` 與 `N_N` 通透陽離子的**優先順位**各有何不同？」",
+              "vitals": {
+                "subject": "林玄（五聚體離子流透視）",
+                "hr": 74,
+                "sbp": 118,
+                "dbp": 76,
+                "iop": 15,
+                "tempC": 36.8,
+                "potassium": 4.2,
+                "rhythm": "normal",
+                "rhythmText": "五聚門平衡態",
+                "pupilMm": 3.5,
+                "ciliary": "均衡",
+                "airway": 100,
+                "secretion": "正常",
+                "nmj": 50,
+                "nmjLabel": "終板膜極化穩定",
+                "tofPattern": "normal",
+                "badges": ["N_M vs N_N 五聚結構比較"]
+              },
+              "choices": [
+                {
+                  "id": "c_nm_nn_ok",
+                  "label": "N_M 主要先讓 Na⁺ 排第一、其次為 Ca²⁺；N_N 卻是主要先讓 Ca²⁺ 排第一、其次為 Na⁺",
+                  "sublabel": "兩者皆為 5 次單元 (~250,000 Da)、各有 M1–M4 四螺旋且由 M2 圍出中央孔洞",
+                  "outcome": "correct",
+                  "nextStepId": "e23a_s2",
+                  "feedback": {
+                    "speakerName": "弘岳真人",
+                    "text": "「一針破雙門！肌肉終板 `N_M` 需兩分子 `ACh` 結合 `α₁–γ/ε` 與 `α₁–δ` 介面，`Na⁺` 湧入為首發動動作電位；神經元型 `N_N` 則由 `Ca²⁺` 通透排第一，驅動大腦中樞或自主神經節訊號！」",
+                    "delta": { "yin": 2, "yang": 1 },
+                    "unlockCodex": [46]
+                  }
+                },
+                {
+                  "id": "c_nm_nn_wrong",
+                  "label": "所有菸鹼受體皆只讓 K⁺ 與 Cl⁻ 流入，其中 N_N 在出生後會由 γ 換成 ε 次單元",
+                  "sublabel": "混淆離子方向及 N_M 獨有的胎兒 γ / 成人 ε 替換",
+                  "outcome": "wrong",
+                  "feedback": {
+                    "speakerName": "蘇苓師妹",
+                    "text": "「只有 `GABA_A` 才流 `Cl⁻` 好嗎！菸鹼受體是陽離子通道：肌肉 **`N_M`（含 α₁β₁δγ/ε）是 `Na⁺` 第一、`Ca²⁺` 第二**；神經元 **`N_N`（純 α/β 組成）則是 `Ca²⁺` 第一、`Na⁺` 第二**！」",
+                    "delta": { "yin": -1 }
+                  }
+                }
+              ]
+            },
+            {
+              "id": "e23a_s2",
+              "speaker": "patient",
+              "speakerName": "誤吞菸葉毒水弟子＆戒菸求診者",
+              "speakerTag": "紫煙心魔・隨堂考題 2",
+              "text": "前室弟子誤飲高濃菸草浸液後突見劇烈血壓飆升，緊接著爆出**全身抽搐痙攣**、隨即轉入昏迷且**呼吸肌突然弛緩麻痺**！旁側另有立誓戒菸者詢問藥物 **`Varenicline (Chantix)`** 的機轉。\n請同時作出急重症處置與隨堂考題 2 藥理判定！",
+              "vitals": {
+                "subject": "尼古丁中毒弟子（抽搐後陷入昏迷麻痺！）",
+                "hr": 124,
+                "sbp": 182,
+                "dbp": 106,
+                "rhythm": "tachy",
+                "rhythmText": "尼古丁早期興奮交感暴衝轉麻痺",
+                "pupilMm": 5.0,
+                "airway": 58,
+                "secretion": "噁心流涎吐瀉交雜",
+                "nmj": 14,
+                "nmjLabel": "N_M 去極化麻痺呼吸危機！",
+                "tofPattern": "depolarized",
+                "badges": ["尼古丁中毒先興奮後抑制", "隨堂考題 2: Chantix"]
+              },
+              "choices": [
+                {
+                  "id": "c_nic_ok",
+                  "label": "中毒先活化後抑制：中樞抽搐予 Diazepam，終板 N_M 呼吸肌麻痺須立即給予機械通氣 (Mechanical ventilation)；Varenicline 為「中樞 α₄β₂ 菸鹼受體部分致效劑（非抗 M 藥！）」療效勝過 Bupropion，但須警覺焦慮憂鬱",
+                  "sublabel": "吸菸四階段：渴求（閉）→ 吸菸（開大釋 DA）→ 剛吸完（去敏感關閉）→ 長期（受體上調 Upregulation）",
+                  "outcome": "correct",
+                  "nextStepId": "__EVENT_COMPLETE__",
+                  "feedback": {
+                    "speakerName": "弘岳真人",
+                    "text": "「完全正確！NRT 靠維持持續去敏感化減渴；`Varenicline [Chantix]` 靠中樞 `α₄β₂` 部分致效『一邊給微弱多巴胺壓戒斷、一邊高親和堵死吸菸 DA 爆發』，戒菸率勝於 NDRI `Bupropion`！」",
+                    "delta": { "yin": 2, "yang": 2 },
+                    "unlockCodex": [47],
+                    "vitals": {
+                      "hr": 78,
+                      "sbp": 120,
+                      "dbp": 76,
+                      "airway": 100,
+                      "nmj": 50,
+                      "tofPattern": "normal",
+                      "badges": ["機械通氣＋Diazepam 救回"]
+                    }
+                  }
+                },
+                {
+                  "id": "c_nic_wrong",
+                  "label": "尼古丁痙攣靠注射大量 Pyridostigmine 解毒；Varenicline 則屬周邊 M₃ 蕈毒鹼拮抗劑",
+                  "sublabel": "隨堂考題 2 經典誘答＋給 AChEI 反而加重尼古丁去極化麻痺",
+                  "outcome": "wrong",
+                  "feedback": {
+                    "speakerName": "蘇苓師妹",
+                    "text": "「終板已被大量尼古丁去極化鎖死，再推 Pyridostigmine 增加 ACh 等於催命！抽搐用 **Diazepam**、呼吸麻痺立刻上**呼吸器**；`Varenicline` 也不是蕈毒鹼拮抗劑，是中樞 **`α₄β₂` 菸鹼受體部分致效劑**！」",
+                    "delta": { "yang": 2 }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "variantId": "B",
+          "steps": [
+            {
+              "id": "e23b_s1",
+              "speaker": "hongyue",
+              "speakerName": "弘岳真人",
+              "speakerTag": "截節霸道・優勢張力決定論",
+              "text": "藥陣投入直接塞住自主神經節 `N_N` 通道的 **`Hexamethonium (C6)`**（兩四級胺隔 `6` 碳；可對比穿 BBB 二級胺 `Mecamylamine`），交感與副交感節後輸出同遭切斷！\n林玄脈象儀血壓急跌至 `86/52 mmHg`、卻出現 `HR 108 bpm` 心搏過速與**全身皮膚乾熱無汗**。\n陸離大喊：「完了！病人不出汗，馬上要燒出 40 °C 惡性高熱了！」這句說對了嗎？",
+              "vitals": {
+                "subject": "林玄（神經節 C6 全面阻斷態）",
+                "hr": 108,
+                "sbp": 86,
+                "dbp": 52,
+                "iop": 14,
+                "tempC": 36.9,
+                "rhythm": "tachy",
+                "rhythmText": "SA結失迷走張力→中度心搏過速",
+                "pupilMm": 5.8,
+                "ciliary": "副交感優勢失守→麻痺遠視",
+                "airway": 104,
+                "secretion": "口乾＋無汗 (Anhidrosis)",
+                "nmj": 50,
+                "nmjLabel": "N_M 不受影響",
+                "tofPattern": "normal",
+                "badges": ["N_N 神經節阻斷優勢張力顯現"]
+              },
+              "choices": [
+                {
+                  "id": "c_gang_ok",
+                  "label": "陸離多慮了！神經節阻斷雖阻斷交感膽鹼汗腺造成「無汗症」，但同時卸除血管 α₁ 縮張力引發顯著「皮膚血管擴張 (Cutaneous vasodilation)」，散熱充裕故高體溫通常不成問題；且 SA 結平時受迷走主導故呈現中度心搏過速",
+                  "sublabel": "小動脈靜脈／心室／汗腺屬交感優勢；SA結／眼／GI／膀胱／唾液腺屬副交感優勢；生殖雙廢",
+                  "outcome": "correct",
+                  "nextStepId": "__EVENT_COMPLETE__",
+                  "feedback": {
+                    "speakerName": "弘岳真人",
+                    "text": "「妙解教材最愛考的特例！與單純鎖汗卻不擴張皮膚血管的 Atropine（會發顛茄熱）不同，神經節阻斷把皮膚小動脈 α₁ 縮血管張力一併卸下，血湧皮膚散熱反而罕見高體溫！這卷《截節優勢張力圖》贈與你。」",
+                    "delta": { "yin": 2, "yang": 2 },
+                    "unlockCodex": [48],
+                    "grantItem": {
+                      "id": "pouch_ganglion_seal",
+                      "name": "截節優勢張力圖",
+                      "desc": "標記小動脈與汗腺為交感優勢、SA 結與 GI 膀胱為副交感優勢；並附肌鬆動力與抗痙攣鑑別。"
+                    },
+                    "vitals": {
+                      "hr": 76,
+                      "sbp": 116,
+                      "dbp": 74,
+                      "rhythm": "normal",
+                      "pupilMm": 3.5,
+                      "badges": ["優勢張力決定論通曉"]
+                    }
+                  }
+                },
+                {
+                  "id": "c_gang_wrong",
+                  "label": "沒錯，神經節阻斷會因高體溫發作而與 Atropine 同樣致死，且對心跳必然表現嚴重心搏過緩",
+                  "sublabel": "未分辨皮膚血管擴張之散熱代償，也錯把 SA 結當交感優勢",
+                  "outcome": "wrong",
+                  "feedback": {
+                    "speakerName": "蘇苓師妹",
+                    "text": "「雙重錯解！靜息心房 SA 結是『副交感迷走優勢』，切掉神經節後失去剎車當然變**中度心搏過速**；而且微血管全面擴張帶動皮膚散熱（Cutaneous vasodilation），讓高體溫在神經節阻斷下通常並不構成問題！」",
+                    "delta": { "yin": -1 }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "E24": {
+      "id": "E24",
+      "chapter": 7,
+      "chapterTitle": "第 7 章・菸鹼五聚殿與百痙破陣（自由試煉）",
+      "location": "玄冥封脈殿・百痙煉場＆插管危境",
+      "title": "南疆八藥動力學與氣道突發痙攣",
+      "hubSummary": "區分三大肌鬆劑與 -curonium 類固醇骨架、擇選肝腎衰竭 ICU 首選 Cisatracurium 與 BuChE Dibucaine 測試，兼破麻醉誘導支氣管痙攣主因。",
+      "codexIds": [49, 51],
+      "unlockTables": ["tbl_nmb_phases_pk"],
+      "storyMode": "all",
+      "variants": [
+        {
+          "variantId": "A",
+          "steps": [
+            {
+              "id": "e24a_s1",
+              "speaker": "hongyue",
+              "speakerName": "弘岳真人",
+              "speakerTag": "三大鬆弛譜＆器官衰竭擇藥",
+              "text": "重症丹房急需肌鬆輔助：病患因嚴重敗血性休克合併**急性肝腎雙衰竭**，且對組織胺血管擴張極為敏感；另一床手術病患僅輸注 4 分鐘超短效去極化 `Succinylcholine` 卻整整 **4 小時**仍未恢復自主呼吸！\n弘岳真人命你挑選重度肝腎衰竭 ICU 首選肌鬆劑，並解釋這場 4 小時呼吸麻痺的原因！",
+              "vitals": {
+                "subject": "ICU 多重器官衰竭者 ＆ BuChE 變異者",
+                "hr": 102,
+                "sbp": 88,
+                "dbp": 54,
+                "rhythm": "tachy",
+                "rhythmText": "低血壓危態・禁忌組織胺釋放",
+                "airway": 92,
+                "nmj": 18,
+                "nmjLabel": "休克擇藥＆BuChE 檢查",
+                "tofPattern": "fade",
+                "badges": ["多重器官衰竭肌鬆篩選", "Dibucaine number 待查"]
+              },
+              "choices": [
+                {
+                  "id": "c_cisa_ok",
+                  "label": "肝腎雙衰竭 ICU 首選藉 Hofmann 自發降解、完全不靠肝腎且零組織胺釋放的異喹啉類 Cisatracurium [Nimbex]；延長麻痺則因血漿假性膽鹼酯酶 (BuChE) 先天變異（Dibucaine number 降低）",
+                  "sublabel": "比較類固醇 -curonium (肝膽排 75–90% Rocuronium 1m 最快 / Vecuronium；腎排 Pancuronium 阻 M2) 及 Tubocurarine 放組織胺",
+                  "outcome": "correct",
+                  "nextStepId": "__EVENT_COMPLETE__",
+                  "feedback": {
+                    "speakerName": "弘岳真人",
+                    "text": "「妙哉！`Cisatracurium` 靠體溫與 pH 自動進行 **Hofmann elimination**，肝腎再爛也準時清零、還不像 Atracurium 生出過量癲癇毒 Laudanosine；唯有它完全不放組織胺！收下《雙相脈衝四連針》備戰下一關。」",
+                    "delta": { "yin": 2, "yang": 2 },
+                    "unlockCodex": [49, 51],
+                    "grantItem": {
+                      "id": "pouch_tof_gauge",
+                      "name": "雙相脈衝四連針",
+                      "desc": "內錄 Phase I (等比無Fade/Neostigmine惡化)、Phase II (Fade可逆) 與燒傷 RyR1 急救順口訣。"
+                    },
+                    "vitals": {
+                      "hr": 80,
+                      "sbp": 112,
+                      "dbp": 70,
+                      "rhythm": "normal",
+                      "badges": ["Cisatracurium ICU 首選", "BuChE Dibucaine 確認"]
+                    }
+                  }
+                },
+                {
+                  "id": "c_cisa_wrong",
+                  "label": "ICU 雙衰竭應改用 100% 腎排且強阻心臟 M₂ 的 Gallamine 與 Tubocurarine，並歸咎 AChE 失效使 SCh 延長至 4 小時",
+                  "sublabel": "忽略腎排蓄積、組織胺低壓風險，以及水解 SCh 者實為血漿假性 BuChE",
+                  "outcome": "wrong",
+                  "feedback": {
+                    "speakerName": "蘇苓師妹",
+                    "text": "「肝腎雙衰竭給 100% 腎排的 Gallamine 是想毒死病人嗎？`Tubocurarine` 還會釋放組織胺雪上加霜暴跌血壓！水解 Succinylcholine 的也不是突觸真 AChE，而是血漿 **假性膽鹼酯酶 (BuChE)** 喔！」",
+                    "delta": { "yin": -1 }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "variantId": "B",
+          "steps": [
+            {
+              "id": "e24b_s1",
+              "speaker": "suling",
+              "speakerName": "蘇苓師妹",
+              "speakerTag": "手術誘導突發哮鳴危象",
+              "text": "手術幻陣剛進行全身麻醉誘導並完成**氣管內管置入（Endotracheal intubation）**，監視器猛然拉響高壓哮鳴警報——**嚴重支氣管痙攣**，氣道通暢度暴跌至 **`38%`**！\n蘇苓急問：「先冷靜找元兇——臨床研究實證顯示，在全身麻醉誘導後引起嚴重支氣管痙攣**最常見的主因**究竟是什麼？」",
+              "vitals": {
+                "subject": "全麻誘導剛插管弟子（氣道痙攣警報！）",
+                "hr": 116,
+                "sbp": 148,
+                "dbp": 88,
+                "airway": 38,
+                "secretion": "氣道高阻哮鳴音",
+                "nmj": 12,
+                "nmjLabel": "插管肌鬆後突發痙攣",
+                "tofPattern": "deep",
+                "rhythm": "tachy",
+                "rhythmText": "迷走氣道反射性喘鳴",
+                "badges": ["插管後突發支氣管痙攣"]
+              },
+              "choices": [
+                {
+                  "id": "c_ett_ok",
+                  "label": "「置入氣管內管 (Insertion of an endotracheal tube)」對氣管黏膜的直接機械性刺激是最常見主因！同時確保麻醉深度足夠、排出管腔阻塞並給吸入性支氣管擴張劑",
+                  "sublabel": "雖然 Tubocurarine 或 SCh 等也可能因組織胺誘發，但機械刺激氣管是最常見原因",
+                  "outcome": "correct",
+                  "nextStepId": "__EVENT_COMPLETE__",
+                  "feedback": {
+                    "speakerName": "弘岳真人",
+                    "text": "「完全記住講師強調的關鍵盲點！藥師容易一看到哮鳴就只怪藥物的組織胺釋放，其實全身麻醉誘導後『**置入氣管內管造成的機械刺激**』才是實務最常見誘因；立刻加深麻醉兼吸入 β₂/抗 M 擴張即可化險為夷！」",
+                    "delta": { "yin": 1, "yang": 2 },
+                    "unlockCodex": [49, 51],
+                    "vitals": {
+                      "hr": 78,
+                      "sbp": 120,
+                      "dbp": 76,
+                      "airway": 102,
+                      "rhythm": "normal",
+                      "badges": ["排除氣管內管刺激痙攣"]
+                    }
+                  }
+                },
+                {
+                  "id": "c_ett_crisis",
+                  "label": "認定絕對是藥物反應無須管內管與加深氣道通氣，只靠直接推高劑量靜脈 Tubocurarine 試圖軟化氣管",
+                  "sublabel": "Tubocurarine 中度釋放組織胺將直接引爆更致命之氣道鎖死與低血壓！",
+                  "outcome": "crisis",
+                  "nextStepId": "__EVENT_COMPLETE__",
+                  "crisis": {
+                    "title": "氣道窒息警報：未處置插管反射並錯推 Tubocurarine 組織胺狂湧！",
+                    "mechanism": "忽略氣管內管機械刺激與加深氣道舒張，反而補推會「**中度釋放組織胺**」兼微阻神經節的 **`Tubocurarine`**，造成支氣管極度收縮 (`24%`) ＋ 全身血管擴張休克 (`78/44 mmHg`)！",
+                    "vitals": {
+                      "subject": "窒息休克病人（組織胺狂湧！）",
+                      "hr": 134,
+                      "sbp": 78,
+                      "dbp": 44,
+                      "airway": 24,
+                      "rhythm": "tachy",
+                      "badges": ["支氣管痙攣窒息", "組織胺釋放低血壓休克"]
+                    },
+                    "rescuePrompt": "氣道鎖死僅 24% 伴低血壓休克，此刻最正確的緊急救援步驟是？",
+                    "rescueChoices": [
+                      {
+                        "id": "rc_ett_ok",
+                        "label": "立刻 100% 純氧正壓輔助通氣確認氣管導管暢通 ＋ 加深吸入麻醉深度 ＋ 霧化吸入 Albuterol (β₂) 兼適度輸液穩壓（罕見過敏性休克加極微量 Epinephrine）",
+                        "sublabel": "直接打斷迷走機械支氣管痙攣並對抗組織胺氣道鎖死",
+                        "isSuccess": true,
+                        "feedbackText": "百份純氧通氣加上霧化 `Albuterol` 與加深麻醉反射抑制後，氣道壓力迅速回降，患者血壓氧飽合雙雙回穩！",
+                        "delta": { "yang": 1 },
+                        "vitals": {
+                          "hr": 84,
+                          "sbp": 116,
+                          "dbp": 72,
+                          "airway": 98,
+                          "rhythm": "normal",
+                          "badges": ["氣道通氣痙攣成功平息"]
+                        }
+                      },
+                      {
+                        "id": "rc_ett_fail",
+                        "label": "注射非選擇性 β 阻斷劑 Propranolol 壓心跳，再靜注 Bethanechol 輔助",
+                        "sublabel": "兩者都是強烈的支氣管收縮催命藥",
+                        "isSuccess": false,
+                        "feedbackText": "雙管齊下封死 `β₂` 又催 `M₃` 讓氣道直接歸零窒息！弘岳真人震怒出手接管氣道，判定此次救援無效。",
+                        "vitals": { "airway": 12, "hr": 34, "badges": ["氣道徹底封鎖"] }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "E25": {
+      "id": "E25",
+      "chapter": 7,
+      "chapterTitle": "第 7 章・菸鹼五聚殿與百痙破陣（自由試煉）",
+      "location": "玄冥封脈殿・TOF 脈衝電陣實驗台",
+      "title": "陰陽雙相鎖與 Neostigmine 逆轉誤判劫",
+      "hubSummary": "使用互動 NMJ 四連刺激模擬台親試 Phase I vs Phase II vs Rocuronium，掌握為何 SCh Phase I 給 Neostigmine 反加深麻痺。",
+      "codexIds": [50],
+      "unlockTables": ["tbl_nmb_phases_pk"],
+      "storyMode": "one",
+      "variants": [
+        {
+          "variantId": "A",
+          "steps": [
+            {
+              "id": "e25a_s1",
+              "speaker": "hongyue",
+              "speakerName": "弘岳真人",
+              "speakerTag": "NMJ 四連刺激 TOF 模擬試煉",
+              "text": "脈衝陣法上擺著剛啟動 **`Succinylcholine`** 僅 **2 分鐘**的肌肉標靶：肉眼尚可看到明顯**肌束顫動 (Fasciculations)**，隨即轉為鬆弛麻痺，右側 TOF 四柱顯示**振幅等比例縮小、無漸進衰減（`No fade`）**！\n可使用下方「**NMJ 陰陽雙相鎖模擬台**」實測介入反應——現在陸離想搶推 **`Neostigmine`** 幫病人提前恢復肌力，你作何判斷？",
+              "widget": "nmj_phase_lab",
+              "pouchHints": [
+                {
+                  "itemId": "pouch_tof_gauge",
+                  "text": "【雙相脈衝四連針靈應】Phase I（有顫動、TOF 等比無 Fade）時終板正遭持續去極化鎖死鄰近 Na⁺ 通道；此時給 Neostigmine 堆高 ACh 只會把阻斷越推越深（Augmented）！"
+                }
+              ],
+              "vitals": {
+                "subject": "麻醉手術弟子（SCh Phase I：肌束顫動後麻痺）",
+                "hr": 66,
+                "sbp": 118,
+                "dbp": 76,
+                "rhythm": "normal",
+                "rhythmText": "Phase I 去極化期・微刺激 M2 略慢",
+                "airway": 98,
+                "nmj": 18,
+                "nmjLabel": "N_M 持續去極化阻斷",
+                "tofPattern": "depolarized",
+                "tofNote": "Phase I：等比縮小（無 Fade）",
+                "badges": ["SCh Phase I 觀察中"]
+              },
+              "choices": [
+                {
+                  "id": "c_p1_ok",
+                  "label": "嚴禁此時投予 Neostigmine！目前屬去極化 Phase I，Neostigmine 增加 ACh 且抑假性膽鹼酯酶反會「增強／惡化 (Augmented)」阻斷；維持通氣等待 4–8 min 自然廓清即可",
+                  "sublabel": "若給少量非去極化劑 (Tubocurarine) 反而拮抗去極化；真正需 Neostigmine 逆轉者為非去極化劑 (Rocuronium) 與長輸注後的 Phase II",
+                  "outcome": "correct",
+                  "nextStepId": "e25a_s2",
+                  "feedback": {
+                    "speakerName": "弘岳真人",
+                    "text": "「穩如泰山！Phase I 時終板本來就因為無法恢復再極化而鎖住電壓閘控 `Na⁺` 通道，這時誰給 `Neostigmine` 多灑 `ACh`＋封死 `BuChE`，簡直火上加油！」",
+                    "delta": { "yin": 2, "yang": 2 }
+                  }
+                },
+                {
+                  "id": "c_p1_crisis",
+                  "label": "採信陸離：立刻靜脈推注足量 Neostigmine，把麻痺中的病人提前從 Phase I 逆轉醒來！",
+                  "sublabel": "Phase I 疊加 AChE 抑制劑只會讓去極化與假性酶受抑雙雙加深麻痺",
+                  "outcome": "crisis",
+                  "nextStepId": "e25a_s2",
+                  "crisis": {
+                    "title": "雙相逆鎖災變：Phase I 錯投 Neostigmine 令神經肌肉阻斷全面加深！",
+                    "mechanism": "`Neostigmine` 一面抑制突觸 AChE 令 `ACh` 死壓終板延長去極化，一面抑制血漿假性膽鹼酯酶延緩 `Succinylcholine` 代謝——TOF 四柱瞬間幾近歸零 (`0/4`)，自主呼吸回復遙遙無期且爆發 M 過量心搏過緩溢涎！",
+                    "vitals": {
+                      "subject": "SCh + Neostigmine 雙重惡化態",
+                      "hr": 44,
+                      "sbp": 100,
+                      "dbp": 62,
+                      "rhythm": "brady",
+                      "rhythmText": "深度麻痺合併 M2 竇緩",
+                      "airway": 72,
+                      "secretion": "大量支氣管黏液流涎",
+                      "nmj": 6,
+                      "nmjLabel": "去極化阻斷重度加深！",
+                      "tofPattern": "deep",
+                      "tofNote": "Phase I + Neostigmine → 0/4",
+                      "badges": ["去極化阻斷惡化危機", "TOF 歸零"]
+                    },
+                    "rescuePrompt": "SCh Phase I 給完 Neostigmine 反而麻痺歸零兼黏液滿喉心跳 44，立即處置為何？",
+                    "rescueChoices": [
+                      {
+                        "id": "rc_p1_ok",
+                        "label": "立即停用所有 AChE 抑制劑、死守機械控制通氣撐過延長代謝期，並補投 Glycopyrrolate / Atropine 壓制 Neostigmine 誘發之心搏過緩與氣道黏液",
+                        "sublabel": "Sugammadex 對 SCh 完全無效，唯靠維生通氣等待藥物退潮＋抗 M 控涎護心",
+                        "isSuccess": true,
+                        "feedbackText": "停掉 AChEI 並予 `Glycopyrrolate` 清乾氣道及拉回心率、全程穩妥通氣後，病人終於跨過延長麻痺恢復自主力道！",
+                        "delta": { "yin": 1 },
+                        "vitals": {
+                          "hr": 74,
+                          "sbp": 116,
+                          "dbp": 74,
+                          "rhythm": "normal",
+                          "airway": 98,
+                          "secretion": "控制受控",
+                          "nmj": 38,
+                          "tofPattern": "fade",
+                          "badges": ["Phase I 誤投險象搶救回穩"]
+                        }
+                      },
+                      {
+                        "id": "rc_p1_fail",
+                        "label": "以為劑量還不夠再加推三倍 Neostigmine 與高劑量 Sugammadex 16 mg/kg 急救",
+                        "sublabel": "Sugammadex 抓不到非類固醇鏈狀的 Succinylcholine，加倍 Neostigmine 更將人壓死",
+                        "isSuccess": false,
+                        "feedbackText": "γ-環糊精根本抓不住雙乙醯膽鹼骨架的 SCh，疊加 Neostigmine 卻把終板永遠泡在 ACh 毒海裡引發嚴峻滯留性呼吸衰竭與心搏劇降！本輪試煉判定失敗。",
+                        "vitals": { "hr": 30, "nmj": 2, "badges": ["雙相誤投逆轉徹底敗退"] }
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "id": "e25a_s2",
+              "speaker": "suling",
+              "speakerName": "蘇苓師妹",
+              "speakerTag": "Phase II 去敏感期與 Rocuronium 比較",
+              "text": "長時間大劑量持續滴注 `Succinylcholine` 超過 `20 分鐘`後，終板電位終於恢復**再極化 (Repolarized)**，卻見 `N_M` 受體呈現**去敏感化 (Phase II)**：TOF 波形由等比縮小轉成如左下圖的**明顯衰減 (Fade)**！\n「此刻與非去極化 **`Rocuronium`** 一樣都有 `Fade` 與強直後促進，那此時再用 **`Neostigmine`** 結果如何？」",
+              "vitals": {
+                "subject": "SCh Phase II 長時輸注轉態",
+                "hr": 76,
+                "sbp": 118,
+                "dbp": 76,
+                "rhythm": "normal",
+                "rhythmText": "終板膜已再極化",
+                "nmj": 22,
+                "nmjLabel": "Phase II 去敏感化阻斷",
+                "tofPattern": "fade",
+                "tofNote": "Phase II：出現類非去極化 Fade",
+                "badges": ["Phase II 轉化監測"]
+              },
+              "choices": [
+                {
+                  "id": "c_p2_ok",
+                  "label": "Phase II 與 Rocuronium 皆表現「可被 Neostigmine 拮抗／部分逆轉 (Antagonistic)」（因膜已再極化）；唯 Rocuronium 無肌束顫動起效、僅 Sugammadex 能專門包覆類固醇骨架逆轉 Rocuronium",
+                  "sublabel": "講義 p.36 最精髓對調比較表完美通徹！",
+                  "outcome": "correct",
+                  "nextStepId": "__EVENT_COMPLETE__",
+                  "feedback": {
+                    "speakerName": "弘岳真人",
+                    "text": "「一氣呵成！Phase I 與 Phase II 正是陰陽雙相逆轉關鍵：前段去極化膜沒復位，Neostigmine 加重之；後段膜已復位卻受體鈍化，TOF 再現 `Fade`，Neostigmine 反可喚醒受體！至於專屬鉗合類固醇的 `Sugammadex`，下關手術實戰就靠你了！」",
+                    "delta": { "yin": 2, "yang": 2 },
+                    "unlockCodex": [50],
+                    "vitals": {
+                      "nmj": 50,
+                      "nmjLabel": "TOF 恢復 100%",
+                      "tofPattern": "normal",
+                      "badges": ["陰陽雙相鎖模擬過關"]
+                    }
+                  }
+                },
+                {
+                  "id": "c_p2_wrong",
+                  "label": "Phase II 會失去所有 Fade、且給 Tubocurarine 會神奇逆轉喚醒病人，而 Sugammadex 連 Succinylcholine 都能秒殺",
+                  "sublabel": "三項敘述全部與講義 p.36 比較表相反",
+                  "outcome": "wrong",
+                  "feedback": {
+                    "speakerName": "蘇苓師妹",
+                    "text": "「錯透三點囉！Phase II 是『再現 Fade（衰減）』、給 `Tubocurarine` 會『增強 (Augmented)』而不是減輕，且 `Sugammadex` 只抓類固醇類 `-curonium`，抓不住 Succinylcholine！」",
+                    "delta": { "yang": 1 }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "E26": {
+      "id": "E26",
+      "chapter": 8,
+      "chapterTitle": "第 8 章・太虛手術台與解痙秘境",
+      "location": "手術幻境台・赤熱焚身爐",
+      "title": "焚身惡熱劫與燒傷α7血鉀暴走",
+      "hubSummary": "【Boss 戰】辨析 RyR1 惡性高熱雙重觸發與 IV Dantrolene；實戰燒燙傷「α7AChR 一石二鳥」血鉀 7.4 尖高 T 波之鈣鹽穩膜急救。",
+      "isBoss": true,
+      "codexIds": [52, 53],
+      "unlockTables": ["tbl_nmb_phases_pk"],
+      "storyMode": "all",
+      "variants": [
+        {
+          "variantId": "A",
+          "steps": [
+            {
+              "id": "e26a_s1",
+              "speaker": "patient",
+              "speakerName": "RyR1 遺傳手術病患",
+              "speakerTag": "Vol.3 Boss I・惡性高熱突襲",
+              "text": "手術幻陣中，病患吸入 **`Halothane / Sevoflurane`** 揮發性麻醉劑後剛追加了 **`Succinylcholine`**——五分鐘內下顎與全身瞬間**肌肉強直僵硬**、核心體溫狂竄 **`40.4 °C`**、ECG 心搏過速 `156 bpm`、臉色發紺並排出深色肌紅素茶尿！\n陸離驚道：「術後感染敗血燒起來了嗎？快給強效抗生素與消炎退燒針！」你如何救命？",
+              "pouchHints": [
+                {
+                  "itemId": "pouch_tof_gauge",
+                  "text": "【雙相脈衝四連針靈應】吸入性鹵化烴（放大反應）＋ Succinylcholine（強力開關）在 RyR1 突變者身上觸發「惡性高熱」——SR 瘋狂洩 Ca²⁺！解藥只認阻斷 RyR1 的 IV Dantrolene，且胺基糖苷類抗生素會加重 NMB！"
+                }
+              ],
+              "vitals": {
+                "subject": "手術台病患（RyR1 惡性高熱爆發！）",
+                "hr": 156,
+                "sbp": 152,
+                "dbp": 94,
+                "tempC": 40.4,
+                "potassium": 6.1,
+                "rhythm": "tachy",
+                "rhythmText": "惡性高熱高代謝性過速",
+                "airway": 78,
+                "nmj": 94,
+                "nmjLabel": "SR Ca²⁺暴洩・全身強直僵硬",
+                "tofPattern": "spastic",
+                "tofNote": "骨骼肌強直僵硬（惡性高熱）",
+                "badges": ["惡性高熱 (MH) 警報！", "RyR1 鈣通道狂開"]
+              },
+              "choices": [
+                {
+                  "id": "c_mh_ok",
+                  "label": "此為骨骼肌肌漿網 RyR1 突變受 SCh ＋ 揮發性吸入麻醉劑雙重觸發的「惡性高熱」！立即停用觸發麻醉劑並 100% 純氧通氣，火速靜脈注射專一解毒藥 IV Dantrolene（阻斷 RyR1 開啟），積極降溫控鉀酸",
+                  "sublabel": "口服長期慢用須防黑框警語肝毒性；另謹記 Aminoglycosides 會抑突觸前 Ca²⁺ 內流加深 NMB",
+                  "outcome": "correct",
+                  "nextStepId": "__EVENT_COMPLETE__",
+                  "feedback": {
+                    "speakerName": "弘岳真人",
+                    "text": "「果斷精準！`Dantrolene` 直接把暴走的骨骼肌 SR `RyR1` 鈣閘門死死關上（且不幹擾心肌 `RyR2`），體溫與剛直肌張迅速回落！順手封鎖高鉀危機——此戰完勝！」",
+                    "delta": { "yin": 2, "yang": 2 },
+                    "unlockCodex": [52],
+                    "vitals": {
+                      "hr": 86,
+                      "tempC": 37.3,
+                      "potassium": 4.4,
+                      "rhythm": "normal",
+                      "nmj": 50,
+                      "tofPattern": "normal",
+                      "badges": ["IV Dantrolene 封印 RyR1"]
+                    }
+                  }
+                },
+                {
+                  "id": "c_mh_crisis",
+                  "label": "採信陸離當敗血症！維持 Halothane 續麻、補打退燒 Acetaminophen 與大劑量 Aminoglycoside 抗生素",
+                  "sublabel": "放任鹵化烴續開 RyR1 將令體溫直撲 42 °C 心停、Aminoglycosides 更壓抑終板傳導",
+                  "outcome": "crisis",
+                  "nextStepId": "__EVENT_COMPLETE__",
+                  "crisis": {
+                    "title": "焚身熔脈劫：惡性高熱體溫直破 41.8 °C 併高鉀尖 T 心危！",
+                    "mechanism": "未停吸入麻醉且未給 `Dantrolene`，`RyR1` 無止境洩鈣令 ATP 耗盡、核心體溫竄破 **`41.8 °C`**、橫紋肌徹底溶解令血鉀飆高至 **`6.6 mEq/L`**！",
+                    "vitals": {
+                      "subject": "手術病患（41.8 °C 熔毀臨界！）",
+                      "hr": 168,
+                      "sbp": 74,
+                      "dbp": 42,
+                      "tempC": 41.8,
+                      "potassium": 6.6,
+                      "rhythm": "hyperk",
+                      "rhythmText": "高熱酸中毒伴尖高 T 波！",
+                      "nmj": 96,
+                      "tofPattern": "spastic",
+                      "badges": ["惡性高熱失控", "高血鉀尖 T 波"]
+                    },
+                    "rescuePrompt": "溫度 41.8 °C、高血鉀尖高 T 波出現、呼吸酸中毒爆表！最後搶救生路為何？",
+                    "rescueChoices": [
+                      {
+                        "id": "rc_mh_ok",
+                        "label": "立刻關停所有揮發性麻醉劑 ＋ 火速靜注高劑量 IV Dantrolene ＋ 冰毯降溫與 100% 通氣、輔以 NaHCO₃/Calcium/Insulin+Glucose 救高鉀",
+                        "sublabel": "切斷 RyR1 源頭並保護心肌度過酸中毒高鉀期",
+                        "isSuccess": true,
+                        "feedbackText": "急推 `IV Dantrolene` 關住 `RyR1` 洩鈣後，體溫與血鉀驚險降回安全帶，病患終獲保全！此 Boss 危機警戒絕不可重演！",
+                        "delta": { "yin": 1, "yang": 1 },
+                        "vitals": {
+                          "hr": 92,
+                          "tempC": 37.6,
+                          "potassium": 4.6,
+                          "rhythm": "normal",
+                          "nmj": 50,
+                          "tofPattern": "normal",
+                          "badges": ["Dantrolene 險中救命"]
+                        }
+                      },
+                      {
+                        "id": "rc_mh_fail",
+                        "label": "加推 Succinylcholine 與 Neostigmine 嘗試鬆開僵硬的下顎肌",
+                        "sublabel": "SCh 正是引發惡性高熱的元兇！再補等於直接送終",
+                        "isSuccess": false,
+                        "feedbackText": "再推 `Succinylcholine` 如潑油救火，肌肉溶解與室顫瞬間引爆休克停搏！弘岳真人急運玄功搶救收手，判 Boss 戰失利。",
+                        "vitals": { "rhythm": "asystole", "hr": 0, "badges": ["Asystole 失控敗退"] }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "variantId": "B",
+          "steps": [
+            {
+              "id": "e26b_s1",
+              "speaker": "suling",
+              "speakerName": "蘇苓師妹",
+              "speakerTag": "Vol.3 Boss I-B・燒燙傷 α₇AChR 一石二鳥＆高血鉀",
+              "text": "大面積三度燒燙傷第 5 天弟子推進清創室：先前他對一般劑量 `Rocuronium` 幾乎毫無反應（抗性 `Resistance`），不料剛才有醫師誤推 **`Succinylcholine`** 想硬插管，數十秒內血鉀竟狂飆至 **`7.4 mEq/L`**！\n脈象儀立刻響起尖銳紅警—`P` 波消失、`T` 波急遽高尖刺出（Peaked T waves）！此刻「**一石二鳥**」本質為何？又必須**第一秒搶先**注入什麼？",
+              "vitals": {
+                "subject": "大面積燒傷弟子（K⁺ 7.4 致命高血鉀！）",
+                "hr": 46,
+                "sbp": 76,
+                "dbp": 44,
+                "tempC": 37.2,
+                "potassium": 7.4,
+                "rhythm": "hyperk",
+                "rhythmText": "超高尖 T 波＋寬 QRS・心搏將停！",
+                "nmj": 12,
+                "nmjLabel": "整條肌膜 α₇AChR 暴洩 K⁺",
+                "tofPattern": "deep",
+                "badges": ["α7AChR 致命高血鉀", "K⁺ 7.4 尖高 T 波"]
+              },
+              "choices": [
+                {
+                  "id": "c_burnk_ok",
+                  "label": "燒傷整片肌膜增生胎兒 γ 型與特殊同質五聚體 α₇AChR（連 Choline 都能持久開啟），同時解釋抗非去極化與爆高血鉀！第一秒急救必先推 IV 鈣鹽（Calcium gluconate/chloride）穩定心肌細胞膜電位，再接 Insulin+葡萄糖／NaHCO₃／β₂ 趕鉀入胞及利尿透析排出",
+                  "sublabel": "一石二鳥：受體數量劇增→抗 Rocuronium；整段細胞膜被 SCh 與膽鹼扯開→狂洩 K⁺！穩定心肌膜電位最優先",
+                  "outcome": "correct",
+                  "nextStepId": "__EVENT_COMPLETE__",
+                  "feedback": {
+                    "speakerName": "弘岳真人",
+                    "text": "「妙不可言！唯有立刻推入 `Calcium gluconate` 抬高心肌閾電位把心臟死死托住，才來得及靠胰島素、碳酸氫鈉與 `Albuterol` 把血鉀押回細胞，最後經透析與利尿劑徹底除鉀！」",
+                    "delta": { "yin": 2, "yang": 2 },
+                    "unlockCodex": [53],
+                    "vitals": {
+                      "hr": 74,
+                      "sbp": 116,
+                      "dbp": 72,
+                      "potassium": 4.7,
+                      "rhythm": "normal",
+                      "nmj": 50,
+                      "tofPattern": "normal",
+                      "badges": ["鈣鹽穩膜救高血鉀過關"]
+                    }
+                  }
+                },
+                {
+                  "id": "c_burnk_crisis",
+                  "label": "先給口服慢速離子交換樹脂 Kayexalate 慢慢等大便排鉀，並認為剛推完 SCh 時 K⁺ 低到不需急用鈣鹽",
+                  "sublabel": "無視尖高 T 波寬 QRS 心電圖警訊而不立刻穩定心肌膜電位！",
+                  "outcome": "crisis",
+                  "nextStepId": "__EVENT_COMPLETE__",
+                  "crisis": {
+                    "title": "心室顫動轉停搏：未優先穩膜令 K⁺ 7.8 mEq/L 截斷心脈！",
+                    "mechanism": "`Kayexalate` 起效需要數小時！面對已被 `α₇AChR`（連代謝產物 Choline 都持續開啟）狂洩 K⁺ 上升至 **`7.8 mEq/L`** 的心肌，沒第一秒用**鈣鹽**拉回閾電位差距，瞬間由尖高 T 波跌入 **`Asystole`**！",
+                    "vitals": {
+                      "subject": "燒傷弟子（高鉀停搏危象！）",
+                      "hr": 0,
+                      "sbp": 48,
+                      "dbp": 28,
+                      "potassium": 7.8,
+                      "rhythm": "asystole",
+                      "rhythmText": "Asystole！高血鉀停搏警報！",
+                      "badges": ["高血鉀停搏危機", "Asystole"]
+                    },
+                    "rescuePrompt": "心電圖已趨直線停搏、血鉀 7.8 mEq/L，CPR 下必須先直推哪一支救命藥？",
+                    "rescueChoices": [
+                      {
+                        "id": "rc_burnk_ok",
+                        "label": "立刻 IV 推注 Calcium chloride / Calcium gluconate 穩定心肌膜電位 ＋ 隨即配予 Insulin+Glucose 及 NaHCO₃ 將 K⁺ 趕回胞內，同步準備血液透析",
+                        "sublabel": "三步驟先後不可紊亂：1.穩膜(鈣鹽) → 2.進細胞(糖島/鹼/β2) → 3.排出(利尿/樹脂/透析)",
+                        "isSuccess": true,
+                        "feedbackText": "靜脈鈣鹽一進，心電圖直線瞬間彈回竇性波形，配合高張糖島趕鉀後心跳重回 78 bpm！",
+                        "delta": { "yin": 1 },
+                        "vitals": {
+                          "hr": 78,
+                          "sbp": 114,
+                          "dbp": 72,
+                          "potassium": 4.9,
+                          "rhythm": "normal",
+                          "nmj": 50,
+                          "tofPattern": "normal",
+                          "badges": ["鈣鹽穩膜搶回心脈"]
+                        }
+                      },
+                      {
+                        "id": "rc_burnk_fail",
+                        "label": "再推大劑量 Rocuronium 兼靜脈氯化鉀 KCl 企圖平衡受體內外離子梯度",
+                        "sublabel": "高血鉀時再推氯化鉀等於當場毒死心室",
+                        "isSuccess": false,
+                        "feedbackText": "補鉀於 7.8 高鉀之心臟猶如死刑判決，脈象徹底寂滅！弘岳真人震袖保魂中止 Boss 戰，判定失敗。",
+                        "vitals": { "potassium": 8.8, "rhythm": "asystole", "badges": ["誤補高鉀徹底停搏"] }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "E27": {
+      "id": "E27",
+      "chapter": 8,
+      "chapterTitle": "第 8 章・太虛手術台與解痙秘境",
+      "location": "手術幻境台・困難氣道密室",
+      "title": "無法通氣危局與縛龍金環 (Case Study 2)",
+      "hubSummary": "【Boss 戰】辨明橫膈肌麻痺／恢復順序與 Glycopyrrolate 配伍優勢；全真搶救 Case Study 2（CICV）並掌握 Sugammadex 與 7 天避孕衛教。",
+      "isBoss": true,
+      "codexIds": [54],
+      "unlockTables": ["tbl_nmb_phases_pk"],
+      "storyMode": "one",
+      "variants": [
+        {
+          "variantId": "A",
+          "steps": [
+            {
+              "id": "e27a_s1",
+              "speaker": "hongyue",
+              "speakerName": "弘岳真人",
+              "speakerTag": "骨骼肌順序＆傳統解鎖配伍",
+              "text": "麻醉將收尾時，弘岳真人先驗你的基本功：「投予非去極化肌鬆劑後，眼瞼手指小肌肉與**橫膈肌 (Diaphragm)** 究竟誰先麻痺、誰先恢復？又為何傳統以 `Neostigmine` 逆轉常規淺中度肌鬆時，必須固定併用四級胺 **`Glycopyrrolate`** 而非 `Atropine`？」",
+              "vitals": {
+                "subject": "常規手術收尾弟子",
+                "hr": 70,
+                "sbp": 116,
+                "dbp": 74,
+                "rhythm": "normal",
+                "rhythmText": "準備常規肌鬆逆轉",
+                "airway": 96,
+                "nmj": 32,
+                "nmjLabel": "橫膈肌最先出現張力",
+                "tofPattern": "fade",
+                "tofNote": "待逆轉淺中度非去極阻斷",
+                "badges": ["麻痺逆序＋Glycopyrrolate"]
+              },
+              "choices": [
+                {
+                  "id": "c_diaph_ok",
+                  "label": "小肌最早麻、橫膈肌「最後才麻痺」且停藥時「最先恢復」！傳統逆轉選四級胺 Glycopyrrolate 因其極少進 BBB 零譫妄，兼與 Neostigmine 起效與時效同步保護心跳氣道",
+                  "sublabel": "橫膈肌是人體呼吸命脈，具有最高安全備援餘裕與優先回復權",
+                  "outcome": "correct",
+                  "nextStepId": "e27a_s2",
+                  "feedback": {
+                    "speakerName": "弘岳真人",
+                    "text": "「字字珠璣！橫膈肌『最後失陷、最先光復』；而 `Glycopyrrolate` [Robinul] 帶永久正電不傷中樞又能精準替 `Neostigmine` 善後。但下一床面對的『深度阻斷急症』卻輪不到它出馬了——看招！」",
+                    "delta": { "yin": 2, "yang": 1 }
+                  }
+                },
+                {
+                  "id": "c_diaph_wrong",
+                  "label": "橫膈肌永遠第一個先麻痺且最後才恢復；併用 Atropine 因為不進 BBB 所以比 Glycopyrrolate 更無中樞副作用",
+                  "sublabel": "順序完全弄反且忘記 Atropine 是能入 BBB 的三級胺",
+                  "outcome": "wrong",
+                  "feedback": {
+                    "speakerName": "蘇苓師妹",
+                    "text": "「剛好反過來喔！小而快的眼指肌先麻、生命中樞**橫膈肌最後麻且最先復原**；且 `Atropine` 是三級胺會過 BBB，`Glycopyrrolate` 才是標準不入腦的四級胺！」",
+                    "delta": { "yang": 1 }
+                  }
+                }
+              ]
+            },
+            {
+              "id": "e27a_s2",
+              "speaker": "patient",
+              "speakerName": "35 歲女性 (Case Study 2)",
+              "speakerTag": "Vol.3 Boss II・CICV 無法插管無法通氣",
+              "text": "**Clinical Case Study 2**：35 歲女性（80 kg, BMI 32 肥胖、1 型糖尿病胃排空延遲、**正在服用口服避孕藥 OCP**、**Mallampati class 3**），右膝鏡手術剛推入 Propofol 與插管劑量 **`Rocuronium`**，TOF 頓呈 **`0/4` 完全深度麻痺**——突然喉鏡插不進、面罩吹不動，徹底陷於「**無法插管、無法通氣 (CICV)**」！\n此刻緊急首選處置與術後絕不可漏的衛教為何？",
+              "pouchHints": [
+                {
+                  "itemId": "pouch_antimuscarinic_lens",
+                  "text": "【茄科破障琉璃鏡靈應】高劑量環糊精螯合劑 Sugammadex 連同 OCP 裡的黃體素也一併鎖住——術後必須特別提醒 7 天內另采非荷爾蒙避孕！"
+                }
+              ],
+              "vitals": {
+                "subject": "35歲 CICV 女患者（Rocuronium 深度 0/4）",
+                "hr": 114,
+                "sbp": 138,
+                "dbp": 86,
+                "rhythm": "tachy",
+                "rhythmText": "低血氧缺氧交感緊張！",
+                "airway": 34,
+                "nmj": 6,
+                "nmjLabel": "深度 Rocuronium 阻斷 (0/4)",
+                "tofPattern": "deep",
+                "tofNote": "CICV 深度阻斷：Neostigmine 無效！",
+                "badges": ["CICV 無法插管無法通氣！", "服用口服避孕藥 (OCP)"]
+              },
+              "choices": [
+                {
+                  "id": "c_cicv_ok",
+                  "label": "火速靜注高劑量 Sugammadex [Bridion] (16 mg/kg)，1.5–3 分鐘內藉 γ-環糊精 1:1 包覆 Rocuronium 瞬間恢復自發呼吸！（注意監測過敏休克與腎排複合體可透析，並「強烈衛教術後 7 天內採額外非荷爾蒙避孕」！）",
+                  "sublabel": "Neostigmine 在剛誘導的深度阻斷下根本來不及逆轉，唯靠 Sugammadex 專抓類固醇 -curonium 救命",
+                  "outcome": "correct",
+                  "nextStepId": "__EVENT_COMPLETE__",
+                  "feedback": {
+                    "speakerName": "弘岳真人",
+                    "text": "「妙奪天工！高劑量 **`Sugammadex` (16 mg/kg)** 如縛龍金環般秒速鎖死類固醇骨架 `Rocuronium`（對 `Vecuronium` 同效），2 分鐘救回自主通氣；連她服口服避孕藥會被螯合失效、必須衛教 **7 天非荷爾蒙避孕**都一滴不漏！賜《縛龍環糊精金印》！」",
+                    "delta": { "yin": 2, "yang": 3 },
+                    "unlockCodex": [54],
+                    "grantItem": {
+                      "id": "pouch_bridion_ring",
+                      "name": "縛龍環糊精金印",
+                      "desc": "記錄 Sugammadex 螯合類固醇 -curonium 兼螯黃體素 7 天避孕守則，與解痙／CNS 要訣。"
+                    },
+                    "vitals": {
+                      "hr": 78,
+                      "sbp": 118,
+                      "dbp": 76,
+                      "rhythm": "normal",
+                      "airway": 100,
+                      "nmj": 52,
+                      "tofPattern": "normal",
+                      "tofNote": "TOF 100%（Sugammadex 1.5–3m 逆轉）",
+                      "badges": ["Sugammadex CICV 逆轉成功", "衛教7天非荷爾蒙避孕"]
+                    }
+                  }
+                },
+                {
+                  "id": "c_cicv_crisis",
+                  "label": "放棄 Sugammadex！單靠靜注常規劑量 Neostigmine + Glycopyrrolate 慢慢等它從受體累積 ACh 擠開 Rocuronium",
+                  "sublabel": "深度肌鬆 0/4 時突觸 AChE 抑劑完全抓瞎，血氧直線狂墜！",
+                  "outcome": "crisis",
+                  "nextStepId": "__EVENT_COMPLETE__",
+                  "crisis": {
+                    "title": "極度缺氧窒息危象：Neostigmine 對深度肌鬆 CICV 緩不濟急！",
+                    "mechanism": "在 `Rocuronium` 插管剛誘導的深度 `0/4` 阻斷期，`ACh` 相對濃度在 `Neostigmine` 下仍無力競爭過高濃度的佔位拮抗劑——通氣遲遲不回復，氣道飽和度崩潰、心率驟跌至 `42 bpm`！",
+                    "vitals": {
+                      "subject": "CICV 缺氧瀕危女性",
+                      "hr": 42,
+                      "sbp": 68,
+                      "dbp": 38,
+                      "rhythm": "brady",
+                      "rhythmText": "重度缺氧誘發心搏過緩危機！",
+                      "airway": 18,
+                      "nmj": 5,
+                      "tofPattern": "deep",
+                      "badges": ["重度缺氧心跳 42！", "深度阻斷 Neostigmine 無力"]
+                    },
+                    "rescuePrompt": "CICV 缺氧引發緩脈休克！唯一的瞬時藥物解鎖與清醒後關鍵避孕衛教分別為何？",
+                    "rescueChoices": [
+                      {
+                        "id": "rc_cicv_ok",
+                        "label": "立刻 IV 急推 Sugammadex 16 mg/kg 直接包覆清除 Rocuronium（緊密戒備過敏性休克／嚴重緩脈，複合體可透析），脫險清醒後務必衛教「7 天額外非荷爾蒙避孕」",
+                        "sublabel": "1.5–3 分鐘快速解鎖自發呼吸並避開避孕失敗風險",
+                        "isSuccess": true,
+                        "feedbackText": "`Sugammadex 16 mg/kg` 一注射入脈，兩分鐘內橫膈肌搶先動了起來，TOF 彈回 100% 滿格挽救性命！日後銘記深度 Rocuronium CICV 直上 Sugammadex！",
+                        "delta": { "yang": 2 },
+                        "vitals": {
+                          "hr": 82,
+                          "sbp": 116,
+                          "dbp": 74,
+                          "rhythm": "normal",
+                          "airway": 100,
+                          "nmj": 50,
+                          "tofPattern": "normal",
+                          "badges": ["Sugammadex 險中奇蹟救回"]
+                        }
+                      },
+                      {
+                        "id": "rc_cicv_fail",
+                        "label": "改推 Succinylcholine 企圖幫他重插管，術後只說口服避孕藥照平常繼續吃完全不必理會",
+                        "sublabel": "沒通氣下再加 SCh 只會雙重麻痺徹底缺氧停搏",
+                        "isSuccess": false,
+                        "feedbackText": "在未恢復通氣下疊加肌肉鬆弛劑無異於雪上加霜，血氧完全見底窒息休克！弘岳真人強行環甲膜切開接手急救，判定此場 Boss 救援失敗。",
+                        "vitals": { "hr": 0, "rhythm": "asystole", "badges": ["缺氧窒息 Bosss 敗退"] }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "E28": {
+      "id": "E28",
+      "chapter": 8,
+      "chapterTitle": "第 8 章・太虛手術台與解痙秘境",
+      "location": "玄冥封脈殿・龍脊反射弧＆卸甲秘境",
+      "title": "龍脊驟停劫、肉毒雙刀與漸凍護甲訣",
+      "hubSummary": "掌握膝跳伸張反射與三大解痙劑 (Diazepam/Baclofen 驟停反彈/Tizanidine)，精辨 BTX-A vs BTX-B SNARE 切點、Dantrolene 肝毒、ALS Riluzole 及 Carisoprodol IV級管制。",
+      "codexIds": [55, 56],
+      "unlockTables": ["tbl_spasmolytics_bt"],
+      "storyMode": "all",
+      "variants": [
+        {
+          "variantId": "A",
+          "steps": [
+            {
+              "id": "e28a_s1",
+              "speaker": "hongyue",
+              "speakerName": "弘岳真人",
+              "speakerTag": "脊髓伸張反射＆中樞解痙三傑",
+              "text": "龍脊密室敲動肌梭膝跳反射：`Ia` 感覺神經進入脊髓釋放神經傳導物促進伸肌收縮，同時驅動抑制中間神經元鬆弛屈肌；房內另住著長期置放**脊髓腔內 `Baclofen` 輸注導管**的多發性硬化症弟子（另配 `Tizanidine` 備案）。\n關於該反射弧傳導物質與停藥禁忌，下列何者為真？",
+              "vitals": {
+                "subject": "脊髓損傷痙攣弟子（Baclofen 導管監控）",
+                "hr": 78,
+                "sbp": 120,
+                "dbp": 76,
+                "tempC": 36.9,
+                "rhythm": "normal",
+                "rhythmText": "脊髓幫浦恆流抑痙中",
+                "nmj": 58,
+                "nmjLabel": "GABA_B 控制肌張力平穩",
+                "tofPattern": "normal",
+                "badges": ["脊髓伸張反射與幫浦檢查"]
+              },
+              "choices": [
+                {
+                  "id": "c_spasm_ok",
+                  "label": "Ia 纖維釋放興奮性麩胺酸 (Glutamate) 促伸肌收縮、抑制中間神經元釋 GABA/Glycine 鬆屈肌；Baclofen 屬 GABA_B 致效劑（突觸後 ↑K⁺、突觸前降 Ca²⁺/Glu），不可驟停以免反彈危症痙攣；Tizanidine 為脊髓 α₂ 致效劑（降壓僅 Clonidine 1/10–1/15，驟停反彈高血壓）",
+                  "sublabel": "對照 Diazepam (GABA_A 促 Cl⁻ 內流，最嗜睡)；Tizanidine 經 CYP1A2 代謝",
+                  "outcome": "correct",
+                  "nextStepId": "__EVENT_COMPLETE__",
+                  "feedback": {
+                    "speakerName": "弘岳真人",
+                    "text": "「絲絲入扣！脊髓幫浦無論是 **`Baclofen`**（防致命反彈高張痙攣與高熱）或是 `Tizanidine`（防反彈高血壓搏過速）都絕不可直接硬停斷藥！」",
+                    "delta": { "yin": 2, "yang": 1 },
+                    "unlockCodex": [55],
+                    "vitals": {
+                      "nmj": 50,
+                      "badges": ["中樞解痙與驟停危機通曉"]
+                    }
+                  }
+                },
+                {
+                  "id": "c_spasm_crisis",
+                  "label": "採信陸離：嫌脊髓內導管太麻煩，直接把重度依賴多年的脊髓腔 Baclofen 輸注幫浦「一口氣拔斷徹底停藥」，且不予替代口服",
+                  "sublabel": "GABA_B 受體長期下調後突然撤除刺激將觸發致命性嚴重反彈式痙攣與橫紋肌高熱！",
+                  "outcome": "crisis",
+                  "nextStepId": "__EVENT_COMPLETE__",
+                  "crisis": {
+                    "title": "反彈強直危象：脊髓腔 Baclofen 驟停引發高張抽搐兼高熱！",
+                    "mechanism": "突然中斷高濃度脊髓腔 `Baclofen` 後，失去 `GABA_B` 對突觸前 `Ca²⁺`/麩胺酸之強力煞車，全身肌肉爆發劇烈反彈強直痙攣、高燒竄至 **`39.4 °C`** 伴隨自律神經大亂！",
+                    "vitals": {
+                      "subject": "Baclofen 驟停弟子（全身強直痙攣高熱！）",
+                      "hr": 136,
+                      "sbp": 168,
+                      "dbp": 98,
+                      "tempC": 39.4,
+                      "rhythm": "tachy",
+                      "nmj": 94,
+                      "tofPattern": "spastic",
+                      "badges": ["Baclofen 驟停反彈痙攣", "高熱自律失調"]
+                    },
+                    "rescuePrompt": "病人全身角弓反張、高熱 39.4 °C，當務之急搶救措施為何？",
+                    "rescueChoices": [
+                      {
+                        "id": "rc_bac_ok",
+                        "label": "火速重新修復或給予 Baclofen 補充（脊髓或過渡大劑量口服）＋ 立即靜脈輸注 Benzodiazepines (Diazepam/Lorazepam) 藉 GABA_A 緊急壓痙鎮靜並降溫輸液防橫紋肌溶解",
+                        "sublabel": "立即重補 GABAergic 抑制電流打斷麩胺酸失控",
+                        "isSuccess": true,
+                        "feedbackText": "雙管齊下恢復 `Baclofen` 供給並推 `IV Diazepam` 強化 `GABA_A Cl⁻` 抑制後，強直痙攣與體溫逐步平穩下降！切記停藥必須漸進遞減！",
+                        "delta": { "yin": 2 },
+                        "vitals": {
+                          "hr": 80,
+                          "sbp": 120,
+                          "dbp": 76,
+                          "tempC": 37.2,
+                          "rhythm": "normal",
+                          "nmj": 50,
+                          "tofPattern": "normal",
+                          "badges": ["Baclofen 驟停險象搶救成功"]
+                        }
+                      },
+                      {
+                        "id": "rc_bac_fail",
+                        "label": "誤判是中風感染給 Physostigmine 再補兩劑 Amifampridine 促進運動神經傳導物質釋放",
+                        "sublabel": "增加突觸興奮傳導只會讓全身強直搐死",
+                        "isSuccess": false,
+                        "feedbackText": "4-AP 兼 AChEI 狂催突觸神經傳導，使全身抽搐痙攣與高鉀橫紋肌溶解徹底惡化！弘岳真人急運重鎮接手，救援敗退。",
+                        "vitals": { "tempC": 40.8, "hr": 158, "badges": ["強直惡化敗退"] }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "variantId": "B",
+          "steps": [
+            {
+              "id": "e28b_s1",
+              "speaker": "suling",
+              "speakerName": "蘇苓師妹",
+              "speakerTag": "第三卷壓軸・SNARE 雙刀／ALS／管制藥",
+              "text": "第三卷《玄冥封脈篇》最後一關！桌案上陳列 **肉毒桿菌毒素 `BTX-A` 與 `BTX-B`**（鋅蛋白酶）、口服 `Dantrolene`、漸凍人症用藥 `Riluzole`，以及急性拉傷抗痙攣劑 `Carisoprodol` / `Cyclobenzaprine`。\n蘇苓直指關鍵考點：「分子切割上 **`BTX-A`** 與 **`BTX-B`** 各自劈開哪個 SNARE 蛋白？又 **`Riluzole`** 如何護住脊髓運動神經元？`Carisoprodol` 又為何列管？」",
+              "vitals": {
+                "subject": "第三卷綜合分子解剖陣",
+                "hr": 74,
+                "sbp": 118,
+                "dbp": 76,
+                "tempC": 36.8,
+                "potassium": 4.2,
+                "rhythm": "normal",
+                "rhythmText": "雙極穩健（即將轉入太陽烈火）",
+                "nmj": 50,
+                "nmjLabel": "SNARE / ALS 機轉齊備",
+                "tofPattern": "normal",
+                "badges": ["Ch.08 總結：BTX/ALS/管制"]
+              },
+              "choices": [
+                {
+                  "id": "c_btx_ok",
+                  "label": "BTX-A (及 BoNT-E) 切突觸前膜 SNAP-25 與 Syntaxin；BTX-B (及 D/F) 切囊泡膜 Synaptobrevin (VAMP)（防擴散黑框警語）；口服 Dantrolene 黑框防肝毒性；ALS 的 Riluzole 兼抑前 Na⁺ 降釋放、非競抑 NMDA/AMPA 且促膠細胞再回收 Glu；Carisoprodol 代謝為 Meprobamate 列第 IV 級管制藥！",
+                  "sublabel": "一字不漏總結第三卷 Ch.08 最後四大壓軸分子＆管制考點！",
+                  "outcome": "correct",
+                  "nextStepId": "__EVENT_COMPLETE__",
+                  "feedback": {
+                    "speakerName": "弘岳真人",
+                    "text": "「大哉問亦大哉答！從顛茄左旋到 `BTX-A (SNAP-25)` vs `BTX-B (VAMP)`、再到 `Riluzole` 三路截斷麩胺酸與 `Carisoprodol → Meprobamate` 第 IV 級管制，你已徹底征服第三卷玄冥封脈殿！第四卷『太陽烈火』正待啟幕！」",
+                    "delta": { "yin": 2, "yang": 2 },
+                    "unlockCodex": [56],
+                    "vitals": { "badges": ["第三卷 Ch.08 玄冥圓滿"] }
+                  }
+                },
+                {
+                  "id": "c_btx_wrong",
+                  "label": "BTX-A 專門切割囊泡膜 VAMP 而 BTX-B 才切 SNAP-25；且口服 Dantrolene 主要傷害腎臟毫無肝毒性，Carisoprodol 則毫不成癮",
+                  "sublabel": "A/B 型受質完全倒錯，且忽略黑框肝毒性與 Meprobamate 濫用風險",
+                  "outcome": "wrong",
+                  "feedback": {
+                    "speakerName": "蘇苓師妹",
+                    "text": "「別被字母順口搞混：`BTX-A` 切的是突觸前膜的 **`SNAP-25`（與 Syntaxin）**，`BTX-B` 才切囊泡膜 **`Synaptobrevin / VAMP`**！口服 Dantrolene 黑框警語就是**肝毒性**；`Carisoprodol` 則因轉為 Meprobamate 成癮列第四級管制！」",
+                    "delta": { "yin": -1 }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "E29": {
+      "id": "E29",
+      "chapter": 9,
+      "chapterTitle": "第 9 章・太陽烈火殿與千姿百脈（自由接診）",
+      "location": "太陽烈火殿・髓質雙爐＆酪胺發酵宴",
+      "title": "髓質雙雄、酪胺旁路與起司高壓劫",
+      "hubSummary": "辨明腎上腺髓質 80/20、主次生合成 (Tyramine→Octopamine) 與 VMA/HVA 匯流，並於互動餐盤台實測 9 大酪胺／L-DOPA／PEA 食物危機。",
+      "codexIds": [57, 58, 59],
+      "unlockTables": ["tbl_tyramine_foods"],
+      "storyMode": "all",
+      "variants": [
+        {
+          "variantId": "A",
+          "steps": [
+            {
+              "id": "e29a_s1",
+              "speaker": "hongyue",
+              "speakerName": "弘岳真人",
+              "speakerTag": "第四卷・太陽烈火啟程",
+              "text": "赤金石階引領二人來到烈焰翻騰的「太陽烈火殿」。左爐演繹腎上腺髓質（N_N 入血），右爐演化交感節後突觸與代謝匯流。\n弘岳真人考問：「髓質釋放入血的兒茶酚胺 **`Epi` 與 `NE` 比例**各佔多少？又主生合成限速酶、次要替代旁路 `Tyramine → Octopamine` 暨最終尿液匯流指標各為何物？」",
+              "vitals": {
+                "subject": "林玄（太陽烈火殿入門基準）",
+                "hr": 76,
+                "sbp": 120,
+                "dbp": 76,
+                "iop": 15,
+                "tempC": 36.8,
+                "potassium": 4.2,
+                "rhythm": "normal",
+                "rhythmText": "雙脈均衡入太陽",
+                "pupilMm": 3.5,
+                "ciliary": "平衡",
+                "airway": 100,
+                "secretion": "正常",
+                "nmj": 50,
+                "nmjLabel": "穩健",
+                "tofPattern": "normal",
+                "badges": ["進入第四卷・太陽烈火篇"]
+              },
+              "choices": [
+                {
+                  "id": "c_syn_ok",
+                  "label": "髓質釋 80% Epi＋20% NE；主途徑由 Tyrosine 經限速酶 TH（Metyrosine 抑）→Dopa→DA→NE→(髓質 PNMT)→Epi；次要旁路經 Tyramine→Octopamine；Epi/NE 經 Metanephrine/Normetanephrine 匯流為尿中 VMA，DA 則匯流為 HVA",
+                  "sublabel": "Ephedrine 兼直接激發與間接促釋屬「混合作用型」，Amphetamine/Tyramine 屬「釋放／置換型」",
+                  "outcome": "correct",
+                  "nextStepId": "__EVENT_COMPLETE__",
+                  "feedback": {
+                    "speakerName": "弘岳真人",
+                    "text": "「字句無漏！尤其髓質才富含 `PNMT` 把 80% NE 轉成 Epi 入血；而尿中的 **VMA、Metanephrine、Normetanephrine** 與多巴胺終產物 **HVA**，更是日後確診嗜鉻細胞瘤的鐵證！」",
+                    "delta": { "yin": -1, "yang": 3 },
+                    "unlockCodex": [57, 58],
+                    "vitals": {
+                      "badges": ["髓質80/20與VMA/HVA通達"]
+                    }
+                  }
+                },
+                {
+                  "id": "c_syn_wrong",
+                  "label": "髓質釋放 80% NE + 20% DA；限速步驟為 PNMT，且 Epi/NE 與 DA 全部統一只代謝成 HVA",
+                  "sublabel": "比例、限速酶與代謝終產物全部混淆",
+                  "outcome": "wrong",
+                  "feedback": {
+                    "speakerName": "蘇苓師妹",
+                    "text": "「記反啦！腎上腺髓質主要把 NE 透過 `PNMT` 轉成 **`80% Epinephrine`＋20% NE**；速率決定步驟是 **`Tyrosine hydroxylase (TH)`**（受 `Metyrosine` 抑）；`Epi/NE` 匯流為 **`VMA`**，`DA` 才匯流為 **`HVA`**！」",
+                    "delta": { "yin": 1 }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "variantId": "B",
+          "steps": [
+            {
+              "id": "e29b_s1",
+              "speaker": "patient",
+              "speakerName": "憂鬱症服不可逆 MAOI 弟子",
+              "speakerTag": "起司效應・互動餐盤推演",
+              "text": "酒樓試煉擺開九味佳餚，正服用**不可逆單胺氧化酶抑制劑（Irreversible MAOI）**的弟子腹餓欲食。\n請撥動下方「**酪胺餐盤推演台**」檢驗各食物毫克數：究竟哪一類單份含 **`Tyramine`** 最高？蠶豆（Broad beans）與大量巧克力明明酪胺極低，為何照樣列為特別危險？",
+              "widget": "tyramine_table_lab",
+              "vitals": {
+                "subject": "不可逆 MAOI 用藥弟子（餐前評估）",
+                "hr": 74,
+                "sbp": 118,
+                "dbp": 76,
+                "rhythm": "normal",
+                "rhythmText": "尚未誤食高酪胺餐點",
+                "badges": ["MAOI 酪胺飲食安全篩檢"]
+              },
+              "choices": [
+                {
+                  "id": "c_tyr_ok",
+                  "label": "嚴禁醃漬／煙燻魚類（如醃鯡魚 0–198 mg 單份最高！）、熟成起司 (0–130 mg)、發酵香腸與濃縮啤酒酵母；同時嚴戒含多巴胺前驅 L-DOPA 之蠶豆與含苯乙胺 PEA 之大量巧克力（首渡 MAO 被毀時僅 20–50 mg 酪胺即爆高壓！）",
+                  "sublabel": "可改擇少量新鮮紅酒 (0–3 mg) 與新鮮低酪胺鮮食，並知急救藥為 IV Phentolamine",
+                  "outcome": "correct",
+                  "nextStepId": "__EVENT_COMPLETE__",
+                  "feedback": {
+                    "speakerName": "弘岳真人",
+                    "text": "「極為敏銳！世人常稱『起司效應』卻忽略了**煙燻／醃漬魚肉 (0–198 mg)** 單份上限比熟成起司更高，且蠶豆憑 `L-DOPA` 照樣催出兒茶酚胺風暴！這枚《酪胺起司避忌籤》助你後路防範各種促壓毒局！」",
+                    "delta": { "yin": 2, "yang": 2 },
+                    "unlockCodex": [59],
+                    "grantItem": {
+                      "id": "pouch_mao_diet_seal",
+                      "name": "酪胺起司避忌籤",
+                      "desc": "明載 20–50 mg Tyramine 即爆發，醃魚 198mg 最高，蠶豆 L-DOPA、巧克力 PEA 皆須 Phentolamine 解壓。"
+                    },
+                    "vitals": {
+                      "hr": 74,
+                      "sbp": 118,
+                      "dbp": 76,
+                      "rhythm": "normal",
+                      "badges": ["MAOI 安全食譜過關"]
+                    }
+                  }
+                },
+                {
+                  "id": "c_tyr_crisis",
+                  "label": "採信陸離：「魚肉起司補蛋白質最健康啦！整盤醃鯡魚 (198mg) 配 Cheddar 起司跟蠶豆全吃下去！」",
+                  "sublabel": "腸肝 MAO 徹底失活下吞入 >200mg Tyramine，偽傳導物 Octopamine 狂擠海量 NE！",
+                  "outcome": "crisis",
+                  "nextStepId": "__EVENT_COMPLETE__",
+                  "crisis": {
+                    "title": "起司效應狂潮：血壓暴衝 218/130 mmHg 伴隨反射性心搏過緩！",
+                    "mechanism": "高量 `Tyramine` 避開腸肝首渡代謝後，經 `NET` 進入交感末梢部分轉為偽神經傳導物 `Octopamine`、大舉置換囊泡 `NE` 傾瀉入突觸！病患後枕劇痛欲裂、血壓狂飆 **`218/130 mmHg`**，迷走感壓反射壓低心率至 **`50 bpm`**！",
+                    "vitals": {
+                      "subject": "MAOI 起司效應弟子（劇痛高壓危象！）",
+                      "hr": 50,
+                      "sbp": 218,
+                      "dbp": 130,
+                      "rhythm": "brady",
+                      "rhythmText": "劇壓危象＋強烈感壓反射性竇緩",
+                      "pupilMm": 5.8,
+                      "badges": ["起司效應高血壓危機", "腦出血高風險"]
+                    },
+                    "rescuePrompt": "弟子血壓已飆至 218/130 mmHg 隨時腦出血！急診降壓首選解藥為何？",
+                    "rescueChoices": [
+                      {
+                        "id": "rc_tyr_ok",
+                        "label": "立刻 IV 推注速效可逆 α 阻斷劑 Phentolamine（或選用 Sodium nitroprusside / Nicardipine 控制危象）直接切斷 α₁ 血管瘋狂收縮！",
+                        "sublabel": "直擊海量 NE 所催動之 α₁ 血管平滑肌收縮，禁忌單用純 β 阻斷劑",
+                        "isSuccess": true,
+                        "feedbackText": "`IV Phentolamine` 一入血脈，血管阻力應聲洩壓至 `132/80 mmHg`，爆裂性頭痛即時舒解！並賜《酪胺起司避忌籤》警戒日後！",
+                        "delta": { "yin": 2 },
+                        "grantItem": {
+                          "id": "pouch_mao_diet_seal",
+                          "name": "酪胺起司避忌籤",
+                          "desc": "明載 20–50 mg Tyramine 即爆發，醃魚 198mg 最高，急救唯用 IV Phentolamine。"
+                        },
+                        "vitals": {
+                          "hr": 78,
+                          "sbp": 132,
+                          "dbp": 80,
+                          "rhythm": "normal",
+                          "badges": ["Phentolamine 平息起司效應"]
+                        }
+                      },
+                      {
+                        "id": "rc_tyr_fail",
+                        "label": "單獨靜脈推注非選擇性 β 阻斷劑 Propranolol 試圖緩和心悸再補一劑 Ephedrine",
+                        "sublabel": "單給 β 阻斷切斷血管 β₂ 舒張緩衝反令 α₁ 縮壓暴走至 245 mmHg！",
+                        "isSuccess": false,
+                        "feedbackText": "單獨封死 `β₂` 舒張更放任大量 NE 死催 `α₁` 縮血管，兼推 `Ephedrine` 令收縮壓破 245 mmHg 引發眼底視網膜出血！弘岳真人急運強效血管擴張禁法收手，本戰敗退！",
+                        "vitals": { "sbp": 245, "hr": 40, "badges": ["α1未阻反飆高壓"] }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "E30": {
+      "id": "E30",
+      "chapter": 9,
+      "chapterTitle": "第 9 章・太陽烈火殿與千姿百脈（自由接診）",
+      "location": "太陽烈火殿・兒茶酚丹爐微觀陣",
+      "title": "逼尿隨堂陷阱、MLCK 與 FXYD1/RYR1 手抖",
+      "hubSummary": "使用兒茶酚 SAR 煉丹台，辨破 α1 逼尿肌隨堂陷阱、Gq 五縮血管受體、Gs 抑 MLCK 平滑肌舒張，與 β2 FXYD1/NKCC 低血鉀及 DHPR/RYR1/PLB 手抖。",
+      "codexIds": [60],
+      "unlockTables": ["tbl_sympatho_hemo"],
+      "storyMode": "all",
+      "variants": [
+        {
+          "variantId": "A",
+          "steps": [
+            {
+              "id": "e30a_s1",
+              "speaker": "hongyue",
+              "speakerName": "弘岳真人",
+              "speakerTag": "微觀訊息傳遞＆隨堂考題",
+              "text": "烈火丹爐投影出兩重微觀陣法（可點擊下方「**兒茶酚胺 SAR 煉丹改造台**」試煉 N-取代與雙酚修飾）：\n【隨堂考題】：活化 **`α₁` 交感受體**可能引發的人體反應中，下列**何者完全錯誤**？且為何同為 `G_s → ↑cAMP` 路徑，在心肌 (`β₁`) 引起收縮、在氣管平滑肌 (`β₂`) 卻引起**舒張**？",
+              "widget": "catechol_sar_lab",
+              "vitals": {
+                "subject": "雙極微觀訊息模擬陣",
+                "hr": 74,
+                "sbp": 118,
+                "dbp": 76,
+                "potassium": 4.2,
+                "rhythm": "normal",
+                "rhythmText": "Gq vs Gs 微觀訊息觀察中",
+                "airway": 100,
+                "badges": ["α1 隨堂陷阱", "cAMP 相反效應解析"]
+              },
+              "choices": [
+                {
+                  "id": "c_micro_ok",
+                  "label": "「膀胱逼尿肌收縮」錯！（α₁ 只縮內括約肌／攝護腺／豎毛肌／Gq 血管 [α₁,AT₁,ET_A,V₁,M₃]，逼尿肌由 M₃ 收縮、β₂/β₃ 舒張）；Gs ↑cAMP 在心肌經 PKA 開 L-type 鈣道促收縮，在平滑肌則「磷酸化抑制 MLCK」使肌球蛋白無法收縮而舒張！",
+                  "sublabel": "一舉雙破 α₁ 隨堂考題＋血管平滑肌五種 Gq 受體＋Gs 心肌 vs 平滑肌相反機轉",
+                  "outcome": "correct",
+                  "nextStepId": "__EVENT_COMPLETE__",
+                  "feedback": {
+                    "speakerName": "弘岳真人",
+                    "text": "「妙解入微！同一個 **`PKA`** 磷酸化，在心室給鈣離子閘門加速打開增強搏力；到了平滑肌卻替「肌球蛋白輕鏈激酶 **`MLCK`**」上鎖令其失能舒張——可謂『同源異效』！」",
+                    "delta": { "yin": 2, "yang": 2 },
+                    "unlockCodex": [60],
+                    "vitals": {
+                      "badges": ["Gq五受體＋抑MLCK通透"]
+                    }
+                  }
+                },
+                {
+                  "id": "c_micro_wrong",
+                  "label": "「豎毛肌收縮」是錯的（只有 α₁ 會收縮膀胱逼尿肌排尿！）；平滑肌則是因為 ↑cAMP 活化 Gq→IP₃ 才放鬆",
+                  "sublabel": "把逼尿肌 M3/β3 調控與豎毛肌徹底搞反，並混錯 Gs 與 Gq",
+                  "outcome": "wrong",
+                  "feedback": {
+                    "speakerName": "蘇苓師妹",
+                    "text": "「被題目繞暈了嗎！交感興奮（`α₁`）收縮的是『**膀胱內括約肌**』鎖住尿不外漏，同時令豎毛肌豎起起雞皮疙瘩、收縮血管；**膀胱逼尿肌**若真用 α₁ 收縮豈不是打戰時滿褲子尿出來？逼尿肌舒張靠 `β₂/β₃`（抑 **`MLCK`**）！」",
+                    "delta": { "yang": 1 }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "variantId": "B",
+          "steps": [
+            {
+              "id": "e30b_s1",
+              "speaker": "patient",
+              "speakerName": "密集吸入高劑量 Albuterol 弟子",
+              "speakerTag": "骨骼肌 β₂ 副作用分子剖析",
+              "text": "氣喘急性發作的弟子反覆霧化吸入高劑量 `β₂` 致效劑 **`Albuterol`** 後，氣道終於拉開到 `124%`，卻見雙手出現明顯**高頻震顫手抖（Tremors）**，急測血清鉀竟驟降為 **`3.0 mEq/L`（低血鉀 Hypokalemia）**！\n這兩大常見 `β₂` 副作用背後分別由哪組蛋白磷酸化鏈條所造成？",
+              "vitals": {
+                "subject": "高劑量 β₂ 氣喘緩解弟子（K⁺ 3.0＋手抖！）",
+                "hr": 106,
+                "sbp": 124,
+                "dbp": 70,
+                "potassium": 3.0,
+                "rhythm": "tachy",
+                "rhythmText": "β2 低血鉀警示 (U 波潛伏)",
+                "airway": 124,
+                "nmj": 66,
+                "nmjLabel": "骨骼肌 Ca²⁺震盪細微手抖",
+                "badges": ["低血鉀 (K⁺ 3.0)", "β2 手抖＋FXYD1/NKCC"]
+              },
+              "choices": [
+                {
+                  "id": "c_b2micro_ok",
+                  "label": "低血鉀因 PKA 磷酸化調節蛋白 FXYD1 活化 Na⁺/K⁺-ATPase ＋ ERK 活化 NKCC 共轉運，大舉將 K⁺ 泵入肌細胞；手抖則因 PKA 磷酸化 t-小管 DHPR、SR RYR1 與 Phospholamban (PLB) 產生肌漿鈣震盪",
+                  "sublabel": "此機制亦正是高血鉀危機 (如前卷燒傷) 時反過來利用霧化 Albuterol 降血鉀之依據！",
+                  "outcome": "correct",
+                  "nextStepId": "__EVENT_COMPLETE__",
+                  "feedback": {
+                    "speakerName": "弘岳真人",
+                    "text": "「分子級神解！記住 `FXYD1 + NKCC` 進鉀、`DHPR/RYR1/PLB` 抖手，便能同時看懂『為何 β₂ 當救高血鉀用藥』及『正常病人噴過量為何抽手掉鉀』！贈你《兒茶酚分子顯微鏡》！」",
+                    "delta": { "yin": 2, "yang": 2 },
+                    "unlockCodex": [60],
+                    "grantItem": {
+                      "id": "pouch_catechol_mirror",
+                      "name": "兒茶酚分子顯微鏡",
+                      "desc": "刻有 Gq 五縮血管、PKA 抑 MLCK、FXYD1/NKCC 及非兒茶酚雙步 SAR 訣竅。"
+                    },
+                    "vitals": {
+                      "hr": 82,
+                      "potassium": 3.8,
+                      "rhythm": "normal",
+                      "nmj": 50,
+                      "badges": ["β2 微觀分子鏈條破譯"]
+                    }
+                  }
+                },
+                {
+                  "id": "c_b2micro_wrong",
+                  "label": "β₂ 致效劑直接阻塞腎小管 K⁺ 通道引起低血鉀，手抖則是阻斷腦內乙醯膽鹼引發巴金森氏抖症",
+                  "sublabel": "完全忽視骨骼肌 PKA FXYD1 / NKCC 跨膜趕鉀與肌漿網鈣震盪",
+                  "outcome": "wrong",
+                  "feedback": {
+                    "speakerName": "蘇苓師妹",
+                    "text": "「不是腎臟排掉而是『被推進肌肉細胞內部』！`PKA` 磷酸化 **`FXYD1`** 加上 **`ERK` 催動 `NKCC`** 才讓鉀進胞；而手抖是 **`DHPR / RYR1 / PLB`** 鈣通道共振震盪，非巴金森氏抖症喔！」",
+                    "delta": { "yin": -1 }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "E31": {
+      "id": "E31",
+      "chapter": 9,
+      "chapterTitle": "第 9 章・太陽烈火殿與千姿百脈（自由接診）",
+      "location": "太陽烈火殿・四脈奔流模擬室",
+      "title": "四脈動脈曲線、反射緩脈與腎上腺素反轉",
+      "hubSummary": "操縱四大擬交感胺血流動力模擬器，從 SBP/DBP/TPR/脈壓/HR 曲線辨認無標記 NE/Epi/PE/Iso，並親測「腎上腺素反轉 (Epinephrine Reversal)」。",
+      "codexIds": [61],
+      "unlockTables": ["tbl_sympatho_hemo"],
+      "storyMode": "one",
+      "variants": [
+        {
+          "variantId": "A",
+          "steps": [
+            {
+              "id": "e31a_s1",
+              "speaker": "hongyue",
+              "speakerName": "弘岳真人",
+              "speakerTag": "四脈無標記曲線讀圖考驗",
+              "text": "四脈模擬儀出現一組未標記藥物靜脈輸注波形：總周邊阻力 **`TPR ↑↑↑`**、收縮壓 **`SBP ↑↑`**、舒張壓 **`DBP ↑↑`**、脈壓略升 (`↑`)，然而心跳速率 **`HR` 竟顯著驟降至 `54 bpm` (`↓↓`)**！\n請點選下方「**四大擬交感胺模擬器**」逐一測試——這支明明能興奮心肌 `β₁`、卻反而讓心跳往下跌的藥究竟為何？（另問 `D₁` 降急壓藥 **`Fenoldopam`** 須防何眼科副作用？）",
+              "widget": "sympatho_hemo",
+              "vitals": {
+                "subject": "四脈無標記靜脈滴注實驗",
+                "hr": 54,
+                "sbp": 174,
+                "dbp": 108,
+                "iop": 15,
+                "rhythm": "brady",
+                "rhythmText": "雙壓飆升→感壓反射蓋過β₁致緩脈！",
+                "pupilMm": 5.2,
+                "airway": 100,
+                "badges": ["無標記曲線讀圖測驗"]
+              },
+              "choices": [
+                {
+                  "id": "c_ne_curve_ok",
+                  "label": "必為 Norepinephrine (α₁, α₂, β₁；極少 β₂)！因缺乏骨骼肌 β₂ 血管舒張緩衝使 TPR/DBP 強升，引發猛烈「迷走感壓反射 (Vagal baroreflex)」徹底蓋過直接 β₁ 加速；而治高壓急症的 D₁ 致效劑 Fenoldopam 會升高眼內壓 (IOP)",
+                  "sublabel": "口訣：E > N ≫ I (α 親和)；I > E ≥ N (β 親和)；舒張壓直接反映 TPR！",
+                  "outcome": "correct",
+                  "nextStepId": "e31a_s2",
+                  "feedback": {
+                    "speakerName": "弘岳真人",
+                    "text": "「讀圖功力極深！舒張壓看 `TPR`、`Epinephrine` 因骨骼肌 `β₂` 舒張讓 `DBP ↓` 且脈壓大大變寬、`Isoproterenol` 讓 `MAP ↓ / HR ↑↑↑`；唯獨缺 `β₂` 緩衝的 **`NE`** 與純 `α₁` **`Phenylephrine`** 會讓 `DBP ↑↑` 反把心跳逼慢！」",
+                    "delta": { "yin": 1, "yang": 2 }
+                  }
+                },
+                {
+                  "id": "c_ne_curve_wrong",
+                  "label": "必為 Epinephrine 或 Isoproterenol，因為只有 β₂ 強效擴張才會讓舒張壓飆升並使心跳慢下來",
+                  "sublabel": "誤解 β₂ 對舒張壓／TPR 之方向及迷走反射起源",
+                  "outcome": "wrong",
+                  "feedback": {
+                    "speakerName": "蘇苓師妹",
+                    "text": "「把下方的模擬器按一遍看看右側數字變化！`Epi` 與 `Iso` 都會靠 `β₂` 舒張骨骼肌血管使 **`DBP` 下降、心跳上升**！能讓收縮與舒張壓雙雙飆高又壓低心率的，只可能是缺 `β₂` 的 **`NE`**（或純 `α₁` `Phenylephrine`）喔！」",
+                    "delta": { "yin": -1 }
+                  }
+                }
+              ]
+            },
+            {
+              "id": "e31a_s2",
+              "speaker": "suling",
+              "speakerName": "蘇苓師妹",
+              "speakerTag": "腎上腺素反轉 (Epinephrine Reversal)",
+              "text": "現在請點擊模擬器上的 **`[預先投入 α 阻斷劑 Phentolamine]`** 按鈕，再切換比對四大藥物！\n蘇苓問：「預先用 `Phentolamine` 鎖死 `α₁` 縮血管後，再注射治療劑量 **`Epinephrine`** 與 **`Norepinephrine`**，兩者血壓變化何以迥異？」",
+              "choices": [
+                {
+                  "id": "c_epirev_ok",
+                  "label": "預先 α 阻斷後再給 Epinephrine 會出現「腎上腺素反轉」：只剩骨骼肌 β₂ 舒張令血壓遽跌 (86/44 mmHg)！反觀 Norepinephrine 因幾乎無 β₂ 親和力，僅保留 β₁ 正性強心而不至於反轉劇降",
+                  "sublabel": "而 Isoproterenol 本就純 β 毫無 α 作用，α 阻斷前後反應不變",
+                  "outcome": "correct",
+                  "nextStepId": "__EVENT_COMPLETE__",
+                  "feedback": {
+                    "speakerName": "弘岳真人",
+                    "text": "「一針透徹百年經典藥理實驗！贈與你《四脈血壓脈壓羅盤》，待會兒面對腎上腺嗜鉻細胞瘤與 α/β 阻斷急症時必有神助！」",
+                    "delta": { "yin": 2, "yang": 2 },
+                    "unlockCodex": [61],
+                    "grantItem": {
+                      "id": "pouch_hemo_compass",
+                      "name": "四脈血壓脈壓羅盤",
+                      "desc": "標明 Epinephrine Reversal 必須仰賴 β₂，而嗜鉻細胞瘤絕不可違反「先 α 後 β」鐵律！"
+                    },
+                    "vitals": {
+                      "hr": 74,
+                      "sbp": 118,
+                      "dbp": 76,
+                      "rhythm": "normal",
+                      "badges": ["四脈曲線與反轉效應完勝"]
+                    }
+                  }
+                },
+                {
+                  "id": "c_epirev_wrong",
+                  "label": "α 阻斷下 Epinephrine 反倒爆衝高血壓，而 Norepinephrine 反而才會大幅反轉降壓休克",
+                  "sublabel": "搞反哪一個兒茶酚胺擁有強力血管 β₂ 受體親和力",
+                  "outcome": "wrong",
+                  "feedback": {
+                    "speakerName": "蘇苓師妹",
+                    "text": "「記得 **`ISO ≥ Epi ≫ NE`** 對 `β₂` 的親和力差異嗎？就是因為 `Epi` 擁有強大的 `β₂` 舒張血管能力，一旦 `α₁` 被 `Phentolamine` 封住才發生『腎上腺素反轉降壓』；`NE` 沒有 `β₂` 可靠，故不反轉降壓！」",
+                    "delta": { "yin": -1 }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "E32": {
+      "id": "E32",
+      "chapter": 9,
+      "chapterTitle": "第 9 章・太陽烈火殿與千姿百脈（自由接診）",
+      "location": "太陽烈火殿・高低姿壓診堂",
+      "title": "姿勢性低血壓、直接選藥與 JAMA OAB 長輩雙難",
+      "hubSummary": "貫通 JAMA 2026 姿勢性低血壓衣架痛與兩大前驅藥、五項專精致效劑禁忌，再決斷 JAMA 2025 長輩 OAB 譫妄 vs. 高血壓危象！",
+      "codexIds": [62, 63, 64],
+      "unlockTables": ["tbl_oab_bph_trials"],
+      "storyMode": "all",
+      "variants": [
+        {
+          "variantId": "A",
+          "steps": [
+            {
+              "id": "e32a_s1",
+              "speaker": "patient",
+              "speakerName": "起身昏厥伴後頸衣架痛外門執事",
+              "speakerTag": "JAMA 2026 姿勢性低血壓門診",
+              "text": "一名年長外門執事平躺測得 `118/76 mmHg`，站立未滿 **3 分鐘**血壓驟墜至 **`84/52 mmHg`**！他雙眼黑矇並緊抓後頸雙肩哀嚎痛楚連連。\n蘇苓翻出《JAMA Intern Med. 2026》新訂指針問：「此種典型疼痛稱為何名？站立 3 分鐘內 `SBP/DBP` 下墜達何標準始可確診？日常喝水吃鹽目標暨兩大前驅藥 **`Midodrine` vs. `Droxidopa`** 該如何分辦？」",
+              "vitals": {
+                "subject": "姿勢性低血壓執事（站立 2 min 驟降）",
+                "hr": 96,
+                "sbp": 84,
+                "dbp": 52,
+                "iop": 14,
+                "tempC": 36.7,
+                "potassium": 4.1,
+                "rhythm": "tachy",
+                "rhythmText": "站立腦灌流不足・代償心率略升",
+                "pupilMm": 4.2,
+                "airway": 100,
+                "badges": ["衣架痛警報", "JAMA 2026 OH"]
+              },
+              "choices": [
+                {
+                  "id": "c_oh_ok",
+                  "label": "後頸雙肩缺血痛稱「衣架痛 (Coat-hanger pain)」；站立 3 分鐘內 SBP ↓ ≥ 20 或 DBP ↓ ≥ 10 mmHg 即確診；日常飲水 2–2.5 L＋攝鈉 6–10 g＋及腰彈性襪；Midodrine 水解脫去甘胺酸轉 α₁ 致效劑 Desglymidodrine，Droxidopa 則直接脫羧變回 Norepinephrine",
+                  "sublabel": "口服 Midodrine 嚴防「平躺性高血壓 (Supine HTN)」、豎毛起雞皮疙瘩與尿滯留",
+                  "outcome": "correct",
+                  "nextStepId": "e32a_s2",
+                  "feedback": {
+                    "speakerName": "弘岳真人",
+                    "text": "「字字皆中 *JAMA 2026* 實證！尤須叮囑執事睡前 4 小時不可再服 **`Midodrine`** 以防平躺血壓狂飆；兩者相較，`Midodrine` 脫 `Glycine` 變 `Desglymidodrine`，`Droxidopa (L-DOPS)` 直接補回內生性 **`NE`**！」",
+                    "delta": { "yin": 1, "yang": 2 },
+                    "unlockCodex": [62],
+                    "vitals": {
+                      "hr": 76,
+                      "sbp": 116,
+                      "dbp": 74,
+                      "rhythm": "normal",
+                      "badges": ["OH 前驅藥機制通達"]
+                    }
+                  }
+                },
+                {
+                  "id": "c_oh_wrong",
+                  "label": "此為心絞痛；須站立 30 分鐘 SBP ↓ ≥ 50 mmHg 才算；限水 500 mL；Droxidopa 水解脫甘胺酸變成 α₁ 致效劑而 Midodrine 直接變為 Epinephrine",
+                  "sublabel": "把時間閾值、飲水衛教方向及兩大前驅藥轉換方向全盤弄反",
+                  "outcome": "wrong",
+                  "feedback": {
+                    "speakerName": "蘇苓師妹",
+                    "text": "「千萬不可限水啊！姿勢性低血壓是要多喝 **`2–2.5 L`** 水、攝鈉 **`6–10 g`** 擴充血容；標準是 **3 分鐘內 `SBP↓≥20` 或 `DBP↓≥10`**；記牢 **`Midodrine` 脫 `Glycine`**、**`Droxidopa` 轉成 `NE`**！」",
+                    "delta": { "yin": -1 }
+                  }
+                }
+              ]
+            },
+            {
+              "id": "e32a_s2",
+              "speaker": "hongyue",
+              "speakerName": "弘岳真人",
+              "speakerTag": "直接 α/β 專精五情境快篩",
+              "text": "剛送走執事，門外又列隊五位急診病患：\n(1) 連噴通鼻噴霧一週停用後鼻黏膜反彈爆塞（**藥物性鼻炎**）；\n(2) 懷孕合併慢性高血壓（需安全長效維護首選）；\n(3) ICU 插管鎮靜（不可抑制呼吸、盼省鴉片類）；\n(4) 急性心衰竭（需短期 IV 強心大於加速）；\n(5) 肺病衛教一日一次的超長效支氣管擴張 **Ultra-LABA**。\n請一氣配妥五味單方！",
+              "vitals": {
+                "subject": "急診聯合會診（五類直接擬交感適應症）",
+                "hr": 80,
+                "sbp": 124,
+                "dbp": 78,
+                "rhythm": "normal",
+                "airway": 100,
+                "badges": ["五情境精準選藥"]
+              },
+              "choices": [
+                {
+                  "id": "c_direct_ok",
+                  "label": "依次為：(1) Oxymetazoline (α₁+α₂A 連用 >3–5 天停用必反彈)；(2) α-Methyldopa (孕婦慢性高壓首選)；(3) Dexmedetomidine (ICU α₂ 不抑呼吸)；(4) Dobutamine (β₁ 正變力＞變時)；(5) Indacaterol / Olodaterol / Vilanterol (QD Ultra-LABA 治 COPD)",
+                  "sublabel": "Clonidine 亦為中樞 α₂ 兼治高壓與鴉片／酒精戒斷，但孕婦首選為 α-Methyldopa",
+                  "outcome": "correct",
+                  "nextStepId": "__EVENT_COMPLETE__",
+                  "feedback": {
+                    "speakerName": "弘岳真人",
+                    "text": "「一氣呵成！記清楚 `Oxymetazoline` 別超過五天、妊高壓維持推 **`α-Methyldopa`**（轉偽傳導物 `α-Methylnorepinephrine`）、ICU 鎮靜不抑呼吸推 **`Dexmedetomidine`**，加上 `Dobutamine` 與三味 `-terol` Ultra-LABA！」",
+                    "delta": { "yin": 2, "yang": 2 },
+                    "unlockCodex": [63],
+                    "vitals": {
+                      "badges": ["五專精直接致效全勝"]
+                    }
+                  }
+                },
+                {
+                  "id": "c_direct_wrong",
+                  "label": "通鼻反彈來自口服 Ephedrine；孕婦首選 Clonidine；ICU 鎮靜不抑呼吸用高劑量 Phenylephrine；Ultra-LABA 代表為僅能靜脈滴注安胎的 Ritodrine",
+                  "sublabel": "誤將短效安胎藥當每日 COPD 維持藥，亦錯置妊高壓首選",
+                  "outcome": "wrong",
+                  "feedback": {
+                    "speakerName": "蘇苓師妹",
+                    "text": "「`Ritodrine` 是早產安胎專用（易心悸高血糖肺水腫），每日一次 COPD Ultra-LABA 才是 **`Indacaterol / Olodaterol / Vilanterol`**；妊高壓首選 **`α-Methyldopa`**；反彈鼻炎必考 **`Oxymetazoline`**！」",
+                    "delta": { "yang": -1 }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "variantId": "B",
+          "steps": [
+            {
+              "id": "e32b_s1",
+              "speaker": "patient",
+              "speakerName": "78 歲頻尿老翁（輕度失智＋高血壓 186/104）",
+              "speakerTag": "JAMA 2025 膀胱過動症 (OAB) 臨床兩難",
+              "text": "78 歲老翁受急迫性尿失禁 (OAB) 所苦，依 *JAMA 2025* 實證兩大類藥皆須 **4–6 週**方顯全效。然而老翁同時合併**輕度認知退化 (MCI)**，且平時忘記吃降壓藥，現場血壓高達 **`186/104 mmHg`**！\n陸離問：「這名老人家既怕腦袋糊塗又頂著超高血壓，究竟該如何挑選 OAB 口服方？」",
+              "pouchHints": [
+                {
+                  "itemId": "pouch_antimuscarinic_lens",
+                  "text": "琉璃鏡靈光閃動：OAB 中以脂溶性三級胺 Oxybutynin 的 CNS 譫妄風險居首；若改採 β₃ 致效劑雖不入腦口乾，但會升壓 8–11%（重度未控高血壓禁用）！唯有帶正電四級胺 Trospium 或 M₃ 高選 Darifenacin 雙避兩險！"
+                }
+              ],
+              "vitals": {
+                "subject": "78歲 OAB 合併 MCI＋嚴重未控高血壓長輩",
+                "hr": 82,
+                "sbp": 186,
+                "dbp": 104,
+                "iop": 16,
+                "tempC": 36.8,
+                "potassium": 4.2,
+                "rhythm": "normal",
+                "rhythmText": "嚴重未控制高血壓基底・OAB 兩難",
+                "pupilMm": 3.4,
+                "airway": 100,
+                "badges": ["高血壓 186/104", "MCI 認知弱勢"]
+              },
+              "choices": [
+                {
+                  "id": "c_oab_ok",
+                  "label": "避開 Oxybutynin 與 Mirabegron！先控制高血壓並優先選用極難穿 BBB 的四級胺 Trospium（或 M₃ 專一 Darifenacin）；且事先衛教無論抗 M 或 β₃ 皆須連續服用 4–6 週才顯完全療效",
+                  "sublabel": "兩害相權雙避雷區：兼顧保護長輩認知與避免 β₃ 升壓危機",
+                  "outcome": "correct",
+                  "nextStepId": "__EVENT_COMPLETE__",
+                  "feedback": {
+                    "speakerName": "弘岳真人",
+                    "text": "「妙極！這是 *JAMA 2025* OAB 綜論最經典的臨床題：老人怕認知譫妄別給 `Oxybutynin`；嚴重未控高壓又撞上 **`Mirabegron` 禁忌（升高 BP 8–11%）**，改選帶正電不入腦的 **`Trospium`** 最穩健！」",
+                    "delta": { "yin": 2, "yang": 2 },
+                    "unlockCodex": [64],
+                    "vitals": {
+                      "hr": 76,
+                      "sbp": 172,
+                      "dbp": 94,
+                      "badges": ["JAMA OAB 雙難完美迴避"]
+                    }
+                  }
+                },
+                {
+                  "id": "c_oab_oxy_crisis",
+                  "label": "憑 JAMA 平均減尿次數最多（-19.4 次/週），直接開立口服三級胺 Oxybutynin 並衛教兩天見效",
+                  "sublabel": "忽略 Oxybutynin 高居各抗 M 藥之首的 CNS 譫妄與失智惡化風險",
+                  "outcome": "crisis",
+                  "crisis": {
+                    "title": "急性抗膽鹼譫妄 (Oxybutynin CNS Toxicity)！",
+                    "mechanism": "高脂溶性口服 Oxybutynin 強烈貫穿老人脆弱之血腦障壁，封鎖中樞記憶相關 M₁ 受體；不僅口乾如燥土，更在當夜誘發嚴重譫妄與幻覺躁動！",
+                    "rescuePrompt": "老翁半夜拔掉點滴、認不清家人且大喊看見蟲影！請立即停藥並換用安全的 OAB 處方選項：",
+                    "vitals": {
+                      "hr": 108,
+                      "sbp": 178,
+                      "dbp": 98,
+                      "pupilMm": 6.4,
+                      "tempC": 37.6,
+                      "secretion": "極度口乾無涎",
+                      "rhythm": "tachy",
+                      "badges": ["CNS 譫妄危機"]
+                    },
+                    "rescueChoices": [
+                      {
+                        "id": "rc_oab_switch_tros",
+                        "label": "立即停用 Oxybutynin 予以補水安撫，改用不入血腦障壁的四級胺 Trospium（並控制高血壓後觀察 4–6 週）",
+                        "isSuccess": true,
+                        "feedbackText": "停用 `Oxybutynin` 後中樞 M₁ 逐步解圍，譫妄順利褪去；改採極性四級胺 `Trospium` 兼護老翁神智與膀胱！"
+                      },
+                      {
+                        "id": "rc_oab_keep_oxy",
+                        "label": "加倍口服 Oxybutynin 劑量壓制躁動，同時靜脈加打 Scopolamine 鎮定",
+                        "isSuccess": false,
+                        "feedbackText": "雙重強穿 BBB 抗 M 藥使中樞譫妄徹底失控！弘岳真人緊急出手清毒並宣告此案搶救失利。"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "id": "c_oab_mira_crisis",
+                  "label": "因 β₃ 致效劑不會導致認知惡化與口乾，直接投予 Mirabegron 50 mg QD（半衰期 50 h），無須顧慮 186/104 血壓",
+                  "sublabel": "無視 Mirabegron 使血壓上升 8–11% 與嚴重未控高血壓之絕對禁忌",
+                  "outcome": "crisis",
+                  "crisis": {
+                    "title": "β₃ 致效劑引爆惡性高血壓危象！",
+                    "mechanism": "雖然 Mirabegron 不傷腦也不口乾，卻帶動交感與心血管張力讓收縮／舒張壓再上攀 8–11%！在原本 186/104 未控基底上直接催出 218/122 mmHg 高血壓腦病變警訊！",
+                    "rescuePrompt": "脈象儀紅燈狂閃、`218/122 mmHg` 迫近主動脈剝離邊緣！立即處置並改弦更張：",
+                    "vitals": {
+                      "hr": 102,
+                      "sbp": 218,
+                      "dbp": 122,
+                      "rhythm": "tachy",
+                      "rhythmText": "β₃ 禁於未控高血壓・飆破 218 mmHg！",
+                      "badges": ["高血壓危象 (218/122)"]
+                    },
+                    "rescueChoices": [
+                      {
+                        "id": "rc_mira_stop",
+                        "label": "立即停用 Mirabegron（牢記嚴重未控制高壓禁用！），先急症降壓並改採不穿 BBB 之 Trospium",
+                        "isSuccess": true,
+                        "feedbackText": "緊急煞停 **`Mirabegron`** 並穩壓後血壓緩降！從此銘記：老年高壓合并失智用 `Trospium` 雙全其美，且須告知病人耐心等候 **4–6 週**療效！"
+                      },
+                      {
+                        "id": "rc_mira_double",
+                        "label": "加碼並用 Vibegron 雙倍 β₃ 劑量來擴張膀胱血管降壓",
+                        "isSuccess": false,
+                        "feedbackText": "重複疊加 β₃ 致效劑反讓高血壓危象惡化，師尊緊急截斷氣脈保住老翁性命！"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "E33": {
+      "id": "E33",
+      "chapter": 9,
+      "chapterTitle": "第 9 章・太陽烈火殿與千姿百脈（自由接診）",
+      "location": "太陽烈火殿・紫極天靈陣（前額葉試煉）",
+      "title": "非兒茶酚改造、冰毒轉運矩陣與前額葉 HCN 陣",
+      "hubSummary": "破解去 3,4-OH 與 α-CH₃ 雙步增效、比較五大興奮劑 VMAT 轉運矩陣，並操作「PFC HCN 通道」實驗室平息 Signal/Noise 失衡！",
+      "codexIds": [65, 66],
+      "unlockTables": ["tbl_oab_bph_trials"],
+      "storyMode": "all",
+      "variants": [
+        {
+          "variantId": "A",
+          "steps": [
+            {
+              "id": "e33a_s1",
+              "speaker": "luli",
+              "speakerName": "陸離師兄",
+              "speakerTag": "非兒茶酚 SAR 與興奮劑轉運矩陣",
+              "text": "邪修竟偷偷從坊間風邪藥草「麻黃 **`Ephedrine`**」提煉毒丹！他得意洋洋展示五大興神粉劑：`Amphetamine`、`Methamphetamine`、`MDMA`、`Methylphenidate`、`Modafinil` 及禁藥 `Cocaine` 與已下市減肥藥 `Sibutramine`。\n蘇苓考校：「`Ephedrine` 經哪一步簡單還原變成『冰毒 (`Meth mouth` 毒牙腐爛)』？兩步結構改造各抵抗何酶？又五大興奮劑中**誰能逆轉囊泡 `VMAT`、誰不行**？」",
+              "pouchHints": [
+                {
+                  "itemId": "pouch_catechol_mirror",
+                  "text": "顯微鏡提示：去除 3,4-OH → 抗 COMT 且脂溶性大增可口服進 BBB；α-碳加甲基 → 抗 MAO 變長效。VMAT 反向轉運只限 Amphetamine/Meth 與 MDMA（Modafinil/Methylphenidate/Cocaine 只擋細胞膜再回收，無 VMAT 反向釋放）！"
+                }
+              ],
+              "vitals": {
+                "subject": "毒丹分子構效與轉運矩陣鑑別",
+                "hr": 86,
+                "sbp": 128,
+                "dbp": 82,
+                "rhythm": "normal",
+                "pupilMm": 4.4,
+                "airway": 108,
+                "badges": ["非兒茶酚 SAR", "單胺轉運矩陣"]
+              },
+              "choices": [
+                {
+                  "id": "c_stim_ok",
+                  "label": "去除 3,4-OH 抗 COMT 且進腦；α-CH₃ 抗 MAO 變長效；Ephedrine（通鼻 α₁/平喘 β₂/利水 D₁）「去 β-羥基」即變 Methamphetamine（致冰毒嘴）；Amphetamine/Meth（DAT/NET）與 MDMA（最強 SERT）為受質並逆轉 VMAT；Modafinil（治伴猝倒症之猝睡症）、Methylphenidate、Cocaine（兼局麻）無 VMAT 反向轉運；Sibutramine 因 NEJM SCOUT 增 MI/中風下市",
+                  "sublabel": "一字不差貫通講義 p.27–28 化學改造與五大興奮劑矩陣",
+                  "outcome": "correct",
+                  "nextStepId": "__EVENT_COMPLETE__",
+                  "feedback": {
+                    "speakerName": "弘岳真人",
+                    "text": "「徹頭徹尾看破毒丹底牌！尤其切記 **`Modafinil`** 與 **`Methylphenidate`** 不像安非他命／搖頭丸那樣把囊泡 **`VMAT`** 反向擠空，且 **`MDMA`** 最偏好血清素轉運體 **`SERT`**；減肥禁藥 **`Sibutramine`** 亦須緊記 *SCOUT* 試驗血的教訓！」",
+                    "delta": { "yin": 1, "yang": 2 },
+                    "unlockCodex": [65],
+                    "vitals": {
+                      "badges": ["非兒茶酚與轉運矩陣滿分"]
+                    }
+                  }
+                },
+                {
+                  "id": "c_stim_wrong_vmat",
+                  "label": "Methylphenidate 與 Modafinil 皆強烈進入囊泡驅動 VMAT 反向釋放大量 DA，反倒是 Amphetamine 與 MDMA 對 VMAT 毫無作用",
+                  "sublabel": "把有/無 VMAT 囊泡反向轉運的兩大陣營完全顛倒",
+                  "outcome": "wrong",
+                  "feedback": {
+                    "speakerName": "蘇苓師妹",
+                    "text": "「剛好反了！唯有 **`Amphetamine / Methamphetamine`** 與 **`MDMA`** 才是轉運體受質、鑽進突觸後驅動 **`VMAT`** 反向爆釋；`Methylphenidate`、`Modafinil` 與 `Cocaine` 僅擋住胞外膜再回收，**無 VMAT 反向轉運**！」",
+                    "delta": { "yang": -1 }
+                  }
+                },
+                {
+                  "id": "c_stim_wrong_sar",
+                  "label": "Ephedrine 須「加上 3,4-鄰二酚羥基」才變成冰毒並穿過血腦障壁；且去除 α-CH₃ 能徹底抵抗 COMT 分解",
+                  "sublabel": "極性增高反而進不了 BBB，並把 COMT 與 MAO 抗性官能基搞反",
+                  "outcome": "wrong",
+                  "feedback": {
+                    "speakerName": "弘岳真人",
+                    "text": "「加上兩個 `-OH` 水溶性暴增就進不了腦啦！必須是**去掉 3,4-`-OH`** 才抗 `COMT` 兼進 `BBB`，再於 **`α-碳加甲基`** 阻擋 `MAO`；`Ephedrine` 去掉 `β-OH` 才是冰毒！」",
+                    "delta": { "yin": -1 }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "variantId": "B",
+          "steps": [
+            {
+              "id": "e33b_s1",
+              "speaker": "patient",
+              "speakerName": "神念渙散、無法專注功課的少年弟子（ADHD）",
+              "speakerTag": "前額葉皮質 (PFC) HCN 通道實驗室",
+              "text": "少年弟子患有注意力不足過動症 (ADHD)，前額葉工作記憶 **`Signal ↓ / Noise ↑`**。\n請立即操作下方「**前額葉皮質 (PFC) HCN 通道『訊號 vs. 雜訊』調控模擬台**」比較四種介入路徑——為何 **`NE` 與 `DA` 對 HCN 通道開關恰好相反**？又為何僅抑制 `NET` 的非興奮劑 **`Atomoxetine`** 竟然能在 PFC 同時拉高 `NE` 與 `DA`，還完全不會有成癮性？",
+              "widget": "adhd_pfc_lab",
+              "vitals": {
+                "subject": "少年 ADHD 前額葉神經元（Signal ↓ / Noise ↑）",
+                "hr": 78,
+                "sbp": 112,
+                "dbp": 70,
+                "rhythm": "normal",
+                "rhythmText": "前額葉樹突棘 HCN 門戶電位漏失中",
+                "airway": 100,
+                "badges": ["ADHD HCN 訊噪平衡實驗"]
+              },
+              "choices": [
+                {
+                  "id": "c_adhd_ok",
+                  "label": "cAMP 會打開 HCN 使訊號漏失！NE→α₂A (Gi)→↓cAMP「關閉」正路徑 HCN (Signal ↑↑)；DA→D₁ (Gs)→↑cAMP「打開」雜訊分支 HCN 洩走干擾 (Noise ↓↓)！因 PFC 極缺 DAT、改由 NET 一併回收 NE 與 DA，故 Atomoxetine 單抑 NET 就能在 PFC 雙升 NE＋DA 且不升紋狀體依核 DA 無成癮性；Guanfacine 高度專一 α₂A 較 Clonidine 少鎮靜低血壓",
+                  "sublabel": "從 cAMP 相反開關、PFC DAT 稀疏代償到 Guanfacine 選擇性差異全部命中",
+                  "outcome": "correct",
+                  "nextStepId": "__EVENT_COMPLETE__",
+                  "feedback": {
+                    "speakerName": "弘岳真人",
+                    "text": "「太精采了！同一顆 **`HCN` 通道**，主訊號樹突棘靠 `α₂A Gi` 把它『關門鎖電』，旁路雜訊則靠 `D₁ Gs` 把它『開閘洩流』；而 **`Atomoxetine`** 借著『前額葉缺 DAT 由 NET 代管』之生理特性，一箭雙鵰卻絕不成癮！」",
+                    "delta": { "yin": 2, "yang": 1 },
+                    "unlockCodex": [66],
+                    "vitals": {
+                      "badges": ["前額葉 HCN 訊噪雙控過關"]
+                    }
+                  }
+                },
+                {
+                  "id": "c_adhd_wrong_hcn",
+                  "label": "NE 靠 α₂A 活化 Gs 打開 HCN 強化訊號，而 DA 靠 D₁ 關閉 HCN；且 Atomoxetine 是因為強力抑制紋狀體依核 DAT 才不具成癮性",
+                  "sublabel": "G 蛋白偶聯、HCN 開關方向及依核紋狀體成癮機轉皆錯",
+                  "outcome": "wrong",
+                  "feedback": {
+                    "speakerName": "蘇苓師妹",
+                    "text": "「點一下上方模擬器按鈕複核一遍：`α₂A` 是 **`G_i` 降 cAMP → 關閉 HCN**，而 **`D₁`** 才是 **`G_s` 升 cAMP → 打開雜訊刺 HCN**；而且正是因為 **`Atomoxetine`** 在紋狀體與依核（那裡有大量 DAT）不增加 DA，所以才無成癮風險喔！」",
+                    "delta": { "yin": -1 }
+                  }
+                },
+                {
+                  "id": "c_adhd_wrong_clon",
+                  "label": "Guanfacine 是非選擇性咪唑啉＋α₂A/2B/2C 致效劑最易嗜睡昏厥，反而是 Clonidine 最專一 α₂A 毫無鎮靜低壓",
+                  "sublabel": "把 Guanfacine 與 Clonidine 亞型選擇性與副作用剛好對調",
+                  "outcome": "wrong",
+                  "feedback": {
+                    "speakerName": "蘇苓師妹",
+                    "text": "「記反啦！**`Guanfacine [Intuniv]`** 才是高選擇性 **`α₂A`**（鎮靜與低血壓顯著少於 **`Clonidine`**），兩者都是非興奮劑二線好選擇喔！」",
+                    "delta": { "yang": -1 }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "E34": {
+      "id": "E34",
+      "chapter": 10,
+      "chapterTitle": "第 10 章・破陽止戈與升糖迴天最終決戰",
+      "location": "破陽止戈台・突觸前閘門兼嗜鉻急診",
+      "title": "α 阻斷突觸前差異與嗜鉻細胞瘤「先 α 後 β」鐵律",
+      "hubSummary": "解答 Phentolamine 為何比 Prazosin 誘發劇烈心搏過速，並面對 212 mmHg 嗜鉻細胞瘤危象嚴防誤先給 β 阻斷劑之致命陷阱！",
+      "codexIds": [67, 68],
+      "unlockTables": ["tbl_sympatho_hemo", "tbl_beta_migraine_glaucoma"],
+      "storyMode": "all",
+      "variants": [
+        {
+          "variantId": "A",
+          "steps": [
+            {
+              "id": "e34a_s1",
+              "speaker": "hongyue",
+              "speakerName": "弘岳真人",
+              "speakerTag": "第 10 章終章啟幕・α 阻斷劑突觸前煞車",
+              "text": "踏入第十重天關「破陽止戈台」，兩位降壓門徒對照呈現迥異脈象：投予非選擇性 **`Phentolamine` (`α₁=α₂`)** 者心跳狂飆至 `132 bpm`；而投予選擇性 **`Prazosin` (`α₁⋙α₂`)** 者血壓亦降，心率卻平緩許多。\n真人問：「`Phentolamine` 為何引發遠較 `Prazosin` 劇烈的**心搏過速**？`Prazosin` 另可治療何種精神創傷症狀？且前述何種胺類在 `α` 阻斷下會出現『反轉降壓』？」",
+              "pouchHints": [
+                {
+                  "itemId": "pouch_hemo_compass",
+                  "text": "羅盤刻字：突觸前 α₂ 是交感末梢抑制 NE 再釋放的「煞車」！封住 α₂ 等於拆掉煞車大噴 NE 催逼 β₁；此外 α 阻斷劑只對具強 β₂ 的 Epinephrine 展現「腎上腺素反轉」，NE 不會反轉跌壓！"
+                }
+              ],
+              "vitals": {
+                "subject": "Phentolamine (α₁=α₂) 受試弟子",
+                "hr": 132,
+                "sbp": 102,
+                "dbp": 62,
+                "rhythm": "tachy",
+                "rhythmText": "雙重反射＋拆煞心搏過速！",
+                "pupilMm": 2.8,
+                "airway": 100,
+                "badges": ["突觸前 α₂ 被封・嚴重心搏過速"]
+              },
+              "choices": [
+                {
+                  "id": "c_phento_ok",
+                  "label": "Phentolamine 連突觸前 α₂ 負回饋煞車一起阻斷，使大量 NE 湧出狠催心肌 β₁ 引發嚴重心搏過速；Prazosin 專阻 α₁ 保留 α₂ 煞車且可治 PTSD 驚醒惡夢；α 阻斷後僅 Epinephrine 因餘血管 β₂ 而反轉降壓",
+                  "sublabel": "兼備「α₂ 煞車學說」與首劑效應、PTSD 惡夢及腎上腺素反轉三大重點",
+                  "outcome": "correct",
+                  "nextStepId": "__EVENT_COMPLETE__",
+                  "feedback": {
+                    "speakerName": "弘岳真人",
+                    "text": "「字字珠璣！記住『**保留突觸前 `α₂` 煞車**』正是 `Prazosin` 比 `Phentolamine` 心搏過速輕微的根本關鍵，睡前初劑防首劑姿勢性昏厥外，亦能平復退伍戰士的 **`PTSD` 惡夢**！」",
+                    "delta": { "yin": 2, "yang": 1 },
+                    "unlockCodex": [67],
+                    "vitals": {
+                      "hr": 82,
+                      "sbp": 114,
+                      "dbp": 74,
+                      "rhythm": "normal",
+                      "badges": ["α 阻斷突觸前機制過關"]
+                    }
+                  }
+                },
+                {
+                  "id": "c_phento_wrong",
+                  "label": "Phentolamine 會直接強烈興奮心肌 α₂ 受體加速；Prazosin 專治氣喘；且 α 阻斷後唯有 Norepinephrine 會反轉大跌休克",
+                  "sublabel": "混亂突觸前 α₂ 負回饋與心肌 β₁，並弄錯反轉對象",
+                  "outcome": "wrong",
+                  "feedback": {
+                    "speakerName": "蘇苓師妹",
+                    "text": "「突觸前 `α₂` 本身是**抑釋放煞車**，封鎖它才會釋放出大批 NE 去激動心臟 **`β₁`**！而反轉降壓靠的是強 `β₂` 舒張血管的 **`Epinephrine`**（`NE` 缺乏 `β₂` 能力）！」",
+                    "delta": { "yang": -1 }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "variantId": "B",
+          "steps": [
+            {
+              "id": "e34b_s1",
+              "speaker": "patient",
+              "speakerName": "陣發狂汗頭痛心悸弟子（Pheochromocytoma）",
+              "speakerTag": "嗜鉻細胞瘤高血壓急症・生死鐵律！",
+              "text": "急診扛進一名極度危險弟子：血壓狂飆 **`212/124 mmHg`**、心搏 **`144 bpm`**、劇烈搏動頭痛且大汗淋漓，尿檢確認 **`VMA` 與 `Metanephrines`** 暴增——確診為**腎上腺髓質嗜鉻細胞瘤 (`Pheochromocytoma`)** 大量噴發 `Epi/NE`！\n陸離望著 `HR 144` 心急喊道：「心跳這麼快快爆了，趕緊直接先推靜脈 `β` 阻斷劑 **`Propranolol`** 把心率壓下來！」",
+              "pouchHints": [
+                {
+                  "itemId": "pouch_hemo_compass",
+                  "text": "羅盤急救鐵律：嗜鉻細胞瘤絕對「必須先 α 後 β」！若先封 β₂ 舒張緩衝，海量兒茶酚胺將毫無阻攔狂催 α₁ 縮血管瞬間衝破 230 mmHg 爆血管！急推 IV Phentolamine 並在慢性／術前配不可逆 Phenoxybenzamine 或抑 TH 的 Metyrosine！"
+                }
+              ],
+              "vitals": {
+                "subject": "嗜鉻細胞瘤急診發作（HR 144 / BP 212/124）",
+                "hr": 144,
+                "sbp": 212,
+                "dbp": 124,
+                "iop": 20,
+                "tempC": 37.9,
+                "potassium": 4.0,
+                "rhythm": "tachy",
+                "rhythmText": "Epi/NE 狂潮！務守先 α 後 β！",
+                "pupilMm": 6.0,
+                "airway": 115,
+                "badges": ["高血壓危象 212/124", "嗜鉻細胞瘤發作"]
+              },
+              "choices": [
+                {
+                  "id": "c_pheo_ok",
+                  "label": "嚴喝止先推 Propranolol！鐵律「必須先 α 後 β」：立即 IV Phentolamine 緊急降壓；術前配共價不可逆烷基化 Phenoxybenzamine（14–48h 合成新受體）與抑 TH 的 Metyrosine（留意入腦 EPS 與結晶尿），待 α₁ 穩固封鎖後方可審慎加用 β 阻斷劑！",
+                  "sublabel": "完全遵守「先 α 後 β」生命鐵律並點出共價不可逆與 TH 抑制雙寶",
+                  "outcome": "correct",
+                  "nextStepId": "__EVENT_COMPLETE__",
+                  "feedback": {
+                    "speakerName": "弘岳真人",
+                    "text": "「好一句『嚴喝止先 β』！這道生死鐵律已奪回無數冤魂：先將 `α₁` 縮血管通道鎖死，待日後需要抑心律才加 `β` 阻斷；術前共價鎖死的 **`Phenoxybenzamine`**（需重合成受體 `14–48 h`）與抑 `TH` 之 **`Metyrosine`** 亦堪稱絕配！」",
+                    "delta": { "yin": 2, "yang": 2 },
+                    "unlockCodex": [68],
+                    "vitals": {
+                      "hr": 92,
+                      "sbp": 134,
+                      "dbp": 84,
+                      "rhythm": "normal",
+                      "pupilMm": 3.5,
+                      "badges": ["先 α 後 β 成功搶穩嗜鉻危象"]
+                    }
+                  }
+                },
+                {
+                  "id": "c_pheo_beta_crisis",
+                  "label": "順從陸離建議：為保護心臟免於衰竭，立即優先靜脈注射非選擇性 Propranolol 先降心率至 70 bpm，稍後再看血壓",
+                  "sublabel": "致命禁忌：單獨先封 β 阻斷劑消除骨骼肌 β₂ 血管舒張緩衝",
+                  "outcome": "crisis",
+                  "crisis": {
+                    "title": "未經 α 阻斷先給 β 阻斷 → 反常性毀滅高血壓肺水腫！",
+                    "mechanism": "Propranolol 瞬間封死骨骼肌與周邊 β₂ 血管舒張緩衝！腫瘤不斷噴出的大量 Epinephrine/NE 轉而 100% 毫無阻力地狂轟 α₁ 縮血管受體，血壓一秒衝破 236/142 mmHg，雙肺出現急性肺水腫囉音！",
+                    "rescuePrompt": "弟子咳出粉紅泡沫痰、SBP 破 `236 mmHg`！請立刻逆轉這場人為災難：",
+                    "vitals": {
+                      "hr": 88,
+                      "sbp": 236,
+                      "dbp": 142,
+                      "rhythm": "wideqrs",
+                      "rhythmText": "無拮抗 α₁ 狂潮！血壓破 236 急性肺水腫！",
+                      "airway": 58,
+                      "secretion": "粉紅泡沫痰湧出",
+                      "badges": ["違反先 α 後 β 危象", "血壓 236/142"]
+                    },
+                    "rescueChoices": [
+                      {
+                        "id": "rc_pheo_phentolamine",
+                        "label": "立即靜脈推注 α 阻斷劑 Phentolamine 緊急打開周邊 α₁ 血管縮鎖（後續再用 Phenoxybenzamine 穩控）",
+                        "isSuccess": true,
+                        "feedbackText": "急推 **`IV Phentolamine`** 如洩洪閘門般迅速壓下 **236/142** 致命高壓，肺水腫囉音退去！從此將「**嗜鉻細胞瘤絕對先 `α` 後 `β`**」刻入骨髓！"
+                      },
+                      {
+                        "id": "rc_pheo_more_bb",
+                        "label": "補打更高劑量 Propranolol 與靜注 Epinephrine 嘗試重新平衡受體",
+                        "isSuccess": false,
+                        "feedbackText": "血壓瞬間失控瀕臨腦出血！弘岳真人只得強行點穴截斷脈流，宣告本案急症搶救失利。"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "id": "c_pheo_wrong_res",
+                  "label": "急診發作當場直接單一靜注高劑量 Reserpine，因為 Reserpine 最快 10 分鐘耗竭嗜鉻細胞瘤所有兒茶酚胺",
+                  "sublabel": "誤將慢效數天且初期反會促進囊泡崩解釋放之藥物當急性靜脈急救藥",
+                  "outcome": "wrong",
+                  "feedback": {
+                    "speakerName": "蘇苓師妹",
+                    "text": "「急診快炸開還用慢條斯理耗竭小泡的 `Reserpine`？！必須直接上迅速阻斷受體的 **`IV Phentolamine`** 並配合術前共價 **`Phenoxybenzamine`**（14–48 小時生效）或 **`Metyrosine`** 抑 `TH`！」",
+                    "delta": { "yin": -1 }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "E35": {
+      "id": "E35",
+      "chapter": 10,
+      "chapterTitle": "第 10 章・破陽止戈與升糖迴天最終決戰",
+      "location": "破陽止戈台・攝護腺暨角膜危局",
+      "title": "JAMA BPH、114 國考 IFIS 與 Propranolol 禁點眼危象",
+      "hubSummary": "結合 JAMA 2025 攝護腺肥大三類藥與 114 國考 Tamsulosin 虹膜鬆脫 IFIS，再拆解 β 阻斷 ISA 偏頭痛陷阱與 Propranolol 禁點眼角膜潰瘍！",
+      "codexIds": [69, 70],
+      "unlockTables": ["tbl_oab_bph_trials", "tbl_beta_migraine_glaucoma"],
+      "storyMode": "all",
+      "variants": [
+        {
+          "variantId": "A",
+          "steps": [
+            {
+              "id": "e35a_s1",
+              "speaker": "patient",
+              "speakerName": "白內障手術併發「虹膜軟塌亂飄」70 歲長老",
+              "speakerTag": "114 年國考 IFIS 真題＋JAMA 2025 BPH",
+              "text": "眼科手術室急傳異象！一名 **70 歲男性**接受白內障超音波晶體乳化術時，散瞳劑剛點上去，虹膜卻宛如破絮般軟塌隨水流狂飄、瞳孔反迅速緊縮遮擋視野——出現典型「**術中虹膜鬆脫症候群 (`IFIS`)**」！\n蘇苓檢閱 *JAMA 2025* 良性攝護腺肥大 (BPH) 實證考問：「此病患平時長期服用的 **哪一顆攝護腺藥物**正是引起 `IFIS` 元兇（114 年國考真題）？又 BPH 三大類藥（動態 `α₁`、靜態 `5α-RI`、`PDE5i`）起效時間、**`PSA` 判讀倍數**暨禁忌各為何？」",
+              "pouchHints": [
+                {
+                  "itemId": "pouch_hemo_compass",
+                  "text": "羅盤密註：Tamsulosin 強效選擇阻斷攝護腺暨虹膜開大肌 α₁A 受體，白內障術中必警覺 IFIS！而 Finasteride/Dutasteride 需 3–6 個月才縮體積，並讓血清 PSA 減半 (判讀須 ×2)；Tadalafil 則嚴禁併用 Nitrates！"
+                }
+              ],
+              "vitals": {
+                "subject": "70歲白內障術中 IFIS 長老（慢性 BPH 服藥史）",
+                "hr": 74,
+                "sbp": 132,
+                "dbp": 82,
+                "iop": 16,
+                "rhythm": "normal",
+                "pupilMm": 2.1,
+                "ciliary": "虹膜鬆脫 IFIS 瞳孔反縮！",
+                "airway": 100,
+                "badges": ["114 國考真題 IFIS", "JAMA 2025 BPH"]
+              },
+              "choices": [
+                {
+                  "id": "c_bph_ifis_ok",
+                  "label": "元兇為高選擇性 α₁A 阻斷劑 Tamsulosin（阻虹膜開大肌 α₁A 引發 IFIS！與 Silodosin 起效 3–7 天、IPSS -9.6 但逆行性射精 8–28% 最高）；靜態 5α-RI (Finasteride/Dutasteride) 須 3–6 個月見效並使血清 PSA 降低 50% (判讀須 ×2)；Tadalafil (5 mg QD) 嚴禁併用 Nitrates",
+                  "sublabel": "相較非選 Doxazosin / Terazosin（2–4 週且姿勢性低壓風險最高）更為完整精準",
+                  "outcome": "correct",
+                  "nextStepId": "__EVENT_COMPLETE__",
+                  "feedback": {
+                    "speakerName": "弘岳真人",
+                    "text": "「一針見血命中 **114 年第二次醫師／藥師國考真題**與 *JAMA 2025* 三大重點！永遠提醒男科與眼科互通病歷：`Tamsulosin`（阻 `α₁A`）停藥許久仍能留存 `IFIS` 風險，而 **`Finasteride / Dutasteride` 使 `PSA -50%`**（須乘以 `2`）亦必牢記！」",
+                    "delta": { "yin": 2, "yang": 1 },
+                    "unlockCodex": [69],
+                    "vitals": {
+                      "pupilMm": 4.5,
+                      "ciliary": "虹膜張力安全輔助固定",
+                      "badges": ["BPH 三路與 IFIS 通貫"]
+                    }
+                  }
+                },
+                {
+                  "id": "c_bph_ifis_wrong_5ari",
+                  "label": "IFIS 元兇是 Finasteride 阻斷男性荷爾蒙使虹膜萎縮，且 5α-還原酶抑制劑只需 3 天縮腺體並讓 PSA 假性升高 2 倍",
+                  "sublabel": "將 Tamsulosin α₁A 特有眼科併發症與 5α-RI 慢效降 PSA 方向徹底弄反",
+                  "outcome": "wrong",
+                  "feedback": {
+                    "speakerName": "蘇苓師妹",
+                    "text": "「虹膜開大肌靠 **`α₁A`** 收縮開瞳，當然是阻斷 **`α₁A`** 的 **`Tamsulosin`** 惹的禍！`Finasteride/Dutasteride` 則要吃 **`3–6 個月`**，且會讓 `PSA` 減半 **`(-50%)`**（判讀要乘以 2 才不會漏看攝護腺癌）！」",
+                    "delta": { "yin": -1 }
+                  }
+                },
+                {
+                  "id": "c_bph_ifis_wrong_nitr",
+                  "label": "Tadalafil 雖屬 PDE5 抑制劑但為唯一獲核准 BPH 用藥，與舌下含片 Nitroglycerin (Nitrates) 併用可雙重擴張攝護腺治療",
+                  "sublabel": "無視 PDE5 抑制劑併用硝酸鹽類引爆致命血壓崩盤之絕對禁忌",
+                  "outcome": "wrong",
+                  "feedback": {
+                    "speakerName": "弘岳真人",
+                    "text": "「`PDE5i`＋`Nitrates` 一個增生成 `cGMP`、一個阻分解 `cGMP`，併用將引發**無可挽回之休克低血壓**！二者絕對禁止併用！」",
+                    "delta": { "yang": -1 }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "variantId": "B",
+          "steps": [
+            {
+              "id": "e35b_s1",
+              "speaker": "luli",
+              "speakerName": "陸離師兄",
+              "speakerTag": "β 阻斷劑 ISA 與局部麻醉點眼迷思",
+              "text": "藥櫃前，陸離自信滿滿配了兩帖藥：「第一，既然 **`Propranolol`** 跟 **`Timolol`** 都是一代非選擇性 `β₁=β₂` 阻斷劑，咱就把 `Propranolol` 磨製成點眼液點青光眼；第二，挑有部分致效 **`ISA`** 的 **`Pindolol`／`Acebutolol`** 來預防偏頭痛一定最溫和有效！」\n眼看他正拿起滴管準備往高眼壓師兄眼睛滴下 **`Propranolol` 眼藥水**——你如何阻攔並指正兩大錯誤？",
+              "pouchHints": [
+                {
+                  "itemId": "pouch_hemo_compass",
+                  "text": "羅盤警告：β 阻斷劑兩大特質不可混為一談！Propranolol 具極強「局部麻醉（膜穩定作用 MSA）」，點眼會麻醉角膜奪走眨眼反射而引發嚴重角膜潰瘍；另所有具 ISA（Acebutolol/Pindolol/Labetalol 等）對預防偏頭痛完全無效！"
+                }
+              ],
+              "vitals": {
+                "subject": "青光眼 (IOP 29) 兼偏頭痛師兄（險誤點 Propranolol）",
+                "hr": 74,
+                "sbp": 122,
+                "dbp": 78,
+                "iop": 29,
+                "rhythm": "normal",
+                "pupilMm": 3.5,
+                "ciliary": "房水過多・角膜待保護",
+                "airway": 100,
+                "badges": ["高眼壓 (IOP 29)", "MSA／ISA 考驗"]
+              },
+              "choices": [
+                {
+                  "id": "c_isa_msa_ok",
+                  "label": "搶下滴管兩者皆否決！Propranolol 具強「局部麻醉／膜穩定作用 (MSA)」，禁點眼否則麻醉角膜喪失眨眼反射釀成角膜潰瘍，點眼須選無局麻 Timolol（或微弱 Betaxolol）；具 ISA 之 Pindolol / Acebutolol 對偏頭痛預防完全無效，須用無 ISA 之 Propranolol／Metoprolol！",
+                  "sublabel": "精準區分 ISA（Acebutolol/Carteolol/Celiprolol/Labetalol/Penbutolol/Pindolol）與 MSA 名單",
+                  "outcome": "correct",
+                  "nextStepId": "__EVENT_COMPLETE__",
+                  "feedback": {
+                    "speakerName": "弘岳真人",
+                    "text": "「好身手！記住這個經典對比：同屬非選 `β` 家族，`Propranolol` 口服穿腦治偏頭痛一流，卻因 **`MSA` 局部麻醉作用**絕不能點眼睛；點眼睛降壓只用無局麻 **`Timolol`**（而含 **`ISA`** 者別拿去預防偏頭痛）！」",
+                    "delta": { "yin": 2, "yang": 2 },
+                    "unlockCodex": [70],
+                    "vitals": {
+                      "iop": 16,
+                      "badges": ["ISA 無效／Propranolol 禁點眼通過"]
+                    }
+                  }
+                },
+                {
+                  "id": "c_msa_drop_crisis",
+                  "label": "放任點入局部 Propranolol 眼藥水降眼壓，並口頭交代 Pindolol 當作偏頭痛首選預防方",
+                  "sublabel": "忽略 Propranolol 膜穩定阻斷 Na⁺ 通道引起之嚴重角膜感覺喪失",
+                  "outcome": "crisis",
+                  "crisis": {
+                    "title": "角膜神經麻痺暨急性角膜潰瘍 (Corneal Ulceration)！",
+                    "mechanism": "點入具強烈「局部麻醉／膜穩定作用 (MSA)」的 Propranolol 後，角膜感覺神經 Na⁺ 通道遭封鎖，病患瞬間感覺不到乾澀異物、失去保護性眨眼反射，微塵刮傷角膜形成急性潰瘍穿孔危機！",
+                    "rescuePrompt": "師兄雙眼喪失眨眼痛覺、裂隙燈下角膜中央浮現螢光染色上皮缺損！立即搶救處置：",
+                    "vitals": {
+                      "hr": 88,
+                      "sbp": 126,
+                      "dbp": 80,
+                      "iop": 28,
+                      "ciliary": "角膜感覺喪失・上皮潰瘍！",
+                      "rhythm": "tachy",
+                      "badges": ["角膜潰瘍危機", "Propranolol MSA 毒性"]
+                    },
+                    "rescueChoices": [
+                      {
+                        "id": "rc_cornea_timolol",
+                        "label": "立即大量生理食鹽水沖淨殘藥、保護角膜促進癒合，改以無局部麻醉作用之 Timolol（或一線 Latanoprost）點眼降壓！",
+                        "isSuccess": true,
+                        "feedbackText": "急沖殘留 `Propranolol` 並保護角膜後逐步修復；日後謹記：**`Timolol`** 與 **`Betaxolol`** 無顯著局麻才可安全點眼，而含 **`ISA`** 者亦不可用於預防偏頭痛！"
+                      },
+                      {
+                        "id": "rc_cornea_tetracaine",
+                        "label": "加點高濃度局部麻醉藥水 Tetracaine 讓角膜徹底放鬆止癢",
+                        "isSuccess": false,
+                        "feedbackText": "雙重角膜局麻使角膜上皮大面積壞死穿孔！弘岳真人急忙截封修復並宣告本次處置失敗。"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "id": "c_isa_wrong",
+                  "label": "事實上只有 Timolol 具備強烈局部麻醉作用，而有 ISA 的 Acebutolol 才是偏頭痛指南推薦預防強藥",
+                  "sublabel": "將局部麻醉風險與 ISA 偏頭痛禁忌雙雙對調",
+                  "outcome": "wrong",
+                  "feedback": {
+                    "speakerName": "蘇苓師妹",
+                    "text": "「兩個都在考反面常識呢！**無局麻的 `Timolol`** 才能安全點眼；有強烈局部麻醉的是 **`Propranolol`**（禁點眼）；而有部分激發 **`ISA`**（如 `Pindolol`）無法完全壓制血管神經波動，所以預防偏頭痛無效喔！」",
+                    "delta": { "yin": -1 }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "E36": {
+      "id": "E36",
+      "isBoss": true,
+      "chapter": 10,
+      "chapterTitle": "第 10 章・破陽止戈與升糖迴天最終決戰",
+      "location": "破陽止戈台・雙脈頭痛青光大考陣",
+      "title": "【Boss】三代 β 阻斷、台灣 2022 偏頭痛指引與青光眼六路決戰",
+      "hubSummary": "破陽止戈第一重 Boss！統合心衰三傑、10 分鐘 Esmolol、Nebivolol NO/β₃、DM 雙危、2022 台灣偏頭痛指南（孕婦與異感痛）暨青光眼六大類點眼！",
+      "codexIds": [71, 72, 73],
+      "unlockTables": ["tbl_beta_migraine_glaucoma"],
+      "storyMode": "all",
+      "variants": [
+        {
+          "variantId": "A",
+          "steps": [
+            {
+              "id": "e36a_s1",
+              "speaker": "hongyue",
+              "speakerName": "弘岳真人",
+              "speakerTag": "第一重 Boss 試煉・三代 β 阻斷與 DM 雙殺危機",
+              "text": "「進入破陽大考首陣！」弘岳真人連拋四道急症難題：\n(1) 哪些三大 `β` 阻斷劑證實**降低慢性心衰竭死亡率**？(2) 手術室欲在 **10 分鐘**內極速起效退藥應靠紅血球酯酶代謝之何藥？(3) 第三代中 **對 `β₁` 選擇性最高、半衰期 `11–30h` 且促內皮 `β₃ → NO` 擴血管**者為何？(4) **糖尿病友**用一代 **`Propranolol`** 為何陷入「雙重致命低血糖危機」，又**僅剩哪個症狀**不受遮蔽？",
+              "vitals": {
+                "subject": "複合急診案例（慢性 HF ＋ 糖尿病友低血糖警示）",
+                "hr": 68,
+                "sbp": 110,
+                "dbp": 70,
+                "rhythm": "normal",
+                "rhythmText": "雙重低血糖警示與三代 β 陣啟陣",
+                "airway": 100,
+                "secretion": "交感膽鹼冷汗猶存！",
+                "badges": ["Boss 陣：三代 β 阻斷", "DM 僅存 M₃ 盜汗警訊"]
+              },
+              "choices": [
+                {
+                  "id": "c_bb3gen_ok",
+                  "label": "(1) 慢性 HF 三傑：Bisoprolol、Metoprolol Succinate、Carvedilol（忌急失代償）；(2) 紅血球酯酶 10 分鐘超短效：IV Esmolol；(3) 最高 β₁ 選＋β₃ 放 NO＋11–30h：Nebivolol；(4) Propranolol 既阻 β₁ 遮蔽心悸又阻肝臟 β₂ 阻礙肝醣分解糖質新生，唯獨「交感膽鹼 M₃ 盜汗」不被遮蔽反成唯一警訊！",
+                  "sublabel": "一代 Propranolol 另兼具高脂溶防門脈高壓食道曲張出血與甲狀腺風暴抑制 T₄→T₃",
+                  "outcome": "correct",
+                  "nextStepId": "e36a_s2",
+                  "feedback": {
+                    "speakerName": "弘岳真人",
+                    "text": "「滴水不漏！記住 `Propranolol` 阻糖回升與掩心跳的**雙重殺傷**，好在小汗腺走 **`交感膽鹼 M₃`** 路徑不被 `β` 阻斷擋掉，糖友忽然冷汗淋漓便是最後警報！再看下一關：**2022 台灣偏頭痛妊娠急救**！」",
+                    "delta": { "yin": 2, "yang": 2 },
+                    "unlockCodex": [71]
+                  }
+                },
+                {
+                  "id": "c_bb3gen_wrong",
+                  "label": "慢性 HF 首選 Atenolol；Esmolol 靠腎排長達 24 小時；Nebivolol 靠阻斷 eNOS 縮血管；Propranolol 連 M₃ 流汗都會徹底封鎖毫無警訊",
+                  "sublabel": "錯認三傑、Esmolol 紅血球酯酶半衰期與汗腺 M₃ 受體特性",
+                  "outcome": "wrong",
+                  "feedback": {
+                    "speakerName": "蘇苓師妹",
+                    "text": "「HF 降死三傑是 **`Bisoprolol / Metoprolol Succinate / Carvedilol`**；術中 10 分鐘超短靠**紅血球酯酶**是 **`Esmolol`**；`Nebivolol` 會促 **`β₃` 釋放 `NO`**；而**冷汗是 `M₃` 受體**，絕不會被 `β` 阻斷掩蓋！」",
+                    "delta": { "yin": -1 }
+                  }
+                }
+              ]
+            },
+            {
+              "id": "e36a_s2",
+              "speaker": "patient",
+              "speakerName": "懷孕 14 週偏頭痛加劇孕婦（伴梳頭表皮異感痛）",
+              "speakerTag": "2022 台灣頭痛學會指引・CSD/CGRP 與孕婦禁區",
+              "text": "孕婦單側搏動性劇痛噁心怕光（符合口訣 **`PUMA`**），且已經出現連輕輕梳頭吹風都疼痛的「**表皮異感痛 (`Allodynia`)**」！\n依 *Acta Neurol Taiwan 2022* 台灣頭痛學會指引：**孕婦急性首選止痛藥為何**？何種常見抗癲癇與血清素劇藥**於孕婦絕對禁忌**？陣發性發作未懷孕平時可用哪五大預防類（含台灣首選防老人 EPS 的 **`Flunarizine`**），又 **`Allodynia` 機轉為何**？",
+              "pouchHints": [
+                {
+                  "itemId": "pouch_hemo_compass",
+                  "text": "羅盤急救鐵則：孕婦偏頭痛「急性」首選 Acetaminophen，絕對禁止高收縮子宮胎盤的 Triptans 與 Ergotamine！「預防」則絕對禁止強致畸胎之 Valproate（及避開 Topiramate），且有 ISA 的 β-blockers 對預防無效！"
+                }
+              ],
+              "vitals": {
+                "subject": "孕期 14 週嚴重偏頭痛孕婦（PUMA + Allodynia）",
+                "hr": 98,
+                "sbp": 124,
+                "dbp": 76,
+                "rhythm": "normal",
+                "rhythmText": "CSD→CGRP→中樞敏感化 Allodynia！",
+                "airway": 100,
+                "badges": ["2022 台灣指引 Boss", "妊娠偏頭痛防護"]
+              },
+              "choices": [
+                {
+                  "id": "c_migraine_ok",
+                  "label": "孕婦急性首選 Acetaminophen，絕對禁用 Triptans / Ergotamine（胎盤血管劇縮）與致畸胎 Valproate！機轉為 CSD→三叉釋放 CGRP/Sub P →發展中樞敏感化 Allodynia 需早期阻斷；非孕陣發預防選無 ISA β-blockers (Propranolol/Metoprolol)、Topiramate、Valproate (忌孕)、Flunarizine (防老人 EPS)、CGRP 單抗，慢性 (≥15d) 可打 BoNT-A 155–195U",
+                  "sublabel": "一字無誤貫穿四期口訣 PUMA、中樞敏感化 Allodynia 與 2022 台灣指引精髓",
+                  "outcome": "correct",
+                  "nextStepId": "__EVENT_COMPLETE__",
+                  "feedback": {
+                    "speakerName": "弘岳真人",
+                    "text": "「太完美了！既有 **2022 台灣頭痛學會**的 `Flunarizine`（提醒老人防巴金森 `EPS`/憂鬱）、慢性肉毒 `155–195U` 與無 `ISA` 原則，又守護住母嬰避開 **`Valproate`** 畸胎與 **`Triptans/Ergots`** 胎盤危機！」",
+                    "delta": { "yin": 2, "yang": 2 },
+                    "unlockCodex": [72],
+                    "vitals": {
+                      "hr": 78,
+                      "badges": ["台灣偏頭痛指引破陣成功"]
+                    }
+                  }
+                },
+                {
+                  "id": "c_migraine_teratogen_crisis",
+                  "label": "因孕婦已現 Allodynia 且痛極難忍，立刻靜注 Sumatriptan (5-HT1B/1D) / Ergotamine 強力壓痛，並開立 Valproate 預防複發！",
+                  "sublabel": "孕期誤下兩大禁忌：致子宮胎盤缺血之 Ergots/Triptans 與強致畸胎 Valproate",
+                  "outcome": "crisis",
+                  "crisis": {
+                    "title": "妊娠用藥雙重災難：胎盤血管痙攣與致畸胎暴露！",
+                    "mechanism": "Ergotamine 與 Triptans 強烈收縮子宮動脈與胎盤血管危及胎兒供氧，而 Valproate 為頭號神經管缺損 (Neural tube defect) 高風險致畸胎藥物，且對已經進入中樞敏感化之 Allodynia 急性 Triptan 亦常遲效失效！",
+                    "rescuePrompt": "胎心監視器傳來急促警報、孕婦腹緊疼痛！立即止損撤藥並切換安全標準方針：",
+                    "vitals": {
+                      "hr": 116,
+                      "sbp": 148,
+                      "dbp": 94,
+                      "rhythm": "tachy",
+                      "rhythmText": "胎盤收縮警報！立即停撤 Triptan/Ergot/Valproate！",
+                      "badges": ["妊娠禁忌危象", "Boss 急症搶救"]
+                    },
+                    "rescueChoices": [
+                      {
+                        "id": "rc_migraine_acet",
+                        "label": "立即停撤 Ergots / Triptans 與 Valproate 嚴密監測胎盤血流，孕期急性止痛改用最安全首選 Acetaminophen！",
+                        "isSuccess": true,
+                        "feedbackText": "迅速切換 **`Acetaminophen`** 並解除子宮血管緊縮，母子重歸平穩！永記孕期嚴禁 **`Valproate`** 畸胎與 **`Triptans/Ergots`** 劇縮！"
+                      },
+                      {
+                        "id": "rc_migraine_ergo_more",
+                        "label": "改加打具有強 ISA 的 Pindolol 搭配高劑量 Ergotamine 續壓偏頭痛",
+                        "isSuccess": false,
+                        "feedbackText": "胎盤痙攣急劇惡化，ISA β 阻斷又毫無效用！弘岳真人震怒出手保胎，終止試煉宣告走火入魔！"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "id": "c_migraine_wrong_allodynia",
+                  "label": "表皮異感痛 Allodynia 出現後反而是 Triptans 最有效時機，且台灣預防常以含強 ISA 的 Pindolol 搭配孕婦可用之 Valproate 為主",
+                  "sublabel": "對早期阻斷 CGRP 前之時機、ISA 禁忌及孕婦防畸概念全反",
+                  "outcome": "wrong",
+                  "feedback": {
+                    "speakerName": "蘇苓師妹",
+                    "text": "「錯三個重點喔！`Allodynia` 一旦出現就進入**中樞敏感化**（急性藥容易來不及，要早期下藥！）；`ISA` 的 `Pindolol` 偏頭痛無效；孕婦嚴禁 `Valproate`（致畸胎）跟 `Triptans/Ergots`！」",
+                    "delta": { "yang": -1 }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "variantId": "B",
+          "steps": [
+            {
+              "id": "e36b_s1",
+              "speaker": "patient",
+              "speakerName": "隅角開放性青光眼長老 (IOP 34 mmHg)",
+              "speakerTag": "青光眼六大類點眼家族總決戰",
+              "text": "眼前是房水排出逐年淤塞的**隅角開放性青光眼**長老（眼壓 `34 mmHg`）。六枚藥瓶並陳案前：`Latanoprost / Bimatoprost`、`Timolol / Betaxolol`、`Brimonidine`、`Dorzolamide / Acetazolamide`、`Pilocarpine` 與 `Netarsudil`。\n長老詢問：「當今**每日一次一線首選**點眼液為何？它有何著名的美容／色素變化外觀副作用？又**這六大家族如何清楚區分為『減少生成』、`雙重兼攻`與『增加排出』**？」",
+              "vitals": {
+                "subject": "隅角開放性青光眼長老（IOP 34 mmHg）",
+                "hr": 72,
+                "sbp": 124,
+                "dbp": 78,
+                "iop": 34,
+                "rhythm": "normal",
+                "pupilMm": 3.5,
+                "ciliary": "房水排出受阻",
+                "airway": 100,
+                "badges": ["高眼壓 (IOP 34)", "六類眼藥大檢閱"]
+              },
+              "choices": [
+                {
+                  "id": "c_glaucoma_ok",
+                  "label": "一線首選睡前 QD 前列腺素 F2α 類似物 Latanoprost / Bimatoprost（增加葡萄膜鞏膜排出，副作用：虹膜棕色色素沉著加深＋眼睫毛變長濃密 Latisse）；同增排出還有 M₃ Pilocarpine 與 ROCKi Netarsudil；減少生成為 β 阻斷 Timolol/Betaxolol（忌氣喘心緩）與碳酸酐酶抑制 Dorzolamide/Acetazolamide（口服致結石肢麻）；Brimonidine (α₂) 兼降生成與增排！",
+                  "sublabel": "一舉囊括減生成、增排出、雙效 α₂、ROCKi 與 PGF2α 美容/變色高頻考點",
+                  "outcome": "correct",
+                  "nextStepId": "__EVENT_COMPLETE__",
+                  "feedback": {
+                    "speakerName": "弘岳真人",
+                    "text": "「如數家珍！無論國考考『哪一藥同時降生成兼促排出（`Brimonidine`）』、還是問『睡前滴一滴睫毛變長虹膜變咖啡（`Latanoprost / Bimatoprost`）』，還是『`Netarsudil` 走 `Rho` 激酶小樑網』，皆已難不倒你！前方即是太虛萬藥鼎最終決戰！」",
+                    "delta": { "yin": 2, "yang": 2 },
+                    "unlockCodex": [73],
+                    "vitals": {
+                      "iop": 15,
+                      "badges": ["青光眼六大類總決戰勝出"]
+                    }
+                  }
+                },
+                {
+                  "id": "c_glaucoma_wrong",
+                  "label": "目前一線首選為每天四次、毫無局部痛感也不縮瞳的 Pilocarpine，且會使虹膜變淺藍色；而 Timolol 與 Acetazolamide 主機制都是強力加速葡萄膜排出",
+                  "sublabel": "誤解 PGF₂α 地位、虹膜褐化與睫毛增生作用及 β 阻斷／CAI 降生成機轉",
+                  "outcome": "wrong",
+                  "feedback": {
+                    "speakerName": "蘇苓師妹",
+                    "text": "「`Pilocarpine` 一點眉骨痛又縮瞳看近霧茫茫，早就被每日睡前一次的 **`Latanoprost / Bimatoprost (PGF₂α)`** 取代一線了（它會讓**虹膜棕色加深、睫毛濃長**）；而 `Timolol` 跟 `CAI` 是減少生成、`Brimonidine` 才是雙效兼攻喔！」",
+                    "delta": { "yin": -1 }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "E37": {
+      "id": "E37",
+      "isBoss": true,
+      "chapter": 10,
+      "chapterTitle": "第 10 章・破陽止戈與升糖迴天最終決戰",
+      "location": "太虛萬藥鼎・陰陽雙極最終殿",
+      "title": "【最終壓軸 Boss】WADA 運動禁藥與 β 阻斷劑過量：升糖素迴天訣",
+      "hubSummary": "全四卷壓軸最終大戰！揭曉慢性 β 阻斷降腎素之奧秘與 WADA 運動禁藥，再於 β 阻斷劑大量過量、腎上腺素無力回天之際，施展終極解毒奧義——高劑量 IV Glucagon！",
+      "codexIds": [74, 75],
+      "unlockTables": ["tbl_beta_migraine_glaucoma"],
+      "storyMode": "one",
+      "variants": [
+        {
+          "variantId": "A",
+          "steps": [
+            {
+              "id": "e37a_s1",
+              "speaker": "hongyue",
+              "speakerName": "弘岳真人",
+              "speakerTag": "大考前關・長期 TPR 密碼與 WADA 運動禁藥",
+              "text": "太虛萬藥鼎九層金鐘齊鳴，終極守關題降臨：「初用 `β` 阻斷劑時因心輸出量降反讓總周邊阻力微升，**為何長期慢性投藥後 `TPR` 反而能穩定往下降**？又國際反禁藥組織 **`WADA`** 將 `β` 阻斷劑列為『**賽內與賽外全天候絕對禁藥**』的三大精準項目為何（非僅賽內項目）？」",
+              "vitals": {
+                "subject": "終極殿護脈陣（長期腎素與運動醫學考驗）",
+                "hr": 72,
+                "sbp": 116,
+                "dbp": 74,
+                "rhythm": "normal",
+                "rhythmText": "雙極匯聚・蓄勢迎戰最終危象",
+                "airway": 100,
+                "badges": ["終章 Boss 第一關：Renin & WADA"]
+              },
+              "choices": [
+                {
+                  "id": "c_wada_renin_ok",
+                  "label": "慢性抑制腎臟近球細胞 β₁ 受體 → 減少「腎素 (Renin)」釋放並切斷 RAAS 血管收縮使長期 TPR 下降！因能鎮定 β₁ 心跳並消除 β₂ 細微手抖焦慮，WADA 於「射箭 (Archery)、射擊 (Shooting)、水下運動 (Underwater sports)」列為賽內＋賽外全天候禁藥（僅賽內則含賽車/撞球/高爾夫/飛鏢等）",
+                  "sublabel": "清晰區隔初期 vs 長期 TPR 反轉點與 WADA 全時／賽內清單",
+                  "outcome": "correct",
+                  "nextStepId": "e37a_s2",
+                  "feedback": {
+                    "speakerName": "弘岳真人",
+                    "text": "「妙透玄關！鎮定射箭手心率與微顫本為修心正途，豈容藉藥作弊？再一步，便是全四卷最驚心動魄的壓軸生死決戰！」",
+                    "delta": { "yin": 1, "yang": 2 },
+                    "unlockCodex": [74]
+                  }
+                },
+                {
+                  "id": "c_wada_renin_wrong",
+                  "label": "長期 TPR 下降是因為 β 阻斷劑轉為興奮平滑肌 α₂ 受體；而 WADA 僅於舉重、馬拉松與百米短跑全天候禁用 β 阻斷劑",
+                  "sublabel": "錯認腎素 β₁ 途徑與需要極高定力手穩的精準項目",
+                  "outcome": "wrong",
+                  "feedback": {
+                    "speakerName": "蘇苓師妹",
+                    "text": "「用 β 阻斷去跑馬拉松會氣喘腳軟心輸出量上不去吧！真正貪圖它『手不抖、心靜氣平』的項目是**射箭、射擊與水下運動**（全天候禁用）；降 TPR 靠的是長期抑腎球細胞 `β₁` 減少 **`Renin`** 釋放喔！」",
+                    "delta": { "yin": -1 }
+                  }
+                }
+              ]
+            },
+            {
+              "id": "e37a_s2",
+              "speaker": "patient",
+              "speakerName": "吞服大量緩釋型 β 阻斷劑垂危弟子",
+              "speakerTag": "【全四卷壓軸最終戰】β 阻斷劑過量致死休克！",
+              "text": "急報傳入大殿！一名弟子誤吞整瓶超長效 `β` 阻斷劑，心率暴跌至 **`30 bpm`**、血壓崩塌為 **`68/40 mmHg`**、呈寬緩 `QRS` 與房室傳導重度阻滯！外堂弟子已連推高劑量 **`Epinephrine` 與 `Isoproterenol`，病患卻紋絲不動——因為心肌 `β₁` 受體已遭海量拮抗劑徹底死鎖佔滿！**\n眼見脈象正滑向心臟停搏 (`Asystole`)，全場目光匯聚於你掌中之最後一道救援訣！你該打下哪一味繞道神藥並道出其分子路徑？",
+              "pouchHints": [
+                {
+                  "itemId": "pouch_hemo_compass",
+                  "text": "羅盤終極秘篆：競爭鎖死 β₁ 受體時，所有 β 致效劑都敲不開大門！唯有心肌細胞膜上另一座獨立偶聯 Gs 蛋白的大門——高劑量升糖素 (IV Glucagon)——能徹底繞過 β 阻斷劑直活腺苷酸環化酶 → ↑cAMP → ↑Ca²⁺ 起死回生！"
+                }
+              ],
+              "vitals": {
+                "subject": "重度 β-Blocker 過量休克弟子（HR 30 / BP 68/40）",
+                "hr": 30,
+                "sbp": 68,
+                "dbp": 40,
+                "iop": 12,
+                "tempC": 36.2,
+                "potassium": 4.5,
+                "rhythm": "wideqrs",
+                "rhythmText": "Epi/Iso 皆失敗！心肌 β₁ 遭死鎖即將停搏！",
+                "pupilMm": 3.5,
+                "airway": 78,
+                "badges": ["終極 Boss：β 阻斷過量休克", "心臟 β₁ 完全封鎖"]
+              },
+              "choices": [
+                {
+                  "id": "c_glucagon_ok",
+                  "label": "高劑量靜脈注射升糖素 (IV Glucagon)！徹底繞過被死鎖的心肌 β₁ 受體，直接結合心肌獨立之「Glucagon 受體 (Gs)」→ 直接活化腺苷酸環化酶 (Adenylyl cyclase) → 提升細胞內 ↑cAMP → PKA 促進 ↑Ca²⁺ 內流，瞬間挽回正性變時 (心跳) 與正性變力 (收縮力)！",
+                  "sublabel": "全四卷壓軸秘奧義：獨立 Gs 受體繞道救援（可輔以鈣離子與高劑量胰島素療法）",
+                  "outcome": "correct",
+                  "nextStepId": "__EVENT_COMPLETE__",
+                  "feedback": {
+                    "speakerName": "弘岳真人",
+                    "text": "「妙哉！！一劑高劑量 **`IV Glucagon`** 如太虛紫雷破空降下！當 **`β₁`** 正門被死死焊封時，你不與敵藥硬撞正門，而是徑入旁側獨立 **`Glucagon Gs` 天門**直接湧出 **`cAMP`** 與 **`Ca²⁺`**，令漸停的心脈再度躍動回 **`78 bpm / 118/74 mmHg`**！雙極陰陽，於此大圓滿成！」",
+                    "delta": { "yin": 2, "yang": 2 },
+                    "unlockCodex": [75],
+                    "vitals": {
+                      "hr": 78,
+                      "sbp": 118,
+                      "dbp": 74,
+                      "rhythm": "normal",
+                      "rhythmText": "升糖素繞道 Gs 成功・心脈回陽重跳！",
+                      "airway": 100,
+                      "badges": ["升糖素繞道 Gs 成功回陽！"]
+                    }
+                  }
+                },
+                {
+                  "id": "c_glucagon_crisis_epi",
+                  "label": "認為競爭性拮抗只需更強硬劑量撞開即可，拒絕換藥並強推 10 倍極量 Isoproterenol ＋ Epinephrine",
+                  "sublabel": "頑固硬撞已被過量高濃度 β 阻斷劑飽和死鎖的心肌 β₁ 受體",
+                  "outcome": "crisis",
+                  "crisis": {
+                    "title": "心臟停搏危機 (Refractory β-Blocker Overdose Asystole)！",
+                    "mechanism": "病患體內巨量 β 阻斷劑仍死死霸佔心肌 β₁ 受體；盲目倍增 Isoproterenol 與 Epinephrine 不但徒勞無功，反耽誤關鍵黃金搶救時間——監測儀瞬間拉成一條平坦紅線 Asystole！",
+                    "rescuePrompt": "心搏歸零、警鐘長鳴！整個太虛大殿屏息以待這最終一步搶救——立刻選出真正繞過 β 阻斷的獨立 Gs 解毒藥：",
+                    "vitals": {
+                      "hr": 0,
+                      "sbp": 42,
+                      "dbp": 20,
+                      "rhythm": "asystole",
+                      "rhythmText": "停搏拉平線！唯有獨立 Gs 受體可繞道救援！",
+                      "badges": ["心搏停止 Asystole！", "β₁ 完全死鎖失敗"]
+                    },
+                    "rescueChoices": [
+                      {
+                        "id": "rc_finale_glucagon",
+                        "label": "高劑量靜脈推注 IV Glucagon！（繞過 β₁ 直觸獨立 Glucagon Gs 受體→腺苷酸環化酶→↑cAMP→↑Ca²⁺，輔以 CPR 與鈣鹽）",
+                        "isSuccess": true,
+                        "unlockCodex": [75],
+                        "vitals": {
+                          "hr": 76,
+                          "sbp": 114,
+                          "dbp": 72,
+                          "rhythm": "normal",
+                          "rhythmText": "升糖素繞道成功・心跳重歸竇性！",
+                          "airway": 100,
+                          "badges": ["升糖素絕地回陽！"]
+                        },
+                        "feedbackText": "高劑量 **`IV Glucagon`** 成功繞過死鎖 **`β₁`** 直接活化 **`Adenylyl cyclase → ↑cAMP → ↑Ca²⁺`**！一條死寂的平線在最後關頭重現鏗鏘有力的 QRS 尖波——絕地回陽！"
+                      },
+                      {
+                        "id": "rc_finale_atropine_only",
+                        "label": "持續單純推注 Atropine 加上更大劑量 Isoproterenol 硬闖 β₁",
+                        "isSuccess": false,
+                        "feedbackText": "死鎖的 β₁ 門戶毫無反應，心脈終於無法自行回溫！弘岳真人強行出手復甦病患並宣告大考終極 Boss 搶救失敗。"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "id": "c_glucagon_wrong_bb",
+                  "label": "立刻注射 Prazosin (α₁ 阻斷劑) 搭配 Neostigmine，利用擴大血管與減慢迷走反射幫助心臟減輕負荷",
+                  "sublabel": "兩者分別進一步雪崩降低血壓與加劇極端心搏過緩甚至心搏停止",
+                  "outcome": "wrong",
+                  "feedback": {
+                    "speakerName": "蘇苓師妹",
+                    "text": "「病人都 `HR 30、BP 68/40` 快休克了！推 `Prazosin` 降壓跟 `Neostigmine` 催迷走心緩是要立刻送走他嗎？！快想**有哪顆激素的獨立心肌 `Gs` 受體能夠完全繞過被封死的 `β₁`，直接生出 `cAMP`！**」",
+                    "delta": { "yin": -2 }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
+
+
+

@@ -1,0 +1,7 @@
+dist/
+*_standalone.html
+.DS_Store
+__pycache__/
+*.pyc
+.pytest_cache/
+node_modules/

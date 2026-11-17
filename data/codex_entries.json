@@ -1,0 +1,612 @@
+{
+  "entries": [
+    {
+      "num": 1,
+      "vol": 1,
+      "scroll": "scroll_1",
+      "title": "醫道字首／字根／字尾破譯",
+      "summary": "掌握醫學字首（Prefixes）、字根（Roots）與字尾（Suffixes），從英文病名與藥理術語直接推知病機與禁忌。",
+      "keyPoints": [
+        "字首：a-/an-（無，Anesthesia）、brady-（慢，Bradycardia）、tachy-（快，Tachycardia）、hyper-（過多）、hypo-（不足）、peri-（周圍）、poly-（多）、bi-（雙側）、contra-（反對／禁忌 Contraindicated）。",
+        "字根：cardi/o（心）、dermat/o（皮）、neur/o（神經）、hepat/o（肝）、oste/o（硬骨）、arthr/o（關節）、gastr/o（胃）、my/o（肌）、cyt/o（細胞）、hem/o（血）、onc/o（腫瘤）、psych/o（心智）。",
+        "字尾：-itis（發炎）、-ectomy（切除）、-logy（學科）、-scopy（內視鏡）、-emia（血液狀態）、-pathy（病變）、-stasis（止血/控制）、-cyte（細胞）、-plasia（發育）、-phobia（恐懼）、-phagia（吞嚥）、-lysis（分解破壞）、-oma（腫瘤）、-genic（致病源起）。"
+      ],
+      "drugs": ["Anesthesia", "Bradycardia", "Tachycardia", "Contraindicated", "Dysphagia", "Pathogenic"],
+      "trapAlert": "看到 -lysis（破壞分解）切勿與 -stasis（停止控制）混淆；Contraindicated 意為特定情境下之禁忌症。"
+    },
+    {
+      "num": 2,
+      "vol": 1,
+      "scroll": "scroll_1",
+      "title": "細胞間三種訊號傳遞法門",
+      "summary": "依訊號傳遞距離與專一性，區分 Endocrine（內分泌）、Paracrine（旁分泌）與 Synaptic（突觸傳遞）。",
+      "keyPoints": [
+        "Endocrine（萬里飛劍）：荷爾蒙釋入血液循環作用遠端標的細胞，範圍廣、反應慢但持久（例：腎上腺髓質分泌 Epinephrine 入血）。",
+        "Paracrine（隔牆傳音）：局部介質擴散至細胞外液作用鄰近多個細胞，限於局部微環境。",
+        "Synaptic（靈犀一點）：神經末梢將神經傳導物質釋入狹窄突觸間隙，毫秒級極速傳遞、具高度解剖定位專一性。"
+      ],
+      "drugs": ["Epinephrine (Endocrine)", "Local mediator (Paracrine)", "ACh / NE (Synaptic)"],
+      "trapAlert": "腎上腺髓質嗜鉻細胞直接把 80% Epi 與 20% NE 釋入血液，故屬於內分泌（Endocrine）而非典型突觸釋放。"
+    },
+    {
+      "num": 3,
+      "vol": 1,
+      "scroll": "scroll_1",
+      "title": "神經系統兩大疆域與血腦障壁（BBB）穿透鐵律",
+      "summary": "區分中樞神經系統（CNS：腦與脊髓）與周邊（PNS），三級胺與四級胺決定藥物能否穿過血腦障壁（BBB）。",
+      "keyPoints": [
+        "三級胺（Tertiary amines）或非極性分子：不帶永久電荷、脂溶性高，可自由穿透 BBB 進入 CNS（例：Physostigmine、Atropine、Scopolamine、Pilocarpine、Nicotine）。",
+        "四級胺（Quaternary amines）：帶有永久正電荷、極性親水，絕對無法穿透 BBB（例：Neostigmine、Pyridostigmine、Edrophonium、Bethanechol、2-PAM、Muscarine、Guanethidine）。"
+      ],
+      "drugs": ["Physostigmine (三級胺入腦)", "Neostigmine (四級胺不入腦)", "2-PAM (四級胺)", "DAM (不帶電入腦)"],
+      "trapAlert": "中樞抗膽鹼症候群（譫妄/幻覺）若給四級胺 Neostigmine 無法入腦；有機磷中毒中樞再生須靠不帶電 DAM 而非 2-PAM。"
+    },
+    {
+      "num": 4,
+      "vol": 1,
+      "scroll": "scroll_1",
+      "title": "體運動神經 vs. 自主神經架構差異",
+      "summary": "體運動神經為單神經元直達骨骼肌（無神經節），自主神經則須經兩個神經元與自主神經節中繼。",
+      "keyPoints": [
+        "體運動神經（Somatic motor）：胞體在脊髓，單一運動神經元直達骨骼肌，無神經節（No ganglia），末梢僅釋放 ACh 作用於 N_M 受體。",
+        "自主神經（ANS）：CNS 節前神經元釋放 ACh 作用於自主神經節的 N_N 受體；節後神經元位於 PNS 神經節，釋放 ACh 或 NE 作用於效應器官。"
+      ],
+      "drugs": ["ACh → N_N (自主神經節)", "ACh → N_M (骨骼肌終板)"],
+      "trapAlert": "所有自主神經節（含交感、副交感與腎上腺髓質）的節前傳導物質一律是 ACh 作用於 N_N，切勿誤以為交感節前釋放 NE。"
+    },
+    {
+      "num": 5,
+      "vol": 1,
+      "scroll": "scroll_1",
+      "title": "交感神經 vs. 副交感神經系統對照",
+      "summary": "比較太陰歸藏脈（副交感）與太陽伐戮脈（交感）之解剖起點、纖維長度、擴散度與生理使命。",
+      "keyPoints": [
+        "副交感（Craniosacral outflow）：CN III, VII, IX, X 與薦髓 S2–S4；節前纖維長、神經節近或位於器官壁內、節後纖維極短；輸出獨立離散（Discrete），主 Rest-and-digest，節後 ACh → M1–M5。",
+        "交感（Thoracolumbar outflow）：胸腰段 T1–L2/L3；節前纖維短、節後纖維長且高度分支；輸出廣泛擴散（Diffuse），主 Fight-or-flight，一般節後 NE → α/β。"
+      ],
+      "drugs": ["CN III, VII, IX, X + S2–S4", "T1–L2/L3 胸腰段"],
+      "trapAlert": "記住兩條長度對比：副交感「節前長、節後短」單線精準；交感「節前短、節後長」廣泛動員。"
+    },
+    {
+      "num": 6,
+      "vol": 1,
+      "scroll": "scroll_1",
+      "title": "交感神經系統「三大天道特例」",
+      "summary": "交感神經一般節後釋放 NE，但有三大極高頻必考解剖與傳導物質例外。",
+      "keyPoints": [
+        "特例一｜皮膚小汗腺（Eccrine sweat glands）：交感節後纖維例外釋放 ACh，作用於 M3 受體促發汗（Atropine 會抑汗導致皮膚乾熱）。",
+        "特例二｜腎血管平滑肌：交感節後同時釋放 NE 與 Dopamine（DA），作用於 α 與 D1 受體。",
+        "特例三｜腎上腺髓質嗜鉻細胞：無節後纖維，視同特化節後神經元；由交感節前 ACh → N_N 支配，釋放約 80% Epinephrine 與 20% Norepinephrine 入血液循環。"
+      ],
+      "drugs": ["小汗腺 ACh → M3", "腎血管 NE + DA (D1)", "腎上腺髓質 80% Epi / 20% NE"],
+      "trapAlert": "題目問「全身唯一由交感節後釋放 ACh 支配的效應器官」答案為皮膚小汗腺（M3），而非腎上腺髓質（髓質是節前纖維直接支配）。"
+    },
+    {
+      "num": 7,
+      "vol": 1,
+      "scroll": "scroll_1",
+      "title": "三大類神經傳導物質分類特徵",
+      "summary": "區分傳統小分子傳導物質（12 種）、傳統神經胜肽，以及非傳統氣體傳導物質（NO）。",
+      "keyPoints": [
+        "傳統小分子（12 種）：存於突觸小泡並於末梢快速合成（ACh, DA, NE, Epi, 5-HT, Histamine, Glu, Aspartate, Glycine, GABA, ATP, Adenosine）。",
+        "神經胜肽（Neuropeptides）：存於大型緻密核心小泡，常作 Cotransmitters（Endorphins, Enkephalins, Substance P, NPY）。",
+        "非傳統氣體傳導物質（Gasotransmitters）：一氧化氮（NO）不儲存於突觸小泡中，需要時由酵素當場合成並直接擴散穿透細胞膜。"
+      ],
+      "drugs": ["Nitric oxide (NO)", "Substance P", "Endorphins / NPY"],
+      "trapAlert": "NO 絕對不儲存於突觸小泡，也非靠鈣離子觸發胞吐釋放，而是由 NOS 當場合成後直接跨膜擴散。"
+    },
+    {
+      "num": 8,
+      "vol": 1,
+      "scroll": "scroll_1",
+      "title": "九大靈訊重點 I：ACh 與 Dopamine（DA）",
+      "summary": "統整 ACh 在周邊與中樞（阿茲海默症）的作用，以及 Dopamine 三大核心中樞路徑。",
+      "keyPoints": [
+        "ACh：介導 NMJ 骨骼肌收縮、所有自主神經節、副交感效應與交感小汗腺排汗；CNS 基底前腦膽鹼神經元退化致阿茲海默症。",
+        "DA 路徑 1｜黑質紋狀體路徑（Nigrostriatal）：調控動作起始與協調，退化導致巴金森氏症。",
+        "DA 路徑 2｜中腦邊緣／皮質路徑（Mesolimbic/Mesocortical）：調控動機、獎賞與強化學習。",
+        "DA 路徑 3｜結節漏斗路徑（Tuberoinfundibular）：張力性抑制腦下垂體前葉分泌泌乳素（Prolactin）；阻斷 D2 或耗竭 DA 致高泌乳素血症。"
+      ],
+      "drugs": ["Donepezil (阿茲海默症)", "Bromocriptine (D2致效劑)", "Haloperidol (D2拮抗劑致高泌乳素/EPS)"],
+      "trapAlert": "泌乳素受下視丘 DA 張力性「抑制」，因此 D2 阻斷劑（如抗精神病藥）或 Reserpine 耗竭 DA 反而會讓泌乳素升高溢乳。"
+    },
+    {
+      "num": 9,
+      "vol": 1,
+      "scroll": "scroll_1",
+      "title": "九大靈訊重點 II：Norepinephrine（NE）與 Epinephrine（Epi）",
+      "summary": "釐清 NE 與 Epi 在支氣管擴張、中樞藍斑核與濃度依賴血管反應上的關鍵差異。",
+      "keyPoints": [
+        "NE：主要交感節後傳導物質，升心率/收縮力/血管張力；CNS 源自腦幹藍斑核（Locus coeruleus）調控警覺與壓力反應。",
+        "支氣管擴張辨析：NE 對 β2 親和力極低且支氣管平滑肌缺交感末梢支配，支氣管擴張主要靠血液循環中的 Epinephrine 作用於 β2 受體！",
+        "Epi：腎上腺髓質經 PNMT 甲基化 NE 合成；低濃度優先活化高親和力 β2 擴張血管，高濃度活化 α1 收縮血管；同時促肝醣分解、糖質新生與脂解。"
+      ],
+      "drugs": ["Epinephrine (α+β)", "Norepinephrine (α1/α2/β1 強，β2 極弱)", "Locus coeruleus"],
+      "trapAlert": "考題陷阱：靜脈給予低濃度 Epinephrine 與高濃度 Epinephrine 對總周邊血管阻力（TPR）的影響方向截然相反！"
+    },
+    {
+      "num": 10,
+      "vol": 1,
+      "scroll": "scroll_1",
+      "title": "九大靈訊重點 III：Serotonin（5-HT）與 Histamine",
+      "summary": "掌握周邊 5-HT 的真正產地與血小板儲存特性，以及組織胺中樞覺醒與周邊受體分工。",
+      "keyPoints": [
+        "Serotonin (5-HT)：CNS 調控情緒、睡眠、食慾與體溫；人體 >90% 周邊 5-HT 由腸道嗜鉻細胞生成；血小板本身不合成 5-HT，靠轉運體攝取儲存以促凝集。",
+        "Histamine：源自下視丘結節乳頭核（Tuberomammillary nucleus）促清醒（第一代抗組織胺過 BBB 阻 H1 致嗜睡）；周邊 H1 介導過敏與搔癢，H2 刺激胃壁細胞泌酸。"
+      ],
+      "drugs": ["5-HT (腸嗜鉻細胞 >90%)", "H1 (過敏/中樞清醒)", "H2 (胃壁細胞泌酸)"],
+      "trapAlert": "血小板活化時會釋放 5-HT 促血管收縮與凝集，但血小板「自己不會合成 5-HT」，全是從腸道來源攝取儲存的。"
+    },
+    {
+      "num": 11,
+      "vol": 1,
+      "scroll": "scroll_1",
+      "title": "九大靈訊重點 IV：Glutamate、GABA 與 Substance P",
+      "summary": "對照 CNS 最主要興奮性與抑制性傳導物質，並比較 GABA_A 與 GABA_B 受體雙機轉。",
+      "keyPoints": [
+        "Glutamate：CNS 最主要興奮性傳導物質（AMPA/NMDA），介導 LTP 記憶；NMDA 過度活化引發大量 Ca²⁺ 內流致興奮性毒性（中風／癲癇壞死）。",
+        "GABA_A：配體閘控離子通道，促進 Cl⁻ 內流，產生快速過極化抑制（Fast IPSP）；代表藥 Benzodiazepines。",
+        "GABA_B：偶聯 Gi 蛋白之 GPCR，促進突觸後 K⁺ 外流（並抑突觸前 Ca²⁺），產生緩慢持久抑制（Slow IPSP）；致效劑 Baclofen。",
+        "Substance P：感覺神經 C 纖維釋放之胜肽，作用於脊髓背角 NK1 受體傳痛，並於周邊引發神經源性發炎。"
+      ],
+      "drugs": ["NMDA (Ca²⁺ 興奮性毒性)", "GABA_A (Cl⁻ 內流)", "GABA_B / Baclofen (K⁺ 外流)", "NK1"],
+      "trapAlert": "GABA_A 走 Cl⁻ 內流離子通道；GABA_B 則走 Gi 蛋白促 K⁺ 外流，兩者離子流向與速度快慢完全不同！"
+    },
+    {
+      "num": 12,
+      "vol": 1,
+      "scroll": "scroll_1",
+      "title": "GPCR 訊號放大循環與三大受體機制（+ G12/13）",
+      "summary": "理解 2012 年諾貝爾化學獎 7-TM GPCR 四步驟放大循環，以及離子通道、AC/cAMP、PLC/IP3-DAG 三大路徑。",
+      "keyPoints": [
+        "GPCR 四步驟：配體結合 → 構型改變結合異三聚體 G 蛋白，GTP 取代 GDP → Gα 與 Gβγ 解離傳訊 → 單一受體在配體未脫離前連續活化數百個 G 蛋白（放大效應）。",
+        "離子通道型（Ionotropic）：N_M、N_N、GABA_A、NMDA、5-HT3。",
+        "Gs（活化 AC → ↑cAMP → PKA）：β1–β3、D1、D5；Gi（Gαi 降 cAMP ＋ Gβγ 直開 K⁺ 通道）：M2、M4、α2、D2–D4。",
+        "Gq（PLC-β 切 PIP2 → IP3 開 ER Ca²⁺ ＋ DAG 活化 PKC）：M1、M3、M5、α1。補充：G12/13 → RhoGEF → RhoA。"
+      ],
+      "drugs": ["Gq: M1, M3, M5, α1", "Gi: M2, M4, α2, D2–D4", "Gs: β1–β3, D1, D5"],
+      "trapAlert": "Gi 蛋白不僅靠 Gαi 抑制腺苷酸環化酶降 cAMP，游離的 Gβγ 還會直接開啟鉀離子通道讓 K⁺ 外流過極化！"
+    },
+    {
+      "num": 13,
+      "vol": 1,
+      "scroll": "scroll_1",
+      "title": "膽鹼受體宗譜與菸鹼五聚體結構（M1–M5, N_M, N_N）",
+      "summary": "牢記蕈毒鹼奇偶偶聯法則與五聚體菸鹼受體於胎兒／成人骨骼肌、中樞／神經節的次單元組成。",
+      "keyPoints": [
+        "奇偶口訣：奇數號 M1（神經元/胃壁細胞）、M3（腺體/平滑肌/血管內皮）、M5（黑質/腦血管）皆偶聯 Gq；偶數號 M2（心臟 SA/AV/心房）、M4（紋狀體）皆偶聯 Gi。",
+        "N_M（肌肉終板五聚體）：胎兒與電鰩為 (α1)2β1δγ；成人成熟肌肉由 ε 取代 γ，成為 (α1)2β1δε。",
+        "N_N（神經元五聚體）：僅由 α 與 β 組成；CNS 代表型 (α4)2(β2)3，自主神經節代表型 α3α5(β2)3。"
+      ],
+      "drugs": ["M1/M3/M5 (Gq)", "M2/M4 (Gi)", "N_M 成人 (α1)2β1δε", "N_N 神經節 α3α5(β2)3"],
+      "trapAlert": "成熟成人骨骼肌終板 N_M 的第 5 個次單元是 ε（Epsilon），而非胎兒時期的 γ（Gamma）。"
+    },
+    {
+      "num": 14,
+      "vol": 1,
+      "scroll": "scroll_1",
+      "title": "腎上腺素與多巴胺受體亞型代表藥物總覽",
+      "summary": "掌握 α1A/B/D、α2A/B/C、β1/2/3 與 D1–D5 之代表致效劑、拮抗劑、α1C 廢除公案與染色體位置。",
+      "keyPoints": [
+        "α1 亞型：α1A（原含已廢除之 α1C，主導攝護腺與虹膜開大肌，阻斷劑 Tamsulosin，C8）；α1B（周邊血管，C5）；α1D（主動脈與逼尿肌，C20）；非選擇代表致效 Phenylephrine／拮抗 Prazosin。",
+        "α2 亞型（Gi）：α2A（中樞降壓/PFC 增訊號，Guanfacine，C10）；α2B（血管，C2）；α2C（髓質，C4）；致效 Clonidine／拮抗 Yohimbine。",
+        "β 亞型（Gs）：β1（Dobutamine / Metoprolol，C10）；β2（Albuterol / Butoxamine，C5）；β3（Mirabegron 治膀胱過動，C8）；非選擇 Isoproterenol / Propranolol。",
+        "DA 家族：D1（Fenoldopam，C5）、D2（Bromocriptine / Haloperidol，C11）、D3（C3）、D4（Clozapine，C11）、D5（C4）。"
+      ],
+      "drugs": ["Tamsulosin (α1A)", "Phenylephrine (α1)", "Dobutamine (β1)", "Albuterol (β2)", "Mirabegron (β3)", "Fenoldopam (D1)"],
+      "trapAlert": "歷史上曾命名的「α1C」經證實與 α1A 完全相同，現行命名已正式廢除省略 α1C！"
+    },
+    {
+      "num": 15,
+      "vol": 1,
+      "scroll": "scroll_2",
+      "title": "突觸胞吐六步驟與膽鹼性突觸斷脈四標靶",
+      "summary": "解析神經末梢去極化至胞吐之六步序列，以及膽鹼突觸合成、裝泡、釋放與裂解的藥理標靶。",
+      "keyPoints": [
+        "六步序列：動作電位抵末梢 → 開啟 VGCa²⁺ → Ca²⁺ 內流 → SNARE (VAMPs/SNAPs) 介導胞吐 → 結合突觸後受體 → 回收／酵素裂解／擴散終止。",
+        "標靶 1｜CHT（Na⁺-choline 共運輸器）：ACh 合成之速率決定步驟，受 Hemicholinium 阻斷。",
+        "標靶 2｜VAT（囊泡轉運體）：H⁺ 梯度驅動將 ACh 裝入小泡，受 Vesamicol 阻斷。",
+        "標靶 3｜SNARE 複合體：Botulinum toxin（肉毒桿菌毒素，鋅蛋白酶）專一切割 VAMPs/SNAPs，致鬆弛性麻痺，臨床用於肌痙攣、斜視、OAB、偏頭痛與多汗症。"
+      ],
+      "drugs": ["Hemicholinium (抑 CHT)", "Vesamicol (抑 VAT)", "Botulinum toxin (切 SNARE)"],
+      "trapAlert": "膽鹼性突觸的「速率決定步驟」是 CHT 攝取細胞外膽鹼（受 Hemicholinium 阻斷），而非 ChAT 酵素！"
+    },
+    {
+      "num": 16,
+      "vol": 1,
+      "scroll": "scroll_2",
+      "title": "正腎上腺素性突觸斷脈與 Guanethidine vs. Reserpine",
+      "summary": "掌握兒茶酚胺合成速率決定步驟與兩大交感神經元阻斷劑在 BBB、機轉、禁忌症與交互作用之生死對照。",
+      "keyPoints": [
+        "速率決定步驟：Tyrosine hydroxylase (TH) 將 Tyr 轉 L-DOPA，受 Metyrosine 抑制；胞吐受 Bretylium/Guanethidine 抑制；NET (Uptake 1) 回收受 Cocaine 與 TCAs 抑制。",
+        "Guanethidine：高極性不入 BBB（僅限周邊），須經由 NET 進入末梢取代囊泡 NE；半衰期 ~5 天（1–2 週起效）；與 TCAs 或 Cocaine 併用因爭奪 NET 而減效；致延遲／逆行射精與腹瀉。",
+        "Reserpine：穿過 BBB 不可逆抑制 VMAT，同時耗竭中樞與周邊之 NE、DA、5-HT；會誘發嚴重憂鬱（憂鬱病史禁用）、巴金森氏症候群、胃酸大增（消化性潰瘍禁用），長期造成藥理性去神經超敏感性。"
+      ],
+      "drugs": ["Metyrosine (抑 TH)", "Guanethidine (經 NET 不入腦)", "Reserpine (抑 VMAT 入腦)", "TCAs / Cocaine"],
+      "trapAlert": "憂鬱症或消化性潰瘍患者禁用 Reserpine；而服用 TCA 或 Cocaine 會阻斷 NET，反而使 Guanethidine 失去降壓藥效！"
+    },
+    {
+      "num": 17,
+      "vol": 1,
+      "scroll": "scroll_2",
+      "title": "周天十七大臟腑陰陽消長與三大臨床生理鐵則",
+      "summary": "統整交感與副交感對全身器官受體的調控精髓，熟記靜息心率、血管支配與下食道括約肌例外。",
+      "keyPoints": [
+        "鐵則 1｜心臟：靜息心率 70–80 bpm 由副交感迷走張力（M2）主導；去神經移植心臟之固有心率高達 110–130 bpm。",
+        "鐵則 2｜血管與性功能：全身絕大多數血管無副交感支配（勃起海綿體動脈為少數 M3→NO 例外）；口訣 Point（勃起＝副交感 M3）and Shoot（射精＝交感 α1）。",
+        "鐵則 3｜括約肌唯一例外：消化道與泌尿道平滑肌括約肌經副交感皆放鬆，唯獨下食道括約肌（LES）例外受迷走 ACh→M3 收縮以防止胃酸逆流！"
+      ],
+      "drugs": ["固有心率 110–130 bpm", "Point (M3) & Shoot (α1)", "LES (M3 收縮防逆流)"],
+      "trapAlert": "問「副交感刺激會收縮哪一個內臟括約肌？」必答下食道括約肌（LES）；其餘幽門、奧迪氏與尿道內括約肌皆為副交感舒張。"
+    },
+    {
+      "num": 18,
+      "vol": 1,
+      "scroll": "scroll_2",
+      "title": "MAP 雙回饋環（感壓反射與 RAAS）＋ 兒茶酚胺代謝（VMA / HVA）",
+      "summary": "從平均動脈壓（MAP）回饋機轉推演藥物引起的反射性心率變化，並熟記嗜鉻細胞瘤尿液代謝指標。",
+      "keyPoints": [
+        "自主神經感壓反射：Phenylephrine（純 α1）或 NE 升壓 → 感壓受器放電 ↑ → 抑制交感並強活迷走 M2 → 引發反射性心搏過緩（Reflex bradycardia）。",
+        "荷爾蒙 RAAS 回饋：低血壓／腎灌流下降 → 腎素（受 β1 促進）↑ → Angiotensin II ↑ → Aldosterone ↑ → 鈉水滯留升血容量。",
+        "代謝匯流：MAO（粒線體外膜）與 COMT（肝腎突觸後）共同將 Epi/NE 經 Metanephrine/Normetanephrine 轉為尿液 VMA；將 Dopamine 轉為 HVA（診斷嗜鉻細胞瘤）。"
+      ],
+      "drugs": ["Phenylephrine (反射性心搏過緩)", "MAO + COMT → VMA", "Dopamine → HVA"],
+      "trapAlert": "高血壓患者檢測尿液 VMA 與 HVA，分別對應 NE/Epi 與 Dopamine 經 MAO 及 COMT 雙酶代謝後的最終產物。"
+    },
+    {
+      "num": 19,
+      "vol": 2,
+      "scroll": "scroll_3",
+      "title": "擬膽鹼總論、黑寡婦蜘蛛毒素與受體親和力光譜",
+      "summary": "區分直接型與間接型擬膽鹼藥物、黑寡婦毒液促胞吐機轉，以及蕈毒鹼與菸鹼受體對三大天然分子的親和力排列。",
+      "keyPoints": [
+        "直接作用型（Direct-acting）：直接結合 M 或 N 受體（膽鹼酯類、生物鹼）；間接作用型（Indirect-acting）：可逆或不可逆抑制 AChE。",
+        "胞吐相反毒素：肉毒桿菌毒素切割 SNARE 阻斷 ACh 釋放（弛緩麻痺）；黑寡婦蜘蛛毒素（Black widow spider venom）則促突觸小泡大量胞吐釋放 ACh。",
+        "親和力光譜：Muscarinic 受體為 Muscarine > ACh ≫ Nicotine；Nicotinic 受體則為 Muscarine ≪ ACh < Nicotine。"
+      ],
+      "drugs": ["Black widow spider venom (促釋放)", "Muscarine > ACh ≫ Nicotine (M)", "Nicotine > ACh ≫ Muscarine (N)"],
+      "trapAlert": "黑寡婦蜘蛛毒素導致 ACh 暴量胞吐耗竭；肉毒桿菌毒素則把小泡鎖死在末梢內放不出來。"
+    },
+    {
+      "num": 20,
+      "vol": 2,
+      "scroll": "scroll_3",
+      "title": "真性 AChE（150 μs 三聯體水解）vs. 肝臟假性膽鹼酯酶（BuChE）",
+      "summary": "解析 AChE 活性中心催化三聯體（Glu-His-Ser）150 微秒瞬斬機制，與 BCHE 基因突變的臨床麻醉危機。",
+      "keyPoints": [
+        "AChE 活性中心：含催化三聯體 Glu-His-Ser 與 Choline 次位點；三步驟（結合 → Ser-OH 親核攻擊形成共價乙醯化酵素釋出 Choline → 水合去乙醯化釋出 Acetate）全程僅 ~150 μs。",
+        "BuChE（假性／丁醯膽鹼酯酶）：由肝臟合成分布於血漿，可作有機磷毒物之生物清除者（Biological scavenger）。",
+        "BCHE 基因突變：缺乏正常 BuChE 的病人若使用肌肉鬆弛劑 Succinylcholine，將無法代謝而發生數小時嚴重呼吸肌麻痺與呼吸中止（Apnea）。"
+      ],
+      "drugs": ["AChE (Glu-His-Ser, 150 μs)", "BuChE (血漿假性膽鹼酯酶)", "Succinylcholine (Apnea 風險)"],
+      "trapAlert": "抑制 BuChE 並非間接擬膽鹼藥物的主要治療機轉，但先天缺乏 BuChE 會讓 Succinylcholine 引發致命性術後呼吸中止。"
+    },
+    {
+      "num": 21,
+      "vol": 2,
+      "scroll": "scroll_3",
+      "title": "膽鹼酯結構改造兩秘法與四大膽鹼酯比較",
+      "summary": "透過導入 β-甲基與 Carbamoyl 取代乙醯基，掌握 ACh、Methacholine、Carbachol 與 Bethanechol 的完整構效關係。",
+      "keyPoints": [
+        "共同結構：四大膽鹼酯皆帶永久正電四級銨基團，高度親水、口服吸收差、幾乎不穿透 BBB。",
+        "秘法一｜導入 β-甲基（Methacholine, Bethanechol）：立體障礙降低 AChE 水解速率，並「完全消除」菸鹼受體（N）作用！",
+        "秘法二｜以 Carbamoyl (-OCONH₂) 取代乙醯基（Carbachol, Bethanechol）：共振穩定降低羰基親電性，「完全抗拒 AChE 水解」。",
+        "臨床應用：ACh (Miochol-E, 眼科瞬時縮瞳)、Methacholine (Provocholine, 氣喘激發試驗)、Carbachol (Miostat, 青光眼點眼且具強 N 作用)、Bethanechol (Urecholine, 腸阻塞與尿滯留，無 N 作用，禁用於氣喘)。"
+      ],
+      "drugs": ["Acetylcholine [Miochol-E]", "Methacholine [Provocholine]", "Carbachol [Miostat]", "Bethanechol [Urecholine]"],
+      "trapAlert": "四大膽鹼酯中誰「同時保留強大 N 作用又抗 AChE 水解」？是 Carbachol（有 Carbamoyl 但無 β-甲基）！"
+    },
+    {
+      "num": 22,
+      "vol": 2,
+      "scroll": "scroll_3",
+      "title": "五大直接作用型生物鹼與毒菇／生態危機",
+      "summary": "比較 Muscarine、Pilocarpine、Nicotine、Lobeline 與 Neonicotinoids 之電荷、BBB 穿透力、中毒解救與生態衝擊。",
+      "keyPoints": [
+        "Muscarine（四級銨，難入 CNS）：見於毒蠅傘（Amanita muscaria）與絲蓋傘（Inocybe），誤食 15–30 分內發作早發型蕈毒鹼中毒（DUMBBELSS），以 Atropine 解毒。",
+        "Pilocarpine（三級胺，可入 CNS）：M 受體部分致效劑，用於修格蘭氏症候群、青光眼與老花眼。",
+        "Nicotine / Lobeline（三級胺，極易入 CNS）：Nicotine 同時活化 N_N 與 N_M 用於戒菸；Lobeline 效價較弱。",
+        "Neonicotinoids（新菸鹼類）：專攻昆蟲中樞 N 受體之殺蟲劑，雖對脊椎動物毒性較低，卻造成蜜蜂與授粉昆蟲族群崩潰危機。"
+      ],
+      "drugs": ["Muscarine (四級胺/Atropine解毒)", "Pilocarpine (三級胺)", "Nicotine", "Lobeline", "Neonicotinoids"],
+      "trapAlert": "極易搞混陷阱：生物鹼中的 Muscarine 雖是生物鹼卻含有「四級銨」正電荷，故極難進入 CNS；Pilocarpine 與 Nicotine 才是三級胺。"
+    },
+    {
+      "num": 23,
+      "vol": 2,
+      "scroll": "scroll_3",
+      "title": "Gq 八步驟與迷走神經 M2（Gi）雙重定心訣",
+      "summary": "深入微觀膜電位層級，破解 M1/M3/M5 的 Gq 連鎖路徑與竇房結 M2（Gi）如何靠 Gβγ 與 Gαi 雙重減慢心率。",
+      "keyPoints": [
+        "Gq 八步驟：配體結合 → 構型改變結合 Gq → GDP 換 GTP → Gαq 活化 PLC → PIP2 切為 IP3 + DAG → IP3 促 ER 釋放 Ca²⁺ → Ca²⁺ 與 DAG 活化 PKC → 磷酸化靶蛋白促平滑肌收縮與分泌。",
+        "竇房結 M2 雙鎖：① Gβγ 直開乙醯膽鹼敏感鉀通道 I_K,ACh → K⁺ 外流過極化；② Gαi 抑 AC 降 cAMP → 減弱節律點 I_f（Funny current）並降 PKA 減少 L-type Ca²⁺ 通道 I_Ca 開啟。",
+        "體運動終板 N_M 需「2 個 ACh 分子」同時結合兩個 α1 次單元方能開啟 Na⁺ 內流。"
+      ],
+      "drugs": ["I_K,ACh (Gβγ 開啟)", "I_f & I_Ca (Gαi 降 cAMP)", "N_M 雙 ACh 結合"],
+      "trapAlert": "竇房結的 I_f（Funny current）受 cAMP 直接調控，不需 PKA 即可被降 cAMP 抑制；I_Ca 則須透過 ↓PKA 磷酸化減少來抑制。"
+    },
+    {
+      "num": 24,
+      "vol": 2,
+      "scroll": "scroll_4",
+      "title": "修格蘭氏症候群（Sjögren's Syndrome）與乾燥症治療",
+      "summary": "掌握原發性與次發性乾燥症之抗體標誌，以及 Pilocarpine 與高 M3 選擇性 Cevimeline 的比較。",
+      "keyPoints": [
+        "病因：好發女性之慢性自體免疫疾病，免疫細胞攻擊淚腺與唾液腺造成乾眼與口乾症（Xerostomia）。",
+        "分類：原發性（單獨發生，常驗出 Anti-SSA/Ro 與 Anti-SSB/La 抗體）；次發性（合併 SLE、類風濕性關節炎 RA 或硬皮症）。",
+        "用藥：Pilocarpine [Salagen] 為非選擇性 M 部分致效劑；Cevimeline [Evoxac] 為 M3 選擇性奎寧環衍生物，全身出汗與心血管副作用較少！"
+      ],
+      "drugs": ["Pilocarpine [Salagen]", "Cevimeline [Evoxac, M3選擇性]", "Anti-SSA/Ro, Anti-SSB/La"],
+      "trapAlert": "相較於 Pilocarpine，Cevimeline 具備更高的 M3 受體選擇性，對乾燥症患者副作用更少。"
+    },
+    {
+      "num": 25,
+      "vol": 2,
+      "scroll": "scroll_4",
+      "title": "神經性膀胱與術後尿滯留處置原則",
+      "summary": "理解排尿反射中逼尿肌與內括約肌之受體協同，並牢記使用 Bethanechol 前的兩大絕對禁忌評估。",
+      "keyPoints": [
+        "薦髓受損影響三大排尿訊號：膀胱充盈感覺上傳、逼尿肌（M3）收縮、尿道內括約肌（M3/M1）放鬆。",
+        "用藥首選：Bethanechol [Urecholine] 或 Neostigmine（經由促進膀胱收縮與括約肌舒張排尿）。",
+        "絕對前提與禁忌：給藥前「必須先排除機械性尿道阻塞（如結石或嚴重 BPH）」以免膀胱壓力過高破裂；且絕對禁用於氣喘（M3 誘發支氣管痙攣）與活動性消化性潰瘍！"
+      ],
+      "drugs": ["Bethanechol [Urecholine]", "Neostigmine"],
+      "trapAlert": "臨床地雷：見到術後尿滯留不可不問病史直接打 Bethanechol！若患者合併氣喘會誘發急性支氣管痙攣，若有機械阻塞會造成膀胱穿孔。"
+    },
+    {
+      "num": 26,
+      "vol": 2,
+      "scroll": "scroll_4",
+      "title": "眼內三平滑肌、房水路徑與青光眼急慢分型",
+      "summary": "區分眼內三塊平滑肌受體、房水循環解剖路徑，以及隅角閉鎖型（急症）與開放型青光眼之根本治法差異。",
+      "keyPoints": [
+        "三大眼內平滑肌：睫狀肌（M3 看近調節）、虹膜括約肌（M3 縮瞳）、虹膜開大肌（α1 散瞳）。正常眼壓 10–20 mmHg。",
+        "房水路徑：睫狀上皮生成（β2 促生成、α2 抑生成）→ 後房 → 瞳孔 → 前房 → 小樑網 → 舒萊姆管（Canal of Schlemm）。",
+        "隅角閉鎖型青光眼（急症）：虹膜往前擠壓封死隅角，先用 Pilocarpine 緊急縮瞳拉開小樑網降壓，待控制後行「雷射虹膜穿孔術（Laser iridotomy）」根治！",
+        "隅角開放型青光眼（慢性）：小樑網本身退化阻塞，以長期點眼藥為主（Timolol/Betaxolol 減生成，Pilocarpine/Carbachol/PGF2α 增排出）。"
+      ],
+      "drugs": ["Pilocarpine (縮瞳拉開隅角)", "Laser iridotomy (閉鎖型根治)", "Timolol / Betaxolol (減生成)"],
+      "trapAlert": "隅角閉鎖型青光眼切勿僅靠點眼藥拖延，亦不可誤點散瞳劑（Atropine/α1），急降眼壓後必須進行雷射虹膜穿孔術。"
+    },
+    {
+      "num": 27,
+      "vol": 2,
+      "scroll": "scroll_4",
+      "title": "老花眼（Presbyopia）雙機轉與三類點眼藥物（含 Aceclidine）",
+      "summary": "掌握老花眼點眼治療的針孔效應原理，並比較 Pilocarpine 與新一代瞳孔選擇性 Aceclidine 及腎上腺素類點眼藥。",
+      "keyPoints": [
+        "雙機轉：① 針孔效應（Pinhole effect）縮小瞳孔阻擋周邊散射光線、增加景深；② 增強睫狀肌看近調節。",
+        "門派 1｜擬膽鹼致效劑：Pilocarpine / Carbachol 同時強力收縮睫狀肌，常致「眉骨痛（Brow ache）與看遠模糊」；新一代瞳孔選擇性 Aceclidine 主縮虹膜括約肌，顯著減少睫狀肌痙攣！",
+        "門派 2｜α 拮抗劑 Phentolamine（阻斷開大肌 α1）；門派 3｜α2 致效劑 Brimonidine（突觸前負回饋抑 NE 釋放而溫和縮瞳）。"
+      ],
+      "drugs": ["Aceclidine (瞳孔選擇性)", "Pilocarpine (易致眉骨痛)", "Phentolamine", "Brimonidine"],
+      "trapAlert": "Pilocarpine 改善老花眼容易產生眉骨痛與遠視模糊；若題幹詢問如何只縮瞳不強烈痙攣睫狀肌，首選 Aceclidine！"
+    },
+    {
+      "num": 28,
+      "vol": 2,
+      "scroll": "scroll_4",
+      "title": "靜脈輸注 ACh 劑量依賴雙相反應與不反應期相反方向陷阱",
+      "summary": "看穿低劑量 vs 高劑量 ACh 對心率的反轉效應，與心房和房室結在 M2 活化後「完全相反」的不反應期變化。",
+      "keyPoints": [
+        "劑量依賴雙相反應：低劑量靜注 ACh（20–50 μg/min）先擴張血管內皮 M3→NO 降血壓，觸發感壓反射性「心搏過速」；高劑量才直接壓倒反射活化心臟 M2 導致「心搏過緩」。",
+        "必考相反方向｜心房（Atria）：M2 開啟 I_K,ACh 加速再極化，使心房不反應期「縮短」（反而更易維持心房顫動 AFib）。",
+        "必考相反方向｜房室結（AV node）：M2 抑制 Ca²⁺ 內流減慢傳導，使房室結不反應期「延長」！"
+      ],
+      "drugs": ["低劑量 ACh → 反射心搏過速", "心房不反應期 ↓ (易維持 AFib)", "AV 結不反應期 ↑"],
+      "trapAlert": "超級陷阱！迷走神經興奮／M2 活化時，心房不反應期「縮短」，房室結不反應期「延長」，兩者方向完全相反！"
+    },
+    {
+      "num": 29,
+      "vol": 2,
+      "scroll": "scroll_4",
+      "title": "Furchgott 血管內皮實驗、NO–cGMP–PKG 六步驟與 NOS 同功酶",
+      "summary": "重現完整與磨除內皮對 ACh 截然相反的反應，並熟記剪應力 PIEZO1 及三種 NOS 同功酶的差異。",
+      "keyPoints": [
+        "Furchgott 實驗：完整內皮（Unrubbed）加 ACh → 結合內皮 M3 釋放 EDRF (NO) 使血管舒張（3×10⁻⁷ M 達最大）；磨除內皮（Rubbed）後，ACh 直接結合平滑肌 M3（Gq→IP3→↑Ca²⁺）反而造成「血管收縮」！",
+        "NO–cGMP–PKG 六步驟：內皮 M3↑Ca²⁺（或血流剪應力經 PIEZO1 通道磷酸化）→ Ca²⁺/CaM 活化 eNOS 將 L-arginine 轉為 NO → 擴散入平滑肌活化 sGC → GTP 轉 cGMP → 活化 PKG 抑 Ca²⁺ 內流促舒張 → PDE5 水解 cGMP 為 5'-GMP 終止。",
+        "三種 NOS：nNOS（持續型/Ca²⁺ 依賴，神經元 NANC）、iNOS（發炎細胞激素轉錄誘導/不依賴 Ca²⁺，巨噬細胞）、eNOS（持續＋誘導/Ca²⁺ 及磷酸化，內皮細胞）。"
+      ],
+      "drugs": ["EDRF = NO", "PIEZO1 機械通道", "sGC → cGMP → PKG", "nNOS / iNOS / eNOS"],
+      "trapAlert": "給 ACh 不見得永遠擴張血管！一旦血管內皮受損或磨除（Rubbed），ACh 會直接活化平滑肌 M3 造成強烈收縮。"
+    },
+    {
+      "num": 30,
+      "vol": 2,
+      "scroll": "scroll_4",
+      "title": "Sildenafil 開發史與 PDE-5 抑制劑三大臨床適應症",
+      "summary": "認識藥物老藥新用（Drug repositioning）經典案例，並精準記憶 ED、肺動脈高壓與 BPH 各自的核准用藥。",
+      "keyPoints": [
+        "Sildenafil 大事紀：1980s 原開發作抗心絞痛藥 → 1991 一期試驗現意外勃起副作用 → 1996 轉定位 ED → 1998 以 Viagra 上市 → 2005 以 Revatio 核准治肺動脈高壓（PAH）。",
+        "三大適應症對照：① 勃起功能障礙（ED）：Sildenafil, Vardenafil, Tadalafil, Avanafil；② 肺動脈高壓（PAH）：Sildenafil, Tadalafil；③ 良性攝護腺肥大（BPH）：唯獨核准 Tadalafil！"
+      ],
+      "drugs": ["Sildenafil [Viagra / Revatio]", "Tadalafil (唯一核准治 BPH)", "Vardenafil / Avanafil"],
+      "trapAlert": "三大適應症考點：四種 PDE5 抑制劑都可治 ED，兩種可治 PAH，但「只有長效的 Tadalafil」獲得 BPH 適應症核准（且絕不可與硝酸鹽類併用以免致命低血壓）。"
+    },
+    {
+      "num": 31,
+      "vol": 2,
+      "scroll": "scroll_4",
+      "title": "胃腸泌尿括約肌 NANC 舒張機制 vs. LES 唯一例外",
+      "summary": "解析為何副交感神經同時能讓腸胃壁蠕動收縮、卻讓多數內臟括約肌舒張，並對比骨骼肌外括約肌。",
+      "keyPoints": [
+        "NANC 抑制性神經元：在幽門、奧迪氏、迴盲瓣、尿道內及肛門內括約肌，節前 ACh 活化肌間神經叢 M1/N → 催動 NANC 神經元（含 nNOS）釋放 NO、VIP 與 ATP 使環狀平滑肌舒張。",
+        "唯一平滑肌例外｜下食道括約肌（LES）：平時受迷走神經 ACh→M3 直接刺激維持「收縮」以防止胃酸逆流（僅在吞嚥瞬間由 NANC 釋放 NO 短暫舒張）。",
+        "外括約肌（UES、尿道外與肛門外括約肌）：屬於橫紋骨骼肌，受體運動神經 ACh→N_M 有意識支配。"
+      ],
+      "drugs": ["NANC (NO / VIP / ATP)", "LES (M3 收縮防逆流)", "UES / 外括約肌 (體運動 N_M)"],
+      "trapAlert": "下食道括約肌（LES）與幽門括約肌同樣受迷走神經影響，但常態下 LES 是 M3 主導收縮防逆流，其餘平滑肌括約肌則是 NANC 主導舒張。"
+    },
+    {
+      "num": 32,
+      "vol": 2,
+      "scroll": "scroll_4",
+      "title": "可逆性 AChE 抑制劑分類與抗膽鹼症候群（CAS）解毒禁忌",
+      "summary": "比較醇類 Edrophonium 與胺基甲酸酯類三雄，並掌握 TCA 過量伴心臟傳導阻滯時禁用 Physostigmine 的致命陷阱。",
+      "keyPoints": [
+        "簡單醇類｜Edrophonium [Enlon, Tensilon]：四級胺靜電短暫結合，僅 5–15 min，專用於 MG 診斷與雙危象鑑別。",
+        "四級胺 Carbamates（0.5–6 h，不入 CNS）｜Neostigmine 與 Pyridostigmine：兼有「額外直接刺激 N_M 受體」作用。",
+        "三級胺 Carbamate｜Physostigmine [Anticholium]：脂溶性穿過 BBB，是治療抗膽鹼症候群（CAS 譫妄／幻覺）之唯一專一解毒劑！",
+        "致命禁忌：三環抗憂鬱劑（TCA）過量若合併心臟傳導延遲／阻滯時，常規投予 Physostigmine 恐誘發心搏停止（Asystole）或癲癇！"
+      ],
+      "drugs": ["Edrophonium (5–15m)", "Neostigmine / Pyridostigmine (四級胺+直刺N_M)", "Physostigmine (三級胺入CNS)", "TCA 過量禁忌"],
+      "trapAlert": "背口訣「中樞解毒選 Physostigmine」之前一定要先看心電圖！遇到 TCA 過量併 QRS/傳導阻滯給 Physostigmine 會直接誘發 Asystole！"
+    },
+    {
+      "num": 33,
+      "vol": 2,
+      "scroll": "scroll_4",
+      "title": "重症肌無力（MG）、禁用直接致效劑原因與雙危象鑑別",
+      "summary": "從 NMJ 七步偶聯切入 MG 病理，徹底區分肌無力危象（劑量不足）與膽鹼性危象（過量去極化阻斷）。",
+      "keyPoints": [
+        "MG 病因：85% 具抗突觸後 N_M 自體抗體（常伴胸腺瘤），特徵為晨輕暮重、眼瞼下垂（Ptosis）與複視（Diplopia）。",
+        "為何絕對禁用直接致效劑：持續刺激殘存 N_M 會導致受體「去敏感化與去極化阻斷」，反令肌無力急遽惡化；維持首選 Pyridostigmine（免疫治療：類固醇、胸腺切除、IVIG、血漿置換）。",
+        "雙危象鑑別（Edrophonium test）：肌無力危象無蕈毒鹼症狀，打 Edrophonium 肌力「改善」→ 應增量；膽鹼性危象伴流涎、腹絞痛、縮瞳、心搏過緩，打 Edrophonium「惡化」→ 應立即停用 AChEI 並給 Atropine！"
+      ],
+      "drugs": ["Pyridostigmine [Mestinon]", "Edrophonium (Tensilon test)", "Atropine (救膽鹼性危象)"],
+      "trapAlert": "看到 MG 病人呼吸困難先問是否剛加過 AChEI 或有縮瞳流涎！若是膽鹼性危象卻暴力加藥，氣管會被分泌物淹沒且肌力徹底癱瘓。"
+    },
+    {
+      "num": 34,
+      "vol": 2,
+      "scroll": "scroll_4",
+      "title": "LEMS（Amifampridine）與阿茲海默症中樞 AChE 抑制劑",
+      "summary": "對比突觸後 MG 與突觸前 LEMS（伴小細胞肺癌 SCLC）之機轉與用藥禁忌，並區分四種阿茲海默症中樞 AChEI。",
+      "keyPoints": [
+        "LEMS（藍伯特-伊頓肌無力症候群）：自體抗體攻擊突觸前 VGCa²⁺ 通道，>50% 伴隨小細胞肺癌（SCLC）。首選 Amifampridine / 4-AP（阻斷突觸前 K⁺ 通道→延緩再極化延長動作電位→促 Ca²⁺ 內流增 ACh 釋放）。",
+        "Amifampridine 禁忌：阻斷中樞與心臟 K⁺ 通道易致癲癇與 QT 延長，絕對禁用於癲癇史、心房顫動或長 QT 症候群！",
+        "阿茲海默症（AD）：第一代 Tacrine 因嚴重肝毒性已淘汰；一線三傑為 Donepezil（QD 無肝毒）、Galantamine（兼 N 受體正向異位調控）、Rivastigmine（同抑 AChE/BuChE，有貼片）。"
+      ],
+      "drugs": ["Amifampridine [Firdapse / Ruzurgi]", "4-AP [Ampyra]", "Donepezil / Galantamine / Rivastigmine", "Tacrine (淘汰肝毒)"],
+      "trapAlert": "MG 是抗突觸後 N_M；LEMS 則是抗突觸前 VGCa²⁺ 且常藏著小細胞肺癌，給藥 Amifampridine 必先確認無癲癇與 QT prolongation！"
+    },
+    {
+      "num": 35,
+      "vol": 2,
+      "scroll": "scroll_5",
+      "title": "四大有機磷毒理差異、酵素「老化（Aging）」與 2-PAM vs. DAM",
+      "summary": "掌握有機磷不可逆磷酸化 Ser-OH、48 小時老化脫烷基不可逆機制，以及四級胺 2-PAM 與三級／中性 DAM 穿腦差別。",
+      "keyPoints": [
+        "四大有機磷：Echothiophate（四級胺不入 CNS，治青光眼 100h 已淘汰）；Parathion（轉劇毒 Paraoxon，人蟲皆毒）；Malathion（哺乳類與鳥類經羧酸酯酶 Carboxylase 快速水解解毒故相對安全，治頭蝨／疥瘡）；Sarin（含 P-F 鍵高揮發神經毒氣）。",
+        "酵素老化（Aging）：有機磷共價接上 Ser-OH 後若未在約 48 小時內解救，O-P 斷鍵脫去一個烷基（釋出乙醇）使磷原子帶負電並大幅強化鍵結，此時 2-PAM 徹底失效！",
+        "2-PAM vs. DAM：Pralidoxime (2-PAM) 帶永久正電四級胺不入 CNS（只救周邊與 NMJ）；Diacetylmonoxime (DAM) 不帶電荷可穿透 BBB 再生 CNS 酵素。"
+      ],
+      "drugs": ["Malathion (Carboxylase解毒)", "Parathion → Paraoxon", "2-PAM (不入CNS)", "DAM (可入CNS)"],
+      "trapAlert": "為何 Malathion 可安全用於頭蝨外用藥而 Parathion 卻讓農夫喪命？因為哺乳類與鳥類的羧酸酯酶能迅速水解 Malathion 上的兩個酯鍵！"
+    },
+    {
+      "num": 36,
+      "vol": 2,
+      "scroll": "scroll_5",
+      "title": "農夫 JM 四步急救錄（DuoDote®）與戰場沙林預防性「卡位護酶訣」",
+      "summary": "演練有機磷急性中毒完整四步急救 SOP、DuoDote 自動注射筆劑量，以及 Pyridostigmine 戰前「先機卡位」原理。",
+      "keyPoints": [
+        "農夫 JM 四步急救：① 脫除衣物並徹底沖洗皮膚除污 → ② 暢通呼吸道與氧氣／呼吸器支持（因 2-PAM 不入 CNS 且老化的酵素無法逆轉）→ ③ 高劑量 Atropine (0.5–5 mg IV) 壓制蕈毒鹼過量徵象（分泌物／縮瞳／譫妄）→ ④ 靜注 2-PAM (1–2 g 接續 200–500 mg/h) 直至肌肉束狀顫動（Fasciculations）消失。",
+        "DuoDote® 自動注射筆（≥41 kg 大腿前外側壓 10 秒）：每支含 2.1 mg Atropine + 600 mg Pralidoxime chloride。",
+        "戰場沙林預防｜先機卡位護酶訣：暴露前預服可逆性 Pyridostigmine，先可逆胺基甲醯化部分 AChE（4–6 h 自然水解復活），阻擋 Sarin 不可逆磷酸化（四級胺故僅護周邊神經）。"
+      ],
+      "drugs": ["Atropine + 2-PAM (DuoDote® 2.1mg/600mg)", "Pyridostigmine (戰前卡位護周邊)"],
+      "trapAlert": "急救有機磷中毒時，2-PAM 無法代替 Atropine！必須先除污與維持氣道，再以足量 Atropine 搶救蕈毒鹼窒息，並於老化前投予 2-PAM 救回菸鹼終板肌力。"
+    }
+  ],
+  "referenceTables": [
+    {
+      "id": "tbl_organs",
+      "title": "一、周天十七大臟腑交感與副交感調控精要表",
+      "headers": ["目標器官", "交感神經作用（受體）", "副交感神經作用（受體）", "核心生理／國考註記"],
+      "rows": [
+        ["腦部 (Brain)", "↑ 警覺性 (NE藍斑核)；α2 突觸前負回饋", "M1：↑ 記憶與注意力", "基底前腦退化 → 阿茲海默症"],
+        ["眼睛 (Eye)", "α1 收縮輻射肌 → 散瞳；β2 放鬆睫狀肌看遠；α2 ↓房水、β2 ↑房水", "M3 收縮括約肌 → 縮瞳；M3 收縮睫狀肌看近調節", "正常眼壓 10–20 mmHg；Pilocarpine 拉開小樑網"],
+        ["唾液腺", "α1 ↑ 濃稠黏液唾液；α2 ↓ 分泌", "M3 ↑ 大量水樣漿液性唾液", "抗膽鹼藥阻斷 M3 致明顯口乾"],
+        ["心臟 (Heart)", "β1/β2 ↑ 心率、收縮力、AV 傳導速度", "M2 ↓ 心率、↓ 心房收縮力、↓ AV 傳導", "靜息 70–80 bpm（迷走主導）vs 移植去神經固有 110–130 bpm"],
+        ["肺與支氣管", "β2 支氣管擴張（主要靠循環 Epi！）", "M3 支氣管收縮、↑ 黏液分泌", "氣喘禁用 Bethanechol 與非選擇性 β 阻斷劑"],
+        ["血管", "α1 皮膚內臟收縮；β2 骨骼肌血管擴張（循環 Epi）", "大多數血管無副交感支配；勃起海綿體 M3→NO 擴張", "無內皮（Rubbed）時給 ACh 反轉為平滑肌 M3 收縮"],
+        ["胃腸與括約肌", "α1 收縮括約肌；α2/β2 ↓ 蠕動", "M3 ↑ 胃酸與蠕動；一般括約肌 NANC (NO/VIP) 舒張", "唯獨下食道括約肌（LES）受迷走 ACh→M3 收縮防逆流！"],
+        ["膀胱與生殖", "α1 內括約肌收縮儲尿、射精 (Shoot)；β2/β3 舒張逼尿肌", "M3 收縮逼尿肌排尿、勃起 (Point, NO)", "口訣：Point (M3 勃起) and Shoot (α1 射精)"],
+        ["腎上腺髓質", "節前 ACh→N_N 促釋放 80% Epi + 20% NE 入血", "無副交感支配", "嗜鉻細胞視同特化交感節後神經元"],
+        ["腎臟", "β1 ↑ Renin 分泌；α1 ↓ Renin 分泌", "無副交感支配", "腎血管平滑肌交感末梢同時釋放 NE 與 DA (D1)"],
+        ["皮膚汗腺", "小汗腺：交感膽鹼性例外釋放 ACh → M3 排汗", "無副交感支配", "大汗腺（頂漿腺）受 α 與膽鹼共同反應主壓力排汗"]
+      ]
+    },
+    {
+      "id": "tbl_receptors",
+      "title": "二、膽鹼、腎上腺素與多巴胺受體亞型及基因定位表",
+      "headers": ["受體亞型", "偶聯 G 蛋白 / 通道", "代表致效劑", "代表拮抗劑", "主要作用與染色體"],
+      "rows": [
+        ["M1 / M3 / M5 (奇數)", "Gq/11 → PLC-β → IP3/DAG → ↑Ca²⁺", "ACh, Bethanechol, Cevimeline (M3)", "Pirenzepine (M1), Atropine, Darifenacin (M3)", "M1 神經/胃壁；M3 腺體/平滑肌/內皮 NO；M5 黑質"],
+        ["M2 / M4 (偶數)", "Gi/o → ↓cAMP ＋ Gβγ 直開 K⁺ 通道", "ACh, Methacholine", "Atropine, Gallamine (M2)", "M2 心臟 SA/AV 負性變時變傳導；M4 紋狀體"],
+        ["N_M (骨骼肌終板)", "五聚體離子通道：胎兒 (α1)2β1δγ / 成人 (α1)2β1δε", "ACh, Nicotine, Carbachol", "Tubocurarine, Rocuronium", "需 2 個 ACh 結合 α1 介面；Na⁺ 第一、Ca²⁺ 第二"],
+        ["N_N (中樞/神經節)", "五聚體：CNS (α4)2(β2)3 / 節 α3α5(β2)3", "ACh, Nicotine, Varenicline", "Hexamethonium (C6), Mecamylamine", "Ca²⁺ 第一、Na⁺ 第二；自主神經節中繼站"],
+        ["α1A (原α1C廢除) / α1B / α1D", "Gq → IP3/DAG → ↑Ca²⁺", "Phenylephrine, Oxymetazoline", "Tamsulosin (α1A), Prazosin", "攝護腺/虹膜開大 (C8)、血管 (C5)、主動脈/膀胱 (C20)"],
+        ["α2A / α2B / α2C", "Gi → ↓cAMP, ↑K⁺ 外流", "Clonidine, Guanfacine (α2A)", "Yohimbine", "突觸前負回饋與中樞降壓；C10 / C2 / C4"],
+        ["β1 / β2 / β3", "Gs → ↑cAMP → PKA", "Dobutamine (β1), Albuterol (β2), Mirabegron (β3)", "Metoprolol (β1), Butoxamine (β2), Propranolol", "β1 心臟/腎素 (C10)；β2 支氣管/平滑肌舒張 (C5)；β3 膀胱/脂解 (C8)"],
+        ["D1 / D5 (D1-like)", "Gs → ↑cAMP", "Fenoldopam (D1), Dopamine", "SCH 23390 (D1)", "腎血管擴張排鈉 (C5)、海馬迴記憶 (C4)"],
+        ["D2 / D3 / D4 (D2-like)", "Gi → ↓cAMP", "Bromocriptine (D2), Pramipexole", "Haloperidol (D2), Clozapine (D4)", "黑質紋狀體/抑泌乳素 (C11)、邊緣 (C3)、皮質 (C11)"]
+      ]
+    },
+    {
+      "id": "tbl_guan_res",
+      "title": "三、交感神經元阻斷劑對決：Guanethidine vs. Reserpine",
+      "headers": ["比較項目", "Guanethidine（胍乙啶）", "Reserpine（利血平）"],
+      "rows": [
+        ["作用部位與 BBB", "僅限周邊交感末梢（極性極高，不入 CNS）", "中樞 ＋ 周邊單胺神經元（穿過 BBB 入腦）"],
+        ["作用機轉", "經由 NET (Uptake 1) 進入末梢，聚集小泡取代並逐步耗竭 NE", "不可逆抑制 VMAT，單胺無法入小泡而被 MAO 分解，耗竭 NE + DA + 5-HT"],
+        ["不良反應與禁忌", "姿勢性／運動後低血壓、延遲或逆行性射精、副交感優勢腹瀉", "鎮靜、嚴重憂鬱（憂鬱症禁用）、巴金森氏症候群、胃酸大增（消化性潰瘍禁用）"],
+        ["藥動學與交互作用", "t1/2 ~5 天、起效需 1–2 週；TCAs 與 Cocaine 阻斷 NET 會減弱其降壓效果！", "近乎不可逆需等新小泡合成；長期造成藥理性去神經超敏感性"]
+      ]
+    },
+    {
+      "id": "tbl_esters",
+      "title": "四、四大膽鹼酯（Choline Esters）與五大生物鹼比較表",
+      "headers": ["藥物與商品名", "結構／電荷關鍵", "AChE 敏感度", "M / N 受體活性", "BBB 與主要臨床用途"],
+      "rows": [
+        ["Acetylcholine [Miochol-E]", "四級胺・乙醯基", "++++ (150 μs 水解)", "M +++ / N +++", "不入 CNS；眼科手術瞬間縮瞳"],
+        ["Methacholine [Provocholine]", "四級胺・具 β-甲基", "+ (部分抗水解)", "M ++++ / N None", "不入 CNS；氣喘支氣管激發試驗"],
+        ["Carbachol [Miostat]", "四級胺・具 Carbamoyl 基", "Negligible (完全抗拒)", "M ++ / N +++", "不入 CNS；青光眼局部點眼縮瞳"],
+        ["Bethanechol [Urecholine]", "四級胺・β-甲基 + Carbamoyl", "Negligible (完全抗拒)", "M ++ / N None", "不入 CNS；術後腸阻塞與尿滯留（禁用氣喘）"],
+        ["Muscarine", "四級胺天然生物鹼", "不被 AChE 水解", "主作用於 M", "極難入 CNS；絲蓋傘/毒蠅傘中毒（Atropine 解毒）"],
+        ["Pilocarpine [Salagen]", "三級胺生物鹼", "不被 AChE 水解", "M 部分致效劑", "可入 CNS；修格蘭氏症候群、青光眼、老花眼"],
+        ["Nicotine / Lobeline", "三級胺生物鹼", "不被 AChE 水解", "主作用於 N_N / N_M", "極易入 CNS；戒菸輔助（Lobeline 效力較弱）"],
+        ["Neonicotinoids", "合成類菸鹼化合物", "不被 AChE 水解", "專攻昆蟲中樞 N", "農用殺蟲劑；造成蜜蜂授粉昆蟲族群崩潰"]
+      ]
+    },
+    {
+      "id": "tbl_nos_sphincters",
+      "title": "五、NOS 同功酶與人體括約肌調控對照表",
+      "headers": ["項目分類", "組織分布／神經支配", "活化與調控機制", "臨床重點"],
+      "rows": [
+        ["NOS-1 (nNOS)", "神經元（NANC 氮能神經）、骨骼肌", "持續表現型，Ca²⁺ 依賴性", "消化道與泌尿道括約肌舒張關鍵酵素"],
+        ["NOS-2 (iNOS)", "巨噬細胞、平滑肌細胞", "受發炎細胞激素轉錄誘導，不依賴 Ca²⁺", "敗血性休克大量 NO 導致頑固低血壓"],
+        ["NOS-3 (eNOS)", "血管內皮細胞、血小板", "持續＋誘導，受 Ca²⁺/CaM 與剪應力 PIEZO1 磷酸化", "Furchgott 實驗中釋放 EDRF (NO) 促 cGMP 舒張"],
+        ["下食道括約肌 (LES)", "平滑肌（迷走興奮性支配）", "ACh → M3 收縮（僅吞嚥時由 NANC NO 短暫舒張）", "唯一副交感常態收縮之平滑肌括約肌，防胃酸逆流"],
+        ["其他內臟平滑肌括約肌", "幽門、奧迪氏、迴盲瓣、尿道內、肛門內括約肌", "ACh → M1/N → NANC 神經元釋放 NO / VIP / ATP 舒張", "配合胃腸蠕動與逼尿肌收縮順利排出"],
+        ["外括約肌 (UES/尿道/肛門外)", "橫紋骨骼肌（體運動神經）", "單一運動神經元 ACh → N_M 收縮", "受主觀意識控制"]
+      ]
+    },
+    {
+      "id": "tbl_mg_crisis",
+      "title": "六、可逆性 AChE 抑制劑與雙危象鑑別（MG vs. Cholinergic）",
+      "headers": ["比較／鑑別項目", "肌無力危象 (Myasthenic Crisis)", "膽鹼性危象 (Cholinergic Crisis)", "可逆性 AChEI 關鍵藥理"],
+      "rows": [
+        ["致病本質", "MG 惡化或 AChEI 劑量不足", "AChEI 過量造成終板 N_M 去極化阻斷", "Edrophonium（5–15 分鐘四級胺醇類）專供診斷鑑別"],
+        ["伴隨蕈毒鹼症狀", "無明顯過度蕈毒鹼徵象", "腹絞痛、腹瀉、大量流涎、氣管黏液、針尖縮瞳、心搏過緩", "Neostigmine / Pyridostigmine（四級胺，兼直刺 N_M）"],
+        ["Edrophonium 測試反應", "靜脈小劑量後「肌力顯著改善」", "注射後「肌無力更惡化」且分泌物暴增", "Physostigmine（三級胺入 CNS，解 CAS 譫妄，TCA 阻滯禁用）"],
+        ["後續搶救處置", "調升 Pyridostigmine 劑量、考慮 IVIG 或血漿置換", "立即停用所有 AChEI、守護氣道並靜注 Atropine", "LEMS（>50% SCLC）首選 Amifampridine（忌癲癇與長 QT）"]
+      ]
+    },
+    {
+      "id": "tbl_ch07_master",
+      "title": "七、第二卷（Ch.07）全章代表藥物與有機磷總表",
+      "headers": ["藥物學名", "商品名", "分類與 BBB", "核心臨床應用與禁忌"],
+      "rows": [
+        ["Cevimeline", "Evoxac", "直接 M3 選擇性致效劑", "修格蘭氏症候群口乾症（副作用少於 Pilocarpine）"],
+        ["Aceclidine", "—", "瞳孔選擇性 M 致效劑", "老花眼針孔效應（極少引起睫狀肌痙攣與眉骨痛）"],
+        ["Sildenafil / Tadalafil", "Viagra, Revatio / Cialis", "PDE5 抑制劑（增 cGMP）", "ED、PAH（Sildenafil/Tadalafil）；唯有 Tadalafil 核准治 BPH"],
+        ["Donepezil / Galantamine / Rivastigmine", "Aricept / Razadyne / Exelon", "中樞可逆 AChEI（取代肝毒 Tacrine）", "阿茲海默症一線（Galantamine 兼 N 正向異位；Rivastigmine 有貼片）"],
+        ["Amifampridine / 4-AP", "Firdapse, Ruzurgi / Ampyra", "突觸前 K⁺ 通道阻斷劑（2.5 h）", "LEMS 首選；絕對禁用於癲癇史、AFib 或長 QT 症候群"],
+        ["Parathion / Malathion / Sarin", "—", "不可逆有機磷（共價磷酸化 Ser-OH）", "Malathion 哺乳類經羧酸酯酶快速解毒（安全治頭蝨）；Sarin 毒氣"],
+        ["Pralidoxime (2-PAM) / DAM", "Protopam / DuoDote®", "肟類 AChE 再生劑（老化前有效）", "2-PAM 四級胺不入 CNS 救周邊 NMJ；DAM 不帶電可穿 BBB 救 CNS；DuoDote 含 2.1mg Atropine + 600mg 2-PAM"]
+      ]
+    }
+  ]
+}

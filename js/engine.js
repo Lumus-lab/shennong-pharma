@@ -207,7 +207,7 @@
     document.getElementById('crumb-location').textContent = '自由接診／破陣樞紐';
 
     hubTitle.textContent = ch.title;
-    hubDesc.textContent = ch.hubDescription || '請自由選擇接下來欲前往的試煉殿堂或診間。先取得「隨身丹囊」道具，將為後續關卡提供靈應線索！';
+    hubDesc.innerHTML = formatInline(ch.hubDescription || '請自由選擇接下來欲前往的試煉殿堂或診間。先取得「隨身丹囊」道具，將為後續關卡提供靈應線索！');
 
     hubCards.innerHTML = '';
     (ch.events || []).forEach((eid) => {
@@ -221,11 +221,11 @@
       card.setAttribute('data-event-id', eid);
       card.innerHTML = `
         <div class="hub-card-top">
-          <span>${escapeHtml(eid)}・${escapeHtml(ev.location)}</span>
+          <span>${escapeHtml(eid)}・${formatInline(ev.location)}</span>
           <span class="hub-card-status">${isDone ? '已完成 ✓' : '前往試煉 →'}</span>
         </div>
-        <h3>${escapeHtml(ev.title)}</h3>
-        <p>${escapeHtml(ev.hubSummary || ev.subtitle || '')}</p>
+        <h3>${formatInline(ev.title)}</h3>
+        <p>${formatInline(ev.hubSummary || ev.subtitle || '')}</p>
       `;
       if (!isDone) {
         card.addEventListener('click', () => {
@@ -304,8 +304,8 @@
     updateHud();
     global.TaixuPulseMonitor.update(run.vitals);
 
-    document.getElementById('crumb-chapter').textContent = ev.chapterTitle || `第${ev.chapter}章`;
-    document.getElementById('crumb-location').textContent = `${ev.location}｜${ev.title}`;
+    document.getElementById('crumb-chapter').innerHTML = formatInline(ev.chapterTitle || `第${ev.chapter}章`);
+    document.getElementById('crumb-location').innerHTML = formatInline(`${ev.location}｜${ev.title}`);
 
     const variantChip = document.getElementById('variant-chip');
     if (variantChip) {
@@ -317,8 +317,8 @@
     const crisisBanner = document.getElementById('crisis-banner');
     if (run.activeCrisis) {
       crisisBanner.hidden = false;
-      document.getElementById('crisis-title-text').textContent = run.activeCrisis.title;
-      document.getElementById('crisis-mech-text').textContent = run.activeCrisis.mechanism;
+      document.getElementById('crisis-title-text').innerHTML = formatInline(run.activeCrisis.title);
+      document.getElementById('crisis-mech-text').innerHTML = formatInline(run.activeCrisis.mechanism);
       renderSpeaker('suling', '急症搶救線', '臨危處置・即時補救');
       renderRichText(document.getElementById('scene-body'), run.activeCrisis.rescuePrompt);
       document.getElementById('pouch-hint').hidden = true;
@@ -341,7 +341,7 @@
     }
     if (matchedHint) {
       pouchHintEl.hidden = false;
-      pouchTextEl.textContent = matchedHint.text;
+      pouchTextEl.innerHTML = formatInline(matchedHint.text);
     } else {
       pouchHintEl.hidden = true;
     }
@@ -354,10 +354,14 @@
     if (run.pendingTransition) {
       fbPanel.hidden = false;
       showPendingFeedbackPanel(run.pendingTransition);
-      renderChoices(step.choices || [], true);
+      renderChoices(step.choices || [], true, run.pendingTransition.pickedChoiceId || null);
     } else {
       fbPanel.hidden = true;
-      renderChoices(step.choices || [], false);
+      const subEl = document.getElementById('feedback-subnote');
+      const optEl = document.getElementById('feedback-options');
+      if (subEl) { subEl.hidden = true; subEl.innerHTML = ''; }
+      if (optEl) { optEl.hidden = true; optEl.innerHTML = ''; }
+      renderChoices(step.choices || [], false, null);
     }
   }
 
@@ -366,8 +370,8 @@
     if (avatar) {
       avatar.innerHTML = SPEAKER_AVATARS[speakerKey] || SPEAKER_AVATARS.narrator;
     }
-    document.getElementById('speaker-name').textContent = name;
-    document.getElementById('speaker-role').textContent = role;
+    document.getElementById('speaker-name').innerHTML = formatInline(name);
+    document.getElementById('speaker-role').innerHTML = formatInline(role);
   }
 
   function renderRichText(container, text) {
@@ -379,7 +383,14 @@
       .join('');
   }
 
+  function formatInline(str) {
+    return global.TaixuFormat ? global.TaixuFormat.formatClinicalInline(str) : escapeHtml(str);
+  }
+
   function formatInlineMarkup(str) {
+    if (global.TaixuFormat) {
+      return global.TaixuFormat.formatClinicalMarkdown(str);
+    }
     const escaped = escapeHtml(str);
     return escaped
       .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
@@ -427,17 +438,17 @@
         <h3 class="lab-title">四象膽鹼酯煉丹台（點擊切換基團觀察構效關係 SAR）</h3>
         <div class="lab-controls">
           <button type="button" class="lab-toggle ${al.betaMethyl ? 'active' : ''}" id="btn-lab-beta">
-            ${al.betaMethyl ? '✓ ' : ''}導入 β-甲基 (-CH₃)
+            ${formatInline((al.betaMethyl ? '✓ ' : '') + '導入 β-甲基 (-CH₃)')}
           </button>
           <button type="button" class="lab-toggle ${al.carbamoyl ? 'active' : ''}" id="btn-lab-carb">
-            ${al.carbamoyl ? '✓ ' : ''}換入 Carbamoyl 基 (-OCONH₂)
+            ${formatInline((al.carbamoyl ? '✓ ' : '') + '換入 Carbamoyl 基 (-OCONH₂)')}
           </button>
         </div>
         <div class="lab-readout">
-          <div class="lab-kv"><span>煉成產物</span><strong>${esterName}</strong></div>
-          <div class="lab-kv"><span>對 AChE 敏感度</span><strong>${acheSens}</strong></div>
-          <div class="lab-kv"><span>菸鹼 (N) 活性</span><strong>${nAct}</strong></div>
-          <div class="lab-kv"><span>蕈毒鹼 (M) 與用途</span><strong>${mAct}｜${clinical}</strong></div>
+          <div class="lab-kv"><span>煉成產物</span><strong>${formatInline(esterName)}</strong></div>
+          <div class="lab-kv"><span>對 AChE 敏感度</span><strong>${formatInline(acheSens)}</strong></div>
+          <div class="lab-kv"><span>菸鹼 (N) 活性</span><strong>${formatInline(nAct)}</strong></div>
+          <div class="lab-kv"><span>蕈毒鹼 (M) 與用途</span><strong>${formatInline(mAct)}｜${formatInline(clinical)}</strong></div>
         </div>
       `;
 
@@ -454,14 +465,14 @@
     } else if (step.widget === 'endothelium_lab') {
       const intact = run.endotheliumIntact !== false;
       labEl.innerHTML = `
-        <h3 class="lab-title">Furchgott 離體血管試驗台（切換內皮狀態再注 ACh 3×10⁻⁷ M）</h3>
+        <h3 class="lab-title">${formatInline('Furchgott 離體血管試驗台（切換內皮狀態再注 ACh 3×10⁻⁷ M）')}</h3>
         <div class="lab-controls">
           <button type="button" class="lab-toggle ${intact ? 'active' : ''}" id="btn-endo-unrubbed">完整未磨除內皮 (Unrubbed)</button>
           <button type="button" class="lab-toggle ${!intact ? 'active' : ''}" id="btn-endo-rubbed">已磨除內皮 (Rubbed)</button>
         </div>
         <div class="lab-readout">
-          <div class="lab-kv"><span>主要結合位置</span><strong>${intact ? '內皮細胞 M₃ → eNOS' : '平滑肌細胞 M₃ (直接 Gq→IP₃→↑Ca²⁺)'}</strong></div>
-          <div class="lab-kv"><span>血管反應</span><strong>${intact ? '釋放 EDRF (NO) → 血管舒張' : '失去 NO 緩衝 → 反轉為血管收縮'}</strong></div>
+          <div class="lab-kv"><span>主要結合位置</span><strong>${formatInline(intact ? '內皮細胞 M₃ → eNOS' : '平滑肌細胞 M₃ (直接 Gq→IP₃→↑Ca²⁺)')}</strong></div>
+          <div class="lab-kv"><span>血管反應</span><strong>${formatInline(intact ? '釋放 EDRF (NO) → 血管舒張' : '失去 NO 緩衝 → 反轉為血管收縮')}</strong></div>
         </div>
       `;
       labEl.querySelector('#btn-endo-unrubbed').addEventListener('click', () => {
@@ -502,7 +513,7 @@
             .map(
               (item) => `
             <button type="button" class="lab-toggle ${revealed[item.term] ? 'active' : ''}" data-rune="${escapeHtml(item.term)}">
-              <code>${escapeHtml(item.term)}</code> ${revealed[item.term] ? '→ ' + escapeHtml(item.ans) : '（點擊破譯）'}
+              <code>${escapeHtml(item.term)}</code> ${revealed[item.term] ? '→ ' + formatInline(item.ans) : '（點擊破譯）'}
             </button>`
             )
             .join('')}
@@ -632,12 +643,12 @@
             <line x1="2" y1="30" x2="94" y2="30" stroke="rgba(255,255,255,0.25)" stroke-width="1"/>
             ${tofHeights.map((h, i) => `<rect x="${8 + i * 22}" y="${30 - h}" width="14" height="${h}" rx="2" fill="hsl(166,68%,54%)"/>`).join('')}
           </svg>
-          <span><strong>${escapeHtml(appliedTofNote)}</strong></span>
+          <span><strong>${formatInline(appliedTofNote)}</strong></span>
         </div>
         <div class="lab-readout">
-          <div class="lab-kv"><span>初始骨骼肌反應</span><strong>${escapeHtml(blockerMeta.onset)}</strong></div>
-          <div class="lab-kv"><span>強直／TOF 特徵</span><strong>${escapeHtml(blockerMeta.tof)}</strong></div>
-          <div class="lab-kv"><span>併用介入實測結論</span><strong>${escapeHtml(actionResult)}</strong></div>
+          <div class="lab-kv"><span>初始骨骼肌反應</span><strong>${formatInline(blockerMeta.onset)}</strong></div>
+          <div class="lab-kv"><span>強直／TOF 特徵</span><strong>${formatInline(blockerMeta.tof)}</strong></div>
+          <div class="lab-kv"><span>併用介入實測結論</span><strong>${formatInline(actionResult)}</strong></div>
         </div>
       `;
 
@@ -712,8 +723,8 @@
             .map(
               (f) => `
             <button type="button" class="lab-food-btn ${f.cls === 'safe' ? 'safe' : ''} ${selSet.has(f.id) ? 'active' : ''}" data-food="${f.id}">
-              <span>${selSet.has(f.id) ? '✓ ' : ''}${escapeHtml(f.name)}</span>
-              <small>${escapeHtml(f.mg)}</small>
+              <span>${selSet.has(f.id) ? '✓ ' : ''}${formatInline(f.name)}</span>
+              <small>${formatInline(f.mg)}</small>
             </button>`
             )
             .join('')}
@@ -722,7 +733,7 @@
           <div class="lab-kv"><span>推估餐食負荷</span><strong>~${totalMg} mg Tyramine${specialFlags.length ? ' + 特規胺' : ''}</strong></div>
           <div class="lab-kv"><span>預估血壓／脈象</span><strong>${isCrisis ? '214/126 mmHg（嚴重頭痛・血管炸裂）' : isBorder ? '148/92 mmHg（輕度升壓）' : '118/76 mmHg（安全平穩）'}</strong></div>
         </div>
-        <div class="lab-note-box">${escapeHtml(verdict)}</div>
+        <div class="lab-note-box">${formatInline(verdict)}</div>
       `;
 
       labEl.querySelectorAll('[data-food]').forEach((btn) => {
@@ -768,19 +779,19 @@
         <div class="lab-controls">
           ${Object.keys(rLabels)
             .map(
-              (rk) => `<button type="button" class="lab-toggle ${sar.rGroup === rk ? 'active' : ''}" data-sar-r="${rk}">${escapeHtml(rLabels[rk])}</button>`
+              (rk) => `<button type="button" class="lab-toggle ${sar.rGroup === rk ? 'active' : ''}" data-sar-r="${rk}">${formatInline(rLabels[rk])}</button>`
             )
             .join('')}
         </div>
         <div class="lab-controls">
           <button type="button" class="lab-toggle ${sar.removeRingOh ? 'active' : ''}" id="btn-sar-ringoh">${sar.removeRingOh ? '✓ ' : ''}去除苯環 3,4-鄰二酚羥基 (-OH)</button>
-          <button type="button" class="lab-toggle ${sar.addAlphaMethyl ? 'active' : ''}" id="btn-sar-alphame">${sar.addAlphaMethyl ? '✓ ' : ''}α-碳導入甲基 (-CH₃)</button>
+          <button type="button" class="lab-toggle ${sar.addAlphaMethyl ? 'active' : ''}" id="btn-sar-alphame">${formatInline((sar.addAlphaMethyl ? '✓ ' : '') + 'α-碳導入甲基 (-CH₃)')}</button>
         </div>
         <div class="lab-readout">
-          <div class="lab-kv"><span>對應藥理原型</span><strong>${escapeHtml(baseName)}</strong></div>
-          <div class="lab-kv"><span>β 受體親和力變化</span><strong>${escapeHtml(betaAff)}</strong></div>
-          <div class="lab-kv"><span>COMT 代謝與 BBB 穿透</span><strong>${escapeHtml(comtText)}</strong></div>
-          <div class="lab-kv"><span>MAO 抗性與藥效時間</span><strong>${escapeHtml(maoText)}</strong></div>
+          <div class="lab-kv"><span>對應藥理原型</span><strong>${formatInline(baseName)}</strong></div>
+          <div class="lab-kv"><span>β 受體親和力變化</span><strong>${formatInline(betaAff)}</strong></div>
+          <div class="lab-kv"><span>COMT 代謝與 BBB 穿透</span><strong>${formatInline(comtText)}</strong></div>
+          <div class="lab-kv"><span>MAO 抗性與藥效時間</span><strong>${formatInline(maoText)}</strong></div>
         </div>
       `;
       labEl.querySelectorAll('[data-sar-r]').forEach((btn) => {
@@ -833,10 +844,10 @@
       labEl.innerHTML = `
         <h3 class="lab-title">四大擬交感胺 IV 血流動力學＆「腎上腺素反轉」模擬器（同步驅動右側 SVG 脈象儀）</h3>
         <div class="lab-controls">
-          <button type="button" class="lab-toggle ${sl.drug === 'pe' ? 'active' : ''}" data-symp="pe">Phenylephrine (α₁)</button>
-          <button type="button" class="lab-toggle ${sl.drug === 'ne' ? 'active' : ''}" data-symp="ne">Norepinephrine (α+β₁)</button>
-          <button type="button" class="lab-toggle ${sl.drug === 'epi' ? 'active' : ''}" data-symp="epi">Epinephrine (α+β₁+β₂)</button>
-          <button type="button" class="lab-toggle ${sl.drug === 'iso' ? 'active' : ''}" data-symp="iso">Isoproterenol (β₁+β₂)</button>
+          <button type="button" class="lab-toggle ${sl.drug === 'pe' ? 'active' : ''}" data-symp="pe">${formatInline('Phenylephrine (α₁)')}</button>
+          <button type="button" class="lab-toggle ${sl.drug === 'ne' ? 'active' : ''}" data-symp="ne">${formatInline('Norepinephrine (α+β₁)')}</button>
+          <button type="button" class="lab-toggle ${sl.drug === 'epi' ? 'active' : ''}" data-symp="epi">${formatInline('Epinephrine (α+β₁+β₂)')}</button>
+          <button type="button" class="lab-toggle ${sl.drug === 'iso' ? 'active' : ''}" data-symp="iso">${formatInline('Isoproterenol (β₁+β₂)')}</button>
         </div>
         <div class="lab-controls">
           <button type="button" class="lab-toggle ${sl.alphaBlocked ? 'active' : ''}" id="btn-symp-ablock">
@@ -844,10 +855,10 @@
           </button>
         </div>
         <div class="lab-readout">
-          <div class="lab-kv"><span>總周邊阻力 (TPR)</span><strong>${escapeHtml(st.tpr)}</strong></div>
-          <div class="lab-kv"><span>收縮壓 / 舒張壓</span><strong>SBP ${escapeHtml(st.sbpText)} / DBP ${escapeHtml(st.dbpText)}</strong></div>
-          <div class="lab-kv"><span>平均動脈壓 / 脈壓</span><strong>MAP ${escapeHtml(st.mapText)}｜PP ${escapeHtml(st.pp)}</strong></div>
-          <div class="lab-kv"><span>心跳淨效應 (β₁ vs 迷走)</span><strong>${escapeHtml(st.hrText)}</strong></div>
+          <div class="lab-kv"><span>總周邊阻力 (TPR)</span><strong>${formatInline(st.tpr)}</strong></div>
+          <div class="lab-kv"><span>收縮壓 / 舒張壓</span><strong>SBP ${formatInline(st.sbpText)} / DBP ${formatInline(st.dbpText)}</strong></div>
+          <div class="lab-kv"><span>平均動脈壓 / 脈壓</span><strong>MAP ${formatInline(st.mapText)}｜PP ${formatInline(st.pp)}</strong></div>
+          <div class="lab-kv"><span>${formatInline('心跳淨效應 (β₁ vs 迷走)')}</span><strong>${formatInline(st.hrText)}</strong></div>
         </div>
       `;
 
@@ -904,15 +915,15 @@
         <h3 class="lab-title">前額葉皮質 (PFC) HCN 通道「訊號 vs. 雜訊」調控模擬台</h3>
         <div class="lab-controls">
           <button type="button" class="lab-toggle ${adhd.state === 'baseline' ? 'active' : ''}" data-adhd="baseline">ADHD 基態</button>
-          <button type="button" class="lab-toggle ${adhd.state === 'ne_a2a' ? 'active' : ''}" data-adhd="ne_a2a">NE / Guanfacine (α₂A)</button>
-          <button type="button" class="lab-toggle ${adhd.state === 'da_d1' ? 'active' : ''}" data-adhd="da_d1">DA (D₁ 開通道去雜訊)</button>
+          <button type="button" class="lab-toggle ${adhd.state === 'ne_a2a' ? 'active' : ''}" data-adhd="ne_a2a">${formatInline('NE / Guanfacine (α₂A)')}</button>
+          <button type="button" class="lab-toggle ${adhd.state === 'da_d1' ? 'active' : ''}" data-adhd="da_d1">${formatInline('DA (D₁ 開通道去雜訊)')}</button>
           <button type="button" class="lab-toggle ${adhd.state === 'atomoxetine' ? 'active' : ''}" data-adhd="atomoxetine">Atomoxetine (NET 雙收)</button>
         </div>
         <div class="lab-readout">
-          <div class="lab-kv"><span>目前路徑</span><strong>${escapeHtml(info.title)}</strong></div>
-          <div class="lab-kv"><span>G 蛋白／cAMP 方向</span><strong>${escapeHtml(info.rec)}</strong></div>
-          <div class="lab-kv"><span>HCN 通道開關</span><strong>${escapeHtml(info.camp)}</strong></div>
-          <div class="lab-kv"><span>臨床認知淨效應</span><strong>${escapeHtml(info.result)}</strong></div>
+          <div class="lab-kv"><span>目前路徑</span><strong>${formatInline(info.title)}</strong></div>
+          <div class="lab-kv"><span>G 蛋白／cAMP 方向</span><strong>${formatInline(info.rec)}</strong></div>
+          <div class="lab-kv"><span>HCN 通道開關</span><strong>${formatInline(info.camp)}</strong></div>
+          <div class="lab-kv"><span>臨床認知淨效應</span><strong>${formatInline(info.result)}</strong></div>
         </div>
       `;
       labEl.querySelectorAll('[data-adhd]').forEach((btn) => {
@@ -933,7 +944,22 @@
     return rng.shuffle(items);
   }
 
-  function renderChoices(choices, lockAll) {
+  function getStepOrderedChoices(choices) {
+    const run = global.TaixuState.getRun();
+    const ev = run && nodesData.events[run.currentEventId];
+    const variant = ev ? getActiveVariantObj(run, ev) : null;
+    const step = variant ? variant.steps[run.currentStepIndex] : null;
+    const salt = `choices_${run ? run.currentEventId : ''}_${variant ? variant.variantId : ''}_${step ? step.id : run.currentStepIndex}`;
+    return getOrderedList(choices, salt);
+  }
+
+  function getRescueOrderedChoices(rescueChoices) {
+    const run = global.TaixuState.getRun();
+    const salt = `rescue_${run ? run.currentEventId : ''}_${run ? run.currentVariantIndex : 0}_${run ? run.currentStepIndex : 0}`;
+    return getOrderedList(rescueChoices, salt);
+  }
+
+  function renderChoices(choices, lockAll, pickedChoiceId) {
     const area = document.getElementById('choices-area');
     area.innerHTML = '';
 
@@ -951,12 +977,7 @@
       return;
     }
 
-    const run = global.TaixuState.getRun();
-    const ev = run && nodesData.events[run.currentEventId];
-    const variant = ev ? getActiveVariantObj(run, ev) : null;
-    const step = variant ? variant.steps[run.currentStepIndex] : null;
-    const salt = `choices_${run ? run.currentEventId : ''}_${variant ? variant.variantId : ''}_${step ? step.id : run.currentStepIndex}`;
-    const ordered = getOrderedList(choices, salt);
+    const ordered = getStepOrderedChoices(choices);
 
     ordered.forEach((choice, idx) => {
       const btn = document.createElement('button');
@@ -968,13 +989,14 @@
 
       if (disabledChoicesOnStep.has(choice.id)) {
         btn.classList.add('picked-wrong');
+      } else if (lockAll && pickedChoiceId && choice.id === pickedChoiceId) {
+        btn.classList.add('picked-correct');
       }
 
       btn.innerHTML = `
         <span class="choice-key">${idx + 1}</span>
         <span class="choice-text-wrap">
-          <span class="choice-main">${escapeHtml(choice.label)}</span>
-          ${choice.sublabel ? `<span class="choice-sub">${escapeHtml(choice.sublabel)}</span>` : ''}
+          <span class="choice-main">${formatInline(choice.label)}</span>
         </span>
       `;
       btn.addEventListener('click', () => handleChoiceClick(choice));
@@ -988,9 +1010,7 @@
     area.innerHTML = '';
     fbPanel.hidden = true;
 
-    const run = global.TaixuState.getRun();
-    const salt = `rescue_${run ? run.currentEventId : ''}_${run ? run.currentVariantIndex : 0}_${run ? run.currentStepIndex : 0}`;
-    const ordered = getOrderedList(rescueChoices, salt);
+    const ordered = getRescueOrderedChoices(rescueChoices);
 
     ordered.forEach((rc, idx) => {
       const btn = document.createElement('button');
@@ -1000,8 +1020,7 @@
       btn.innerHTML = `
         <span class="choice-key">${idx + 1}</span>
         <span class="choice-text-wrap">
-          <span class="choice-main">${escapeHtml(rc.label)}</span>
-          ${rc.sublabel ? `<span class="choice-sub">${escapeHtml(rc.sublabel)}</span>` : ''}
+          <span class="choice-main">${formatInline(rc.label)}</span>
         </span>
       `;
       btn.addEventListener('click', () => handleRescueClick(rc));
@@ -1095,16 +1114,34 @@
       fbPanel.hidden = false;
       fbPanel.className = 'feedback-panel is-wrong';
       document.getElementById('feedback-badge').textContent = '藥理推演警示（可改選其他方案）';
-      document.getElementById('feedback-speaker').textContent = fb.speakerName || '蘇苓師妹';
+      document.getElementById('feedback-speaker').innerHTML = formatInline(fb.speakerName || '蘇苓師妹');
+
+      const subnoteEl = document.getElementById('feedback-subnote');
+      if (subnoteEl) {
+        if (choice.sublabel) {
+          subnoteEl.hidden = false;
+          subnoteEl.innerHTML = `<strong>誘答關鍵點：</strong>${formatInline(choice.sublabel)}`;
+        } else {
+          subnoteEl.hidden = true;
+          subnoteEl.innerHTML = '';
+        }
+      }
+
+      const optionsEl = document.getElementById('feedback-options');
+      if (optionsEl) {
+        optionsEl.hidden = true;
+        optionsEl.innerHTML = '';
+      }
+
       renderRichText(document.getElementById('feedback-body'), fb.text || '此方案將造成異常反應，請再行斟酌！');
       document.getElementById('feedback-unlocks').hidden = true;
       document.getElementById('btn-feedback-next').hidden = true;
 
-      renderChoices(step.choices || [], false);
+      renderChoices(step.choices || [], false, null);
       return;
     }
 
-    // Correct / Branch
+    // Correct / Suboptimal
     global.TaixuPulseMonitor.playUiClick(false);
     if (!currentStepHadMistake) {
       run.totalAnswered += 1;
@@ -1133,11 +1170,23 @@
       if (gained) unlockedNames.push(`丹囊入手：${fb.grantItem.name}`);
     }
 
+    const orderedChoices = getStepOrderedChoices(step.choices || []);
+    const optionNotes = orderedChoices.map((c, idx) => ({
+      num: idx + 1,
+      id: c.id,
+      outcome: c.outcome,
+      picked: c.id === choice.id,
+      label: c.label || '',
+      sublabel: c.sublabel || ''
+    }));
+
     run.pendingTransition = {
       type: 'correct',
       badge: choice.outcome === 'suboptimal' ? '勉強過關（可再精進）' : '推演無誤',
       speakerName: fb.speakerName || '弘岳真人',
       text: fb.text || '施治得宜，氣脈循常！',
+      pickedChoiceId: choice.id,
+      optionNotes,
       unlockedNames,
       nextStepId: choice.nextStepId || null
     };
@@ -1150,7 +1199,7 @@
     const fbPanel = document.getElementById('feedback-panel');
     fbPanel.hidden = false;
     showPendingFeedbackPanel(run.pendingTransition);
-    renderChoices(step.choices || [], true);
+    renderChoices(step.choices || [], true, choice.id);
   }
 
   function handleRescueClick(rc) {
@@ -1160,6 +1209,16 @@
     const step = variant.steps[run.currentStepIndex];
     const crisis = run.activeCrisis;
     if (!crisis) return;
+
+    const orderedRescue = getRescueOrderedChoices(crisis.rescueChoices || []);
+    const optionNotes = orderedRescue.map((opt, idx) => ({
+      num: idx + 1,
+      id: opt.id,
+      outcome: opt.isSuccess ? 'correct' : 'crisis',
+      picked: opt.id === rc.id,
+      label: opt.label || '',
+      sublabel: opt.sublabel || ''
+    }));
 
     if (rc.vitals) global.TaixuState.updateVitals(rc.vitals);
     if (rc.delta) global.TaixuState.applyDelta(rc.delta);
@@ -1203,6 +1262,7 @@
       badge: rc.isSuccess ? '險中求生・成功搶救' : '搶救失利・師尊強行保命',
       speakerName: rc.isSuccess ? '弘岳真人' : '弘岳真人（強行出手）',
       text: feedbackText,
+      optionNotes,
       unlockedNames,
       nextStepId: crisis.nextStepId || null,
       forceEndId
@@ -1220,18 +1280,62 @@
     showPendingFeedbackPanel(run.pendingTransition);
   }
 
+  function formatOptionStatusTag(outcome) {
+    if (outcome === 'correct') return { cls: 'is-correct', label: '正解' };
+    if (outcome === 'suboptimal') return { cls: 'is-suboptimal', label: '次優' };
+    if (outcome === 'crisis') return { cls: 'is-crisis', label: '危機陷阱' };
+    return { cls: 'is-wrong', label: '誘答' };
+  }
+
   function showPendingFeedbackPanel(tr) {
     const fbPanel = document.getElementById('feedback-panel');
     fbPanel.className = `feedback-panel ${tr.type === 'crisis' ? 'is-crisis' : 'is-correct'}`;
     document.getElementById('feedback-badge').textContent = tr.badge;
-    document.getElementById('feedback-speaker').textContent = tr.speakerName;
+    document.getElementById('feedback-speaker').innerHTML = formatInline(tr.speakerName);
+
+    const subnoteEl = document.getElementById('feedback-subnote');
+    if (subnoteEl) {
+      subnoteEl.hidden = true;
+      subnoteEl.innerHTML = '';
+    }
+
     renderRichText(document.getElementById('feedback-body'), tr.text);
+
+    const optionsEl = document.getElementById('feedback-options');
+    if (optionsEl) {
+      const notes = Array.isArray(tr.optionNotes) ? tr.optionNotes : [];
+      if (notes.length > 0 && notes.some((o) => Boolean(o.sublabel))) {
+        optionsEl.hidden = false;
+        const rowsHtml = notes
+          .map((opt) => {
+            const st = formatOptionStatusTag(opt.outcome);
+            return `
+              <div class="feedback-opt-item ${st.cls}">
+                <div class="feedback-opt-head">
+                  <span class="feedback-opt-tag">${st.label}</span>
+                  ${opt.picked ? '<span class="feedback-opt-picked">本輪選擇</span>' : ''}
+                  <span class="feedback-opt-label">${opt.num}. ${formatInline(opt.label)}</span>
+                </div>
+                ${opt.sublabel ? `<div class="feedback-opt-note">${formatInline(opt.sublabel)}</div>` : ''}
+              </div>
+            `;
+          })
+          .join('');
+        optionsEl.innerHTML = `
+          <h4 class="feedback-options-title">作答詳解・各選項機轉與誘答辨析</h4>
+          <div class="feedback-options-list">${rowsHtml}</div>
+        `;
+      } else {
+        optionsEl.hidden = true;
+        optionsEl.innerHTML = '';
+      }
+    }
 
     const unlocksEl = document.getElementById('feedback-unlocks');
     if (tr.unlockedNames && tr.unlockedNames.length > 0) {
       unlocksEl.hidden = false;
       unlocksEl.innerHTML = tr.unlockedNames
-        .map((n) => `<span class="unlock-tag">解鎖 ${escapeHtml(n)}</span>`)
+        .map((n) => `<span class="unlock-tag">解鎖 ${formatInline(n)}</span>`)
         .join('');
     } else {
       unlocksEl.hidden = true;
@@ -1451,7 +1555,7 @@
     const pouchEl = document.getElementById('hud-pouch');
     if (pouchEl) {
       pouchEl.innerHTML = (run.pouchItems || [])
-        .map((it) => `<span class="pouch-item" title="${escapeHtml(it.desc || '')}">${escapeHtml(it.name)}</span>`)
+        .map((it) => `<span class="pouch-item" title="${escapeHtml(it.desc || '')}">${formatInline(it.name)}</span>`)
         .join('');
     }
   }

@@ -427,7 +427,7 @@
               "speaker": "patient",
               "speakerName": "試煉傀儡",
               "speakerTag": "嗜睡風團兼癲癇狀態",
-              "text": "玄陣中一名武修服第一代抗組織胺後昏昏欲睡，另邊雷霆陣中麩胺酸瘋狂放電引發神經壞死！\n蘇苓提醒：「下視丘**結節乳頭核**主清醒，過度興奮又需靠 **GABA** 鎮壓——請問 `GABA_A` 與 `GABA_B` 機轉有何不同？」",
+              "text": "玄陣中一名武修服第一代抗組織胺後昏昏欲睡，另邊雷霆陣中麩胺酸瘋狂放電引發神經壞死！\n蘇苓提醒：「下視丘**結節乳突核**主清醒，過度興奮又需靠 **GABA** 鎮壓——請問 `GABA_A` 與 `GABA_B` 機轉有何不同？」",
               "vitals": {
                 "subject": "雷霆玄冰試煉體",
                 "hr": 92,
@@ -453,7 +453,7 @@
                   "nextStepId": "__EVENT_COMPLETE__",
                   "feedback": {
                     "speakerName": "弘岳真人",
-                    "text": "「妙極！第一代抗組織胺過 BBB 阻斷結節乳頭核 H₁ 致嗜睡（周邊 H₁ 主過敏搔癢、H₂ 主胃酸）；Glutamate 藉 NMDA 致鈣毒性；GABA_A 進 Cl⁻、GABA_B 出 K⁺，雙雙平息紫府風暴！」",
+                    "text": "「妙極！第一代抗組織胺過 BBB 阻斷結節乳突核 H₁ 致嗜睡（周邊 H₁ 主過敏搔癢、H₂ 主胃酸）；Glutamate 藉 NMDA 致鈣毒性；GABA_A 進 Cl⁻、GABA_B 出 K⁺，雙雙平息紫府風暴！」",
                     "delta": { "yin": 3, "yang": 1 },
                     "unlockCodex": [10, 11],
                     "grantItem": { "id": "jade_cns_scroll", "name": "鎮魂玉簡", "desc": "熟諳中樞 Histamine/GABA/NMDA 機轉" },
@@ -590,7 +590,7 @@
       "chapterTitle": "第 2 章・璇璣受體閣",
       "location": "璇璣閣・七轉玲瓏台",
       "title": "七轉玲瓏鎖與受體宗譜",
-      "hubSummary": "GPCR 四步放大循環、M1–M5 奇偶口訣、NM 胎兒/成人五聚體與 α1C 歷史公案。",
+      "hubSummary": "GPCR 四步放大循環、M1–M5 奇偶口訣、N_M 胎兒/成人五聚體與 α1C 歷史公案。",
       "codexIds": [12, 13, 14],
       "unlockTables": ["tbl_receptors"],
       "storyMode": "one",

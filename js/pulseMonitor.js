@@ -136,18 +136,26 @@
       }
     }
     const noteEl = document.getElementById('val-tof-note');
-    if (noteEl) noteEl.textContent = customNote || cfg.note;
+    if (noteEl) {
+      const fmt = global.TaixuFormat;
+      noteEl.innerHTML = fmt ? fmt.formatClinicalInline(customNote || cfg.note) : (customNote || cfg.note);
+    }
   }
 
   function renderStaticMetrics(v) {
+    const fmt = global.TaixuFormat;
     const setText = (id, text) => {
       const el = document.getElementById(id);
       if (el) el.textContent = text;
     };
+    const setFormatted = (id, text) => {
+      const el = document.getElementById(id);
+      if (el) el.innerHTML = fmt ? fmt.formatClinicalInline(text) : text;
+    };
 
-    setText('monitor-subject', `受測對象：${v.subject || '林玄'}`);
+    setFormatted('monitor-subject', `受測對象：${v.subject || '林玄'}`);
     setText('val-hr', v.rhythm === 'asystole' ? '0' : String(v.hr));
-    setText('val-rhythm', v.rhythmText || '竇性節律');
+    setFormatted('val-rhythm', v.rhythmText || '竇性節律');
     setText('val-bp', `${v.sbp}/${v.dbp}`);
     const sbp = Number(v.sbp) || 118;
     const dbp = Number(v.dbp) || 76;
@@ -181,7 +189,7 @@
       tempItem.classList.toggle('is-danger', temp >= 39.0);
       tempItem.classList.toggle('is-warn', temp >= 37.8 && temp < 39.0);
     }
-    setText(
+    setFormatted(
       'val-temp-note',
       temp >= 39.5 ? '惡性高熱／高溫危象！' : temp >= 38.2 ? '體溫竄升（無汗熱症）' : '體溫恆定'
     );
@@ -194,7 +202,7 @@
       kItem.classList.toggle('is-danger', kVal >= 5.8 || kVal <= 2.8);
       kItem.classList.toggle('is-warn', (kVal >= 5.2 && kVal < 5.8) || (kVal > 2.8 && kVal <= 3.4));
     }
-    setText(
+    setFormatted(
       'val-k-note',
       kVal >= 5.8
         ? '致命高血鉀！急須鈣鹽穩膜'
@@ -211,7 +219,7 @@
 
     const pupilTag = mm <= 2.2 ? '針尖縮瞳 (Miosis)' : mm >= 5.5 ? '散瞳放大 (Mydriasis)' : '正常調控';
     setText('val-pupil', `${mm.toFixed(1)} mm・${pupilTag}`);
-    setText('val-ciliary', `睫狀肌：${v.ciliary || '適度平衡'}`);
+    setFormatted('val-ciliary', `睫狀肌：${v.ciliary || '適度平衡'}`);
 
     const ciliaryRing = document.getElementById('ciliary-ring');
     if (ciliaryRing) {
@@ -232,7 +240,7 @@
     }
     const airwayTag = airway <= 55 ? '支氣管痙攣' : airway >= 112 ? '擴張通暢' : '氣道暢通';
     setText('val-airway', `${airwayTag} (${airway}%)`);
-    setText('val-secretion', `腺體分泌：${v.secretion || '正常'}`);
+    setFormatted('val-secretion', `腺體分泌：${v.secretion || '正常'}`);
 
     const mucusGroup = document.getElementById('airway-mucus');
     if (mucusGroup) {
@@ -247,7 +255,7 @@
     const nmj = Math.max(5, Math.min(95, Number(v.nmj) || 50));
     const nmjMarker = document.getElementById('nmj-marker');
     if (nmjMarker) nmjMarker.style.left = `${nmj}%`;
-    setText('val-nmj-label', v.nmjLabel || '穩健有力');
+    setFormatted('val-nmj-label', v.nmjLabel || '穩健有力');
     renderTofBars(v.tofPattern || 'normal', v.tofNote);
 
     // ECG block alarm styling
@@ -288,7 +296,7 @@
             : (b.level || 'info');
           if (level === 'danger') hasDanger = true;
           span.className = `seal-tag ${level === 'danger' ? 'seal-danger' : level === 'warn' ? 'seal-warn' : ''}`;
-          span.textContent = `[${text}]`;
+          span.innerHTML = fmt ? fmt.formatClinicalInline(`[${text}]`) : `[${text}]`;
           sealsEl.appendChild(span);
         });
       }

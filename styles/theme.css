@@ -14,11 +14,15 @@
   --border-hairline: hsl(35, 22%, 82%);
   --border-strong: hsl(34, 22%, 68%);
 
-  /* 太陰玄水 (Jade Teal) 與 太陽真火 (Amber Ochre) 與 硃砂 (Cinnabar) */
-  --yin-color: hsl(172, 46%, 31%);
-  --yin-soft: hsla(172, 46%, 31%, 0.11);
-  --yang-color: hsl(30, 74%, 42%);
-  --yang-soft: hsla(30, 74%, 42%, 0.12);
+  /* 太陰玄水 (青冥靛青 Cerulean Indigo) 與 太陽真火 (赤金琥珀 Amber Gold) 與 硃砂 (Cinnabar 告警／印章專用) */
+  --yin-color: hsl(210, 56%, 38%);
+  --yin-soft: hsla(210, 56%, 38%, 0.11);
+  --yin-emblem-start: hsl(212, 58%, 34%);
+  --yin-emblem-end: #3271AE;
+  --yang-color: hsl(36, 80%, 35%);
+  --yang-soft: hsla(36, 80%, 35%, 0.12);
+  --yang-emblem-start: #A96E14;
+  --yang-emblem-end: #D59A2B;
   --cinnabar: hsl(7, 68%, 44%);
   --cinnabar-soft: hsla(7, 68%, 44%, 0.11);
   --jade-ok: hsl(156, 48%, 32%);
@@ -58,10 +62,14 @@ html[data-theme="ink"] {
   --border-hairline: hsl(212, 14%, 23%);
   --border-strong: hsl(212, 14%, 34%);
 
-  --yin-color: hsl(168, 52%, 52%);
-  --yin-soft: hsla(168, 52%, 52%, 0.14);
-  --yang-color: hsl(36, 78%, 56%);
-  --yang-soft: hsla(36, 78%, 56%, 0.14);
+  --yin-color: hsl(206, 68%, 62%);
+  --yin-soft: hsla(206, 68%, 62%, 0.14);
+  --yin-emblem-start: #448CCE;
+  --yin-emblem-end: #6CB4F0;
+  --yang-color: hsl(40, 84%, 58%);
+  --yang-soft: hsla(40, 84%, 58%, 0.15);
+  --yang-emblem-start: #D99B26;
+  --yang-emblem-end: #F2C14E;
   --cinnabar: hsl(7, 74%, 58%);
   --cinnabar-soft: hsla(7, 74%, 58%, 0.15);
   --jade-ok: hsl(154, 52%, 50%);
@@ -114,10 +122,30 @@ body {
   padding: 0 20px 48px;
 }
 
+/* 上下標統一基線與零行距膨脹（修正手機／桌機錯位與撐開行高） */
+sub,
+sup {
+  font-size: 0.72em;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+  font-weight: inherit;
+  letter-spacing: 0;
+}
+
+sup {
+  top: -0.44em;
+}
+
+sub {
+  bottom: -0.22em;
+}
+
 code {
   font-family: var(--font-mono);
   font-size: 0.88em;
-  padding: 1px 6px;
+  line-height: 1.45;
+  padding: 1.5px 6px;
   border-radius: 4px;
   background: var(--surface-elevated);
   border: 1px solid var(--border-hairline);
@@ -209,7 +237,7 @@ code {
   font-size: 0.84rem;
   font-weight: 500;
   cursor: pointer;
-  transition: border-color 0.18s ease, background-color 0.18s ease, transform 0.12s ease;
+  transition: border-color 0.16s ease, background-color 0.16s ease, color 0.16s ease, transform 0.12s ease;
 }
 
 .btn-tool:hover {
@@ -283,7 +311,7 @@ code {
   font-size: 0.9rem;
   font-weight: 500;
   cursor: pointer;
-  transition: background-color 0.18s ease;
+  transition: background-color 0.16s ease, color 0.16s ease;
 }
 
 .btn-secondary:hover {
@@ -303,11 +331,11 @@ code {
   font-size: 0.92rem;
   font-weight: 700;
   cursor: pointer;
-  transition: background-color 0.18s ease;
+  transition: background-color 0.16s ease, color 0.16s ease;
 }
 
 .btn-resume:hover {
-  background: hsla(172, 46%, 31%, 0.18);
+  background: hsla(210, 56%, 38%, 0.18);
 }
 
 /* 開局畫卷 */
@@ -431,7 +459,7 @@ code {
   border: 1.5px solid var(--border-hairline);
   background: var(--surface-paper);
   cursor: pointer;
-  transition: border-color 0.18s ease, background-color 0.18s ease;
+  transition: border-color 0.16s ease, background-color 0.16s ease, color 0.16s ease;
 }
 
 .mode-card input[type="radio"] {
@@ -527,7 +555,7 @@ code {
   background: var(--surface-card);
   font-size: 0.86rem;
   cursor: pointer;
-  transition: border-color 0.16s ease, background-color 0.16s ease;
+  transition: border-color 0.16s ease, background-color 0.16s ease, color 0.16s ease;
 }
 
 .route-pill input {
@@ -1010,16 +1038,18 @@ code {
 }
 
 .choice-btn:disabled {
-  opacity: 0.55;
+  opacity: 0.62;
   cursor: not-allowed;
 }
 
 .choice-btn.picked-correct {
+  opacity: 1;
   border-color: var(--jade-ok);
   background: var(--jade-soft);
 }
 
 .choice-btn.picked-wrong {
+  opacity: 0.86;
   border-color: var(--cinnabar);
   background: var(--cinnabar-soft);
 }
@@ -1049,6 +1079,7 @@ code {
 .choice-main {
   font-weight: 600;
   font-size: 0.96rem;
+  line-height: 1.5;
 }
 
 .choice-sub {
@@ -1110,11 +1141,132 @@ code {
   font-size: 0.94rem;
 }
 
+.feedback-subnote {
+  margin-bottom: 10px;
+  padding: 8px 12px;
+  border-left: 3px solid var(--yang-color);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  background: var(--yang-soft);
+  color: var(--ink-primary);
+  font-size: 0.86rem;
+  line-height: 1.55;
+}
+
+.feedback-subnote strong {
+  color: var(--yang-color);
+  font-weight: 700;
+}
+
 .feedback-body {
   font-size: 0.94rem;
   line-height: 1.75;
   color: var(--ink-primary);
   margin-bottom: 12px;
+}
+
+.feedback-options {
+  margin: 0 0 14px;
+  padding: 12px 14px;
+  border-radius: var(--radius-sm);
+  background: var(--surface-card);
+  border: 1px solid var(--border-hairline);
+}
+
+.feedback-options-title {
+  margin: 0 0 8px;
+  font-family: var(--font-serif);
+  font-size: 0.84rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: var(--ink-secondary);
+}
+
+.feedback-options-list {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.feedback-opt-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 8px 10px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-hairline);
+  background: var(--surface-paper);
+  font-size: 0.84rem;
+  line-height: 1.55;
+}
+
+.feedback-opt-item.is-correct {
+  border-color: hsla(156, 48%, 32%, 0.42);
+  background: var(--jade-soft);
+}
+
+.feedback-opt-item.is-suboptimal {
+  border-color: hsla(36, 80%, 35%, 0.42);
+  background: var(--yang-soft);
+}
+
+.feedback-opt-item.is-crisis {
+  border-color: hsla(7, 68%, 44%, 0.36);
+}
+
+.feedback-opt-head {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.feedback-opt-tag {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 1px 6px;
+  border-radius: 4px;
+  background: var(--surface-elevated);
+  color: var(--ink-secondary);
+  flex-shrink: 0;
+}
+
+.feedback-opt-item.is-correct .feedback-opt-tag {
+  background: var(--jade-ok);
+  color: #fffaf5;
+}
+
+.feedback-opt-item.is-suboptimal .feedback-opt-tag {
+  background: var(--yang-color);
+  color: #fffaf5;
+}
+
+.feedback-opt-item.is-wrong .feedback-opt-tag {
+  background: var(--yin-soft);
+  color: var(--yin-color);
+}
+
+.feedback-opt-item.is-crisis .feedback-opt-tag {
+  background: var(--cinnabar-soft);
+  color: var(--cinnabar);
+}
+
+.feedback-opt-picked {
+  font-size: 0.71rem;
+  font-weight: 700;
+  color: var(--yin-color);
+  border: 1px solid var(--yin-color);
+  padding: 0 5px;
+  border-radius: 3px;
+}
+
+.feedback-opt-label {
+  font-weight: 600;
+  color: var(--ink-primary);
+}
+
+.feedback-opt-note {
+  color: var(--ink-secondary);
+  padding-left: 2px;
 }
 
 .feedback-unlocks {

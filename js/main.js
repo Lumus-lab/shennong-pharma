@@ -235,10 +235,11 @@
           const row = document.createElement('div');
           row.className = 'save-slot-row';
           row.setAttribute('data-slot-id', slot.slotId);
+          const fmt = (s) => (global.TaixuFormat ? global.TaixuFormat.formatClinicalInline(s) : escapeHtml(s));
           row.innerHTML = `
             <div class="save-slot-meta">
-              <span class="save-slot-title">${escapeHtml(slot.title)}</span>
-              <span class="save-slot-desc">${escapeHtml(slot.summary)}</span>
+              <span class="save-slot-title">${fmt(slot.title)}</span>
+              <span class="save-slot-desc">${fmt(slot.summary)}</span>
             </div>
             <div class="save-slot-actions">
               <button type="button" class="btn-primary btn-resume-slot" data-resume-slot="${escapeHtml(slot.slotId)}">繼續此進度</button>
@@ -268,9 +269,11 @@
   }
 
   function showEndingScreen(summary) {
+    const fmtInline = (s) => (global.TaixuFormat ? global.TaixuFormat.formatClinicalInline(s) : escapeHtml(s));
+    const fmtMd = (s) => (global.TaixuFormat ? global.TaixuFormat.formatClinicalMarkdown(s) : escapeHtml(s));
     showScreen('screen-ending');
-    document.getElementById('ending-seal').textContent = summary.ending.seal || '太虛印可';
-    document.getElementById('ending-title').textContent = summary.ending.title;
+    document.getElementById('ending-seal').innerHTML = fmtInline(summary.ending.seal || '太虛印可');
+    document.getElementById('ending-title').innerHTML = fmtInline(summary.ending.title);
     const scopeName =
       summary.mode === 'story'
         ? summary.storyScope === 'part1'
@@ -280,7 +283,7 @@
             : '全四卷大貫通'
         : `Roguelike 速行篇 (${summary.route || '混戰'})`;
     document.getElementById('ending-subtitle').textContent = `${scopeName}｜天機籤號：${summary.seed}`;
-    document.getElementById('ending-narrative').innerHTML = `<p>${escapeHtml(summary.ending.narrative)}</p><p style="color:var(--ink-secondary);margin-top:8px;">${escapeHtml(summary.ending.summary)}</p>`;
+    document.getElementById('ending-narrative').innerHTML = `<p>${fmtMd(summary.ending.narrative)}</p><p style="color:var(--ink-secondary);margin-top:8px;">${fmtMd(summary.ending.summary)}</p>`;
 
     const acc = summary.totalAnswered > 0 ? Math.round((summary.correctFirstTry / summary.totalAnswered) * 100) : 100;
     const metricsEl = document.getElementById('ending-metrics');
@@ -299,9 +302,9 @@
         .map(
           (n) => `
         <div class="wrong-card">
-          <h4>${escapeHtml(n.title)}</h4>
-          <p><strong>誤選：</strong>${escapeHtml(n.picked)}</p>
-          <p>${escapeHtml(n.explanation)}</p>
+          <h4>${fmtInline(n.title)}</h4>
+          <p><strong>誤選：</strong>${fmtInline(n.picked)}</p>
+          <p>${fmtMd(n.explanation)}</p>
         </div>`
         )
         .join('');

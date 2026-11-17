@@ -154,21 +154,22 @@
     const unlockedSet = new Set(meta.unlockedCodex);
     const entries = codexData.entries || [];
 
+    const normalizedQuery = searchQuery ? stripClinical(searchQuery).toLowerCase() : '';
     const filtered = entries.filter((entry) => {
       if (activeVol !== 'all' && String(entry.vol) !== String(activeVol)) return false;
       if (activeScroll !== 'all' && entry.scroll !== activeScroll) return false;
-      if (!searchQuery) return true;
-      const hay = [
-        entry.title,
-        entry.subtitle,
-        entry.summary,
-        ...(entry.keyPoints || []),
-        ...(entry.drugs || []),
-        entry.trapAlert || ''
-      ]
-        .join(' ')
-        .toLowerCase();
-      return hay.includes(searchQuery);
+      if (!normalizedQuery) return true;
+      const hay = stripClinical(
+        [
+          entry.title,
+          entry.subtitle,
+          entry.summary,
+          ...(entry.keyPoints || []),
+          ...(entry.drugs || []),
+          entry.trapAlert || ''
+        ].join(' ')
+      ).toLowerCase();
+      return hay.includes(normalizedQuery);
     });
 
     if (filtered.length === 0) {
@@ -189,24 +190,24 @@
             <span class="codex-num">#${String(entry.num).padStart(2, '0')}・${scrollName}</span>
             <span class="codex-num">尚未解鎖</span>
           </div>
-          <h3>${escapeHtml(entry.title)}</h3>
+          <h3>${formatInline(entry.title)}</h3>
           <p style="margin:0;font-size:0.84rem;color:var(--ink-muted)">於試煉中遭遇此卷考點後自動拓印全文與記憶口訣。</p>
         `;
       } else {
-        const pointsHtml = (entry.keyPoints || []).map((pt) => `<li>${escapeHtml(pt)}</li>`).join('');
+        const pointsHtml = (entry.keyPoints || []).map((pt) => `<li>${formatInline(pt)}</li>`).join('');
         const drugsHtml = (entry.drugs || [])
-          .map((d) => `<span class="drug-badge">${escapeHtml(d)}</span>`)
+          .map((d) => `<span class="drug-badge">${formatInline(d)}</span>`)
           .join('');
         const trapHtml = entry.trapAlert
-          ? `<div class="trap-box"><strong>國考與臨床地雷：</strong>${escapeHtml(entry.trapAlert)}</div>`
+          ? `<div class="trap-box"><strong>國考與臨床地雷：</strong>${formatInline(entry.trapAlert)}</div>`
           : '';
         card.innerHTML = `
           <div class="codex-card-head">
             <span class="codex-num">#${String(entry.num).padStart(2, '0')}・第${entry.vol}卷・${scrollName}</span>
             <span class="unlock-tag">已拓印</span>
           </div>
-          <h3>${escapeHtml(entry.title)}</h3>
-          <p style="margin:0 0 6px;font-size:0.88rem;color:var(--ink-secondary)">${escapeHtml(entry.summary)}</p>
+          <h3>${formatInline(entry.title)}</h3>
+          <p style="margin:0 0 6px;font-size:0.88rem;color:var(--ink-secondary)">${formatInline(entry.summary)}</p>
           <ul class="codex-points">${pointsHtml}</ul>
           ${drugsHtml ? `<div class="codex-drugs">${drugsHtml}</div>` : ''}
           ${trapHtml}
@@ -247,16 +248,16 @@
 
       if (!unlocked) {
         wrap.innerHTML = `
-          <h3 class="ref-table-title">${escapeHtml(tbl.title)}（尚未解鎖）</h3>
+          <h3 class="ref-table-title">${formatInline(tbl.title)}（尚未解鎖）</h3>
           <p style="margin:12px 14px;font-size:0.84rem;color:var(--ink-muted)">推展對應章節劇情即可解鎖，或勾選上方「考前速查」直接查閱。</p>
         `;
       } else {
-        const ths = (tbl.headers || []).map((h) => `<th>${escapeHtml(h)}</th>`).join('');
+        const ths = (tbl.headers || []).map((h) => `<th>${formatInline(h)}</th>`).join('');
         const trs = (tbl.rows || [])
-          .map((row) => `<tr>${row.map((cell) => `<td>${escapeHtml(cell)}</td>`).join('')}</tr>`)
+          .map((row) => `<tr>${row.map((cell) => `<td>${formatInline(cell)}</td>`).join('')}</tr>`)
           .join('');
         wrap.innerHTML = `
-          <h3 class="ref-table-title">${escapeHtml(tbl.title)}</h3>
+          <h3 class="ref-table-title">${formatInline(tbl.title)}</h3>
           <table class="ref-table">
             <thead><tr>${ths}</tr></thead>
             <tbody>${trs}</tbody>
@@ -281,9 +282,9 @@
       const card = document.createElement('article');
       card.className = 'wrong-card';
       card.innerHTML = `
-        <h4>${escapeHtml(n.title)} ${n.count > 1 ? `<span class="codex-num">累計 ${n.count} 次</span>` : ''}</h4>
-        <p><strong>誤選方案：</strong>${escapeHtml(n.picked)}</p>
-        <p><strong>病理演繹與校正：</strong>${escapeHtml(n.explanation)}</p>
+        <h4>${formatInline(n.title)} ${n.count > 1 ? `<span class="codex-num">累計 ${n.count} 次</span>` : ''}</h4>
+        <p><strong>誤選方案：</strong>${formatInline(n.picked)}</p>
+        <p><strong>病理演繹與校正：</strong>${formatMarkdown(n.explanation)}</p>
       `;
       container.appendChild(card);
     });
@@ -300,14 +301,26 @@
       card.className = `codex-card ${unlocked ? '' : 'locked'}`;
       card.innerHTML = `
         <div class="codex-card-head">
-          <span class="codex-num">${escapeHtml(ed.seal || '結局')}</span>
+          <span class="codex-num">${formatInline(ed.seal || '結局')}</span>
           <span class="${unlocked ? 'unlock-tag' : 'codex-num'}">${unlocked ? '已達成' : '未達成'}</span>
         </div>
-        <h3>${escapeHtml(ed.title)}</h3>
-        <p style="margin:0 0 6px;font-size:0.86rem;color:var(--ink-secondary)">${escapeHtml(unlocked ? ed.summary : ed.unlockHint)}</p>
+        <h3>${formatInline(ed.title)}</h3>
+        <p style="margin:0 0 6px;font-size:0.86rem;color:var(--ink-secondary)">${formatInline(unlocked ? ed.summary : ed.unlockHint)}</p>
       `;
       container.appendChild(card);
     });
+  }
+
+  function formatInline(str) {
+    return global.TaixuFormat ? global.TaixuFormat.formatClinicalInline(str) : escapeHtml(str);
+  }
+
+  function formatMarkdown(str) {
+    return global.TaixuFormat ? global.TaixuFormat.formatClinicalMarkdown(str) : escapeHtml(str);
+  }
+
+  function stripClinical(str) {
+    return global.TaixuFormat ? global.TaixuFormat.stripClinicalTags(str) : String(str || '');
   }
 
   function escapeHtml(str) {

@@ -352,6 +352,137 @@
     saveRun();
   }
 
+  const SUB_CHAR_MAP = {
+    '₀': '0',
+    '₁': '1',
+    '₂': '2',
+    '₃': '3',
+    '₄': '4',
+    '₅': '5',
+    '₆': '6',
+    '₇': '7',
+    '₈': '8',
+    '₉': '9'
+  };
+
+  const SUP_CHAR_MAP = {
+    '⁰': '0',
+    '¹': '1',
+    '²': '2',
+    '³': '3',
+    '⁴': '4',
+    '⁵': '5',
+    '⁶': '6',
+    '⁷': '7',
+    '⁸': '8',
+    '⁹': '9',
+    '⁺': '+',
+    '⁻': '−'
+  };
+
+  function escapeHtml(str) {
+    return String(str == null ? '' : str)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;');
+  }
+
+  function toAsciiSub(str) {
+    return String(str || '').replace(/[₀-₉]/g, (ch) => SUB_CHAR_MAP[ch] || ch);
+  }
+
+  function toAsciiSup(str) {
+    return String(str || '').replace(/[⁰¹²³⁴⁵⁶⁷⁸⁹⁺⁻]/g, (ch) => SUP_CHAR_MAP[ch] || ch);
+  }
+
+  // Single-pass union regex outside HTML tags so generated <sub>/<sup> tags are never nested or corrupted
+  const CLINICAL_TOKEN_RE = new RegExp(
+    [
+      '\\b(?:GABA_[AB]|N_[MN]|G_[isq]|ET_[AB]|I_(?:K,ACh|Ca|f)|NK_[1-3])',
+      'PGF[₂2]α',
+      'NaHCO[₃3]|MgSO[₄4]|OCONH[₂2]|CH[₂2]OH|CH[₃3]|H[₂2]O',
+      'α[₇7]AChR',
+      'α[₂2](?:A\\/[2₂]?B\\/[2₂]?C|A\\/B\\/C)',
+      'α[₁1]A\\/B\\/D',
+      'β[₁1]\\/2\\/3',
+      '5-HT[1-7₁-₇][A-D]*(?:\\/[1-7₁-₇]?[A-D]+)*',
+      'G(?:₁₂\\/₁₃|12\\/13|i\\/o|q\\/11|α[isq]|βγ)',
+      '\\)[235₂₃₅](?![A-Za-z0-9_])',
+      '[αβ](?:[1-7][A-D]?|[₁-₇][A-D]*)(?![A-Za-z0-9_])',
+      '(?<![A-Za-z0-9_])(?:M[1-5]|H[1-4]|D[1-5]|AT[12]|V[12]|NK[1-3]|IP3|PIP2|G[isq])(?![A-Za-z0-9_])',
+      '[₀-₉]+',
+      '[⁰¹²³⁴⁵⁶⁷⁸⁹⁺⁻]+'
+    ].join('|'),
+    'g'
+  );
+
+  function formatClinicalToken(tok) {
+    if (tok === 'PGF₂α' || tok === 'PGF2α') return 'PGF<sub>2α</sub>';
+    if (tok === 'NaHCO₃' || tok === 'NaHCO3') return 'NaHCO<sub>3</sub>';
+    if (tok === 'MgSO₄' || tok === 'MgSO4') return 'MgSO<sub>4</sub>';
+    if (tok === 'OCONH₂' || tok === 'OCONH2') return 'OCONH<sub>2</sub>';
+    if (tok === 'CH₂OH' || tok === 'CH2OH') return 'CH<sub>2</sub>OH';
+    if (tok === 'CH₃' || tok === 'CH3') return 'CH<sub>3</sub>';
+    if (tok === 'H₂O' || tok === 'H2O') return 'H<sub>2</sub>O';
+    if (tok === 'α₇AChR' || tok === 'α7AChR') return 'α<sub>7</sub>AChR';
+
+    if (tok.startsWith('GABA_')) return `GABA<sub>${tok.slice(5)}</sub>`;
+    if (tok.startsWith('N_')) return `N<sub>${tok.slice(2)}</sub>`;
+    if (tok.startsWith('G_')) return `G<sub>${tok.slice(2)}</sub>`;
+    if (tok.startsWith('ET_')) return `ET<sub>${tok.slice(3)}</sub>`;
+    if (tok.startsWith('I_')) return `I<sub>${tok.slice(2)}</sub>`;
+    if (tok.startsWith('NK_')) return `NK<sub>${tok.slice(3)}</sub>`;
+
+    if (tok.startsWith('5-HT')) return `5-HT<sub>${toAsciiSub(tok.slice(4))}</sub>`;
+    if (tok.startsWith('G') && tok.length >= 2) return `G<sub>${toAsciiSub(tok.slice(1))}</sub>`;
+    if (tok.startsWith(')')) return `)<sub>${toAsciiSub(tok.slice(1))}</sub>`;
+    if (tok[0] === 'α' || tok[0] === 'β') return `${tok[0]}<sub>${toAsciiSub(tok.slice(1))}</sub>`;
+    if (/^(?:M|H|D|V)[1-5]$/.test(tok)) return `${tok[0]}<sub>${tok.slice(1)}</sub>`;
+    if (/^(?:AT|NK)[1-3]$/.test(tok)) return `${tok.slice(0, 2)}<sub>${tok.slice(2)}</sub>`;
+    if (tok === 'IP3') return 'IP<sub>3</sub>';
+    if (tok === 'PIP2') return 'PIP<sub>2</sub>';
+    if (/^[₀-₉]+$/.test(tok)) return `<sub>${toAsciiSub(tok)}</sub>`;
+    if (/^[⁰¹²³⁴⁵⁶⁷⁸⁹⁺⁻]+$/.test(tok)) return `<sup>${toAsciiSup(tok)}</sup>`;
+    return tok;
+  }
+
+  function applyClinicalScripts(htmlStr) {
+    return String(htmlStr || '').replace(/(<[^>]+>)|([^<]+)/g, (match, tag, text) => {
+      if (tag) return tag;
+      return text.replace(CLINICAL_TOKEN_RE, formatClinicalToken);
+    });
+  }
+
+  function formatClinicalInline(rawStr) {
+    return applyClinicalScripts(escapeHtml(rawStr));
+  }
+
+  function formatClinicalMarkdown(rawStr) {
+    const escaped = escapeHtml(rawStr)
+      .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
+      .replace(/`([^`]+)`/g, '<code>$1</code>');
+    return applyClinicalScripts(escaped);
+  }
+
+  function stripClinicalTags(str) {
+    return toAsciiSub(String(str || ''))
+      .replace(/[⁰¹²³⁴⁵⁶⁷⁸⁹⁺⁻]/g, (ch) => {
+        const mapped = SUP_CHAR_MAP[ch] || ch;
+        return mapped === '−' ? '-' : mapped;
+      })
+      .replace(/−/g, '-')
+      .replace(/<\/?(?:sub|sup|strong|code)>/gi, '')
+      .replace(/_/g, '');
+  }
+
+  global.TaixuFormat = {
+    escapeHtml,
+    formatClinicalInline,
+    formatClinicalMarkdown,
+    stripClinicalTags
+  };
+
   global.TaixuState = {
     DEFAULT_VITALS,
     getMeta,

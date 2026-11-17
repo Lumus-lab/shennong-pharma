@@ -57,6 +57,8 @@
     const mode = opts.mode === 'story' ? 'story' : 'roguelike';
     const route = opts.route || 'all_mixed';
     const storyScope = opts.storyScope || 'full';
+    const storyVariantMode = opts.storyVariantMode || 'compact';
+    const rogueVariantMode = opts.rogueVariantMode || 'balanced';
     const rogueLength = Number(opts.rogueLength) === 8 ? 8 : 6;
     const seed = String(opts.seed || 'TX-4072').trim();
 
@@ -88,7 +90,16 @@
       eventPlan.forEach((eid) => {
         const ev = nodesData.events[eid];
         if (ev && ev.variants && ev.variants.length > 0) {
-          const picked = rng.pick(ev.variants);
+          const coreVariants = ev.variants.filter((v) => v.variantType !== 'past_exam');
+          const pastVariants = ev.variants.filter((v) => v.variantType === 'past_exam');
+          let picked = null;
+          if (rogueVariantMode === 'past_exam' && pastVariants.length > 0) {
+            picked = rng.pick(pastVariants);
+          } else if (coreVariants.length > 0 && pastVariants.length > 0) {
+            picked = rng.next() < 0.5 ? rng.pick(pastVariants) : rng.pick(coreVariants);
+          } else {
+            picked = rng.pick(ev.variants);
+          }
           resolvedVariants[eid] = [picked.variantId];
         }
       });
@@ -101,11 +112,23 @@
       eventPlan.forEach((eid) => {
         const ev = nodesData.events[eid];
         if (!ev || !ev.variants || ev.variants.length === 0) return;
-        const vIds = ev.variants.map((v) => v.variantId);
-        if (ev.storyMode === 'all') {
-          resolvedVariants[eid] = rng.shuffle(vIds);
+        const coreVariants = ev.variants.filter((v) => v.variantType !== 'past_exam');
+        const pastVariants = ev.variants.filter((v) => v.variantType === 'past_exam');
+
+        let coreQueue = [];
+        if (coreVariants.length > 0) {
+          const coreIds = coreVariants.map((v) => v.variantId);
+          coreQueue = ev.storyMode === 'all' ? rng.shuffle(coreIds) : [rng.pick(coreIds)];
+        }
+
+        if (storyVariantMode === 'core_only' || pastVariants.length === 0) {
+          resolvedVariants[eid] = coreQueue.length > 0 ? coreQueue : [ev.variants[0].variantId];
+        } else if (storyVariantMode === 'all') {
+          const pastIds = rng.shuffle(pastVariants.map((v) => v.variantId));
+          resolvedVariants[eid] = coreQueue.concat(pastIds);
         } else {
-          resolvedVariants[eid] = [rng.pick(vIds)];
+          const sampledPast = rng.pick(pastVariants);
+          resolvedVariants[eid] = sampledPast ? coreQueue.concat([sampledPast.variantId]) : coreQueue;
         }
       });
 
@@ -119,6 +142,8 @@
       mode,
       route,
       storyScope,
+      storyVariantMode,
+      rogueVariantMode,
       rogueLength,
       seed,
       eventPlan,
@@ -310,7 +335,10 @@
     const variantChip = document.getElementById('variant-chip');
     if (variantChip) {
       variantChip.hidden = false;
-      variantChip.textContent = `變體 ${variant.variantId}`;
+      variantChip.textContent = variant.examTag
+        ? `變體 ${variant.variantId}｜${variant.examTag}`
+        : `變體 ${variant.variantId}`;
+      variantChip.classList.toggle('is-past-exam', variant.variantType === 'past_exam');
     }
 
     // Check active crisis
@@ -318,7 +346,7 @@
     if (run.activeCrisis) {
       crisisBanner.hidden = false;
       document.getElementById('crisis-title-text').innerHTML = formatInline(run.activeCrisis.title);
-      document.getElementById('crisis-mech-text').innerHTML = formatInline(run.activeCrisis.mechanism);
+      document.getElementById('crisis-mech-text').innerHTML = formatInlineMarkup(run.activeCrisis.mechanism);
       renderSpeaker('suling', '急症搶救線', '臨危處置・即時補救');
       renderRichText(document.getElementById('scene-body'), run.activeCrisis.rescuePrompt);
       document.getElementById('pouch-hint').hidden = true;
@@ -1054,7 +1082,7 @@
 
       const note = {
         key: `${ev.id}_${variant.variantId}_${step.id}_${choice.id}`,
-        title: `${ev.title}｜${crisisObj.title || '急症危機'}`,
+        title: `${ev.title}${variant.examTag ? `（${variant.examTag}）` : ''}｜${crisisObj.title || '急症危機'}`,
         picked: choice.label,
         explanation: crisisObj.mechanism || (choice.feedback && choice.feedback.text) || ''
       };
@@ -1098,7 +1126,7 @@
 
       const note = {
         key: `${ev.id}_${variant.variantId}_${step.id}_${choice.id}`,
-        title: `${ev.title}｜誘答辨析`,
+        title: `${ev.title}${variant.examTag ? `（${variant.examTag}）` : ''}｜誘答辨析`,
         picked: choice.label,
         explanation: fb.text || ''
       };
@@ -1440,7 +1468,7 @@
     const total = Math.max(1, run.totalAnswered);
     const acc = run.correctFirstTry / total;
     const balanceDiff = Math.abs((run.yin || 50) - (run.yang || 50));
-    const riskThreshold = total >= 35 ? 10 : total >= 16 ? 8 : 6;
+    const riskThreshold = total >= 100 ? Math.max(16, Math.round(total * 0.22)) : total >= 35 ? Math.max(10, Math.round(total * 0.18)) : total >= 16 ? 8 : 6;
 
     if (run.failedRescueCount > 0 && run.guardPills <= 0) {
       return endingsData.find((e) => e.id === 'reincarnate') || endingsData[0];
@@ -1494,6 +1522,7 @@
       ending,
       mode: run.mode,
       storyScope: run.storyScope || 'full',
+      storyVariantMode: run.storyVariantMode || 'compact',
       route: run.route,
       seed: run.seed,
       yin: run.yin,
@@ -1548,7 +1577,9 @@
     if (progEl) {
       const scopeTag = run.storyScope === 'part1' ? '上篇' : run.storyScope === 'part2' ? '下篇' : '全四卷';
       const modeTag = run.mode === 'story' ? `章回・${scopeTag}` : '速行篇';
-      progEl.textContent = `${modeTag}・${Math.min(done + 1, totalEvents)}/${totalEvents}`;
+      const queue = run.currentEventId && run.resolvedVariants ? (run.resolvedVariants[run.currentEventId] || []) : [];
+      const qSuffix = queue.length > 1 ? `（陣 ${(run.currentVariantIndex || 0) + 1}/${queue.length}）` : '';
+      progEl.textContent = `${modeTag}・${Math.min(done + 1, totalEvents)}/${totalEvents}${qSuffix}`;
     }
 
     // Pouch items

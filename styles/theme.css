@@ -907,6 +907,14 @@ code {
   background: var(--surface-elevated);
   color: var(--ink-secondary);
   border: 1px solid var(--border-hairline);
+  white-space: nowrap;
+}
+
+.variant-chip.is-past-exam {
+  background: var(--yang-soft);
+  color: var(--yang-color);
+  border-color: hsla(36, 80%, 35%, 0.35);
+  font-weight: 600;
 }
 
 .scene-body {

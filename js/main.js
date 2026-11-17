@@ -276,11 +276,13 @@
     document.getElementById('ending-title').innerHTML = fmtInline(summary.ending.title);
     const scopeName =
       summary.mode === 'story'
-        ? summary.storyScope === 'part1'
-          ? '上篇重溫（一二卷）'
-          : summary.storyScope === 'part2'
-            ? '下篇直入（三四卷）'
-            : '全四卷大貫通'
+        ? `${
+            summary.storyScope === 'part1'
+              ? '上篇重溫（一二卷）'
+              : summary.storyScope === 'part2'
+                ? '下篇直入（三四卷）'
+                : '全四卷大貫通'
+          }${summary.storyVariantMode === 'all' ? '・全考古全刷' : summary.storyVariantMode === 'core_only' ? '・純劇情線' : ''}`
         : `Roguelike 速行篇 (${summary.route || '混戰'})`;
     document.getElementById('ending-subtitle').textContent = `${scopeName}｜天機籤號：${summary.seed}`;
     document.getElementById('ending-narrative').innerHTML = `<p>${fmtMd(summary.ending.narrative)}</p><p style="color:var(--ink-secondary);margin-top:8px;">${fmtMd(summary.ending.summary)}</p>`;
@@ -344,9 +346,11 @@
       });
     });
 
-    document.querySelectorAll('input[name="rogue-length"]').forEach((radio) => {
+    document.querySelectorAll('.sub-option-row input[type="radio"]').forEach((radio) => {
       radio.addEventListener('change', () => {
-        document.querySelectorAll('.sub-chip').forEach((chip) => {
+        const row = radio.closest('.sub-option-row');
+        if (!row) return;
+        row.querySelectorAll('.sub-chip').forEach((chip) => {
           const inp = chip.querySelector('input');
           chip.classList.toggle('selected', Boolean(inp && inp.checked));
         });
@@ -365,11 +369,15 @@
       const routeEl = document.querySelector('input[name="rogue-route"]:checked');
       const scopeEl = document.querySelector('input[name="story-scope"]:checked');
       const lenEl = document.querySelector('input[name="rogue-length"]:checked');
+      const rogueVarEl = document.querySelector('input[name="rogue-variant-mode"]:checked');
+      const storyVarEl = document.querySelector('input[name="story-variant-mode"]:checked');
       const seedEl = document.getElementById('input-seed');
 
       const mode = modeEl ? modeEl.value : 'roguelike';
       const route = routeEl ? routeEl.value : 'all_mixed';
       const storyScope = scopeEl ? scopeEl.value : 'full';
+      const storyVariantMode = storyVarEl ? storyVarEl.value : 'compact';
+      const rogueVariantMode = rogueVarEl ? rogueVarEl.value : 'balanced';
       const rogueLength = lenEl ? Number(lenEl.value) : 6;
       const seed = (seedEl && seedEl.value.trim()) || global.TaixuRNG.generateSeedCode();
       if (seedEl) seedEl.value = seed;
@@ -382,7 +390,15 @@
         await ensureModulesLoaded(needed);
         document.getElementById('topbar-seed-value').textContent = seed;
         showScreen('screen-play');
-        global.TaixuEngine.startNewRun({ mode, route, rogueLength, storyScope, seed });
+        global.TaixuEngine.startNewRun({
+          mode,
+          route,
+          rogueLength,
+          rogueVariantMode,
+          storyScope,
+          storyVariantMode,
+          seed
+        });
       } catch (err) {
         alert(`資料載入失敗：${err.message}`);
       } finally {

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>太虛神農紀：雙極靈樞｜自主神經藥理學互動輕小說</title>
-  <meta name="description" content="改編自《太虛神農紀：雙極天道與百草靈樞》全四卷（Ch.06–Ch.09）之純前端自主神經藥理學互動劇情遊戲，涵蓋 75 項核心考點、短局 Roguelike、全四卷連貫章回、SVG 內景脈象儀（ECG／體溫／血鉀／TOF）、錯藥真實演繹與靈樞丹譜圖鑑。">
+  <meta name="description" content="改編自《太虛神農紀：雙極天道與百草靈樞》全四卷（Ch.06–Ch.09）之純前端自主神經藥理學互動劇情遊戲，全題庫統一四選一（含主線、24 危機補救與歷屆藥理考古對話變體），涵蓋 75 項核心考點、SVG 內景脈象儀與靈樞丹譜圖鑑。">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@500;700;900&display=swap" rel="stylesheet">
@@ -109,10 +109,10 @@
         </div>
 
         <div class="hero-copy">
-          <p class="hero-kicker">太虛醫宗・自主神經藥理實戰系統（全四卷 Ch.06–09）</p>
+          <p class="hero-kicker">太虛醫宗・自主神經藥理實戰系統（全四卷 Ch.06–09・統一四選一）</p>
           <h1 class="hero-title">《太虛神農紀：雙極靈樞》</h1>
           <p class="hero-desc">
-            身懷陰陽雙極靈根的<strong>林玄</strong>，與掌律長老<strong>弘岳真人</strong>、熱血誘答王<strong>陸離</strong>及毒舌藥童<strong>蘇苓</strong>，從總論築基與太陰擬膽鹼，直入玄冥抗膽鹼肌鬆解痙與太陽擬交感破陽止戈！選錯丹方會真實演繹惡性高熱、燒傷高血鉀、嗜鉻血壓危象或 β 阻斷休克，唯靠精準機制補救方能破關！
+            身懷陰陽雙極靈根的<strong>林玄</strong>，與掌律長老<strong>弘岳真人</strong>、熱血誘答王<strong>陸離</strong>及毒舌藥童<strong>蘇苓</strong>，從總論築基與太陰擬膽鹼，直入玄冥抗膽鹼肌鬆解痙與太陽擬交感破陽止戈！全書 37 關主線、24 道危機補救與 103 題歷屆藥理考古對話變體已<strong>全數統一為嚴謹四選一</strong>（共 210 題），選錯丹方會真實演繹惡性高熱、燒傷高血鉀或嗜鉻危象，唯靠精準機制補救方能破關！
           </p>
 
           <div class="meta-stats-bar" id="title-meta-stats">
@@ -147,7 +147,7 @@
               <span class="mode-seal">速行篇</span>
             </div>
             <h3>太虛試煉・Roguelike 速行篇</h3>
-            <p>依所選修煉路線抽出序章 ＋ 4 或 6 場高危臨床病案／實驗破陣 ＋ 1 場急症 Boss 戰。適合零碎時間分卷專攻或四卷混戰刷題。</p>
+            <p>依所選修煉路線抽出序章 ＋ 4 或 6 場高危臨床病案／考古變體 ＋ 1 場急症 Boss 戰。適合零碎時間分卷專攻或歷屆考古混抽刷題。</p>
           </label>
 
           <label class="mode-card" id="card-mode-story">
@@ -157,7 +157,7 @@
               <span class="mode-seal">章回篇</span>
             </div>
             <h3>神農紀實・連貫章回篇</h3>
-            <p>完整貫通 Ch.06–09 全十章 37 關（覆蓋全部 75 項考點），或擇上篇／下篇啟程；遇自由接診樞紐可先取隨身丹囊改變解法，支援隨時斷點續玩。</p>
+            <p>完整貫通 Ch.06–09 全十章 37 關（覆蓋全部 75 項考點），可擇主線＋加抽考古、全題庫 186 題全刷或純主線；支援自由接診與隨時斷點續玩。</p>
           </label>
         </div>
 
@@ -190,7 +190,7 @@
               <span>全毒理急診混合（高危中毒與危機搶救）</span>
             </label>
           </div>
-          <div class="sub-option-row">
+          <div class="sub-option-row" data-chip-group="rogue-length">
             <span class="sub-opt-lbl">速行節奏：</span>
             <label class="sub-chip selected">
               <input type="radio" name="rogue-length" value="6" checked>
@@ -199,6 +199,17 @@
             <label class="sub-chip">
               <input type="radio" name="rogue-length" value="8">
               <span>強化 8 關（深度複習約 18 分鐘）</span>
+            </label>
+          </div>
+          <div class="sub-option-row" data-chip-group="rogue-variant-mode">
+            <span class="sub-opt-lbl">變體抽籤：</span>
+            <label class="sub-chip selected">
+              <input type="radio" name="rogue-variant-mode" value="balanced" checked>
+              <span>主線實驗＋考古均勻混抽</span>
+            </label>
+            <label class="sub-chip">
+              <input type="radio" name="rogue-variant-mode" value="past_exam">
+              <span>歷屆考古對話變體優先</span>
             </label>
           </div>
         </div>
@@ -218,6 +229,21 @@
             <label class="route-pill">
               <input type="radio" name="story-scope" value="part1">
               <span>上篇重溫：一、二卷（Ch.06–07・第 1–5 章 18 關・36 考點）</span>
+            </label>
+          </div>
+          <div class="sub-option-row" data-chip-group="story-variant-mode">
+            <span class="sub-opt-lbl">考古納入：</span>
+            <label class="sub-chip selected">
+              <input type="radio" name="story-variant-mode" value="compact" checked>
+              <span>標準章回（主線＋每關隨機加抽 1 題考古）</span>
+            </label>
+            <label class="sub-chip">
+              <input type="radio" name="story-variant-mode" value="all">
+              <span>全考古全刷（主線 83 ＋ 考古 103 題全過）</span>
+            </label>
+            <label class="sub-chip">
+              <input type="radio" name="story-variant-mode" value="core_only">
+              <span>純原著劇情線（83 主線題）</span>
             </label>
           </div>
         </div>

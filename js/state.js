@@ -162,6 +162,8 @@
       mode: isStory ? 'story' : 'roguelike',
       route: config.route || 'all_mixed',
       storyScope: config.storyScope || 'full',
+      storyVariantMode: config.storyVariantMode || 'compact',
+      rogueVariantMode: config.rogueVariantMode || 'balanced',
       rogueLength: config.rogueLength || 6,
       seed: String(config.seed || 'TX-4072').trim(),
       yin: 50,

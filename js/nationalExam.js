@@ -298,7 +298,7 @@
           : session.filters.track === 'pharmacist'
             ? '藥師(一)'
             : '醫＋藥全部';
-      const periodLbl = session.filters.period === 'all' ? '113–115 年' : `${session.filters.period} 年`;
+      const periodLbl = session.filters.period === 'all' ? '110–115 年' : `${session.filters.period} 年`;
       const chLbl = session.filters.chapter === 'all' ? 'Ch.06–09' : session.filters.chapter;
       ribbonScope.textContent = `${trackLbl}｜${periodLbl}｜${chLbl}（共 ${session.questions.length} 題）`;
     }

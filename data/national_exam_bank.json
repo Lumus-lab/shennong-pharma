@@ -1,0 +1,2963 @@
+{
+  "meta": {
+    "title": "近三年醫師(一)／藥師(一)國考・自主神經藥理實戰題庫（113–115 年）",
+    "source": "中華民國考選部「考畢試題查詢平臺」（113–115 年官方試題、標準答案與更正答案全核對）",
+    "scope": "自主神經系統藥理學 Ch.06–09（純文字藥理與構效關係 SAR 題，略過純化學結構圖片辨認題）",
+    "years": [
+      115,
+      114,
+      113
+    ],
+    "exams": [
+      {
+        "id": "115-2",
+        "label": "115 年第二次（2026/07）",
+        "year": 115,
+        "yearAd": 2026,
+        "code": "115090"
+      },
+      {
+        "id": "115-1",
+        "label": "115 年第一次（2026/01）",
+        "year": 115,
+        "yearAd": 2026,
+        "code": "115020"
+      },
+      {
+        "id": "114-2",
+        "label": "114 年第二次（2025/07）",
+        "year": 114,
+        "yearAd": 2025,
+        "code": "114090"
+      },
+      {
+        "id": "114-1",
+        "label": "114 年第一次（2025/01）",
+        "year": 114,
+        "yearAd": 2025,
+        "code": "114020"
+      },
+      {
+        "id": "113-2",
+        "label": "113 年第二次（2024/07）",
+        "year": 113,
+        "yearAd": 2024,
+        "code": "113090"
+      },
+      {
+        "id": "113-1",
+        "label": "113 年第一次（2024/01）",
+        "year": 113,
+        "yearAd": 2024,
+        "code": "113020"
+      }
+    ],
+    "counts": {
+      "total": 74,
+      "physician": 20,
+      "pharmacist": 54,
+      "byChapter": {
+        "Ch.07": 11,
+        "Ch.08": 19,
+        "Ch.06": 2,
+        "Ch.09": 42
+      }
+    },
+    "excludedImageAnsQuestions": [
+      "113-2 pharmacist Q41（Methylphenidate 立體構形組態 1S,2R 純化學結構圖辨識題）",
+      "115-1 pharmacist Q46（依 SAR 辨識 cholinergic agonist 純化學結構圖題，正解 A 為 pilocarpine）",
+      "115-1 pharmacist Q49（抗巴金森氏症／中樞抗膽鹼藥化 SAR 純化學結構圖題，正解 A 為 phenothiazine 類抗膽鹼衍生物）",
+      "115-2 pharmacist Q54（辨識非選擇性 β 受體抑制劑降壓藥純化學結構圖題，正解 C 為 timolol，另含 neostigmine 與 tolterodine 結構圖）"
+    ]
+  },
+  "questions": [
+    {
+      "id": "NE_115-2_MD_53",
+      "exam": "115-2",
+      "year": 115,
+      "session": 2,
+      "track": "physician",
+      "trackLabel": "醫師(一) 醫學(二)",
+      "subjectCode": "115090",
+      "qnum": 53,
+      "tag": "115-2 醫師(一)｜Q53",
+      "chapter": "Ch.07",
+      "vol": 2,
+      "eventId": "E11",
+      "codexIds": [
+        24,
+        25,
+        26
+      ],
+      "topic": "Pilocarpine 青光眼乾燥症與禁忌",
+      "stem": "下列關於 pilocarpine 的敘述，何者最不適當？",
+      "options": {
+        "A": "口服使用易產生腹瀉的副作用",
+        "B": "可刺激睫狀體（ciliary body）收縮，幫助房水（aqueous humor）排出，因此可用於治療青光眼（glaucoma）",
+        "C": "可刺激唾液分泌，可用於緩解 Sjögren syndrome 病患的症狀",
+        "D": "口服可治療膀胱過動症"
+      },
+      "originalAnswer": "D",
+      "acceptedAnswers": [
+        "D"
+      ],
+      "revisionNote": "",
+      "optionExplanations": {
+        "A": "（錯誤）此敘述正確，非本題所選。Pilocarpine 為直接作用型蕈毒鹼致效劑，口服時會活化腸道平滑肌與腺體 M3 受體，增強蠕動與分泌，常見腹瀉、腹絞痛、多汗與流涎等副交感過度刺激副作用。",
+        "B": "（錯誤）此敘述正確，非本題所選。Pilocarpine 點眼可刺激虹膜瞳孔括約肌與睫狀體平滑肌（M3）收縮，拉開前房隅角並打開小樑網房水流出通道，有效降低眼壓，用於治療青光眼（尤其是急閉青光眼）。",
+        "C": "（錯誤）此敘述正確，非本題所選。口服 pilocarpine（與 cevimeline）藉由活化唾液腺與淚腺 M3 受體顯著促進外分泌，是修格蘭氏症候群（Sjögren syndrome）口乾症的標準治療用藥。",
+        "D": "（正解）此敘述最不適當。Pilocarpine 活化膀胱逼尿肌 M3 受體會促使逼尿肌強力收縮、增加尿意與排尿頻率，反而會嚴重惡化膀胱過動症（OAB）；治療 OAB 應選用 M3 拮抗劑或 β3 致效劑，擬膽鹼藥（如 bethanechol）則是針對「尿滯留」而非過動。"
+      },
+      "coreSummary": "Pilocarpine 屬三級胺直接型 M 致效劑，主治青光眼（縮瞳促房水排出）與修格蘭氏症候群口乾；因刺激逼尿肌收縮，絕對禁用於膀胱過動症（OAB）。",
+      "moexUrl": "https://wwwq.moex.gov.tw/exam/wFrmExamQandASearch.aspx?y=2026&e=115090"
+    },
+    {
+      "id": "NE_115-2_MD_54",
+      "exam": "115-2",
+      "year": 115,
+      "session": 2,
+      "track": "physician",
+      "trackLabel": "醫師(一) 醫學(二)",
+      "subjectCode": "115090",
+      "qnum": 54,
+      "tag": "115-2 醫師(一)｜Q54",
+      "chapter": "Ch.08",
+      "vol": 3,
+      "eventId": "E28",
+      "codexIds": [
+        55,
+        52,
+        56
+      ],
+      "topic": "中樞與周邊骨骼肌鬆弛劑受體機轉比較",
+      "stem": "下列有關骨骼肌鬆弛劑作用機轉之敘述，何者錯誤？",
+      "options": {
+        "A": "diazepam 活化中樞神經之 GABAA receptor",
+        "B": "baclofen 活化中樞神經之 GABAB receptor",
+        "C": "tizanidine 拮抗中樞神經之α2-adrenoceptor",
+        "D": "dantrolene 抑制骨骼肌細胞內之 ryanodine receptor channel"
+      },
+      "originalAnswer": "C",
+      "acceptedAnswers": [
+        "C"
+      ],
+      "revisionNote": "",
+      "optionExplanations": {
+        "A": "（錯誤）此敘述正確，非本題所選。Diazepam 結合於中樞 GABA_A 受體的苯二氮平結合位，正向異位調節增加 Cl⁻ 通道開啟頻率，強化脊髓突觸前抑制以緩解痙攣。",
+        "B": "（錯誤）此敘述正確，非本題所選。Baclofen 為選擇性中樞 GABA_B 受體致效劑，透過 Gi/o 蛋白開啟突觸後 K⁺ 通道並抑制突觸前 Ca²⁺ 內流，有效抑制脊髓單突觸與多突觸伸張反射。",
+        "C": "（正解）此敘述錯誤。Tizanidine 是 clonidine 的同類衍生物，屬於中樞 α2-腎上腺素受體「致效劑（agonist）」，藉由「活化」而非拮抗脊髓突觸前 α2 受體來增強突觸前抑制、減少興奮性胺基酸釋放，進而達到解痙效果。",
+        "D": "（錯誤）此敘述正確，非本題所選。Dantrolene 直接作用於周邊骨骼肌，抑制肌漿網上的 ryanodine receptor（RyR1）鈣離子釋放通道，阻斷興奮—收縮偶聯，並為惡性高熱專一解毒劑。"
+      },
+      "coreSummary": "四大解痙劑機轉口訣：Diazepam 促 GABA_A、Baclofen 致效 GABA_B、Tizanidine「致效」脊髓 α2（非拮抗！）、Dantrolene 直接阻斷骨骼肌 RyR1 鈣釋放。",
+      "moexUrl": "https://wwwq.moex.gov.tw/exam/wFrmExamQandASearch.aspx?y=2026&e=115090"
+    },
+    {
+      "id": "NE_115-2_MD_67",
+      "exam": "115-2",
+      "year": 115,
+      "session": 2,
+      "track": "physician",
+      "trackLabel": "醫師(一) 醫學(二)",
+      "subjectCode": "115090",
+      "qnum": 67,
+      "tag": "115-2 醫師(一)｜Q67",
+      "chapter": "Ch.06",
+      "vol": 1,
+      "eventId": "E05",
+      "codexIds": [
+        14,
+        12,
+        17
+      ],
+      "topic": "自主神經受體亞型與支氣管擴張機轉",
+      "stem": "活化下列何種受體（receptor）能夠最有效地幫助支氣管擴張？",
+      "options": {
+        "A": "α1 adrenergic receptor",
+        "B": "β2 adrenergic receptor",
+        "C": "M3 cholinergic receptor",
+        "D": "serotonin 5-HT3 receptor"
+      },
+      "originalAnswer": "B",
+      "acceptedAnswers": [
+        "B"
+      ],
+      "revisionNote": "",
+      "optionExplanations": {
+        "A": "（錯誤）α1 腎上腺素受體偶聯 Gq 蛋白（IP3/DAG → Ca²⁺↑），主要促使血管平滑肌、虹膜開大肌與攝護腺收縮，在氣管平滑肌分布稀少且不具支氣管擴張作用。",
+        "B": "（正解）支氣管平滑肌大量表現 β2 腎上腺素受體（偶聯 Gs 蛋白），活化後經腺苷酸環化酶升高胞內 cAMP、活化 PKA 並磷酸化抑制肌球蛋白輕鏈激酶（MLCK），能最有效地舒張氣道平滑肌而達支氣管擴張。",
+        "C": "（錯誤）M3 蕈毒鹼受體偶聯 Gq 蛋白，活化後會引起支氣管平滑肌收縮與呼吸道黏液分泌增加；臨床須「拮抗」M3（如 ipratropium、tiotropium）才能幫助支氣管擴張。",
+        "D": "（錯誤）血清素 5-HT3 受體為配體閘控陽離子通道，主要分布於迷走神經末梢與延腦化學受體觸發區（CTZ），參與噁心嘔吐反射，無支氣管擴張功能。"
+      },
+      "coreSummary": "氣道平滑肌陰陽對照：活化 β2（Gs → cAMP↑ → 抑 MLCK）最有效舒張支氣管；活化 M3（Gq → Ca²⁺↑）則引起支氣管收縮，故氣喘急救採 β2 致效或 M3 拮抗。",
+      "moexUrl": "https://wwwq.moex.gov.tw/exam/wFrmExamQandASearch.aspx?y=2026&e=115090"
+    },
+    {
+      "id": "NE_115-2_PH_1",
+      "exam": "115-2",
+      "year": 115,
+      "session": 2,
+      "track": "pharmacist",
+      "trackLabel": "藥師(一) 藥學(一) 藥理學與藥物化學",
+      "subjectCode": "115090",
+      "qnum": 1,
+      "tag": "115-2 藥師(一)｜Q1",
+      "chapter": "Ch.06",
+      "vol": 1,
+      "eventId": "E05",
+      "codexIds": [
+        12,
+        13,
+        4
+      ],
+      "topic": "菸鹼性離子通道與 GPCR／RTK 訊號路徑比較",
+      "stem": "下列何種受體（receptor）的直接訊息傳遞路徑不需要透過酵素的參與，即可引發其受體所在細胞的功能改變？",
+      "options": {
+        "A": "胰島素（insulin）受體－骨骼肌細胞攝取葡萄糖",
+        "B": "alpha1 交感性（alpha1 adrenergic）受體－動脈平滑肌細胞收縮",
+        "C": "菸鹼性乙醯膽鹼（nicotinic acetylcholine）受體－骨骼肌細胞收縮",
+        "D": "beta1 交感性（beta1 adrenergic）受體－心肌細胞收縮"
+      },
+      "originalAnswer": "C",
+      "acceptedAnswers": [
+        "C"
+      ],
+      "revisionNote": "",
+      "optionExplanations": {
+        "A": "（錯誤）胰島素受體屬於受體酪胺酸激酶（receptor tyrosine kinase, RTK），結合胰島素後須先啟動酪胺酸激酶自體磷酸化及下游 PI3K/Akt 酵素級聯，才能促使 GLUT4 移位至細胞膜攝取葡萄糖。",
+        "B": "（錯誤）α1 交感性受體為 Gq 偶聯之 GPCR，必須活化磷脂酶 C（PLC）水解 PIP2 產生 IP3 與 DAG，透過第二訊使酵素級聯升高 Ca²⁺ 才能使動脈平滑肌收縮。",
+        "C": "（正解）骨骼肌終板的菸鹼性乙醯膽鹼受體（N_M）為五聚體配體閘控離子通道（ligand-gated ion channel），兩分子 ACh 結合後通道構型直接開啟，Na⁺ 迅速內流去極化觸發動作電位與肌肉收縮，全程不需透過任何酵素催化。",
+        "D": "（錯誤）β1 交感性受體為 Gs 偶聯之 GPCR，必須活化腺苷酸環化酶（adenylyl cyclase）生成 cAMP 並進一步活化蛋白激酶 A（PKA），方能增強心肌收縮力。"
+      },
+      "coreSummary": "配體閘控離子通道（如 N_M、N_N 菸鹼受體）直接開啟離子通透，不需酵素參與、反應達毫秒級；GPCR（α1/PLC、β1/AC）與 RTK（胰島素受體）則皆須酵素級聯。",
+      "moexUrl": "https://wwwq.moex.gov.tw/exam/wFrmExamQandASearch.aspx?y=2026&e=115090"
+    },
+    {
+      "id": "NE_115-2_PH_10",
+      "exam": "115-2",
+      "year": 115,
+      "session": 2,
+      "track": "pharmacist",
+      "trackLabel": "藥師(一) 藥學(一) 藥理學與藥物化學",
+      "subjectCode": "115090",
+      "qnum": 10,
+      "tag": "115-2 藥師(一)｜Q10",
+      "chapter": "Ch.08",
+      "vol": 3,
+      "eventId": "E28",
+      "codexIds": [
+        55,
+        11
+      ],
+      "topic": "口服 GABA_B 解痙劑 Baclofen",
+      "stem": "下列藥物中，何者為 GABAB 受體致效劑，可口服作為肌肉鬆弛劑？",
+      "options": {
+        "A": "diazepam",
+        "B": "baclofen",
+        "C": "tizanidine",
+        "D": "dantrolene"
+      },
+      "originalAnswer": "B",
+      "acceptedAnswers": [
+        "B"
+      ],
+      "revisionNote": "",
+      "optionExplanations": {
+        "A": "（錯誤）Diazepam 屬於苯二氮平類藥物，作用於中樞 GABA_A 受體（配體閘控 Cl⁻ 通道）而非 GABA_B 受體。",
+        "B": "（正解）Baclofen 為選擇性中樞 GABA_B 受體（Gi/o 偶聯 GPCR）致效劑，可口服吸收（重症亦可用鞘內幫浦給藥），藉由促進突觸後 K⁺ 外流過極化與減少突觸前 Ca²⁺ 內流，有效抑制脊髓伸張反射而作為骨骼肌鬆弛劑。",
+        "C": "（錯誤）Tizanidine 為中樞 α2 腎上腺素受體致效劑，透過加強脊髓突觸前抑制來解除痙攣，非作用於 GABA_B 受體。",
+        "D": "（錯誤）Dantrolene 直接作用於周邊骨骼肌肌漿網的 ryanodine receptor（RyR1），阻斷 Ca²⁺ 釋放以鬆弛肌肉，與中樞 GABA_B 受體無關。"
+      },
+      "coreSummary": "Baclofen 是唯一臨床經典的口服 GABA_B 致效解痙劑（與 GABA_A 的 diazepam、α2 的 tizanidine、RyR1 的 dantrolene 並稱四大解痙核心）；切忌驟然停藥以防反彈性癲癇。",
+      "moexUrl": "https://wwwq.moex.gov.tw/exam/wFrmExamQandASearch.aspx?y=2026&e=115090"
+    },
+    {
+      "id": "NE_115-2_PH_11",
+      "exam": "115-2",
+      "year": 115,
+      "session": 2,
+      "track": "pharmacist",
+      "trackLabel": "藥師(一) 藥學(一) 藥理學與藥物化學",
+      "subjectCode": "115090",
+      "qnum": 11,
+      "tag": "115-2 藥師(一)｜Q11",
+      "chapter": "Ch.09",
+      "vol": 4,
+      "eventId": "E30",
+      "codexIds": [
+        60,
+        63,
+        14
+      ],
+      "topic": "急性支氣管收縮急救藥 Albuterol",
+      "stem": "下列擬交感神經作用藥物（sympathomimetics）中，何者常用於治療急性支氣管收縮？",
+      "options": {
+        "A": "dobutamine",
+        "B": "mirabegron",
+        "C": "tizanidine",
+        "D": "albuterol"
+      },
+      "originalAnswer": "D",
+      "acceptedAnswers": [
+        "D"
+      ],
+      "revisionNote": "",
+      "optionExplanations": {
+        "A": "（錯誤）Dobutamine 為選擇性 β1 腎上腺素受體致效劑，主要用於增強心肌收縮力（治療急性失代償性心衰竭或心因性休克），不具急性支氣管擴張用途。",
+        "B": "（錯誤）Mirabegron 為選擇性 β3 腎上腺素受體致效劑，用於舒張膀胱逼尿肌以治療膀胱過動症（OAB），非呼吸道用藥。",
+        "C": "（錯誤）Tizanidine 為中樞 α2 腎上腺素受體致效劑，臨床用作中樞性骨骼肌解痙劑，不用於緩解急性支氣管收縮。",
+        "D": "（正解）Albuterol（即 salbutamol）為短效選擇性 β2 腎上腺素受體致效劑（SABA），經吸入給藥後數分鐘內即可透過 Gs–cAMP 路徑快速舒張支氣管平滑肌，是治療急性支氣管收縮（如氣喘急性發作）的首選急救藥。"
+      },
+      "coreSummary": "四種選擇性擬交感藥對位速記：dobutamine（β1 強心）、albuterol（β2 急擴支氣管）、mirabegron（β3 鬆膀胱）、tizanidine（中樞 α2 解痙）。",
+      "moexUrl": "https://wwwq.moex.gov.tw/exam/wFrmExamQandASearch.aspx?y=2026&e=115090"
+    },
+    {
+      "id": "NE_115-2_PH_22",
+      "exam": "115-2",
+      "year": 115,
+      "session": 2,
+      "track": "pharmacist",
+      "trackLabel": "藥師(一) 藥學(一) 藥理學與藥物化學",
+      "subjectCode": "115090",
+      "qnum": 22,
+      "tag": "115-2 藥師(一)｜Q22",
+      "chapter": "Ch.09",
+      "vol": 4,
+      "eventId": "E36",
+      "codexIds": [
+        71
+      ],
+      "topic": "圍術期超短效 β 阻斷劑 Esmolol",
+      "stem": "下列何者為短效型β blocker，可用於手術期間或術後靜脈輸注，以降血壓或抑制心律不整？",
+      "options": {
+        "A": "esmolol",
+        "B": "acebutolol",
+        "C": "atenolol",
+        "D": "nebivolol"
+      },
+      "originalAnswer": "A",
+      "acceptedAnswers": [
+        "A"
+      ],
+      "revisionNote": "",
+      "optionExplanations": {
+        "A": "（正解）Esmolol 為第二代 β1 選擇性阻斷劑，因結構含酯基而迅速被血中紅血球酯酶水解去活化，半衰期僅約 9–10 分鐘，最適合於手術期間或術後靜脈輸注，可精準調控急劇高血壓或室上性心律不整，且停藥後藥效迅速消退。",
+        "B": "（錯誤）Acebutolol 為具內在擬交感活性（ISA）與膜穩定作用之 β1 選擇性阻斷劑，口服給藥，母藥半衰期約 3–4 小時（活性代謝物 diacetolol 更達 8–13 小時），非超短效 IV 用藥。",
+        "C": "（錯誤）Atenolol 為親水性第二代 β1 選擇性阻斷劑，主要經腎臟原型排泄，半衰期約 6–7 小時，臨床主要用於口服慢性降壓與心絞痛控制。",
+        "D": "（錯誤）Nebivolol 為第三代具最高 β1 選擇性且能經 β3／內皮路徑促進 NO 釋放擴張血管之口服 β 阻斷劑，半衰期約 10–12 小時以上，非短效圍術期靜脈製劑。"
+      },
+      "coreSummary": "Esmolol 是唯一靠紅血球酯酶快速水解的超短效 β1 阻斷劑（t₁/₂ ≈ 10 分鐘），專用於圍術期／急診靜脈輸注控制血壓與室上性心搏過速。",
+      "moexUrl": "https://wwwq.moex.gov.tw/exam/wFrmExamQandASearch.aspx?y=2026&e=115090"
+    },
+    {
+      "id": "NE_115-2_PH_23",
+      "exam": "115-2",
+      "year": 115,
+      "session": 2,
+      "track": "pharmacist",
+      "trackLabel": "藥師(一) 藥學(一) 藥理學與藥物化學",
+      "subjectCode": "115090",
+      "qnum": 23,
+      "tag": "115-2 藥師(一)｜Q23",
+      "chapter": "Ch.09",
+      "vol": 4,
+      "eventId": "E36",
+      "codexIds": [
+        70,
+        71
+      ],
+      "topic": "內在擬交感活性（ISA）β 阻斷劑之心臟風險",
+      "stem": "下列β-blockers 中，何者之作用特性會刺激心臟加重心絞痛、心律不整或缺血性心臟病的病況？",
+      "options": {
+        "A": "有 intrinsic vagalytic activity 之β-blockers",
+        "B": "有 intrinsic sympatholytic activity 之β-blockers",
+        "C": "有 intrinsic vagal activity 之β-blockers",
+        "D": "有 intrinsic sympathomimetic activity 之β-blockers"
+      },
+      "originalAnswer": "D",
+      "acceptedAnswers": [
+        "D"
+      ],
+      "revisionNote": "",
+      "optionExplanations": {
+        "A": "（錯誤）β 阻斷劑藥理分類中並無「intrinsic vagalytic activity（內在迷走神經抑制活性）」此項標準特性。",
+        "B": "（錯誤）「intrinsic sympatholytic activity」字面意為抑制交感活性，而抑制心臟交感神經可減慢心率、降低心肌耗氧量，反而有助改善心絞痛而非加重。",
+        "C": "（錯誤）β 阻斷劑不具「intrinsic vagal activity」分類名詞，且增強迷走神經活性會使心率減慢、減少心肌耗氧，不會刺激心臟加重缺血。",
+        "D": "（正解）具內在擬交感活性（intrinsic sympathomimetic activity, ISA）之 β 阻斷劑（如 pindolol、acebutolol）本質為部分致效劑（partial agonists）；在靜息或低交感張力下仍對心肌 β 受體具微弱興奮作用，無法充分降低休息心率與心肌耗氧，可能刺激心臟而加重心絞痛、心律不整或缺血性心臟病，亦缺乏心肌梗塞後二級預防及偏頭痛預防效益。"
+      },
+      "coreSummary": "具 ISA（內在擬交感活性）的 β 阻斷劑（如 pindolol、acebutolol）屬部分致效劑，較不致嚴重心搏過緩，但可能加重心絞痛／缺血性心臟病，且心肌梗塞後與偏頭痛預防皆無效。",
+      "moexUrl": "https://wwwq.moex.gov.tw/exam/wFrmExamQandASearch.aspx?y=2026&e=115090"
+    },
+    {
+      "id": "NE_115-2_PH_27",
+      "exam": "115-2",
+      "year": 115,
+      "session": 2,
+      "track": "pharmacist",
+      "trackLabel": "藥師(一) 藥學(一) 藥理學與藥物化學",
+      "subjectCode": "115090",
+      "qnum": 27,
+      "tag": "115-2 藥師(一)｜Q27",
+      "chapter": "Ch.09",
+      "vol": 4,
+      "eventId": "E36",
+      "codexIds": [
+        73,
+        70
+      ],
+      "topic": "隅角開放性青光眼之腎上腺素點眼藥禁忌",
+      "stem": "下列交感神經藥物中，何者最不適合用於治療隅角開放性青光眼（open-angle glaucoma）？",
+      "options": {
+        "A": "albuterol",
+        "B": "apraclonidine",
+        "C": "betaxolol",
+        "D": "timolol"
+      },
+      "originalAnswer": "A",
+      "acceptedAnswers": [
+        "A"
+      ],
+      "revisionNote": "",
+      "optionExplanations": {
+        "A": "（正解）Albuterol 為選擇性 β2 腎上腺素受體致效劑（主要用於支氣管擴張）；睫狀體上皮細胞上的 β2 受體活化會升高 cAMP 進而「增加」房水生成，反而升高眼壓，因此最不適合用於治療隅角開放性青光眼。",
+        "B": "（錯誤）Apraclonidine（與 brimonidine）為外用 α2 腎上腺素受體致效劑點眼藥，藉由 Gi 路徑減少睫狀體房水生成，適合用於隅角開放性青光眼及雷射術後短期降眼壓。",
+        "C": "（錯誤）Betaxolol 為 β1 選擇性阻斷劑點眼藥（無局部麻醉作用、不損角膜反射），可有效減少房水生成以治療隅角開放性青光眼，且對氣喘／COPD 患者氣道風險較非選擇性製劑低。",
+        "D": "（錯誤）Timolol 為經典非選擇性 β 阻斷劑點眼藥（不具局部麻醉作用），可強效阻斷睫狀體 β2 受體以抑制房水生成，為隅角開放性青光眼重要降眼壓用藥。"
+      },
+      "coreSummary": "睫狀體 β2 活化會「增加」房水生成，故青光眼降壓需用「β 阻斷劑」（timolol、betaxolol）或「α2 致效劑」（apraclonidine、brimonidine），不可用 β2 致效劑 albuterol。",
+      "moexUrl": "https://wwwq.moex.gov.tw/exam/wFrmExamQandASearch.aspx?y=2026&e=115090"
+    },
+    {
+      "id": "NE_115-2_PH_28",
+      "exam": "115-2",
+      "year": 115,
+      "session": 2,
+      "track": "pharmacist",
+      "trackLabel": "藥師(一) 藥學(一) 藥理學與藥物化學",
+      "subjectCode": "115090",
+      "qnum": 28,
+      "tag": "115-2 藥師(一)｜Q28",
+      "chapter": "Ch.07",
+      "vol": 2,
+      "eventId": "E11",
+      "codexIds": [
+        24,
+        22
+      ],
+      "topic": "修格蘭氏症候群口乾症之蕈毒鹼致效劑",
+      "stem": "下列何者屬於毒蕈鹼受體致效劑（muscarinic agonist），可用於治療修格蘭氏症候群（Sjögren syndrome）病人之口乾症？",
+      "options": {
+        "A": "pyridostigmine",
+        "B": "pilocarpine",
+        "C": "lobeline",
+        "D": "atropine"
+      },
+      "originalAnswer": "B",
+      "acceptedAnswers": [
+        "B"
+      ],
+      "revisionNote": "",
+      "optionExplanations": {
+        "A": "（錯誤）Pyridostigmine 為四級銨可逆性乙醯膽鹼酯酶抑制劑（屬於間接擬膽鹼藥，非直接蕈毒鹼受體致效劑），臨床主要用於治療重症肌無力（MG）。",
+        "B": "（正解）Pilocarpine 為天然植物生物鹼類直接作用型蕈毒鹼受體致效劑（三級胺），口服可有效活化唾液腺與淚腺 M3 受體促進分泌，為治療修格蘭氏症候群（Sjögren syndrome）及頭頸部放療後口乾症之標準用藥（同適應症另具 M3 選擇性之 cevimeline）。",
+        "C": "（錯誤）Lobeline 為山梗菜生物鹼，屬於菸鹼性受體（nAChR）調節劑／部分致效劑（作用似尼古丁），並非用於治療口乾症的蕈毒鹼受體致效劑。",
+        "D": "（錯誤）Atropine 為競爭性蕈毒鹼受體拮抗劑，會強烈阻斷唾液腺 M3 受體導致嚴重口乾，與治療修格蘭氏症候群完全背道而馳。"
+      },
+      "coreSummary": "修格蘭氏症候群口乾症雙雄為直接型 M 受體致效劑 pilocarpine 與 M3 選擇性 cevimeline；切勿與間接 AChEI（pyridostigmine）、菸鹼生物鹼（lobeline）或抗 M（atropine）混淆。",
+      "moexUrl": "https://wwwq.moex.gov.tw/exam/wFrmExamQandASearch.aspx?y=2026&e=115090"
+    },
+    {
+      "id": "NE_115-2_PH_53",
+      "exam": "115-2",
+      "year": 115,
+      "session": 2,
+      "track": "pharmacist",
+      "trackLabel": "藥師(一) 藥學(一) 藥理學與藥物化學",
+      "subjectCode": "115090",
+      "qnum": 53,
+      "tag": "115-2 藥師(一)｜Q53",
+      "chapter": "Ch.09",
+      "vol": 4,
+      "eventId": "E35",
+      "codexIds": [
+        69,
+        67
+      ],
+      "topic": "Quinazoline α1 拮抗劑動力學",
+      "stem": "下列 quinazoline 類α1-adrenergic antagonists，何者之親脂性最高、與蛋白質結合率最高，且 half-life 最長？",
+      "options": {
+        "A": "alfuzosin",
+        "B": "doxazosin",
+        "C": "prazosin",
+        "D": "terazosin"
+      },
+      "originalAnswer": "B",
+      "acceptedAnswers": [
+        "B"
+      ],
+      "revisionNote": "",
+      "optionExplanations": {
+        "A": "（錯誤）Alfuzosin 將 piperazine 環改為極性較高的開鏈胺基丙基結構（接 tetrahydrofuroyl 基），親脂性較低、血漿蛋白結合率約 82–90%，速釋半衰期約 3–5 小時（緩釋劑型約 10 小時）。",
+        "B": "（正解）Doxazosin 末端醯基接有大型疏水性雙環「1,4-benzodioxan-2-ylcarbonyl（苯並二氧雜環）」基團，因此在四個 quinazoline 類 α1 拮抗劑中親脂性最高、血漿蛋白結合率最高（約 98–99%），且排除半衰期最長（約 19–22 小時，可每日一次給藥）。",
+        "C": "（錯誤）Prazosin 末端為體積較小的芳香 furan（2-furoyl）環，首渡代謝顯著、血漿蛋白結合率約 95–97%，半衰期短（僅約 2–3 小時），常需每日給藥 2–3 次。",
+        "D": "（錯誤）Terazosin 末端為飽和的 tetrahydrofuran（四氫呋喃）環，相較 prazosin 與 doxazosin 水溶性更高（親脂性較低）、口服生體可用率佳（約 90%），蛋白結合率約 90–94%，半衰期約 12 小時，仍短於 doxazosin。"
+      },
+      "coreSummary": "Quinazoline 類 α1 拮抗劑末環決定動力學：doxazosin（benzodioxane 雙環）親脂性最高、蛋白結合率最高（~98–99%）且半衰期最長（~20 hr）；terazosin（THF 環）水溶性高（~12 hr）；prazosin（furan 環）最短效（~2–3 hr）。",
+      "moexUrl": "https://wwwq.moex.gov.tw/exam/wFrmExamQandASearch.aspx?y=2026&e=115090"
+    },
+    {
+      "id": "NE_115-2_PH_56",
+      "exam": "115-2",
+      "year": 115,
+      "session": 2,
+      "track": "pharmacist",
+      "trackLabel": "藥師(一) 藥學(一) 藥理學與藥物化學",
+      "subjectCode": "115090",
+      "qnum": 56,
+      "tag": "115-2 藥師(一)｜Q56",
+      "chapter": "Ch.08",
+      "vol": 3,
+      "eventId": "E28",
+      "codexIds": [
+        55,
+        11
+      ],
+      "topic": "Baclofen R-異構物活性與吸收",
+      "stem": "下列有關 baclofen 之敘述，何者錯誤？",
+      "options": {
+        "A": "具有與 GABA 類似之結構",
+        "B": "S-enantiomer 具有較高活性",
+        "C": "具肌肉鬆弛作用",
+        "D": "口服吸收快速"
+      },
+      "originalAnswer": "B",
+      "acceptedAnswers": [
+        "B"
+      ],
+      "revisionNote": "",
+      "optionExplanations": {
+        "A": "（錯誤）此敘述正確，非本題所選。Baclofen 化學結構為 β-(4-chlorophenyl)-GABA，是在 GABA 的 β 碳接上對氯苯環以增加脂溶性與穿透血腦障壁的能力，具高度類似 GABA 之骨架。",
+        "B": "（正解）此敘述錯誤。Baclofen 臨床雖以消旋體（racemate）給藥，但其對 GABA_B 受體之親和力與骨骼肌鬆弛活性幾乎完全集中於「R-(-)-enantiomer」（活性遠高於 S-(+)-enantiomer 百倍以上），而非 S-enantiomer。",
+        "C": "（錯誤）此敘述正確，非本題所選。Baclofen 活化脊髓 GABA_B 受體抑制伸張反射，具有明確的中樞性骨骼肌鬆弛（解痙）作用。",
+        "D": "（錯誤）此敘述正確，非本題所選。Baclofen 藉腸道胺基酸轉運體協助，口服後吸收快速且幾乎完全，並多以原型經腎臟排泄。"
+      },
+      "coreSummary": "Baclofen 為對氯苯基修飾之 GABA 類似物，口服吸收快、藉活化 GABA_B 解痙；立體藥化必背考點：活性異構物為 R-(-)-enantiomer（而非 S 型）。",
+      "moexUrl": "https://wwwq.moex.gov.tw/exam/wFrmExamQandASearch.aspx?y=2026&e=115090"
+    },
+    {
+      "id": "NE_115-2_PH_57",
+      "exam": "115-2",
+      "year": 115,
+      "session": 2,
+      "track": "pharmacist",
+      "trackLabel": "藥師(一) 藥學(一) 藥理學與藥物化學",
+      "subjectCode": "115090",
+      "qnum": 57,
+      "tag": "115-2 藥師(一)｜Q57",
+      "chapter": "Ch.08",
+      "vol": 3,
+      "eventId": "E28",
+      "codexIds": [
+        56,
+        52
+      ],
+      "topic": "Dantrolene 肝毒中間體與 RyR1",
+      "stem": "下列有關 dantrolene 敘述，何者正確？",
+      "options": {
+        "A": "5-hydroxydantrolene 代謝物不具肌肉鬆弛活性",
+        "B": "代謝中間體可增加肝毒性風險",
+        "C": "具 hydantoin 結構，所以具抗癲癇作用",
+        "D": "主要作用在 GABA 受體"
+      },
+      "originalAnswer": "B",
+      "acceptedAnswers": [
+        "B"
+      ],
+      "revisionNote": "",
+      "optionExplanations": {
+        "A": "（錯誤）Dantrolene 在肝臟經微粒體氧化生成的 5-hydroxydantrolene 為「具活性」之代謝物，仍保有骨骼肌鬆弛活性（半衰期較長，參與藥效維持）。",
+        "B": "（正解）Dantrolene 結構中的芳香硝基（nitrophenyl）在肝臟進行硝基還原代謝時，會產生具高度反應性之 nitroso、hydroxylamine 等代謝中間體，易誘發氧化壓力與肝細胞傷害，顯著增加特異體質性肝毒性（hepatotoxicity）風險，長期口服須嚴密監測肝功能。",
+        "C": "（錯誤）儘管 dantrolene 結構中含有與 phenytoin 相似的 hydantoin（乙內醯脲）五員環，但因分子整體結構與周邊作用特性不同，並不具備抗癲癇作用。",
+        "D": "（錯誤）Dantrolene 為周邊直接作用型骨骼肌鬆弛劑，標靶為骨骼肌肌漿網上的 ryanodine receptor 1（RyR1）鈣離子釋放通道，並非中樞 GABA 受體。"
+      },
+      "coreSummary": "Dantrolene 藥化三大重點：①標靶為骨骼肌 RyR1（非 GABA）；②雖含 hydantoin 環但不抗癲癇；③5-OH 代謝物具活性，硝基還原反應性中間體則是嚴重肝毒性的元兇。",
+      "moexUrl": "https://wwwq.moex.gov.tw/exam/wFrmExamQandASearch.aspx?y=2026&e=115090"
+    },
+    {
+      "id": "NE_115-2_PH_65",
+      "exam": "115-2",
+      "year": 115,
+      "session": 2,
+      "track": "pharmacist",
+      "trackLabel": "藥師(一) 藥學(一) 藥理學與藥物化學",
+      "subjectCode": "115090",
+      "qnum": 65,
+      "tag": "115-2 藥師(一)｜Q65",
+      "chapter": "Ch.09",
+      "vol": 4,
+      "eventId": "E34",
+      "codexIds": [
+        67,
+        69
+      ],
+      "topic": "Prazosin 等 α1 拮抗劑共有藥效團結構",
+      "stem": "下列官能基團中，何者屬於 prazosin、terazosin 及 doxazosin 共有的結構？",
+      "options": {
+        "A": "quinoline，piperidine",
+        "B": "quinazoline，piperidine",
+        "C": "quinoline，piperazine",
+        "D": "quinazoline，piperazine"
+      },
+      "originalAnswer": "D",
+      "acceptedAnswers": [
+        "D"
+      ],
+      "revisionNote": "",
+      "optionExplanations": {
+        "A": "（錯誤）三者雙環母核含有兩個氮原子，屬 quinazoline 而非單氮的 quinoline；中間連結六員環亦為雙氮的 piperazine，而非單氮的 piperidine。",
+        "B": "（錯誤）母核確為 quinazoline，但連結環是含兩個相對氮原子的 piperazine（哌嗪），而非僅含一個氮原子的 piperidine（哌啶）。",
+        "C": "（錯誤）連結環確為 piperazine，但芳香雙環母核為 6,7-dimethoxy-4-aminoquinazoline（雙氮喹唑啉），而非單氮 quinoline（喹啉）。",
+        "D": "（正解）Prazosin、terazosin 與 doxazosin 皆屬於典型的 quinazoline 類選擇性 α1 拮抗劑，三者共有「4-amino-6,7-dimethoxyquinazoline」核心與「piperazine」連結環，差別僅在於接於 piperazine 另一端氮上的醯基環（分別為 furan、tetrahydrofuran、benzodioxane）。"
+      },
+      "coreSummary": "Prazosin、terazosin、doxazosin 共有「雙氮配雙氮」藥效團：quinazoline（2 個 N）＋ piperazine（2 個 N）；同族的 alfuzosin 則是將 piperazine 改為開鏈結構。",
+      "moexUrl": "https://wwwq.moex.gov.tw/exam/wFrmExamQandASearch.aspx?y=2026&e=115090"
+    },
+    {
+      "id": "NE_115-2_PH_67",
+      "exam": "115-2",
+      "year": 115,
+      "session": 2,
+      "track": "pharmacist",
+      "trackLabel": "藥師(一) 藥學(一) 藥理學與藥物化學",
+      "subjectCode": "115090",
+      "qnum": 67,
+      "tag": "115-2 藥師(一)｜Q67",
+      "chapter": "Ch.09",
+      "vol": 4,
+      "eventId": "E32",
+      "codexIds": [
+        63,
+        66
+      ],
+      "topic": "Clonidine 咪唑啉結構與二氯 SAR",
+      "stem": "下列有關 clonidine 的敘述，何者正確？",
+      "options": {
+        "A": "屬 imidazoline 衍生物",
+        "B": "最主要作用於興奮α1 交感神經受體",
+        "C": "口服生體可用率低於 50%",
+        "D": "結構式中含有 3 個氯原子"
+      },
+      "originalAnswer": "A",
+      "acceptedAnswers": [
+        "A"
+      ],
+      "revisionNote": "",
+      "optionExplanations": {
+        "A": "（正解）Clonidine 結構由 2,6-dichlorophenyl 經胺基連接至 2-imidazoline 環，屬於經典的 imidazoline（咪唑啉）衍生物類中樞 α2 致效劑（亦可作用於延腦咪唑啉 I1 受體降壓）。",
+        "B": "（錯誤）Clonidine 主要選擇性活化中樞突觸前 α2 腎上腺素受體，透過負回饋抑制正腎上腺素釋放與中樞交感神經輸出而降壓，並非主要興奮 α1 受體。",
+        "C": "（錯誤）Clonidine 口服吸收優良且首渡代謝少，口服生體可用率高達約 75–95%，遠高於 50%。",
+        "D": "（錯誤）Clonidine 苯環上僅在 2,6 兩個鄰位帶有「2 個氯原子」（2,6-dichlorophenyl，藉由立體位阻使苯環與咪唑啉環維持近垂直之活性構型），並非含有 3 個氯原子。"
+      },
+      "coreSummary": "Clonidine 藥化核心：屬 2-imidazoline 衍生物、苯環具 2 個鄰位氯原子（2,6-dichloro 維持立體垂直構型）、高口服生體可用率（75–95%），主攻中樞 α2（與 I1）受體降壓。",
+      "moexUrl": "https://wwwq.moex.gov.tw/exam/wFrmExamQandASearch.aspx?y=2026&e=115090"
+    },
+    {
+      "id": "NE_115-1_MD_65",
+      "exam": "115-1",
+      "year": 115,
+      "session": 1,
+      "track": "physician",
+      "trackLabel": "醫師(一) 醫學(二)",
+      "subjectCode": "115020",
+      "qnum": 65,
+      "tag": "115-1 醫師(一)｜Q65",
+      "chapter": "Ch.08",
+      "vol": 3,
+      "eventId": "E21",
+      "codexIds": [
+        43,
+        41,
+        26
+      ],
+      "topic": "Ipratropium 抗蕈毒鹼特性與青光眼禁忌",
+      "stem": "下列關於 ipratropium 的敘述，何者最不適當？",
+      "options": {
+        "A": "為 muscarinic cholinergic receptor 的拮抗劑",
+        "B": "最常用的劑型為吸入劑型與霧化劑型",
+        "C": "常用於慢性阻塞性肺病（chronic obstructive pulmonary disease），幫助支氣管擴張",
+        "D": "常用於青光眼（glaucoma），幫助房水（aqueous humor）排出"
+      },
+      "originalAnswer": "D",
+      "acceptedAnswers": [
+        "D"
+      ],
+      "revisionNote": "",
+      "optionExplanations": {
+        "A": "（錯誤）此敘述正確，非本題所選。Ipratropium 為帶永久正電荷的四級銨類短效抗蕈毒鹼劑（SAMA），藉由競爭性拮抗支氣管平滑肌上的 M3 蕈毒鹼受體而阻斷迷走神經媒介的氣道收縮。",
+        "B": "（錯誤）此敘述正確，非本題所選。因 ipratropium 為極性四級銨結構、口服吸收極差且不易穿透血腦障壁，臨床最常以定量吸入劑（MDI）或霧化吸入劑型局部作用於呼吸道，以減少全身性抗膽鹼副作用。",
+        "C": "（錯誤）此敘述正確，非本題所選。Ipratropium 可顯著舒張慢性阻塞性肺病（COPD）患者過高的迷走神經支氣管張力，減少黏液分泌，是 COPD 常用支氣管擴張劑之一。",
+        "D": "（正解）此敘述最不適當。抗蕈毒鹼藥會鬆弛虹膜瞳孔括約肌並麻痺睫狀肌，導致散瞳與前房隅角變窄，反而阻礙房水排出、誘發或惡化隅角閉鎖型青光眼（臨床甚至須防範霧化面罩漏氣波及眼睛）；能助房水排出降眼壓者為擬膽鹼致效劑（如 pilocarpine）。"
+      },
+      "coreSummary": "Ipratropium 為四級銨吸入型 SAMA，主治 COPD 支氣管痙攣；抗蕈毒鹼藥散瞳會阻礙房水排出，對青光眼（尤以閉鎖型）屬禁忌而非治療用藥。",
+      "moexUrl": "https://wwwq.moex.gov.tw/exam/wFrmExamQandASearch.aspx?y=2026&e=115020"
+    },
+    {
+      "id": "NE_115-1_MD_66",
+      "exam": "115-1",
+      "year": 115,
+      "session": 1,
+      "track": "physician",
+      "trackLabel": "醫師(一) 醫學(二)",
+      "subjectCode": "115020",
+      "qnum": 66,
+      "tag": "115-1 醫師(一)｜Q66",
+      "chapter": "Ch.09",
+      "vol": 4,
+      "eventId": "E32",
+      "codexIds": [
+        63,
+        66
+      ],
+      "topic": "Clonidine α2 效應與腸道副作用",
+      "stem": "病人使用 clonidine 時，最不容易出現下列何種效果？",
+      "options": {
+        "A": "血壓降低",
+        "B": "口乾舌燥",
+        "C": "嚴重腹瀉",
+        "D": "更年期熱潮紅（menopausal hot flushes）減輕"
+      },
+      "originalAnswer": "C",
+      "acceptedAnswers": [
+        "C"
+      ],
+      "revisionNote": "",
+      "optionExplanations": {
+        "A": "（錯誤）此為常見藥理效果。Clonidine 活化延腦孤束核與血管運動中樞之 α2（及咪唑啉 I1）受體，降低中樞交感神經輸出，使周邊血管阻力與心輸出下降而有效降低血壓。",
+        "B": "（錯誤）此為最常見副作用之一。Clonidine 活化中樞及唾液腺突觸前 α2 受體，抑制副交感神經乙醯膽鹼釋放，導致唾液分泌顯著減少，常引起明顯口乾舌燥與嗜睡鎮靜。",
+        "C": "（正解）Clonidine 最不容易引起嚴重腹瀉。活化腸道神經叢與腸上皮細胞上的 α2 受體會抑制乙醯膽鹼釋放、減緩腸道蠕動並促進水分與電解質吸收，因此較常引起便秘，臨床甚至曾用來治療糖尿病自主神經病變引起的頑固性腹瀉。",
+        "D": "（錯誤）此為臨床常見效用。Clonidine 可降低中樞正腎上腺素活性並拓寬下視丘體溫調節中樞的無出汗區間，常用作非荷爾蒙選擇以減輕更年期熱潮紅（menopausal hot flushes）。"
+      },
+      "coreSummary": "Clonidine 為中樞 α2 致效劑，典型效應為降血壓、口乾、鎮靜、便秘與緩解更年期熱潮紅；因抑制腸蠕動並促進水分吸收，最不會引起嚴重腹瀉。",
+      "moexUrl": "https://wwwq.moex.gov.tw/exam/wFrmExamQandASearch.aspx?y=2026&e=115020"
+    },
+    {
+      "id": "NE_115-1_MD_73",
+      "exam": "115-1",
+      "year": 115,
+      "session": 1,
+      "track": "physician",
+      "trackLabel": "醫師(一) 醫學(二)",
+      "subjectCode": "115020",
+      "qnum": 73,
+      "tag": "115-1 醫師(一)｜Q73",
+      "chapter": "Ch.07",
+      "vol": 2,
+      "eventId": "E16",
+      "codexIds": [
+        34,
+        32
+      ],
+      "topic": "阿茲海默症 AChEI 與 Memantine",
+      "stem": "下列治療阿茲海默症（Alzheimer disease）的藥物，何者的藥理作用機制與其他三個藥物不同？",
+      "options": {
+        "A": "memantine",
+        "B": "donepezil",
+        "C": "rivastigmine",
+        "D": "galantamine"
+      },
+      "originalAnswer": "A",
+      "acceptedAnswers": [
+        "A"
+      ],
+      "revisionNote": "",
+      "optionExplanations": {
+        "A": "（正解）Memantine 屬於非競爭性、電壓依賴性 NMDA 麩胺酸受體拮抗劑，藉由阻斷過度活化所致的 Ca²⁺ 內流來減少興奮性神經毒性（多用於中重度阿茲海默症），作用機轉與其餘三種膽鹼酯酶抑制劑完全不同。",
+        "B": "（錯誤）Donepezil 為可穿透血腦障壁之高選擇性、可逆性中樞乙醯膽鹼酯酶抑制劑（AChEI），藉由減少突觸間隙 ACh 水解來改善阿茲海默症認知功能。",
+        "C": "（錯誤）Rivastigmine 為氨基甲酸酯類（carbamate）偽不可逆中樞膽鹼酯酶抑制劑，同時抑制 AChE 與 BuChE（另有經皮貼片劑型），與 donepezil、galantamine 同屬提升腦內 ACh 路徑。",
+        "D": "（錯誤）Galantamine 為可逆性中樞乙醯膽鹼酯酶抑制劑（AChEI），並兼具菸鹼性乙醯膽鹼受體（nAChR）正向異位調節作用，與 donepezil、rivastigmine 同屬中樞 AChEI 家族。"
+      },
+      "coreSummary": "阿茲海默症用藥分兩大主軸：donepezil、rivastigmine、galantamine 為中樞 AChEI（補乙醯膽鹼）；memantine 則為 NMDA 拮抗劑（阻麩胺酸興奮性毒性）。",
+      "moexUrl": "https://wwwq.moex.gov.tw/exam/wFrmExamQandASearch.aspx?y=2026&e=115020"
+    },
+    {
+      "id": "NE_115-1_PH_15",
+      "exam": "115-1",
+      "year": 115,
+      "session": 1,
+      "track": "pharmacist",
+      "trackLabel": "藥師(一) 藥學(一) 藥理學與藥物化學",
+      "subjectCode": "115020",
+      "qnum": 15,
+      "tag": "115-1 藥師(一)｜Q15",
+      "chapter": "Ch.09",
+      "vol": 4,
+      "eventId": "E32",
+      "codexIds": [
+        63,
+        71
+      ],
+      "topic": "β 阻斷與 Clonidine 驟停反彈機制",
+      "stem": "長期使用 propranolol 或高劑量 clonidine 治療高血壓，若驟然停藥，前者可能造成心絞痛或惡化心臟病，後者會引發高血壓危象（hypertensive crisis），其可能機制為何？",
+      "options": {
+        "A": "長期使用 propranolol 會誘導心臟血管β2 receptor 表現增加，驟然停藥，會導致低血壓、惡化心臟病",
+        "B": "長期使用高劑量 clonidine 會誘導突觸後神經元α1 receptor 表現增加，增加交感神經興奮引發高血壓危象",
+        "C": "長期使用 propranolol 會誘導心臟心肌β1 receptor 表現減少，驟然停藥，造成心絞痛、惡化心臟病",
+        "D": "長期使用高劑量 clonidine 會誘導突觸前神經元α2 receptor 表達減少，減少負回饋抑制，引發高血壓危象"
+      },
+      "originalAnswer": "D",
+      "acceptedAnswers": [
+        "D"
+      ],
+      "revisionNote": "",
+      "optionExplanations": {
+        "A": "（錯誤）長期使用 β 阻斷劑 propranolol 是誘導心肌 β1 受體表現「上調（upregulation）」，驟然停藥後內生性兒茶酚胺過度刺激心肌，引起心搏過速、血壓上升與心肌耗氧激增而惡化心絞痛，並非血管 β2 增加導致低血壓。",
+        "B": "（錯誤）Clonidine 屬於突觸前 α2 受體致效劑，長期高劑量使用所致的適應性變化是突觸前 α2 受體下調與去敏感化，而非誘導突觸後 α1 受體表現增加。",
+        "C": "（錯誤）受體調控方向正好相反：長期使用拮抗劑 propranolol 會誘導心肌 β1 受體代償性「增加（上調）」，而非減少；驟停撤除阻斷後便對正常交感刺激產生過度敏感。",
+        "D": "（正解）長期使用高劑量 α2 致效劑 clonidine 會造成突觸前神經元 α2 受體表達減少（下調，downregulation）與去敏感化；驟然停藥後，原本仰賴藥物維持的突觸前負回饋煞車突然消失，導致正腎上腺素大量湧出，引發嚴重反彈性高血壓危象（rebound hypertensive crisis）。"
+      },
+      "coreSummary": "長期用拮抗劑（propranolol）致受體上調（β1↑），長期用致效劑（clonidine）致突觸前負回饋受體下調（α2↓），兩者皆忌驟停，須逐步減量以防反彈危象。",
+      "moexUrl": "https://wwwq.moex.gov.tw/exam/wFrmExamQandASearch.aspx?y=2026&e=115020"
+    },
+    {
+      "id": "NE_115-1_PH_26",
+      "exam": "115-1",
+      "year": 115,
+      "session": 1,
+      "track": "pharmacist",
+      "trackLabel": "藥師(一) 藥學(一) 藥理學與藥物化學",
+      "subjectCode": "115020",
+      "qnum": 26,
+      "tag": "115-1 藥師(一)｜Q26",
+      "chapter": "Ch.09",
+      "vol": 4,
+      "eventId": "E32",
+      "codexIds": [
+        64,
+        62,
+        63
+      ],
+      "topic": "膀胱過動症 β3 致效劑 Mirabegron",
+      "stem": "下列交感神經藥物中，何者臨床上可用於治療膀胱過動症（overactive bladder）？",
+      "options": {
+        "A": "mirabegron",
+        "B": "clonidine",
+        "C": "midodrine",
+        "D": "phenylephrine"
+      },
+      "originalAnswer": "A",
+      "acceptedAnswers": [
+        "A"
+      ],
+      "revisionNote": "",
+      "optionExplanations": {
+        "A": "（正解）Mirabegron（及同類 vibegron）為選擇性 β3 腎上腺素受體致效劑，透過 Gs–cAMP 路徑直接舒張膀胱逼尿肌平滑肌、增加膀胱儲尿容量，為臨床治療膀胱過動症（OAB）的重要一線非抗膽鹼用藥（亦避免長者中樞抗膽鹼譫妄風險）。",
+        "B": "（錯誤）Clonidine 為中樞 α2 致效劑，主要用於治療高血壓、注意力不足過動症（ADHD）及戒斷症狀，並非膀胱過動症用藥。",
+        "C": "（錯誤）Midodrine 為口服 α1 致效劑前驅藥（體內去甘胺酸活化為 desglymidodrine），主治神經性姿勢性低血壓；雖可增強膀胱頸與尿道內括約肌張力，但無法放鬆逼尿肌以治療 OAB。",
+        "D": "（錯誤）Phenylephrine 為直接型 α1 致效劑，臨床常用於鼻黏膜去充血、術中低血壓升壓及單純眼科散瞳，不用於治療膀胱過動症。"
+      },
+      "coreSummary": "儲尿期逼尿肌舒張由 β3 受體主導：mirabegron 選擇性活化 β3 治療 OAB，無抗膽鹼口乾與中樞譫妄風險，唯重度未控制高血壓患者須慎用／禁用。",
+      "moexUrl": "https://wwwq.moex.gov.tw/exam/wFrmExamQandASearch.aspx?y=2026&e=115020"
+    },
+    {
+      "id": "NE_115-1_PH_27",
+      "exam": "115-1",
+      "year": 115,
+      "session": 1,
+      "track": "pharmacist",
+      "trackLabel": "藥師(一) 藥學(一) 藥理學與藥物化學",
+      "subjectCode": "115020",
+      "qnum": 27,
+      "tag": "115-1 藥師(一)｜Q27",
+      "chapter": "Ch.08",
+      "vol": 3,
+      "eventId": "E22",
+      "codexIds": [
+        44,
+        41
+      ],
+      "topic": "膀胱過動症抗蕈毒鹼選藥與散瞳劑區辨",
+      "stem": "下列毒蕈鹼受體拮抗劑（muscarinic antagonists）中，何者最不適合用於治療尿失禁（urinary incontinence）或膀胱過動症（overactive bladder）？",
+      "options": {
+        "A": "homatropine",
+        "B": "darifenacin",
+        "C": "oxybutynin",
+        "D": "tolterodine"
+      },
+      "originalAnswer": "A",
+      "acceptedAnswers": [
+        "A"
+      ],
+      "revisionNote": "",
+      "optionExplanations": {
+        "A": "（正解）Homatropine 為非選擇性托烷類抗蕈毒鹼藥物（tropine 與 mandelic acid 所成酯類），臨床專作眼科點眼劑，用於散瞳、睫狀肌麻痺及葡萄膜炎預防虹膜沾黏（作用約 12–24 小時），最不適合全身性用於治療尿失禁或膀胱過動症。",
+        "B": "（錯誤）Darifenacin 為高選擇性 M3 蕈毒鹼受體拮抗劑，可有效抑制逼尿肌過度收縮且大幅減少中樞 M1 認知副作用，適合用於治療 OAB 與急迫性尿失禁。",
+        "C": "（錯誤）Oxybutynin 為經典抗蕈毒鹼 OAB 用藥（具備速釋、緩釋口服及經皮貼片劑型），能直接抑制膀胱逼尿肌痙攣，惟較易入腦而須留意長者中樞抗膽鹼副作用。",
+        "D": "（錯誤）Tolterodine 為常用於治療 OAB 與急迫性尿失禁的抗蕈毒鹼藥物，對膀胱組織具較佳耐受性，口乾副作用較速釋 oxybutynin 低。"
+      },
+      "coreSummary": "OAB 抗 M 家族包含 darifenacin、solifenacin、oxybutynin、tolterodine、fesoterodine、trospium；homatropine 則歸屬眼科中長效散瞳劑，不可混用。",
+      "moexUrl": "https://wwwq.moex.gov.tw/exam/wFrmExamQandASearch.aspx?y=2026&e=115020"
+    },
+    {
+      "id": "NE_115-1_PH_28",
+      "exam": "115-1",
+      "year": 115,
+      "session": 1,
+      "track": "pharmacist",
+      "trackLabel": "藥師(一) 藥學(一) 藥理學與藥物化學",
+      "subjectCode": "115020",
+      "qnum": 28,
+      "tag": "115-1 藥師(一)｜Q28",
+      "chapter": "Ch.08",
+      "vol": 3,
+      "eventId": "E28",
+      "codexIds": [
+        56,
+        55
+      ],
+      "topic": "ALS 治療藥 Riluzole 與解痙鑑別",
+      "stem": "下列藥物中，何者最適合用於治療肌萎縮性脊髓側索硬化症（amyotrophic lateral sclerosis）病人？",
+      "options": {
+        "A": "riluzole",
+        "B": "baclofen",
+        "C": "cyclobenzaprine",
+        "D": "dantrolene"
+      },
+      "originalAnswer": "A",
+      "acceptedAnswers": [
+        "A"
+      ],
+      "revisionNote": "",
+      "optionExplanations": {
+        "A": "（正解）Riluzole 是肌萎縮性脊髓側索硬化症（ALS，俗稱漸凍人症）的核心核准治療藥物，透過阻斷電壓依賴性 Na⁺ 通道、抑制突觸前麩胺酸（glutamate）釋放與減輕興奮性神經毒性，臨床實證可延緩病程惡化並延長病患存活時間。",
+        "B": "（錯誤）Baclofen 為中樞 GABA_B 致效劑，僅能輔助緩解上運動神經元受損引起的局部肌張力過高或痙攣，無法改變或延緩 ALS 神經退化病程。",
+        "C": "（錯誤）Cyclobenzaprine 結構近似三環抗憂鬱劑，主要用於緩解急性局部骨骼肌痙攣（如急性下背痛），兼具顯著抗膽鹼鎮靜副作用，不適用於 ALS 治療。",
+        "D": "（錯誤）Dantrolene 直接抑制骨骼肌肌漿網 RyR1 鈣離子釋放通道，用於惡性高熱急救與特定慢性痙攣，會造成骨骼肌無力，不適合本已進行性肌萎縮無力的 ALS 病人。"
+      },
+      "coreSummary": "ALS（肌萎縮性脊髓側索硬化症）首選疾病修飾藥物為 riluzole（三重抗麩胺酸興奮性毒性機轉），勿與單純解痙劑 baclofen、cyclobenzaprine、dantrolene 混淆。",
+      "moexUrl": "https://wwwq.moex.gov.tw/exam/wFrmExamQandASearch.aspx?y=2026&e=115020"
+    },
+    {
+      "id": "NE_115-1_PH_57",
+      "exam": "115-1",
+      "year": 115,
+      "session": 1,
+      "track": "pharmacist",
+      "trackLabel": "藥師(一) 藥學(一) 藥理學與藥物化學",
+      "subjectCode": "115020",
+      "qnum": 57,
+      "tag": "115-1 藥師(一)｜Q57",
+      "chapter": "Ch.09",
+      "vol": 4,
+      "eventId": "E36",
+      "codexIds": [
+        71,
+        70
+      ],
+      "topic": "β 阻斷劑親脂性與 Esmolol 軟藥",
+      "stem": "Atenolol、esmolol、propranolol 均屬β-adrenergic blockers，下列敘述何者錯誤？",
+      "options": {
+        "A": "atenolol 是β1-selective blocker",
+        "B": "propranolol 為 non-selective blocker",
+        "C": "esmolol 是前驅藥（prodrug），需經 esterase 水解才有活性",
+        "D": "三者中以 propranolol 親脂性最高，最易進入 CNS"
+      },
+      "originalAnswer": "C",
+      "acceptedAnswers": [
+        "C"
+      ],
+      "revisionNote": "",
+      "optionExplanations": {
+        "A": "（錯誤）此敘述正確，非本題所選。Atenolol 苯環對位具有親水性乙醯胺基（acetamide），屬於第二代心臟選擇性 β1-selective blocker。",
+        "B": "（錯誤）此敘述正確，非本題所選。Propranolol 為經典第一代非選擇性 β1/β2 阻斷劑（結構具萘環），同時具明顯局部麻醉（膜穩定）作用。",
+        "C": "（正解）此敘述錯誤。Esmolol 本身即是具活性的 β1 選擇性阻斷劑，並非前驅藥（prodrug）；相反地，它屬於「軟藥（soft drug）」設計，對位所接之甲酯基（methyl ester）會在血中迅速被紅血球酯酶水解為「無活性」的自由酸代謝物，使半衰期縮短至僅約 9–10 分鐘。",
+        "D": "（錯誤）此敘述正確，非本題所選。三者之中，propranolol 具疏水性雙環萘結構且無極性取代基，親脂性最高、最易穿透血腦障壁進入 CNS（易致失眠、惡夢與憂鬱等中樞副作用）；atenolol 親水性最高，最不易入腦。"
+      },
+      "coreSummary": "Esmolol 是「軟藥」而非「前驅藥」：本身即有活性，經血中紅血球酯酶水解後「快速去活化」（t₁/₂ ≈ 9–10 分鐘）；親脂性與入腦程度則以 propranolol 最高。",
+      "moexUrl": "https://wwwq.moex.gov.tw/exam/wFrmExamQandASearch.aspx?y=2026&e=115020"
+    },
+    {
+      "id": "NE_115-1_PH_66",
+      "exam": "115-1",
+      "year": 115,
+      "session": 1,
+      "track": "pharmacist",
+      "trackLabel": "藥師(一) 藥學(一) 藥理學與藥物化學",
+      "subjectCode": "115020",
+      "qnum": 66,
+      "tag": "115-1 藥師(一)｜Q66",
+      "chapter": "Ch.09",
+      "vol": 4,
+      "eventId": "E32",
+      "codexIds": [
+        63,
+        66
+      ],
+      "topic": "Clonidine 藥化結構、代謝與口服吸收特性",
+      "stem": "下列有關 clonidine 之敘述，何者正確？",
+      "options": {
+        "A": "結構中具有 pyridine 雜環基團",
+        "B": "藥理活性作用類似 methoxamine",
+        "C": "主要代謝為 aromatic hydroxylation",
+        "D": "口服生體可用率差，建議靜脈注射給藥"
+      },
+      "originalAnswer": "C",
+      "acceptedAnswers": [
+        "C"
+      ],
+      "revisionNote": "",
+      "optionExplanations": {
+        "A": "（錯誤）Clonidine 結構核心為 2-imidazoline（咪唑啉）五員雙氮雜環與 2,6-二氯苯環（2,6-dichlorophenyl）透過胺基相連，並不具有 pyridine（吡啶）六員雜環。",
+        "B": "（錯誤）Clonidine 主要為中樞 α2 腎上腺素受體致效劑，可降低交感神經輸出而降血壓；methoxamine 則為直接作用型周邊 α1 致效劑，會強烈收縮血管升高血壓，兩者藥理作用截然不同。",
+        "C": "（正解）Clonidine 約有 40–60% 以原型經腎臟排泄，其餘在肝臟進行代謝，主要代謝路徑為苯環對位之芳香環羥化（aromatic hydroxylation）生成無活性的 4-hydroxyclonidine（另有咪唑啉環氧化開環等次要路徑）。",
+        "D": "（錯誤）Clonidine 親脂性良好且首渡代謝低，口服生體可用率高達約 75–95%，臨床常採口服或經皮貼片給藥，並不需要因吸收差而改靜脈注射。"
+      },
+      "coreSummary": "Clonidine 藥化四大考點：2-imidazoline＋2,6-二氯苯環、中樞 α2 致效降壓、口服生體可用率高（75–95%）、肝臟主要經芳香環對位羥化（4-hydroxyclonidine）代謝。",
+      "moexUrl": "https://wwwq.moex.gov.tw/exam/wFrmExamQandASearch.aspx?y=2026&e=115020"
+    },
+    {
+      "id": "NE_114-2_MD_65",
+      "exam": "114-2",
+      "year": 114,
+      "session": 2,
+      "track": "physician",
+      "trackLabel": "醫師(一) 醫學(二)",
+      "subjectCode": "114090",
+      "qnum": 65,
+      "tag": "114-2 醫師(一)｜Q65",
+      "chapter": "Ch.07",
+      "vol": 2,
+      "eventId": "E16",
+      "codexIds": [
+        25,
+        32,
+        33
+      ],
+      "topic": "Neostigmine 適應症與心搏過緩禁忌",
+      "stem": "Neostigmine 最不適合用於下列何種疾病的治療？",
+      "options": {
+        "A": "重症肌無力（myasthenia gravis）",
+        "B": "術後癱瘓性腸阻塞（paralytic ileus）",
+        "C": "心搏過緩（bradycardia）",
+        "D": "術後之尿液滯留（urinary retention）"
+      },
+      "originalAnswer": "C",
+      "acceptedAnswers": [
+        "C"
+      ],
+      "revisionNote": "",
+      "optionExplanations": {
+        "A": "（錯誤，為主要適應症）Neostigmine 為四級胺可逆性乙醯膽鹼酯酶抑制劑（AChEI），可增加神經肌肉接合處 ACh 濃度並具弱直接刺激骨骼肌 N_M 受體作用，臨床常用於重症肌無力（myasthenia gravis）之症狀治療。",
+        "B": "（錯誤，為典型適應症）Neostigmine 增強副交感 M₃ 受體活性，能促進胃腸道平滑肌蠕動，適用於無機械性阻塞之術後癱瘓性腸阻塞（paralytic ileus）或急性假性結腸阻塞。",
+        "C": "（正解，最不適合）Neostigmine 增加迷走神經末梢 ACh 並活化心臟竇房結與房室結之 M₂ 受體（Gi 偶聯，開啟 I_K,ACh 鉀通道並降低 cAMP），反而會「減慢心率」與抑制房室傳導、加重心搏過緩，故絕不適用於治療心搏過緩（心搏過緩急救應選用抗蕈毒鹼劑 atropine）。",
+        "D": "（錯誤，為典型適應症）Neostigmine 活化膀胱逼尿肌 M₃ 受體使膀胱收縮、同時協助膀胱內括約肌舒張，適用於無機械性尿道阻塞之術後尿液滯留。"
+      },
+      "coreSummary": "四級胺 AChEI neostigmine 的四大經典用途為重症肌無力、術後麻痺性腸阻塞、術後尿滯留及逆轉非去極化肌鬆劑；但會刺激心臟 M₂ 致心搏過緩（逆轉肌鬆時須併用 atropine 或 glycopyrrolate 護心）。",
+      "moexUrl": "https://wwwq.moex.gov.tw/exam/wFrmExamQandASearch.aspx?y=2025&e=114090"
+    },
+    {
+      "id": "NE_114-2_MD_66",
+      "exam": "114-2",
+      "year": 114,
+      "session": 2,
+      "track": "physician",
+      "trackLabel": "醫師(一) 醫學(二)",
+      "subjectCode": "114090",
+      "qnum": 66,
+      "tag": "114-2 醫師(一)｜Q66",
+      "chapter": "Ch.09",
+      "vol": 4,
+      "eventId": "E35",
+      "codexIds": [
+        14,
+        69
+      ],
+      "topic": "Tamsulosin 致虹膜鬆脫 IFIS",
+      "stem": "70 歲王先生在接受白內障開刀手術時，出現了虹膜鬆脫症候群（floppy iris syndrome），經檢視王先生平時服用的藥物，推測最可能是由下列何者所造成？",
+      "options": {
+        "A": "降血壓藥 atenolol",
+        "B": "降血糖藥 sitagliptin",
+        "C": "慢性阻塞性肺病用藥 ipratropium",
+        "D": "良性攝護腺肥大用藥 tamsulosin"
+      },
+      "originalAnswer": "D",
+      "acceptedAnswers": [
+        "D"
+      ],
+      "revisionNote": "",
+      "optionExplanations": {
+        "A": "（錯誤）Atenolol 為心臟選擇性 β₁ 腎上腺素受體拮抗劑，主要用於高血壓與心律控制，不阻斷虹膜擴張肌之 α₁A 受體，不會引發虹膜鬆脫症候群。",
+        "B": "（錯誤）Sitagliptin 為口服 DPP-4 抑制劑類降血糖藥，藉由延緩腸泌素降解促進胰島素分泌，與眼部虹膜平滑肌張力無關。",
+        "C": "（錯誤）Ipratropium 為吸入型四級胺抗蕈毒鹼支氣管擴張劑（SAMA），全身吸收極低，且對眼睛若意外噴入係阻斷瞳孔括約肌 M₃ 受體造成散瞳，與 α₁A 阻斷所致的虹膜鬆脫不同。",
+        "D": "（正解）Tamsulosin 為高選擇性 α₁A／α₁D 腎上腺素受體拮抗劑，用於治療良性攝護腺肥大；由於眼內「虹膜擴張肌（iris dilator muscle）」同樣高度表現 α₁A 受體，長期服用 tamsulosin 會造成虹膜擴張肌無力萎縮，使白內障手術中出現典型之「術中虹膜鬆脫症候群（Intraoperative Floppy Iris Syndrome, IFIS）」（虹膜波浪狀飄動、切口脫垂及術中漸進縮瞳）。"
+      },
+      "coreSummary": "114 國考高頻臨床題：α₁A 選擇性 BPH 用藥 tamsulosin 雖減少血管 α₁B 造成的姿勢性低血壓，卻同時阻斷虹膜擴張肌的 α₁A 受體，極易於白內障手術誘發虹膜鬆脫症候群（IFIS），術前必須主動告知眼科醫師。",
+      "moexUrl": "https://wwwq.moex.gov.tw/exam/wFrmExamQandASearch.aspx?y=2025&e=114090"
+    },
+    {
+      "id": "NE_114-2_MD_68",
+      "exam": "114-2",
+      "year": 114,
+      "session": 2,
+      "track": "physician",
+      "trackLabel": "醫師(一) 醫學(二)",
+      "subjectCode": "114090",
+      "qnum": 68,
+      "tag": "114-2 醫師(一)｜Q68",
+      "chapter": "Ch.08",
+      "vol": 3,
+      "eventId": "E21",
+      "codexIds": [
+        3,
+        43
+      ],
+      "topic": "心臟病 COPD 選用 Ipratropium",
+      "stem": "有位 70 歲老人，患有心臟病及慢性阻塞肺部疾病，常伴隨著偶發性氣管痙攣的症狀。下列何者可以有效解除此病人的氣管痙攣症狀，且較不易引發心律不整的副作用？",
+      "options": {
+        "A": "prednisone",
+        "B": "salmeterol",
+        "C": "zafirlukast",
+        "D": "ipratropium"
+      },
+      "originalAnswer": "D",
+      "acceptedAnswers": [
+        "D"
+      ],
+      "revisionNote": "",
+      "optionExplanations": {
+        "A": "（錯誤）Prednisone 為口服糖皮質素抗發炎藥，須經細胞核基因轉錄調節發揮抗發炎效應，起效緩慢（需數小時），無法立即緩解急性偶發性氣管痙攣。",
+        "B": "（錯誤）Salmeterol 為長效 β₂ 致效劑（LABA），起效緩慢（15–30 分鐘）不可用於急性支氣管痙攣救援，且擬交感 β 致效劑對合併心臟病長者具誘發心悸、低血鉀與心律不整之風險。",
+        "C": "（錯誤）Zafirlukast 為口服白三烯素受體拮抗劑（CysLT1 拮抗劑），屬於氣喘長期維持控制藥，無直接迅速擴張支氣管效果，對 COPD 氣管痙攣療效亦差。",
+        "D": "（正解）Ipratropium 為吸入型四級胺短效抗蕈毒鹼支氣管擴張劑（SAMA），可快速阻斷氣道平滑肌 M₃ 受體解除支氣管痙攣（對 COPD 迷走張力主導之氣道阻塞特別有效）；因其帶永久正電之四級銨結構、全身吸收極微且不刺激心臟 β 受體，最不易引發心搏過速或心律不整，最適合合併心臟病之 COPD 老人使用。"
+      },
+      "coreSummary": "吸入型四級胺抗蕈毒鹼劑 ipratropium（SAMA）專阻肺部 M₃、全身吸收極低且不具擬交感心臟刺激性，對合併心臟病或心律不整風險之 COPD 患者解除支氣管痙攣最為安全有效。",
+      "moexUrl": "https://wwwq.moex.gov.tw/exam/wFrmExamQandASearch.aspx?y=2025&e=114090"
+    },
+    {
+      "id": "NE_114-2_PH_21",
+      "exam": "114-2",
+      "year": 114,
+      "session": 2,
+      "track": "pharmacist",
+      "trackLabel": "藥師(一) 藥學(一) 藥理學與藥物化學",
+      "subjectCode": "114090",
+      "qnum": 21,
+      "tag": "114-2 藥師(一)｜Q21",
+      "chapter": "Ch.08",
+      "vol": 3,
+      "eventId": "E28",
+      "codexIds": [
+        55
+      ],
+      "topic": "脊髓 α2 中樞肌鬆劑 Tizanidine",
+      "stem": "下列何者是α2 adrenergic agonist，主要用途作為中樞性肌肉鬆弛劑（centrally acting muscle relaxant）？",
+      "options": {
+        "A": "tizanidine",
+        "B": "formoterol",
+        "C": "phenylephrine",
+        "D": "prazosin"
+      },
+      "originalAnswer": "A",
+      "acceptedAnswers": [
+        "A"
+      ],
+      "revisionNote": "",
+      "optionExplanations": {
+        "A": "（正解）Tizanidine 為結構類似 clonidine 之 α₂ 腎上腺素受體致效劑，主要增強脊髓運動神經元突觸前抑制、減少興奮性胺基酸釋放並壓抑多突觸伸張反射，臨床專用作中樞性肌肉鬆弛劑（解痙劑）以治療多發性硬化症或脊髓損傷相關痙攣；主要經 CYP1A2 代謝，須防強 CYP1A2 抑制劑（如 ciprofloxacin、fluvoxamine）引發嚴重低血壓與過度鎮靜。",
+        "B": "（錯誤）Formoterol 為長效且快速起效之選擇性 β₂ 腎上腺素受體致效劑，吸入用於氣喘與 COPD，非 α₂ 致效劑亦非中樞肌鬆劑。",
+        "C": "（錯誤）Phenylephrine 為直接選擇性 α₁ 腎上腺素受體致效劑，用於升壓、緩解鼻塞與散瞳。",
+        "D": "（錯誤）Prazosin 為選擇性 α₁ 腎上腺素受體拮抗劑，用於治療高血壓、良性攝護腺肥大與 PTSD 相關惡夢。"
+      },
+      "coreSummary": "三大脊髓中樞解痙劑機轉對照：Diazepam 走 GABA_A（Cl⁻ 內流）、Baclofen 走 GABA_B（K⁺ 外流／抑 Ca²⁺，忌驟停）、Tizanidine 走脊髓 α₂ 受體（CYP1A2 代謝，忌併 ciprofloxacin／fluvoxamine）。",
+      "moexUrl": "https://wwwq.moex.gov.tw/exam/wFrmExamQandASearch.aspx?y=2025&e=114090"
+    },
+    {
+      "id": "NE_114-2_PH_22",
+      "exam": "114-2",
+      "year": 114,
+      "session": 2,
+      "track": "pharmacist",
+      "trackLabel": "藥師(一) 藥學(一) 藥理學與藥物化學",
+      "subjectCode": "114090",
+      "qnum": 22,
+      "tag": "114-2 藥師(一)｜Q22",
+      "chapter": "Ch.09",
+      "vol": 4,
+      "eventId": "E33",
+      "codexIds": [
+        65
+      ],
+      "topic": "間接擬交感 Modafinil 治猝睡症",
+      "stem": "下列何者是間接作用型擬交感神經作用劑（indirect-acting sympathomimetics）modafinil 之臨床用途？",
+      "options": {
+        "A": "氣喘（asthma）",
+        "B": "猝睡症（narcolepsy）",
+        "C": "休克（shock）",
+        "D": "偏頭痛（migraine）"
+      },
+      "originalAnswer": "B",
+      "acceptedAnswers": [
+        "B"
+      ],
+      "revisionNote": "",
+      "optionExplanations": {
+        "A": "（錯誤）氣喘以吸入型 β₂ 致效劑、吸入型類固醇或抗膽鹼劑治療，modafinil 不具支氣管擴張作用。",
+        "B": "（正解）Modafinil 為非安非他命類間接作用型擬交感中樞促清醒劑，主要弱抑制多巴胺轉運體（DAT）與正腎上腺素轉運體（NET）以增加突觸間單胺濃度（但不引發 VMAT 囊泡反向釋放，故成癮濫用與周邊心血管副作用低於 amphetamine），為治療猝睡症（narcolepsy）日間過度嗜睡的第一線首選藥物之一。",
+        "C": "（錯誤）休克須靜脈輸注直接型擬交感升壓或強心藥（如 norepinephrine、epinephrine、dobutamine），非口服促醒劑 modafinil 之用途。",
+        "D": "（錯誤）偏頭痛急性期選用 NSAIDs／triptans／gepants，預防則用無 ISA β 阻斷劑／topiramate／CGRP 單抗等，不用 modafinil。"
+      },
+      "coreSummary": "Modafinil（及右旋體 armodafinil）透過純抑制 DAT／NET（無 VMAT 反向轉運）促進中樞清醒，濫用風險與心血管負擔皆較 amphetamine 低，為猝睡症（narcolepsy）第一線治療首選。",
+      "moexUrl": "https://wwwq.moex.gov.tw/exam/wFrmExamQandASearch.aspx?y=2025&e=114090"
+    },
+    {
+      "id": "NE_114-2_PH_23",
+      "exam": "114-2",
+      "year": 114,
+      "session": 2,
+      "track": "pharmacist",
+      "trackLabel": "藥師(一) 藥學(一) 藥理學與藥物化學",
+      "subjectCode": "114090",
+      "qnum": 23,
+      "tag": "114-2 藥師(一)｜Q23",
+      "chapter": "Ch.09",
+      "vol": 4,
+      "eventId": "E31",
+      "codexIds": [
+        14,
+        63
+      ],
+      "topic": "β1 致效劑 Dobutamine 治心因休克",
+      "stem": "下列何者為β1 adrenergic agonist，具有強心作用，可用於治療心因性休克（cardiogenic shock）病人？",
+      "options": {
+        "A": "dobutamine",
+        "B": "isoproterenol",
+        "C": "metaproterenol",
+        "D": "metoprolol"
+      },
+      "originalAnswer": "A",
+      "acceptedAnswers": [
+        "A"
+      ],
+      "revisionNote": "",
+      "optionExplanations": {
+        "A": "（正解）Dobutamine 為合成兒茶酚胺類選擇性 β₁ 腎上腺素受體致效劑（外消旋體中之 (-) 與 (+) 異構物在 α₁ 受體上一為致效、一為拮抗而互抵血管效應，兩者皆共同活化心肌 β₁ 受體），能顯著增強心肌收縮力與心輸出量，且較不引發劇烈心搏過速或周邊血管阻力大增，為靜脈輸注治療急性失代償心衰竭與心因性休克的經典強心藥。",
+        "B": "（錯誤）Isoproterenol 為非選擇性 β₁＝β₂ 強效致效劑，雖具強心作用，但強烈活化 β₂ 擴張周邊血管會導致舒張壓與平均動脈壓（MAP）驟降，並誘發劇烈反射性心搏過速與心肌耗氧激增，不宜用於心因性休克。",
+        "C": "（錯誤）Metaproterenol 為偏 β₂ 選擇性之非兒茶酚胺支氣管擴張劑（間苯二酚結構抗 COMT），臨床用於氣喘支氣管痙攣而非強心急救。",
+        "D": "（錯誤）Metoprolol 為心臟選擇性 β₁ 受體拮抗劑（β 阻斷劑），會抑制心肌收縮與心率，急性心因性休克時禁用。"
+      },
+      "coreSummary": "心因性休克強心首選 β₁ 致效劑 dobutamine（正性肌力優於正性心率、外消旋體抵銷 α₁ 縮血管）；切勿與非選擇性 β 致效劑 isoproterenol（降 MAP、狂飆心跳）或 β₁ 阻斷劑 metoprolol 混淆。",
+      "moexUrl": "https://wwwq.moex.gov.tw/exam/wFrmExamQandASearch.aspx?y=2025&e=114090"
+    },
+    {
+      "id": "NE_114-2_PH_24",
+      "exam": "114-2",
+      "year": 114,
+      "session": 2,
+      "track": "pharmacist",
+      "trackLabel": "藥師(一) 藥學(一) 藥理學與藥物化學",
+      "subjectCode": "114090",
+      "qnum": 24,
+      "tag": "114-2 藥師(一)｜Q24",
+      "chapter": "Ch.09",
+      "vol": 4,
+      "eventId": "E36",
+      "codexIds": [
+        70,
+        71
+      ],
+      "topic": "β1 阻斷劑 Nebivolol 與無局麻特性",
+      "stem": "下列藥物中，何者屬於選擇性β1 adrenergic receptor blocker，且不具局部麻醉作用？",
+      "options": {
+        "A": "nebivolol",
+        "B": "nadolol",
+        "C": "propranolol",
+        "D": "sotalol"
+      },
+      "originalAnswer": "A",
+      "acceptedAnswers": [
+        "A"
+      ],
+      "revisionNote": "",
+      "optionExplanations": {
+        "A": "（正解）Nebivolol 為第三代最高心臟選擇性之 β₁ 腎上腺素受體拮抗劑（兼具活化血管內皮 β₃ 受體釋放 NO 以擴張血管之特性），且不具局部麻醉作用（無膜穩定活性 MSA）亦無內源性擬交感活性（ISA）。",
+        "B": "（錯誤）Nadolol 為長效第一代「非選擇性」（β₁＝β₂）阻斷劑，雖不具局部麻醉作用，但對 β₁ 不具選擇性。",
+        "C": "（錯誤）Propranolol 為第一代「非選擇性」（β₁＝β₂）阻斷劑，且具有顯著「局部麻醉作用（膜穩定活性）」，故禁止製成點眼液以免麻痺角膜反射。",
+        "D": "（錯誤）Sotalol 為「非選擇性」（β₁＝β₂）阻斷劑兼 Class III 抗心律不整藥（抑制鉀通道 I_Kr 延長動作電位與 QT 間期），不具 β₁ 選擇性。"
+      },
+      "coreSummary": "三代 β 阻斷劑速辨：nebivolol 是所有 β 阻斷劑中 β₁ 選擇性最高者（且釋放 NO 擴血管、無局麻、無 ISA）；nadolol、propranolol、sotalol 皆屬非選擇性（其中 propranolol 具強局麻作用）。",
+      "moexUrl": "https://wwwq.moex.gov.tw/exam/wFrmExamQandASearch.aspx?y=2025&e=114090"
+    },
+    {
+      "id": "NE_114-2_PH_25",
+      "exam": "114-2",
+      "year": 114,
+      "session": 2,
+      "track": "pharmacist",
+      "trackLabel": "藥師(一) 藥學(一) 藥理學與藥物化學",
+      "subjectCode": "114090",
+      "qnum": 25,
+      "tag": "114-2 藥師(一)｜Q25",
+      "chapter": "Ch.07",
+      "vol": 2,
+      "eventId": "E16",
+      "codexIds": [
+        34
+      ],
+      "topic": "Amifampridine 治療 LEMS",
+      "stem": "下列何者屬於乙醯膽鹼釋放調控劑（acetylcholine release modulator），可用於治療藍伯－伊頓肌無力症候群（Lambert-Eaton myasthenic syndrome）？",
+      "options": {
+        "A": "amifampridine",
+        "B": "atropine",
+        "C": "echothiophate",
+        "D": "bethanechol"
+      },
+      "originalAnswer": "A",
+      "acceptedAnswers": [
+        "A"
+      ],
+      "revisionNote": "",
+      "optionExplanations": {
+        "A": "（正解）Amifampridine（3,4-diaminopyridine, 3,4-DAP）為突觸前乙醯膽鹼釋放調控劑，機轉係阻斷神經末梢電壓閘控鉀離子通道（K_v），延長動作電位再極化時間，使更多 Ca²⁺ 經殘存之 P/Q 型鈣通道內流並促進 ACh 囊泡釋放，臨床專用於治療自體抗體攻擊突觸前 P/Q 型鈣通道所致的藍伯－伊頓肌無力症候群（LEMS）。",
+        "B": "（錯誤）Atropine 為競爭性蕈毒鹼受體拮抗劑，作用於副交感末梢與中樞 M 受體，與運動神經末梢 ACh 釋放無關。",
+        "C": "（錯誤）Echothiophate 為不可逆長效有機磷類 AChE 抑制劑，藉由抑制酵素減少 ACh 分解（曾用於青光眼點眼），並非 ACh 釋放調控劑。",
+        "D": "（錯誤）Bethanechol 為直接選擇性蕈毒鹼受體致效劑（抗 AChE 水解、幾乎無菸鹼活性），用於術後尿滯留與胃輕癱，對骨骼肌神經肌肉接合處無效。"
+      },
+      "coreSummary": "重症肌無力（MG，攻擊突觸後 N_M 受體）用 AChEI（pyridostigmine）；藍伯－伊頓肌無力症候群（LEMS，攻擊突觸前 P/Q 型 Ca²⁺ 通道，常伴小細胞肺癌）首選 amifampridine（3,4-DAP）阻斷突觸前 K⁺ 通道以促 ACh 釋放。",
+      "moexUrl": "https://wwwq.moex.gov.tw/exam/wFrmExamQandASearch.aspx?y=2025&e=114090"
+    },
+    {
+      "id": "NE_114-2_PH_30",
+      "exam": "114-2",
+      "year": 114,
+      "session": 2,
+      "track": "pharmacist",
+      "trackLabel": "藥師(一) 藥學(一) 藥理學與藥物化學",
+      "subjectCode": "114090",
+      "qnum": 30,
+      "tag": "114-2 藥師(一)｜Q30",
+      "chapter": "Ch.08",
+      "vol": 3,
+      "eventId": "E26",
+      "codexIds": [
+        52,
+        56
+      ],
+      "topic": "Dantrolene 阻 RyR1 與惡性高熱",
+      "stem": "Dantrolene 是臨床常用之骨骼肌鬆弛劑，下列有關該藥的敘述何者錯誤？",
+      "options": {
+        "A": "口服無法吸收，只能靜脈注射給藥",
+        "B": "其作用機制為干擾肌漿網內鈣離子的釋放",
+        "C": "可治療麻醉劑引起的惡性高熱（malignant hyperthermia）",
+        "D": "可能會引起肝炎（hepatitis）等副作用"
+      },
+      "originalAnswer": "A",
+      "acceptedAnswers": [
+        "A"
+      ],
+      "revisionNote": "",
+      "optionExplanations": {
+        "A": "（正解，敘述錯誤）Dantrolene 並非口服無法吸收；其口服生體可用率約 70%（吸收較慢但足以產生治療血中濃度），臨床備有口服膠囊劑型用於長期控制脊髓損傷、腦性麻痺或多發性硬化症等上運動神經元痙攣，僅在急救惡性高熱時須迅速靜脈注射給藥。",
+        "B": "（錯誤，敘述正確）Dantrolene 直接作用於骨骼肌細胞內，結合並抑制肌漿網（sarcoplasmic reticulum）上的 Ryanodine 受體第一型（RyR1），阻斷肌漿網內 Ca²⁺ 釋放與興奮－收縮偶聯。",
+        "C": "（錯誤，敘述正確）吸入性全身麻醉劑（如 halothane、isoflurane、sevoflurane）合併去極化肌鬆劑 succinylcholine 可在 RyR1 突變患者誘發致死性惡性高熱（malignant hyperthermia），靜脈注射 dantrolene 為唯一專一救命解毒劑。",
+        "D": "（錯誤，敘述正確）長期口服 dantrolene 最嚴重的不良反應為劑量相關之肝毒性（可致肝炎甚至致死性肝衰竭），治療期間須嚴密監測肝功能指數。"
+      },
+      "coreSummary": "Dantrolene 是唯一直接作用於骨骼肌肌漿網 RyR1（抑制 Ca²⁺ 釋放）的周邊肌鬆劑：靜脈注射搶救惡性高熱，口服劑型則用於慢性上運動神經元痙攣（務必監測肝炎／肝毒性！）。",
+      "moexUrl": "https://wwwq.moex.gov.tw/exam/wFrmExamQandASearch.aspx?y=2025&e=114090"
+    },
+    {
+      "id": "NE_114-2_PH_32",
+      "exam": "114-2",
+      "year": 114,
+      "session": 2,
+      "track": "pharmacist",
+      "trackLabel": "藥師(一) 藥學(一) 藥理學與藥物化學",
+      "subjectCode": "114090",
+      "qnum": 32,
+      "tag": "114-2 藥師(一)｜Q32",
+      "chapter": "Ch.08",
+      "vol": 3,
+      "eventId": "E23",
+      "codexIds": [
+        46,
+        47
+      ],
+      "topic": "Varenicline 作用 α4β2 戒菸",
+      "stem": "下列藥物中，何者作用於中樞神經菸鹼性受體，可透過阻斷尼古丁（nicotine）所引起的多巴胺釋放而作為戒菸用藥？",
+      "options": {
+        "A": "bupropion",
+        "B": "rimonabant",
+        "C": "varenicline",
+        "D": "nortriptyline"
+      },
+      "originalAnswer": "C",
+      "acceptedAnswers": [
+        "C"
+      ],
+      "revisionNote": "",
+      "optionExplanations": {
+        "A": "（錯誤）Bupropion 為正腎上腺素與多巴胺再回收抑制劑（NDRI，亦具弱 nAChR 拮抗活性），雖為戒菸一線用藥，但並非以中樞菸鹼性受體部分致效劑作為主要機轉。",
+        "B": "（錯誤）Rimonabant 為中樞大麻素 CB₁ 受體拮抗劑／反向致效劑，曾研發用於減重，因引發嚴重憂鬱與自殺念頭已下市，且不作用於菸鹼性受體。",
+        "C": "（正解）Varenicline 為選擇性中樞 α₄β₂ 菸鹼性乙醯膽鹼受體（nAChR）部分致效劑；一方面以適度基礎刺激緩解戒菸戒斷症狀與渴求，另一方面高親和力佔據 α₄β₂ 受體以阻斷吸菸攝入之尼古丁結合，進而抑制尼古丁所誘發之中腦邊緣多巴胺大量釋放（削弱獎賞效應），為單藥戒菸療效最優的首選藥物之一。",
+        "D": "（錯誤）Nortriptyline 為三環抗憂鬱藥（TCA，抑制 NE 與 5-HT 再回收），僅作為戒菸第二線替代用藥，並非中樞菸鹼受體標靶藥物。"
+      },
+      "coreSummary": "Varenicline 是中樞 (α₄)₂(β₂)₃ 菸鹼受體部分致效劑，兼具「溫和止癮（部分致效）」與「截斷吸菸快感（阻斷尼古丁誘發多巴胺釋放）」雙重機轉，為戒菸一線主力。",
+      "moexUrl": "https://wwwq.moex.gov.tw/exam/wFrmExamQandASearch.aspx?y=2025&e=114090"
+    },
+    {
+      "id": "NE_114-2_PH_47",
+      "exam": "114-2",
+      "year": 114,
+      "session": 2,
+      "track": "pharmacist",
+      "trackLabel": "藥師(一) 藥學(一) 藥理學與藥物化學",
+      "subjectCode": "114090",
+      "qnum": 47,
+      "tag": "114-2 藥師(一)｜Q47",
+      "chapter": "Ch.09",
+      "vol": 4,
+      "eventId": "E33",
+      "codexIds": [
+        38,
+        65
+      ],
+      "topic": "Cocaine 水解產物與 Tropine 辨析",
+      "stem": "Cocaine 經水解後，不會產生下列何種產物？",
+      "options": {
+        "A": "tropine",
+        "B": "benzoic acid",
+        "C": "ecgonine",
+        "D": "methanol"
+      },
+      "originalAnswer": "A",
+      "acceptedAnswers": [
+        "A"
+      ],
+      "revisionNote": "",
+      "optionExplanations": {
+        "A": "（正解，不會產生）Cocaine 雖同屬托烷（tropane）生物鹼，但結構為「ecgonine（2β-羧基托品）」之 C-2 甲酯與 C-3 苯甲酸酯，其 C-2 位多了一個羧基；因此完全水解後生成的是 ecgonine 而非 tropine（tropine 缺乏 C-2 羧基，係抗蕈毒鹼藥 atropine 與 homatropine 的水解烷醇胺產物）。",
+        "B": "（錯誤，會產生）Cocaine 的 C-3 位羥基與苯甲酸形成苯甲酸酯（局部麻醉活性之親脂芳香端），經酯酶或酸鹼水解後會產生 benzoic acid。",
+        "C": "（錯誤，會產生）Cocaine 的雙環烷醇胺母核即為 ecgonine（3β-hydroxy-2β-carboxytropane），兩個酯鍵皆水解後即生成 ecgonine。",
+        "D": "（錯誤，會產生）Cocaine 的 C-2 位羧基與甲醇酯化形成甲酯（-COOCH₃），在體內經肝臟羧酸酯酶水解該甲酯鍵後會釋出 methanol（同時生成尿液古柯鹼藥檢主要代謝指標 benzoylecgonine）。"
+      },
+      "coreSummary": "托烷生物鹼藥化大對照：Atropine 水解得「tropine ＋ tropic acid」；Cocaine（兼具局麻與抑制 NET/DAT 之間接擬交感毒物）水解得「ecgonine ＋ benzoic acid ＋ methanol」，絕不會產生 tropine！",
+      "moexUrl": "https://wwwq.moex.gov.tw/exam/wFrmExamQandASearch.aspx?y=2025&e=114090"
+    },
+    {
+      "id": "NE_114-2_PH_48",
+      "exam": "114-2",
+      "year": 114,
+      "session": 2,
+      "track": "pharmacist",
+      "trackLabel": "藥師(一) 藥學(一) 藥理學與藥物化學",
+      "subjectCode": "114090",
+      "qnum": 48,
+      "tag": "114-2 藥師(一)｜Q48",
+      "chapter": "Ch.09",
+      "vol": 4,
+      "eventId": "E32",
+      "codexIds": [
+        14,
+        63
+      ],
+      "topic": "長效 Salmeterol 禁用於急性氣喘",
+      "stem": "為防止造成致命，下列何種交感神經藥物，不建議用於急性嚴重氣喘？",
+      "options": {
+        "A": "epinephrine",
+        "B": "formoterol",
+        "C": "metaproterenol",
+        "D": "salmeterol"
+      },
+      "originalAnswer": "D",
+      "acceptedAnswers": [
+        "D"
+      ],
+      "revisionNote": "",
+      "optionExplanations": {
+        "A": "（錯誤）Epinephrine 為強效非選擇性 α/β 擬交感兒茶酚胺，肌肉或皮下注射可在數分鐘內迅速起效，強效擴張支氣管（β₂）並收縮黏膜血管減輕水腫（α₁），適用於過敏性休克或嚴重急性氣喘發作搶救。",
+        "B": "（錯誤）Formoterol 雖屬長效 β₂ 致效劑（LABA，維持約 12 小時），但兼具「快速起效（1–3 分鐘）」特性，合併吸入型類固醇（ICS-formoterol）可安全用於急性症狀緩解與維持療法。",
+        "C": "（錯誤）Metaproterenol 為短效選擇性偏 β₂ 之支氣管擴張劑（SABA），吸入後數分鐘內即可快速作用，用於緩解急性支氣管痙攣。",
+        "D": "（正解）Salmeterol 為長效部分 β₂ 致效劑（LABA），其親脂性極長的 phenylbutoxyhexyl 側鏈須先溶入細胞膜雙層、再側向擴散錨定至 β₂ 受體外位（exosite），故起效緩慢（需 15–30 分鐘以上），無法及時逆轉急性嚴重氣喘發作；此外單獨使用 LABA 亦會掩蓋發炎而增加致命氣喘惡化風險，嚴禁作為急性氣喘救援用藥。"
+      },
+      "coreSummary": "LABA 雙雄關鍵差異：Formoterol 起效快（1–3 分鐘，可與 ICS 併作急性緩解）；Salmeterol 因長親脂側鏈溶膜錨定 exosite 而起效慢（15–30 分鐘），絕不可用於急性嚴重氣喘救援，否則恐延誤搶救致命！",
+      "moexUrl": "https://wwwq.moex.gov.tw/exam/wFrmExamQandASearch.aspx?y=2025&e=114090"
+    },
+    {
+      "id": "NE_114-1_MD_64",
+      "exam": "114-1",
+      "year": 114,
+      "session": 1,
+      "track": "physician",
+      "trackLabel": "醫師(一) 醫學(二)",
+      "subjectCode": "114020",
+      "qnum": 64,
+      "tag": "114-1 醫師(一)｜Q64",
+      "chapter": "Ch.09",
+      "vol": 4,
+      "eventId": "E31",
+      "codexIds": [
+        14,
+        61
+      ],
+      "topic": "Fenoldopam（D1 致效劑）治高血壓",
+      "stem": "下列何種藥物作用於 dopamine D1 receptor，可使周邊血管平滑肌舒張，靜脈注射用於治療嚴重性高血壓？",
+      "options": {
+        "A": "candesartan",
+        "B": "fenoldopam",
+        "C": "clonidine",
+        "D": "minoxidil"
+      },
+      "originalAnswer": "B",
+      "acceptedAnswers": [
+        "B"
+      ],
+      "revisionNote": "",
+      "optionExplanations": {
+        "A": "（錯誤）Candesartan 為血管張力素 II 第一型受體拮抗劑（ARB），口服阻斷 AT₁ 受體以降血壓，並不作用於多巴胺 D₁ 受體。",
+        "B": "（正解）Fenoldopam 為選擇性周邊多巴胺 D₁ 受體致效劑（Gs 偶聯使 cAMP 上升），靜脈輸注可擴張腎臟、腸繫膜與冠狀動脈等周邊血管平滑肌並促進排鈉利尿，臨床專用於嚴重高血壓（高血壓急症）之降壓；因不穿透血腦障壁而無中樞作用，但須留意反射性心搏過速與眼壓升高（青光眼慎用）。",
+        "C": "（錯誤）Clonidine 為中樞 α₂ 腎上腺素受體致效劑（Gi 偶聯），經由減少腦幹交感神經輸出而降壓，並非多巴胺 D₁ 受體致效劑。",
+        "D": "（錯誤）Minoxidil 為直接血管平滑肌擴張劑，機轉是開啟 ATP 敏感性鉀離子通道（K_ATP）致細胞膜過極化以舒張小動脈，主要口服治療難治性高血壓（外用生髮），與 D₁ 受體無關。"
+      },
+      "coreSummary": "Fenoldopam 是高血壓急症專用的靜脈注射選擇性周邊 D₁ 受體致效劑，可維持甚至增加腎血流量與促排鈉；國考常同時搭配考它「不入腦、但會升眼壓（青光眼禁忌）」的特色。",
+      "moexUrl": "https://wwwq.moex.gov.tw/exam/wFrmExamQandASearch.aspx?y=2025&e=114020"
+    },
+    {
+      "id": "NE_114-1_MD_65",
+      "exam": "114-1",
+      "year": 114,
+      "session": 1,
+      "track": "physician",
+      "trackLabel": "醫師(一) 醫學(二)",
+      "subjectCode": "114020",
+      "qnum": 65,
+      "tag": "114-1 醫師(一)｜Q65",
+      "chapter": "Ch.07",
+      "vol": 2,
+      "eventId": "E17",
+      "codexIds": [
+        3,
+        35,
+        36
+      ],
+      "topic": "2-PAM 解毒機轉與 BBB 穿透限制",
+      "stem": "下列關於 pralidoxime 的敘述，何者最不適當？",
+      "options": {
+        "A": "可幫助被磷酸化的 acetylcholinesterase 恢復活性",
+        "B": "不可作為 carbamate 類 cholinesterase 抑制劑的解毒劑",
+        "C": "與 diacetylmonoxime 相比，其中樞神經系統的穿透力較強",
+        "D": "過量時可能導致肌肉無力"
+      },
+      "originalAnswer": "C",
+      "acceptedAnswers": [
+        "C"
+      ],
+      "revisionNote": "",
+      "optionExplanations": {
+        "A": "（錯誤，敘述正確）Pralidoxime（2-PAM）具高親核性肟基（oxime），可結合至有機磷磷酸化之乙醯膽鹼酯酶（AChE）陰離子位點，在酵素發生不可逆老化（aging）前脫除磷酸基，使 AChE 重新恢復活性。",
+        "B": "（錯誤，敘述正確）Carbamate 類膽鹼酯酶抑制劑（如 physostigmine、neostigmine、carbaryl）屬可逆性胺甲醯化結合，可自行水解恢復，2-PAM 對其無再生效益，且於部分 carbamate（如 carbaryl）中毒時反可能加重毒性，故不作為 carbamate 中毒解毒劑。",
+        "C": "（正解，敘述最不適當）Pralidoxime 結構帶有永久正電之四級銨基團（quaternary ammonium），極性高而難以穿透血腦障壁（BBB），僅主要恢復周邊（尤其骨骼肌神經肌肉接合處）AChE 活性；反觀 diacetylmonoxime（DAM）不帶電荷、脂溶性高，中樞神經系統穿透力遠強於 pralidoxime，本選項恰好寫反。",
+        "D": "（錯誤，敘述正確）高劑量或過量給與 pralidoxime 時，藥物本身具輕度 AChE 抑制與神經肌肉阻斷作用，可能引發肌肉無力、複視、頭暈或血壓上升。"
+      },
+      "coreSummary": "「四級銨不入腦」是自主神經藥理鐵律：Pralidoxime（2-PAM）為帶電四級銨、難以穿透 BBB，主要救周邊骨骼肌麻痺；唯有不帶電的 diacetylmonoxime（DAM）才能有效入腦解中樞毒。",
+      "moexUrl": "https://wwwq.moex.gov.tw/exam/wFrmExamQandASearch.aspx?y=2025&e=114020"
+    },
+    {
+      "id": "NE_114-1_MD_66",
+      "exam": "114-1",
+      "year": 114,
+      "session": 1,
+      "track": "physician",
+      "trackLabel": "醫師(一) 醫學(二)",
+      "subjectCode": "114020",
+      "qnum": 66,
+      "tag": "114-1 醫師(一)｜Q66",
+      "chapter": "Ch.09",
+      "vol": 4,
+      "eventId": "E32",
+      "codexIds": [
+        62,
+        65,
+        69
+      ],
+      "topic": "姿勢性低血壓與擬交感升壓辨析",
+      "stem": "陳先生清晨上廁所時昏倒，家人量血壓時發現收縮壓只有 76 mmHg，而被送來醫院。就診時病人已清醒，血壓為 100/70 mmHg，心跳規則，每分鐘 70 下，無其它不適。醫師評估後，認為是藥物引起的暫時性低血壓。下列陳先生平常服用的藥物中，何者與他的血壓下降關聯最低？",
+      "options": {
+        "A": "tamsulosin",
+        "B": "verapamil",
+        "C": "carvedilol",
+        "D": "pseudoephedrine"
+      },
+      "originalAnswer": "D",
+      "acceptedAnswers": [
+        "D"
+      ],
+      "revisionNote": "",
+      "optionExplanations": {
+        "A": "（錯誤）Tamsulosin 為選擇性 α₁A/α₁D 受體拮抗劑，用於治療良性攝護腺肥大；雖較非選擇性 α₁ 阻斷劑（如 prazosin）對血管影響較小，但在高齡病人清晨起床排尿（姿勢改變合併迷走張力變化）時，仍可能誘發姿勢性低血壓與昏厥。",
+        "B": "（錯誤）Verapamil 為非二氫吡啶類（non-DHP）鈣離子通道阻斷劑，同時抑制心肌收縮與擴張周邊血管，具顯著降壓效果，可能造成低血壓並抑制反射性心搏過速。",
+        "C": "（錯誤）Carvedilol 為兼具 α₁ 受體阻斷與非選擇性 β 受體阻斷之第三代降壓藥，透過擴張周邊血管並抑制心臟交感代償，極易誘發姿勢性低血壓。",
+        "D": "（正解）Pseudoephedrine 為非兒茶酚胺類混合型／間接型擬交感神經藥物，促進正腎上腺素釋放並活化血管 α₁ 受體使血管收縮（用於緩解鼻塞），其心血管作用為「升高血壓」而非降血壓，因此與陳先生清晨血壓驟降昏厥的關聯最低。"
+      },
+      "coreSummary": "臨床評估藥物性姿勢性低血壓時，α₁ 阻斷劑（如 tamsulosin、carvedilol）與鈣離子通道阻斷劑（verapamil）皆會降壓；反之擬交感鼻塞藥 pseudoephedrine 會縮血管升壓，高血壓患者反須慎用。",
+      "moexUrl": "https://wwwq.moex.gov.tw/exam/wFrmExamQandASearch.aspx?y=2025&e=114020"
+    },
+    {
+      "id": "NE_114-1_MD_70",
+      "exam": "114-1",
+      "year": 114,
+      "session": 1,
+      "track": "physician",
+      "trackLabel": "醫師(一) 醫學(二)",
+      "subjectCode": "114020",
+      "qnum": 70,
+      "tag": "114-1 醫師(一)｜Q70",
+      "chapter": "Ch.09",
+      "vol": 4,
+      "eventId": "E36",
+      "codexIds": [
+        72
+      ],
+      "topic": "偏頭痛新藥：Lasmiditan 與 CGRP",
+      "stem": "關於預防或治療偏頭痛的藥物，下列敘述何者正確？",
+      "options": {
+        "A": "aspirin 及 ibuprofen 對於偏頭痛無明顯鎮痛作用",
+        "B": "lasmiditan 可作為偏頭痛急性發作的用藥，且較 sumatriptan 無血管收縮之副作用",
+        "C": "結合 calcitonin gene-related peptide（CGRP）或其受體的抗體可用於治療偏頭痛",
+        "D": "可口服的小分子 calcitonin gene-related peptide（CGRP）受體拮抗劑 ubrogepant 可預防偏頭痛"
+      },
+      "originalAnswer": "B",
+      "acceptedAnswers": [
+        "B"
+      ],
+      "revisionNote": "",
+      "optionExplanations": {
+        "A": "（錯誤）Aspirin、ibuprofen、naproxen 等 NSAIDs 具明確抑制前列腺素合成與腦膜神經源性發炎效果，為輕至中度偏頭痛急性發作的第一線鎮痛治療藥物。",
+        "B": "（正解）Lasmiditan 為高選擇性 5-HT₁F 受體致效劑（ditan 類），可阻斷三叉神經系統痛覺傳遞與 CGRP 釋放以治療偏頭痛急性發作；因不活化血管平滑肌之 5-HT₁B 受體，較 triptans 類（如 sumatriptan，作用於 5-HT₁B/₁D）不具血管收縮副作用，適用於合併冠心病或心血管疾病者。",
+        "C": "（錯誤）標的為 CGRP 或 CGRP 受體的單株抗體（如 erenumab、galcanezumab、fremanezumab、eptinezumab）半衰期長且為注射劑型，臨床核准用於「預防」偏頭痛發作（prophylaxis），並非用於急性發作期治療。",
+        "D": "（錯誤）Ubrogepant 為口服小分子 CGRP 受體拮抗劑（gepant 類），臨床核准適應症為偏頭痛之「急性治療」，而非預防（核准用於預防的口服 gepant 為 atogepant 或隔日服用之 rimegepant）。"
+      },
+      "coreSummary": "偏頭痛新藥高頻對照陷阱：5-HT₁F 致效劑 lasmiditan 治急性且無 5-HT₁B 縮血管副作用；CGRP 單株抗體用於「預防」，口服小分子 ubrogepant 則用於「急性治療」，切勿將兩者適應症顛倒！",
+      "moexUrl": "https://wwwq.moex.gov.tw/exam/wFrmExamQandASearch.aspx?y=2025&e=114020"
+    },
+    {
+      "id": "NE_114-1_PH_22",
+      "exam": "114-1",
+      "year": 114,
+      "session": 1,
+      "track": "pharmacist",
+      "trackLabel": "藥師(一) 藥學(一) 藥理學與藥物化學",
+      "subjectCode": "114020",
+      "qnum": 22,
+      "tag": "114-1 藥師(一)｜Q22",
+      "chapter": "Ch.09",
+      "vol": 4,
+      "eventId": "E36",
+      "codexIds": [
+        70,
+        71
+      ],
+      "topic": "Propranolol 抗心絞痛藥理機轉",
+      "stem": "下列何者為 propranolol 抗心絞痛的藥理作用？",
+      "options": {
+        "A": "抑制運動引發的心跳過快",
+        "B": "增加心肌收縮的作用",
+        "C": "擴張冠狀循環的血管平滑肌",
+        "D": "降低前負荷（preload）"
+      },
+      "originalAnswer": "A",
+      "acceptedAnswers": [
+        "A"
+      ],
+      "revisionNote": "",
+      "optionExplanations": {
+        "A": "（正解）Propranolol 為非選擇性 β 腎上腺素受體拮抗劑，阻斷心臟 β₁ 受體可有效抑制運動或情緒交感興奮所誘發的心跳過快與心肌收縮力過度上升，顯著減少心肌耗氧量並延長舒張期冠狀動脈灌流時間，為其治療穩定型勞力性心絞痛的核心機轉。",
+        "B": "（錯誤）阻斷心肌 β₁ 受體會「降低」心肌收縮力（負性肌力作用）以減少耗氧，而非增加收縮。",
+        "C": "（錯誤）Propranolol 同時阻斷冠狀動脈平滑肌上負責舒張的 β₂ 受體，使 α 受體介導之血管收縮失去平衡，反而可能促使冠狀動脈收縮（故不適用於變異型血管痙攣性心絞痛）。",
+        "D": "（錯誤）因減慢心率並降低心肌收縮力，左心室舒張期填充時間與舒張末期容積反而略微上升，故 β 阻斷劑傾向輕度「增加」前負荷（preload），臨床常合併 nitrates 擴張靜脈降低前負荷以發揮協同效應。"
+      },
+      "coreSummary": "β 阻斷劑抗勞力性心絞痛的核心是阻斷 β₁ 受體「降心率、降收縮力、降血壓」以減少心肌耗氧；反而會微增左心室前負荷，且非選擇性 propranolol 禁單獨用於血管痙攣型心絞痛。",
+      "moexUrl": "https://wwwq.moex.gov.tw/exam/wFrmExamQandASearch.aspx?y=2025&e=114020"
+    },
+    {
+      "id": "NE_114-1_PH_23",
+      "exam": "114-1",
+      "year": 114,
+      "session": 1,
+      "track": "pharmacist",
+      "trackLabel": "藥師(一) 藥學(一) 藥理學與藥物化學",
+      "subjectCode": "114020",
+      "qnum": 23,
+      "tag": "114-1 藥師(一)｜Q23",
+      "chapter": "Ch.09",
+      "vol": 4,
+      "eventId": "E32",
+      "codexIds": [
+        14,
+        63
+      ],
+      "topic": "Dexmedetomidine ICU 鎮靜",
+      "stem": "下列何者是α2 adrenergic agonist，且主要用途是使重症監護情況（intensive care circumstances）病人產生鎮靜作用？",
+      "options": {
+        "A": "betaxolol",
+        "B": "dexmedetomidine",
+        "C": "midodrine",
+        "D": "formoterol"
+      },
+      "originalAnswer": "B",
+      "acceptedAnswers": [
+        "B"
+      ],
+      "revisionNote": "",
+      "optionExplanations": {
+        "A": "（錯誤）Betaxolol 為心臟選擇性 β₁ 腎上腺素受體拮抗劑，主要用於治療高血壓及眼藥水治療隅角開放性青光眼，不具 α₂ 致效與 ICU 鎮靜作用。",
+        "B": "（正解）Dexmedetomidine 為高選擇性 α₂ 腎上腺素受體致效劑（Gi 偶聯），主要活化腦幹藍斑核（locus coeruleus）突觸前與突觸後 α₂ 受體抑制正腎上腺素釋放，產生鎮靜、抗焦慮與輔助止痛效果，且最大優勢為幾乎不抑制呼吸中樞，靜脈輸注常用於加護病房（ICU）重症插管或處置鎮靜。",
+        "C": "（錯誤）Midodrine 為口服 α₁ 受體致效劑前驅藥（經體內代謝去甘胺酸生成活性代謝物 desglymidodrine），收縮周邊血管用於治療姿勢性低血壓。",
+        "D": "（錯誤）Formoterol 為長效且快速起效之選擇性 β₂ 腎上腺素受體致效劑（LABA），吸入用於氣喘與 COPD 支氣管擴張。"
+      },
+      "coreSummary": "Dexmedetomidine 是高選擇性 α₂ 致效劑，專司 ICU 鎮靜且「不抑制呼吸」；與降壓 α₂ 致效劑 clonidine、孕婦高血壓首選 methyldopa、中樞肌鬆 tizanidine 構成四大 α₂ 致效劑家族。",
+      "moexUrl": "https://wwwq.moex.gov.tw/exam/wFrmExamQandASearch.aspx?y=2025&e=114020"
+    },
+    {
+      "id": "NE_114-1_PH_24",
+      "exam": "114-1",
+      "year": 114,
+      "session": 1,
+      "track": "pharmacist",
+      "trackLabel": "藥師(一) 藥學(一) 藥理學與藥物化學",
+      "subjectCode": "114020",
+      "qnum": 24,
+      "tag": "114-1 藥師(一)｜Q24",
+      "chapter": "Ch.09",
+      "vol": 4,
+      "eventId": "E36",
+      "codexIds": [
+        70,
+        71
+      ],
+      "topic": "Acebutolol 具 ISA 部分致效",
+      "stem": "下列β adrenergic blocker 中，何者具有部分致效劑活性（partial agonist activity）？",
+      "options": {
+        "A": "acebutolol",
+        "B": "atenolol",
+        "C": "betaxolol",
+        "D": "bisoprolol"
+      },
+      "originalAnswer": "A",
+      "acceptedAnswers": [
+        "A"
+      ],
+      "revisionNote": "",
+      "optionExplanations": {
+        "A": "（正解）Acebutolol 為心臟選擇性 β₁ 阻斷劑，且具有部分致效劑活性（即內源性擬交感活性，intrinsic sympathomimetic activity, ISA）；在交感張力低時提供微弱 β 刺激以減少嚴重靜息心搏過緩與血脂不利影響，但因具 ISA 而不適合用於心肌梗塞後二級預防或偏頭痛預防。",
+        "B": "（錯誤）Atenolol 為親水性心臟選擇性 β₁ 阻斷劑，屬純拮抗劑，不具部分致效劑活性（ISA），亦無局部麻醉作用。",
+        "C": "（錯誤）Betaxolol 為心臟選擇性 β₁ 阻斷劑，屬純拮抗劑，不具 ISA 且無局部麻醉作用。",
+        "D": "（錯誤）Bisoprolol 為高心臟選擇性 β₁ 阻斷劑，不具 ISA，且為心衰竭（HFrEF）證實可改善存活率的核心 β 阻斷劑之一。"
+      },
+      "coreSummary": "國考最愛考具 ISA（部分致效活性）的 β 阻斷劑代表：非選擇性記 pindolol（與 carteolol、penbutolol），β₁ 選擇性記 acebutolol（與 celiprolol）；具 ISA 者對偏頭痛與心梗後護心皆較無效。",
+      "moexUrl": "https://wwwq.moex.gov.tw/exam/wFrmExamQandASearch.aspx?y=2025&e=114020"
+    },
+    {
+      "id": "NE_114-1_PH_25",
+      "exam": "114-1",
+      "year": 114,
+      "session": 1,
+      "track": "pharmacist",
+      "trackLabel": "藥師(一) 藥學(一) 藥理學與藥物化學",
+      "subjectCode": "114020",
+      "qnum": 25,
+      "tag": "114-1 藥師(一)｜Q25",
+      "chapter": "Ch.08",
+      "vol": 3,
+      "eventId": "E27",
+      "codexIds": [
+        49,
+        54
+      ],
+      "topic": "Sugammadex 逆轉固醇類肌鬆劑",
+      "stem": "下列藥物中，何者可以快速反轉固醇類神經肌肉阻斷劑（steroid neuromuscular blocking drugs） rocuronium 及 vecuronium 肌肉鬆弛的藥效？",
+      "options": {
+        "A": "sugammadex",
+        "B": "diazepam",
+        "C": "dantrolene",
+        "D": "physostigmine"
+      },
+      "originalAnswer": "A",
+      "acceptedAnswers": [
+        "A"
+      ],
+      "revisionNote": "",
+      "optionExplanations": {
+        "A": "（正解）Sugammadex 為經修飾的 γ-環糊精（γ-cyclodextrin）衍生物，可選擇性以 1:1 比例高親和力包覆螯合血漿中的胺基固醇類非去極化神經肌肉阻斷劑（rocuronium 親和力最高，次為 vecuronium），形成水溶性複合物經腎排泄，能在數分鐘內快速逆轉深度肌鬆且不誘發抗膽鹼酯酶之蕈毒鹼副作用。",
+        "B": "（錯誤）Diazepam 為苯二氮平類（BZD），正向調節中樞與脊髓 GABA_A 受體增強 Cl⁻ 內流以緩解肌肉痙攣，完全無法逆轉神經肌肉阻斷劑。",
+        "C": "（錯誤）Dantrolene 阻斷骨骼肌肌漿網 RyR1 鈣通道，用於治療惡性高熱與上運動神經元痙攣，其本身使肌肉鬆弛無力而非逆轉 NMB。",
+        "D": "（錯誤）Physostigmine 為三級胺可逆性 AChE 抑制劑，易穿透 BBB，主用於解救中樞抗膽鹼中毒；傳統逆轉非去極化 NMB 多用四級胺 neostigmine，且 neostigmine 須待自發恢復至一定程度方能有效逆轉，遠不如 sugammadex 可即時快速逆轉深度 rocuronium／vecuronium 阻斷。"
+      },
+      "coreSummary": "Sugammadex（修飾 γ-環糊精）專一包覆逆轉胺基固醇類 NMB（rocuronium、vecuronium），於困難氣道 CICV 危局可即刻救命，但對異喹啉類（cisatracurium、atracurium）與 succinylcholine 無效；且因也會包覆荷爾蒙避孕藥，育齡女性須額外避孕 7 天。",
+      "moexUrl": "https://wwwq.moex.gov.tw/exam/wFrmExamQandASearch.aspx?y=2025&e=114020"
+    },
+    {
+      "id": "NE_114-1_PH_31",
+      "exam": "114-1",
+      "year": 114,
+      "session": 1,
+      "track": "pharmacist",
+      "trackLabel": "藥師(一) 藥學(一) 藥理學與藥物化學",
+      "subjectCode": "114020",
+      "qnum": 31,
+      "tag": "114-1 藥師(一)｜Q31",
+      "chapter": "Ch.09",
+      "vol": 4,
+      "eventId": "E36",
+      "codexIds": [
+        72
+      ],
+      "topic": "抗癲癇藥 Topiramate 預防偏頭痛",
+      "stem": "下列那一個治療癲癇（epilepsy）的藥物也可用於預防偏頭痛（migraine）？",
+      "options": {
+        "A": "tiagabine",
+        "B": "topiramate",
+        "C": "lacosamide",
+        "D": "ethosuximide"
+      },
+      "originalAnswer": "B",
+      "acceptedAnswers": [
+        "B"
+      ],
+      "revisionNote": "",
+      "optionExplanations": {
+        "A": "（錯誤）Tiagabine 透過抑制 GABA 轉運體（GAT-1）減少 GABA 再回收，臨床僅作為局部性癲癇輔助用藥，不具偏頭痛預防適應症。",
+        "B": "（正解）Topiramate 具阻斷電壓閘控鈉通道、增強 GABA_A 活性、拮抗 AMPA/kainate 麩胺酸受體及弱抑制碳酸酐酶等多重機轉，能抑制皮質傳播抑制（CSD）與三叉神經過度興奮；除治癲癇外，亦為偏頭痛預防第一線用藥（常見副作用含體重減輕、感覺異常、認知遲緩、腎結石與致畸胎風險）。",
+        "C": "（錯誤）Lacosamide 藉由促進電壓閘控鈉通道慢速不活化治療局部性癲癇，並非偏頭痛預防用藥。",
+        "D": "（錯誤）Ethosuximide 專一阻斷視丘 T 型鈣通道，專治失神性小發作（absence seizures），不用於偏頭痛預防。"
+      },
+      "coreSummary": "偏頭痛預防一線用藥包含無 ISA β 阻斷劑（propranolol、metoprolol）、抗癲癇藥（topiramate、valproate）、鈣通道阻斷劑（flunarizine）與 CGRP 單抗；其中 topiramate 具減重與腎結石特性，且與 valproate 同樣禁於孕婦預防。",
+      "moexUrl": "https://wwwq.moex.gov.tw/exam/wFrmExamQandASearch.aspx?y=2025&e=114020"
+    },
+    {
+      "id": "NE_114-1_PH_42",
+      "exam": "114-1",
+      "year": 114,
+      "session": 1,
+      "track": "pharmacist",
+      "trackLabel": "藥師(一) 藥學(一) 藥理學與藥物化學",
+      "subjectCode": "114020",
+      "qnum": 42,
+      "tag": "114-1 藥師(一)｜Q42",
+      "chapter": "Ch.09",
+      "vol": 4,
+      "eventId": "E33",
+      "codexIds": [
+        65
+      ],
+      "topic": "Ephedrine 與偽麻黃素非鏡像異構",
+      "stem": "(-)-Ephedrine 與(-)-pseudoephedrine 在結構上的差異稱為：",
+      "options": {
+        "A": "enantiomer",
+        "B": "diastereomer",
+        "C": "bioisostere",
+        "D": "tautomer"
+      },
+      "originalAnswer": "B",
+      "acceptedAnswers": [
+        "B"
+      ],
+      "revisionNote": "",
+      "optionExplanations": {
+        "A": "（錯誤）Enantiomer（鏡像異構物）須分子中「所有」掌性中心立體組態皆完全反轉；(-)-ephedrine 為 (1R,2S)，其鏡像異構物應為 (1S,2R)-(+)-ephedrine，而非 (-)-pseudoephedrine。",
+        "B": "（正解）Ephedrine 苯乙胺側鏈之 β 碳（C-1，接 OH）與 α 碳（C-2，接 CH₃）具 2 個掌性中心，共有 4 個立體異構物：(-)-ephedrine 為 (1R,2S) 紅型（erythro），而 (-)-pseudoephedrine 為 (1R,2R) 蘇型（threo）；兩者僅於一個掌性中心組態相反，不互為鏡像，故互稱非鏡像立體異構物（diastereomer，亦屬 epimer）。",
+        "C": "（錯誤）Bioisostere（生物電子等排體）係指以不同但電子／立體性質相似之官能基互相置換以改善藥效或代謝，而兩者化學組成與官能基完全一致。",
+        "D": "（錯誤）Tautomer（互變異構物）係指分子內質子轉移伴隨雙鍵移動之動態構造異構物（如酮－烯醇互變），並非靜態立體掌性差異。"
+      },
+      "coreSummary": "麻黃素結構具有 α、β 兩個掌性中心：ephedrine 屬紅型（erythro，如 (1R,2S)）而 pseudoephedrine 屬蘇型（threo，如 (1R,2R) 或 (1S,2S)），兩家族彼此互為 diastereomers（非鏡像異構物），理化性質與 CNS 穿透活性亦隨之不同。",
+      "moexUrl": "https://wwwq.moex.gov.tw/exam/wFrmExamQandASearch.aspx?y=2025&e=114020"
+    },
+    {
+      "id": "NE_114-1_PH_48",
+      "exam": "114-1",
+      "year": 114,
+      "session": 1,
+      "track": "pharmacist",
+      "trackLabel": "藥師(一) 藥學(一) 藥理學與藥物化學",
+      "subjectCode": "114020",
+      "qnum": 48,
+      "tag": "114-1 藥師(一)｜Q48",
+      "chapter": "Ch.09",
+      "vol": 4,
+      "eventId": "E36",
+      "codexIds": [
+        10,
+        72
+      ],
+      "topic": "Triptan 偏頭痛藥 Indole 雜環",
+      "stem": "Triptan 類抗偏頭痛藥之結構，皆具有下列何種雜環？",
+      "options": {
+        "A": "isoxazole",
+        "B": "imidazole",
+        "C": "indole",
+        "D": "pyrrole"
+      },
+      "originalAnswer": "C",
+      "acceptedAnswers": [
+        "C"
+      ],
+      "revisionNote": "",
+      "optionExplanations": {
+        "A": "（錯誤）Isoxazole 為氧氮相鄰之五員雜環，並非血清素或 triptan 類抗偏頭痛藥物之核心骨架。",
+        "B": "（錯誤）Imidazole 為 1,3-二氮五員雜環，見於 pilocarpine 或 cimetidine 等結構，非 triptan 類之核心雜環。",
+        "C": "（正解）Triptan 類抗偏頭痛藥物（如 sumatriptan、zolmitriptan、rizatriptan 等 5-HT₁B/₁D 致效劑）係由內源性血清素（5-HT，即 5-hydroxytryptamine）進行結構改造而來，故皆保留色胺骨架中之 **indole**（吲哚，苯環與吡咯環稠合）雜環作為必要藥效團。",
+        "D": "（錯誤）Pyrrole 為單一含氮五員雜環，雖構成 indole 的一部分，但 triptan 類結構皆具完整的苯并吡咯雙環即 indole。"
+      },
+      "coreSummary": "Triptans 名字正源自「tryptamine（色胺）」：以內源性 5-HT 的 indole 雜環為核心，修飾 5 位取代基以取得 5-HT₁B/₁D 受體選擇性並避免迅速遭 MAO-A 去胺破壞。",
+      "moexUrl": "https://wwwq.moex.gov.tw/exam/wFrmExamQandASearch.aspx?y=2025&e=114020"
+    },
+    {
+      "id": "NE_114-1_PH_56",
+      "exam": "114-1",
+      "year": 114,
+      "session": 1,
+      "track": "pharmacist",
+      "trackLabel": "藥師(一) 藥學(一) 藥理學與藥物化學",
+      "subjectCode": "114020",
+      "qnum": 56,
+      "tag": "114-1 藥師(一)｜Q56",
+      "chapter": "Ch.09",
+      "vol": 4,
+      "eventId": "E33",
+      "codexIds": [
+        59,
+        65
+      ],
+      "topic": "Selegiline 肝代謝生安非他命",
+      "stem": "下列何者經肝代謝後，可產生 amphetamine？",
+      "options": {
+        "A": "fenfluramine",
+        "B": "selegiline",
+        "C": "phenelzine",
+        "D": "carbidopa"
+      },
+      "originalAnswer": "B",
+      "acceptedAnswers": [
+        "B"
+      ],
+      "revisionNote": "",
+      "optionExplanations": {
+        "A": "（錯誤）Fenfluramine 雖具苯乙胺結構，但苯環間位帶有三氟甲基（-CF₃），經肝臟 N-脫乙基化後係產生 norfenfluramine（活化 5-HT₂B 受體具心臟瓣膜毒性），不會生成 amphetamine。",
+        "B": "（正解）Selegiline 為不可逆選擇性 MAO-B 抑制劑（低劑量用於巴金森氏症；高劑量喪失選擇性亦可能誘發 MAO-A 相關起司效應），其分子係由甲基安非他命連接炔丙基（propargyl）構成，經肝臟 CYP 進行 N-脫炔丙基化與 N-脫甲基化後，會代謝生成具擬交感中樞興奮活性的 **L-methamphetamine** 與 **L-amphetamine**（易致失眠並造成尿液安非他命篩檢陽性）。",
+        "C": "（錯誤）Phenelzine 為肼類（hydrazine）非選擇性不可逆 MAO 抑制劑，主要經乙醯化及氧化代謝生成苯乙酸衍生物，不產生 amphetamine。",
+        "D": "（錯誤）Carbidopa 為周邊芳香族 L-胺基酸脫羧酶（AADC）抑制劑，含兒茶酚與 α-甲基肼結構，不穿過 BBB 亦不代謝成 amphetamine。"
+      },
+      "coreSummary": "Selegiline 含苯丙胺（安非他命）骨架，肝臟代謝會產生 L-methamphetamine 與 L-amphetamine（故建議早中服用防失眠，且可能影響毒物篩檢）；新一代 MAO-B 抑制劑 rasagiline 改為 aminoindan 骨架，不再產生安非他命代謝物。",
+      "moexUrl": "https://wwwq.moex.gov.tw/exam/wFrmExamQandASearch.aspx?y=2025&e=114020"
+    },
+    {
+      "id": "NE_113-2_MD_65",
+      "exam": "113-2",
+      "year": 113,
+      "session": 2,
+      "track": "physician",
+      "trackLabel": "醫師(一) 醫學(二)",
+      "subjectCode": "113090",
+      "qnum": 65,
+      "tag": "113-2 醫師(一)｜Q65",
+      "chapter": "Ch.08",
+      "vol": 3,
+      "eventId": "E20",
+      "codexIds": [
+        40
+      ],
+      "topic": "Atropine 過量抗膽鹼中毒臨床表徵",
+      "stem": "Atropine過量時，最不容易出現下列何種情況？",
+      "options": {
+        "A": "心跳加快",
+        "B": "唾液大量分泌",
+        "C": "瞳孔放大",
+        "D": "尿液滯留"
+      },
+      "originalAnswer": "B",
+      "acceptedAnswers": [
+        "B"
+      ],
+      "revisionNote": "",
+      "optionExplanations": {
+        "A": "（錯誤）Atropine 阻斷心臟竇房結與房室結之 M2 受體、解除迷走神經煞車，過量時會導致顯著心搏過速（心跳加快）。",
+        "B": "（正解）唾液腺與汗腺對抗蕈毒鹼藥物最為敏感，atropine 阻斷唾液腺 M3 受體會造成嚴重口乾、無汗（Dry as a bone），絕不易出現「唾液大量分泌」（流涎屬於擬膽鹼／有機磷中毒之 SLUDGE 表現）。",
+        "C": "（錯誤）Atropine 阻斷虹膜瞳孔括約肌之 M3 受體，使瞳孔持續放大（mydriasis）並伴隨睫狀肌麻痺與畏光霧視（Blind as a bat）。",
+        "D": "（錯誤）Atropine 阻斷膀胱逼尿肌 M3 受體造成膀胱收縮無力，加上交感維持內括約肌收縮張力，過量時極易引起排尿困難與急性尿液滯留。"
+      },
+      "coreSummary": "Atropine 過量呈現典型抗膽鹼症候群（CAS）：心搏過速、嚴重口乾無汗（高熱／顛茄熱）、瞳孔放大、尿液滯留、腸蠕動停滯與中樞譫妄；分泌腺（唾液／汗腺）對 atropine 阻斷最敏感，絕不會大量流涎。",
+      "moexUrl": "https://wwwq.moex.gov.tw/exam/wFrmExamQandASearch.aspx?y=2024&e=113090"
+    },
+    {
+      "id": "NE_113-2_MD_66",
+      "exam": "113-2",
+      "year": 113,
+      "session": 2,
+      "track": "physician",
+      "trackLabel": "醫師(一) 醫學(二)",
+      "subjectCode": "113090",
+      "qnum": 66,
+      "tag": "113-2 醫師(一)｜Q66",
+      "chapter": "Ch.09",
+      "vol": 4,
+      "eventId": "E31",
+      "codexIds": [
+        14,
+        61
+      ],
+      "topic": "Dopamine 靜脈輸注之劑量與受體效應",
+      "stem": "使用dopamine靜脈輸注時，最不會產生下列何種作用？",
+      "options": {
+        "A": "活化D1 receptor達到利鈉（natriuresis）效果",
+        "B": "活化D2 receptor加快腸蠕動",
+        "C": "活化β1 adrenergic receptor加快心跳",
+        "D": "活化α1 adrenergic receptor提升血壓"
+      },
+      "originalAnswer": "B",
+      "acceptedAnswers": [
+        "B"
+      ],
+      "revisionNote": "",
+      "optionExplanations": {
+        "A": "（錯誤）低劑量靜脈輸注 dopamine（約 1–2 μg/kg/min）選擇性活化腎臟血管與腎小管 D1 受體（Gs → ↑cAMP），擴張腎血管、增加腎血流量並促進鈉離子排泄（利鈉作用）。",
+        "B": "（正解）胃腸道神經系統的 D2 受體為抑制性（Gi）受體，活化後會抑制乙醯膽鹼釋放、**減慢**胃排空與腸蠕動（臨床反而使用 D2 拮抗劑 metoclopramide 來促進胃腸蠕動），故靜注 dopamine 不會藉由 D2 加快腸蠕動。",
+        "C": "（錯誤）中劑量靜脈輸注 dopamine（約 2–10 μg/kg/min）可活化心肌 β1 受體（並促交感末梢釋放正腎上腺素），增強心肌收縮力並加快心跳。",
+        "D": "（錯誤）高劑量靜脈輸注 dopamine（>10 μg/kg/min）主要活化周邊血管平滑肌 α1 受體，造成血管收縮與全身血壓顯著上升。"
+      },
+      "coreSummary": "靜脈輸注 dopamine 具經典「劑量依賴三階受體活化」：低劑量 D1（腎血管擴張、利鈉）→ 中劑量 β1（強心、心跳加快）→ 高劑量 α1（血管收縮升壓）；至於腸道 D2 受體屬抑制性，活化會抑制而非加快腸蠕動。",
+      "moexUrl": "https://wwwq.moex.gov.tw/exam/wFrmExamQandASearch.aspx?y=2024&e=113090"
+    },
+    {
+      "id": "NE_113-2_MD_69",
+      "exam": "113-2",
+      "year": 113,
+      "session": 2,
+      "track": "physician",
+      "trackLabel": "醫師(一) 醫學(二)",
+      "subjectCode": "113090",
+      "qnum": 69,
+      "tag": "113-2 醫師(一)｜Q69",
+      "chapter": "Ch.09",
+      "vol": 4,
+      "eventId": "E36",
+      "codexIds": [
+        72
+      ],
+      "topic": "Sumatriptan 治療偏頭痛之作用機轉",
+      "stem": "Sumatriptan治療偏頭痛的作用機制為何？",
+      "options": {
+        "A": "阻斷血管平滑肌的鈣離子通道使血管舒張",
+        "B": "抑制環氧酶（cyclooxygenase）而減少前列腺素生成",
+        "C": "拮抗血清素（serotonin）受體，以減少神經末梢釋放血管舒張物質",
+        "D": "產生直接血管收縮作用，且減少對痛覺神經末梢的刺激"
+      },
+      "originalAnswer": "D",
+      "acceptedAnswers": [
+        "D"
+      ],
+      "revisionNote": "",
+      "optionExplanations": {
+        "A": "（錯誤）阻斷血管平滑肌鈣離子通道（如 flunarizine、verapamil）屬於偏頭痛預防策略；偏頭痛急性期伴隨腦膜血管異常擴張，sumatriptan 的作用是收縮而非舒張血管。",
+        "B": "（錯誤）抑制環氧酶（COX）以減少前列腺素生成是非類固醇消炎止痛藥（NSAIDs，如 ibuprofen、naproxen）的作用機轉，並非 sumatriptan 的機轉。",
+        "C": "（錯誤）方向相反。Sumatriptan 為選擇性 5-HT1B/1D 受體「致效劑（agonist）」，而非「拮抗劑」；正因活化突觸前 Gi 偶聯之 5-HT1D 受體，才能減少神經末梢釋放血管擴張胜肽。",
+        "D": "（正解）Sumatriptan 選擇性活化顱內腦膜血管之 5-HT1B 受體以產生直接血管收縮，並活化三叉神經末梢 5-HT1D 受體（Gi → ↓cAMP）抑制 CGRP、Substance P 等血管擴張與促發炎胜肽釋放，減少神經性發炎與痛覺刺激。"
+      },
+      "coreSummary": "Sumatriptan 治偏頭痛雙重機轉皆靠「活化（致效）」5-HT1B/1D 受體：5-HT1B 直接收縮擴張之顱內腦膜血管、5-HT1D 抑制三叉神經釋放 CGRP 等致痛發炎胜肽；國考最常把「致效」偷換成「拮抗」設陷阱。",
+      "moexUrl": "https://wwwq.moex.gov.tw/exam/wFrmExamQandASearch.aspx?y=2024&e=113090"
+    },
+    {
+      "id": "NE_113-2_PH_2",
+      "exam": "113-2",
+      "year": 113,
+      "session": 2,
+      "track": "pharmacist",
+      "trackLabel": "藥師(一) 藥理學與藥物化學",
+      "subjectCode": "113090",
+      "qnum": 2,
+      "tag": "113-2 藥師(一)｜Q2",
+      "chapter": "Ch.09",
+      "vol": 4,
+      "eventId": "E34",
+      "codexIds": [
+        67,
+        68
+      ],
+      "topic": "嗜鉻細胞瘤與不可逆 α 阻斷劑",
+      "stem": "嗜鉻細胞瘤（pheochromocytoma）病人在外科手術前1～3週，常會使用phenoxybenzamine，是因為此藥物對 alpha-adrenoceptor的何種作用方式？",
+      "options": {
+        "A": "inverse agonist",
+        "B": "irreversible antagonist",
+        "C": "competitive antagonist",
+        "D": "spare receptor agonist"
+      },
+      "originalAnswer": "B",
+      "acceptedAnswers": [
+        "B"
+      ],
+      "revisionNote": "",
+      "optionExplanations": {
+        "A": "（錯誤）Inverse agonist（反向致效劑）係穩定受體於非活化態以壓低構成性活性，並非 phenoxybenzamine 在嗜鉻細胞瘤術前防護之核心結合方式。",
+        "B": "（正解）Phenoxybenzamine（β-haloalkylamine 類）在體內環化形成活性乙烯亞胺離子，與 α1／α2 受體形成不可逆共價鍵（irreversible noncompetitive antagonist）；術中觸碰嗜鉻細胞瘤即使湧出大量兒茶酚胺，仍無法將其競爭擠下，確保血壓穩定（並須遵守先 α 後 β 鐵律）。",
+        "C": "（錯誤）可逆性競爭拮抗劑（如 phentolamine、prazosin）在術中海量兒茶酚胺瞬間釋放時有被競爭取代之風險；術前最經典的長效不可逆封鎖係仰賴 phenoxybenzamine。",
+        "D": "（錯誤）Phenoxybenzamine 為 α 受體拮抗劑而非致效劑，不可逆阻斷達高比例時會使兒茶酚胺之最大反應（Emax）不可逆下降。"
+      },
+      "coreSummary": "嗜鉻細胞瘤術前 1–3 週使用 phenoxybenzamine 的精髓在於其與 α 受體形成共價鍵、屬「不可逆拮抗劑（irreversible antagonist）」，不怕術中兒茶酚胺海嘯突破封鎖；切記先給 α 阻斷再視需要加 β 阻斷，絕不可顛倒。",
+      "moexUrl": "https://wwwq.moex.gov.tw/exam/wFrmExamQandASearch.aspx?y=2024&e=113090"
+    },
+    {
+      "id": "NE_113-2_PH_22",
+      "exam": "113-2",
+      "year": 113,
+      "session": 2,
+      "track": "pharmacist",
+      "trackLabel": "藥師(一) 藥理學與藥物化學",
+      "subjectCode": "113090",
+      "qnum": 22,
+      "tag": "113-2 藥師(一)｜Q22",
+      "chapter": "Ch.09",
+      "vol": 4,
+      "eventId": "E31",
+      "codexIds": [
+        14,
+        61
+      ],
+      "topic": "Fenoldopam 活化 D1 受體降壓",
+      "stem": "Fenoldopam治療高血壓危症（hypertensive emergencies）的藥理作用機轉為何？",
+      "options": {
+        "A": "活化adenosine A1 receptor，舒張周邊動脈",
+        "B": "活化muscarinic M2 receptor，舒張周邊靜脈",
+        "C": "活化dopamine D1 receptor，舒張周邊動脈",
+        "D": "活化prostaglandin I2 receptor，舒張周邊靜脈"
+      },
+      "originalAnswer": "C",
+      "acceptedAnswers": [
+        "C"
+      ],
+      "revisionNote": "",
+      "optionExplanations": {
+        "A": "（錯誤）活化腺苷 A1 受體（如靜脈注射 adenosine）主要用於減慢房室結傳導以中止陣發性上心室心搏過速（PSVT），並非 fenoldopam 的降壓機轉。",
+        "B": "（錯誤）蕈毒鹼 M2 受體主要分布於心臟竇房結與房室結（調控心率與傳導），並非 fenoldopam 擴張血管之作用標的。",
+        "C": "（正解）Fenoldopam 為周邊選擇性多巴胺 D1 受體致效劑（不穿透血腦障壁），經由 Gs 蛋白增加血管平滑肌 cAMP 以舒張周邊與腎臟小動脈，用於靜脈治療嚴重高血壓危症並可維持腎灌流與促進利鈉（惟會升高眼壓，青光眼患者禁用）。",
+        "D": "（錯誤）活化前列腺環素（PGI2）受體係 epoprostenol、iloprost 等肺動脈高壓藥物之機轉，與 fenoldopam 無關。"
+      },
+      "coreSummary": "Fenoldopam 是專一活化周邊「多巴胺 D1 受體（Gs → ↑cAMP）」的靜脈動脈擴張劑，用於高血壓危症兼顧護腎與利鈉；國考高頻禁忌為青光眼（會升高眼內壓 IOP）。",
+      "moexUrl": "https://wwwq.moex.gov.tw/exam/wFrmExamQandASearch.aspx?y=2024&e=113090"
+    },
+    {
+      "id": "NE_113-2_PH_23",
+      "exam": "113-2",
+      "year": 113,
+      "session": 2,
+      "track": "pharmacist",
+      "trackLabel": "藥師(一) 藥理學與藥物化學",
+      "subjectCode": "113090",
+      "qnum": 23,
+      "tag": "113-2 藥師(一)｜Q23",
+      "chapter": "Ch.07",
+      "vol": 2,
+      "eventId": "E16",
+      "codexIds": [
+        26,
+        33,
+        34
+      ],
+      "topic": "擬副交感神經興奮藥之臨床適應症",
+      "stem": "下列何者不是擬副交感神經興奮藥物（cholinomimetic drug）的治療用途？",
+      "options": {
+        "A": "青光眼（glaucoma）",
+        "B": "重症肌無力（myasthenia gravis）",
+        "C": "阿茲海默症（Alzheimer disease）",
+        "D": "帕金森氏症（Parkinson disease）"
+      },
+      "originalAnswer": "D",
+      "acceptedAnswers": [
+        "D"
+      ],
+      "revisionNote": "",
+      "optionExplanations": {
+        "A": "（錯誤）青光眼屬於擬副交感藥物之經典適應症，如直接擬膽鹼藥 pilocarpine、carbachol 與間接抑制劑 echothiophate 皆可縮瞳並拉開小樑網以促進房水排出降眼壓。",
+        "B": "（錯誤）重症肌無力屬於間接擬膽鹼藥物（四級胺 AChE 抑制劑如 pyridostigmine、neostigmine、edrophonium）的核心適應症，用以提高神經肌肉接合處 ACh 濃度改善肌力。",
+        "C": "（錯誤）阿茲海默症屬於中樞可穿透型 AChE 抑制劑（donepezil、rivastigmine、galantamine）的治療用途，可彌補腦內膽鹼神經退化。",
+        "D": "（正解）巴金森氏症（原題作帕金森氏症）源於黑質紋狀體多巴胺不足、導致紋狀體乙醯膽鹼相對過盛；治療須搭配中樞「抗蕈毒鹼藥物」（如 benztropine、trihexyphenidyl）抑制膽鹼活性，給予擬膽鹼藥反而會惡化震顫與僵硬。"
+      },
+      "coreSummary": "阿茲海默症（缺 ACh → 補中樞擬膽鹼 AChEI）與巴金森氏症（相對多 ACh → 給中樞抗蕈毒鹼藥）在中樞膽鹼用藥方向上正好完全相反，是國考反覆測驗的經典對照組。",
+      "moexUrl": "https://wwwq.moex.gov.tw/exam/wFrmExamQandASearch.aspx?y=2024&e=113090"
+    },
+    {
+      "id": "NE_113-2_PH_24",
+      "exam": "113-2",
+      "year": 113,
+      "session": 2,
+      "track": "pharmacist",
+      "trackLabel": "藥師(一) 藥理學與藥物化學",
+      "subjectCode": "113090",
+      "qnum": 24,
+      "tag": "113-2 藥師(一)｜Q24",
+      "chapter": "Ch.08",
+      "vol": 3,
+      "eventId": "E21",
+      "codexIds": [
+        39,
+        43
+      ],
+      "topic": "LAMA Tiotropium 治療 COPD",
+      "stem": "下列副交感神經藥物中，何者具有支氣管擴張作用，可用於治療慢性阻塞性肺病（COPD）？",
+      "options": {
+        "A": "tiotropium",
+        "B": "bethanechol",
+        "C": "neostigmine",
+        "D": "solifenacin"
+      },
+      "originalAnswer": "A",
+      "acceptedAnswers": [
+        "A"
+      ],
+      "revisionNote": "",
+      "optionExplanations": {
+        "A": "（正解）Tiotropium 為吸入型四級胺長效抗蕈毒鹼支氣管擴張劑（LAMA），對氣道平滑肌 M3 受體具高度動力學選擇性（解離極慢、作用逾 24 小時），每日一次即可有效舒張支氣管並減少黏液分泌，為 COPD 核心維持用藥。",
+        "B": "（錯誤）Bethanechol 為直接作用型蕈毒鹼致效劑，會刺激支氣管 M3 受體引發氣道收縮，COPD 與氣喘病人禁用。",
+        "C": "（錯誤）Neostigmine 為乙醯膽鹼酯酶抑制劑，會增加氣道突觸 ACh 濃度而誘發支氣管痙攣與分泌物增加，不適用於 COPD。",
+        "D": "（錯誤）Solifenacin 雖屬選擇性 M3 拮抗劑，但為口服劑型，臨床主治膀胱過動症（OAB），並非吸入性 COPD 支氣管擴張劑。"
+      },
+      "coreSummary": "COPD 支氣管擴張之副交感用藥須選吸入型四級胺抗蕈毒鹼劑（SAMA ipratropium、LAMA tiotropium／umeclidinium／aclidinium），帶正電不易全身吸收且藉動力學選擇性長效封鎖 M3；擬膽鹼藥（bethanechol、neostigmine）則會誘發支氣管痙攣。",
+      "moexUrl": "https://wwwq.moex.gov.tw/exam/wFrmExamQandASearch.aspx?y=2024&e=113090"
+    },
+    {
+      "id": "NE_113-2_PH_25",
+      "exam": "113-2",
+      "year": 113,
+      "session": 2,
+      "track": "pharmacist",
+      "trackLabel": "藥師(一) 藥理學與藥物化學",
+      "subjectCode": "113090",
+      "qnum": 25,
+      "tag": "113-2 藥師(一)｜Q25",
+      "chapter": "Ch.07",
+      "vol": 2,
+      "eventId": "E09",
+      "codexIds": [
+        20,
+        21
+      ],
+      "topic": "四大膽鹼酯對膽鹼酯酶水解敏感度",
+      "stem": "下列直接作用型擬膽鹼藥物（cholinomimetics）中，何者最易被cholinesterase水解而失去活性？",
+      "options": {
+        "A": "methacholine",
+        "B": "carbachol",
+        "C": "bethanechol",
+        "D": "acetylcholine"
+      },
+      "originalAnswer": "D",
+      "acceptedAnswers": [
+        "D"
+      ],
+      "revisionNote": "",
+      "optionExplanations": {
+        "A": "（錯誤）Methacholine 在 β 碳導入甲基產生立體障礙，使真性 AChE 水解速率遠慢於乙醯膽鹼，且幾乎不被血漿假性膽鹼酯酶（BuChE）分解。",
+        "B": "（錯誤）Carbachol 將乙醯酯改造為胺甲醯酯（carbamate ester），分子穩定性大幅提高，幾乎完全抵抗 AChE 與 BuChE 水解。",
+        "C": "（錯誤）Bethanechol 兼具 β-甲基與胺甲醯酯雙重保護改造，完全耐受膽鹼酯酶水解且高度選擇性作用於 M 受體，可口服給藥。",
+        "D": "（正解）Acetylcholine（乙醯膽鹼）結構毫無 β-甲基立體障礙或胺甲醯基保護，在突觸間隙約 150 微秒即遭真性 AChE 瞬間水解，亦極易被血漿 BuChE 破壞，為四大膽鹼酯中最易失活者。"
+      },
+      "coreSummary": "四象膽鹼酯 SAR 雙秘法：「β-甲基」防 BuChE 兼賦予 M 受體選擇性（methacholine、bethanechol），「胺甲醯酯（-NH2）」徹底抵抗 AChE／BuChE 水解（carbachol、bethanechol）；毫無保護的原型 acetylcholine 最易瞬間水解。",
+      "moexUrl": "https://wwwq.moex.gov.tw/exam/wFrmExamQandASearch.aspx?y=2024&e=113090"
+    },
+    {
+      "id": "NE_113-2_PH_50",
+      "exam": "113-2",
+      "year": 113,
+      "session": 2,
+      "track": "pharmacist",
+      "trackLabel": "藥師(一) 藥理學與藥物化學",
+      "subjectCode": "113090",
+      "qnum": 50,
+      "tag": "113-2 藥師(一)｜Q50",
+      "chapter": "Ch.08",
+      "vol": 3,
+      "eventId": "E28",
+      "codexIds": [
+        11,
+        55
+      ],
+      "topic": "Baclofen 活化 GABAB 抗痙機轉",
+      "stem": "下列何者結構類似GABA，選擇性作用在GABAB受體，而產生抗痙（antispastic）活性？",
+      "options": {
+        "A": "baclofen",
+        "B": "dantrolene",
+        "C": "carisoprodol",
+        "D": "diazepam"
+      },
+      "originalAnswer": "A",
+      "acceptedAnswers": [
+        "A"
+      ],
+      "revisionNote": "",
+      "optionExplanations": {
+        "A": "（正解）Baclofen 為對氯苯基取代的 GABA 結構類似物（β-(4-chlorophenyl)-GABA），引入氯苯環提高脂溶性以穿透血腦障壁，選擇性活化脊髓 GABAB 受體（Gi/o 偶聯：抑制突觸前 Ca²⁺ 內流並開啟突觸後 K⁺ 外流），產生強力抗痙攣（antispastic）作用。",
+        "B": "（錯誤）Dantrolene 為 hydantoin 衍生物，直接作用於骨骼肌肌漿網 RyR1 通道抑制 Ca²⁺ 釋放，既非 GABA 類似物亦不作用於 GABAB 受體。",
+        "C": "（錯誤）Carisoprodol 為胺甲酸酯類中樞肌鬆劑，體內代謝成 meprobamate 並正向調節 GABAA 受體，具鎮靜與濫用依賴風險，不選擇性作用於 GABAB 受體。",
+        "D": "（錯誤）Diazepam 為苯二氮平類（benzodiazepine）藥物，結合於離子通道型 GABAA 受體之異位位點增加 Cl⁻ 內流，而非代謝型 GABAB 受體。"
+      },
+      "coreSummary": "中樞解痙雙星辨析：Diazepam 作用於 GABAA（離子通道 Cl⁻ 內流）；Baclofen 乃加裝對氯苯環助穿 BBB 的 GABA 類似物，專一活化 GPCR 型 GABAB 受體（Gi/o：抑 Ca²⁺、開 K⁺），長期使用切忌驟停以防反彈癲癇與幻覺。",
+      "moexUrl": "https://wwwq.moex.gov.tw/exam/wFrmExamQandASearch.aspx?y=2024&e=113090"
+    },
+    {
+      "id": "NE_113-2_PH_56",
+      "exam": "113-2",
+      "year": 113,
+      "session": 2,
+      "track": "pharmacist",
+      "trackLabel": "藥師(一) 藥理學與藥物化學",
+      "subjectCode": "113090",
+      "qnum": 56,
+      "tag": "113-2 藥師(一)｜Q56",
+      "chapter": "Ch.08",
+      "vol": 3,
+      "eventId": "E28",
+      "codexIds": [
+        55,
+        56
+      ],
+      "topic": "肌鬆劑 Cyclobenzaprine 藥化",
+      "stem": "下列何種肌肉鬆弛劑之結構與三環抗鬱藥最相近？",
+      "options": {
+        "A": "baclofen",
+        "B": "cyclobenzaprine",
+        "C": "dantrolene",
+        "D": "chlorzoxazone"
+      },
+      "originalAnswer": "B",
+      "acceptedAnswers": [
+        "B"
+      ],
+      "revisionNote": "",
+      "optionExplanations": {
+        "A": "（錯誤）Baclofen 為對氯苯基取代之直鏈 γ-胺基丁酸（GABA）類似物，並無三環芳香結構。",
+        "B": "（正解）Cyclobenzaprine 具二苯并環庚烯（dibenzocycloheptene）三環骨架與二甲胺丙基側鏈，結構與三環抗鬱藥 amitriptyline 極為相近（僅中央七員環多一道雙鍵），主要作用於腦幹抑制運動神經活性緩解急性肌肉痙攣，亦帶有顯著抗膽鹼副作用（口乾、嗜睡、尿滯留）且忌併用 MAOI。",
+        "C": "（錯誤）Dantrolene 屬硝基苯-呋喃-乙內醯脲（hydantoin）結構，作用於骨骼肌 RyR1 通道，與三環抗鬱藥結構迥異。",
+        "D": "（錯誤）Chlorzoxazone 屬苯并噁唑酮（benzoxazolone）雙環結構，用於急性肌肉痙攣（偶有肝毒性警訊），並非三環抗鬱藥類似物。"
+      },
+      "coreSummary": "中樞急性肌肉鬆弛劑 cyclobenzaprine 結構幾乎等同三環抗鬱藥 amitriptyline（僅中央環多一雙鍵），因此特別容易表現明顯嗜睡、抗蕈毒鹼副作用（口乾、視力模糊、尿滯留）及與 MAOI 交互作用，高齡者須謹慎避免。",
+      "moexUrl": "https://wwwq.moex.gov.tw/exam/wFrmExamQandASearch.aspx?y=2024&e=113090"
+    },
+    {
+      "id": "NE_113-1_MD_65",
+      "exam": "113-1",
+      "year": 113,
+      "session": 1,
+      "track": "physician",
+      "trackLabel": "醫師(一) 醫學(二)",
+      "subjectCode": "113020",
+      "qnum": 65,
+      "tag": "113-1 醫師(一)｜Q65",
+      "chapter": "Ch.08",
+      "vol": 3,
+      "eventId": "E21",
+      "codexIds": [
+        38,
+        40,
+        42
+      ],
+      "topic": "Scopolamine 臨床用途與排尿困難禁忌",
+      "stem": "Scopolamine 最不適用於下列何種情況？",
+      "options": {
+        "A": "需要散瞳時",
+        "B": "暈車",
+        "C": "排尿困難",
+        "D": "腹痛腹瀉"
+      },
+      "originalAnswer": "C",
+      "acceptedAnswers": [
+        "C"
+      ],
+      "revisionNote": "",
+      "optionExplanations": {
+        "A": "（錯誤）Scopolamine 為抗蕈毒鹼藥物，局部點眼可阻斷虹膜瞳孔括約肌與睫狀肌之 M3 受體，產生散瞳與睫狀肌麻痺作用，臨床適用於散瞳檢查或葡萄膜炎防沾黏。",
+        "B": "（錯誤）Scopolamine 結構具環氧橋、親脂性高且易穿透血腦障壁，可阻斷前庭路徑與中樞 M 受體，經皮貼片劑型為預防暈車與動暈症的一線用藥。",
+        "C": "（正解）Scopolamine 阻斷膀胱逼尿肌 M3 受體會降低膀胱收縮力，同時尿道內括約肌受交感 α1 維持收縮張力，將顯著加重排尿困難並誘發急性尿滯留，故良性攝護腺肥大或排尿困難者最不適用。",
+        "D": "（錯誤）Scopolamine 及其四級銨衍生物（如 hyoscine butylbromide）可阻斷腸道平滑肌 M3 受體、抑制腸道痙攣與過度蠕動，臨床常用於緩解腹痛、腸絞痛與腹瀉症狀。"
+      },
+      "coreSummary": "Scopolamine 因高脂溶性易穿透血腦障壁，是預防動暈症的經典抗蕈毒鹼藥；但阻斷膀胱逼尿肌 M3 受體易引發尿滯留，故排尿困難、良性攝護腺肥大與隅角閉鎖性青光眼皆為重要禁忌。",
+      "moexUrl": "https://wwwq.moex.gov.tw/exam/wFrmExamQandASearch.aspx?y=2024&e=113020"
+    },
+    {
+      "id": "NE_113-1_MD_66",
+      "exam": "113-1",
+      "year": 113,
+      "session": 1,
+      "track": "physician",
+      "trackLabel": "醫師(一) 醫學(二)",
+      "subjectCode": "113020",
+      "qnum": 66,
+      "tag": "113-1 醫師(一)｜Q66",
+      "chapter": "Ch.09",
+      "vol": 4,
+      "eventId": "E32",
+      "codexIds": [
+        62,
+        63,
+        67
+      ],
+      "topic": "自主神經降壓藥與升壓藥 Midodrine",
+      "stem": "下列藥物中，何者不具有降低血壓的效果？",
+      "options": {
+        "A": "doxazosin",
+        "B": "clonidine",
+        "C": "midodrine",
+        "D": "betaxolol"
+      },
+      "originalAnswer": "C",
+      "acceptedAnswers": [
+        "C"
+      ],
+      "revisionNote": "",
+      "optionExplanations": {
+        "A": "（錯誤）Doxazosin 為選擇性 α1 腎上腺素受體拮抗劑，可舒張周邊小動脈與靜脈平滑肌、降低周邊血管阻力，具有明確降血壓效果（並可用於良性攝護腺肥大）。",
+        "B": "（錯誤）Clonidine 為中樞 α2 腎上腺素受體致效劑，作用於延腦血管運動中樞以減少交感神經輸出，具有顯著降血壓效果（驟停須防反彈高血壓）。",
+        "C": "（正解）Midodrine 為口服前驅藥，體內脫去甘胺酸轉化為活性代謝物 desglymidodrine，屬選擇性 α1 受體致效劑，能收縮周邊動靜脈以「升高」血壓，臨床用於治療姿勢性低血壓，絕無降壓效果。",
+        "D": "（錯誤）Betaxolol 為選擇性 β1 腎上腺素受體拮抗劑，可降低心輸出量並抑制腎素（renin）分泌，口服具備降血壓療效（點眼則降眼壓治青光眼）。"
+      },
+      "coreSummary": "四個選項皆為自主神經受體藥物：doxazosin（阻 α1）、clonidine（中樞促 α2）與 betaxolol（阻 β1）皆降血壓；唯獨 midodrine（促 α1 前驅藥）用於拉升姿勢性低血壓，須防仰臥高血壓。",
+      "moexUrl": "https://wwwq.moex.gov.tw/exam/wFrmExamQandASearch.aspx?y=2024&e=113020"
+    },
+    {
+      "id": "NE_113-1_MD_68",
+      "exam": "113-1",
+      "year": 113,
+      "session": 1,
+      "track": "physician",
+      "trackLabel": "醫師(一) 醫學(二)",
+      "subjectCode": "113020",
+      "qnum": 68,
+      "tag": "113-1 醫師(一)｜Q68",
+      "chapter": "Ch.07",
+      "vol": 2,
+      "eventId": "E11",
+      "codexIds": [
+        25,
+        32
+      ],
+      "topic": "Neostigmine 治療急性結腸假性阻塞",
+      "stem": "下列藥物中，何者最適合用於改善住院病人急性結腸假性阻塞（acute colonic pseudo-obstruction）的症狀？",
+      "options": {
+        "A": "sucralfate",
+        "B": "bismuth",
+        "C": "neostigmine",
+        "D": "metoclopramide"
+      },
+      "originalAnswer": "C",
+      "acceptedAnswers": [
+        "C"
+      ],
+      "revisionNote": "",
+      "optionExplanations": {
+        "A": "（錯誤）Sucralfate 為胃黏膜保護劑，於酸性環境形成凝膠覆蓋潰瘍表面，用於消化性潰瘍治療，無促腸蠕動效果且可能引起便秘。",
+        "B": "（錯誤）Bismuth（如 bismuth subsalicylate）具黏膜保護、抗分泌與抑菌作用，用於旅行者腹瀉與幽門螺旋桿菌治療，不適用於腸道假性阻塞。",
+        "C": "（正解）急性結腸假性阻塞（Ogilvie 症候群）源於結腸副交感張力不足、交感過度優勢所致之非機械性擴張；靜脈給予可逆性乙醯膽鹼酯酶抑制劑 neostigmine 可提升突觸 ACh、活化腸壁 M3 受體，迅速誘發結腸推進性蠕動以減壓。",
+        "D": "（錯誤）Metoclopramide（D2 拮抗劑兼 5-HT4 致效劑）主要促進胃排空與近端小腸等上消化道蠕動，對遠端結腸運動幾乎無效，故無法有效解除急性結腸假性阻塞。"
+      },
+      "coreSummary": "住院病人發生非機械性急性結腸假性阻塞（Ogilvie 症候群）時，靜脈注射 neostigmine（間接擬膽鹼 AChE 抑制劑）為首選促結腸減壓藥，給藥期間須監測心電圖並備妥 atropine 防嚴重心搏過緩。",
+      "moexUrl": "https://wwwq.moex.gov.tw/exam/wFrmExamQandASearch.aspx?y=2024&e=113020"
+    },
+    {
+      "id": "NE_113-1_MD_75",
+      "exam": "113-1",
+      "year": 113,
+      "session": 1,
+      "track": "physician",
+      "trackLabel": "醫師(一) 醫學(二)",
+      "subjectCode": "113020",
+      "qnum": 75,
+      "tag": "113-1 醫師(一)｜Q75",
+      "chapter": "Ch.09",
+      "vol": 4,
+      "eventId": "E37",
+      "codexIds": [
+        75
+      ],
+      "topic": "β 阻斷劑過量中毒解毒劑：升糖素",
+      "stem": "β-blockers 類藥物過量導致心搏過緩及低血壓時，最適合用下列何種藥物解毒？",
+      "options": {
+        "A": "theophylline",
+        "B": "caffeine",
+        "C": "metaproterenol",
+        "D": "glucagon"
+      },
+      "originalAnswer": "D",
+      "acceptedAnswers": [
+        "D"
+      ],
+      "revisionNote": "",
+      "optionExplanations": {
+        "A": "（錯誤）Theophylline 為非選擇性 PDE 抑制劑與腺苷受體拮抗劑，治療安全範圍狹窄且易誘發致命心律不整與癲癇，非 β 阻斷劑中毒解毒劑。",
+        "B": "（錯誤）Caffeine 雖具中樞興奮與微弱 PDE 抑制作用，但無法在重度 β 阻斷劑過量時有效逆轉心肌收縮抑制與休克。",
+        "C": "（錯誤）Metaproterenol 為偏向 β2 之支氣管擴張劑；且在 β 阻斷劑過量全面占據心臟 β1 受體的情況下，傳統 β 致效劑往往難以突破受體封鎖。",
+        "D": "（正解）高劑量靜脈注射升糖素（glucagon）可結合心肌細胞上獨立的 glucagon 受體，直接繞過被阻斷的 β1 受體並經由 Gs 蛋白活化腺苷酸環化酶、提高細胞內 cAMP，迅速恢復心肌收縮力、心跳與血壓。"
+      },
+      "coreSummary": "嚴重 β 阻斷劑過量中毒導致難治性心搏過緩與低血壓時，首選專一解毒劑為高劑量 IV glucagon（升糖素），透過獨立受體繞道活化 Gs → ↑cAMP 重啟心臟動能。",
+      "moexUrl": "https://wwwq.moex.gov.tw/exam/wFrmExamQandASearch.aspx?y=2024&e=113020"
+    },
+    {
+      "id": "NE_113-1_PH_17",
+      "exam": "113-1",
+      "year": 113,
+      "session": 1,
+      "track": "pharmacist",
+      "trackLabel": "藥師(一) 藥理學與藥物化學",
+      "subjectCode": "113020",
+      "qnum": 17,
+      "tag": "113-1 藥師(一)｜Q17",
+      "chapter": "Ch.09",
+      "vol": 4,
+      "eventId": "E32",
+      "codexIds": [
+        63,
+        71
+      ],
+      "topic": "妊娠性高血壓用藥安全與 Methyldopa",
+      "stem": "下列那些降血壓藥物可用於治療妊娠性高血壓？①hydralazine ②methyldopa ③amlodipine ④aliskiren ⑤propranolol ⑥losartan",
+      "options": {
+        "A": "①②③",
+        "B": "②⑤⑥",
+        "C": "②③④",
+        "D": "①④⑤"
+      },
+      "originalAnswer": "A",
+      "acceptedAnswers": [
+        "A"
+      ],
+      "revisionNote": "",
+      "optionExplanations": {
+        "A": "（正解）① hydralazine（直接小動脈擴張劑，急症亦常用）、② methyldopa（中樞 α2 致效劑前驅藥，具最充分孕期安全實證之經典首選）與 ③ amlodipine（DHP 類鈣離子通道阻斷劑，如 nifedipine／amlodipine）皆對胎兒相對安全，可用於妊娠性高血壓。",
+        "B": "（錯誤）⑥ losartan 屬血管張力素受體阻斷劑（ARB），會破壞胎兒腎臟發育並引發羊水過少，為孕期絕對禁忌；⑤ propranolol 則易導致胎兒生長遲滯（IUGR）與新生兒心搏過緩、低血糖。",
+        "C": "（錯誤）④ aliskiren 為直接腎素抑制劑，與 ACEi／ARB 同樣抑制胎兒 RAAS 系統而具嚴重致畸與胎兒腎毒性，孕婦絕對禁用。",
+        "D": "（錯誤）包含孕婦絕對禁忌的 ④ aliskiren（直接腎素抑制劑），以及孕期不建議使用的非選擇性 β 阻斷劑 ⑤ propranolol（若選 β 阻斷類，孕期應改用兼具 α1 阻斷的 labetalol）。"
+      },
+      "coreSummary": "妊娠高血壓一線安全用藥口訣「Hypertensive Moms Love Nifedipine/Amlodipine」：Hydralazine、Methyldopa（中樞 α2 致效）、Labetalol（α/β 阻斷）、Nifedipine／Amlodipine；所有 RAAS 抑制劑（ACEi、ARB、Aliskiren）均絕對禁忌，且避免 propranolol／atenolol。",
+      "moexUrl": "https://wwwq.moex.gov.tw/exam/wFrmExamQandASearch.aspx?y=2024&e=113020"
+    },
+    {
+      "id": "NE_113-1_PH_22",
+      "exam": "113-1",
+      "year": 113,
+      "session": 1,
+      "track": "pharmacist",
+      "trackLabel": "藥師(一) 藥理學與藥物化學",
+      "subjectCode": "113020",
+      "qnum": 22,
+      "tag": "113-1 藥師(一)｜Q22",
+      "chapter": "Ch.09",
+      "vol": 4,
+      "eventId": "E32",
+      "codexIds": [
+        62
+      ],
+      "topic": "擬交感前驅藥 Midodrine 與姿勢性低血壓",
+      "stem": "下列何者為擬交感神經作用劑 midodrine 最主要之臨床用途？",
+      "options": {
+        "A": "高血壓（hypertension）",
+        "B": "氣喘（asthma）",
+        "C": "青光眼（glaucoma）",
+        "D": "姿勢性低血壓（orthostatic hypotension）"
+      },
+      "originalAnswer": "D",
+      "acceptedAnswers": [
+        "D"
+      ],
+      "revisionNote": "",
+      "optionExplanations": {
+        "A": "（錯誤）Midodrine 活化周邊血管 α1 受體會升高血壓，故嚴重高血壓為其禁忌症，且服藥後平躺易發生仰臥高血壓（supine hypertension）。",
+        "B": "（錯誤）氣喘支氣管擴張仰賴選擇性 β2 致效劑（如 salbutamol／albuterol），midodrine 僅選擇性作用於 α1 受體而無支氣管舒張功效。",
+        "C": "（錯誤）青光眼降眼壓之交感相關點眼藥為 α2 致效劑（brimonidine）或 β 阻斷劑（timolol），並非口服 α1 致效劑 midodrine。",
+        "D": "（正解）Midodrine 為口服前驅藥，經體內脫甘胺酸轉為活性體 desglymidodrine，選擇性活化周邊動靜脈 α1 受體以增加血管阻力與靜脈回流，主要用於治療神經源性姿勢性低血壓。"
+      },
+      "coreSummary": "Midodrine → desglymidodrine 為經典口服選擇性 α1 致效前驅藥，幾乎不穿過血腦障壁且不直接刺激心臟 β1，主治姿勢性低血壓；衛教須提醒避免於睡前 4 小時內服用以防仰臥高血壓。",
+      "moexUrl": "https://wwwq.moex.gov.tw/exam/wFrmExamQandASearch.aspx?y=2024&e=113020"
+    },
+    {
+      "id": "NE_113-1_PH_23",
+      "exam": "113-1",
+      "year": 113,
+      "session": 1,
+      "track": "pharmacist",
+      "trackLabel": "藥師(一) 藥理學與藥物化學",
+      "subjectCode": "113020",
+      "qnum": 23,
+      "tag": "113-1 藥師(一)｜Q23",
+      "chapter": "Ch.09",
+      "vol": 4,
+      "eventId": "E35",
+      "codexIds": [
+        14,
+        69
+      ],
+      "topic": "Tamsulosin 選擇性阻斷治 BPH",
+      "stem": "下列何種藥物為 adrenergic α1A 及α1D 受體高親和性之拮抗劑，最適合用於治療良性攝護腺肥大（benign prostatic hyperplasia）排尿困難病人？",
+      "options": {
+        "A": "phentolamine",
+        "B": "tamsulosin",
+        "C": "phenylephrine",
+        "D": "brimonidine"
+      },
+      "originalAnswer": "B",
+      "acceptedAnswers": [
+        "B"
+      ],
+      "revisionNote": "",
+      "optionExplanations": {
+        "A": "（錯誤）Phentolamine 為非選擇性可逆性 α1／α2 拮抗劑，易造成血壓驟降與嚴重反射性心搏過速，臨床用於嗜鉻細胞瘤或 MAOI 起司效應高血壓危症，不適用於 BPH。",
+        "B": "（正解）Tamsulosin 對攝護腺平滑肌及膀胱頸富含之 α1A 與 α1D 受體具高度選擇性，可舒張攝護腺與尿道內括約肌以改善排尿困難，同時減少阻斷血管 α1B 受體所致之姿勢性低血壓（惟須注意白內障手術 IFIS 風險）。",
+        "C": "（錯誤）Phenylephrine 為 α1 受體致效劑，反而會收縮膀胱頸與尿道內括約肌平滑肌，惡化良性攝護腺肥大病人的尿滯留。",
+        "D": "（錯誤）Brimonidine 為選擇性 α2 腎上腺素受體致效劑，主要點眼降低房水生成並增加葡萄膜鞏膜排出以治療青光眼，不具 BPH 療效。"
+      },
+      "coreSummary": "Tamsulosin 選擇性阻斷 α1A（攝護腺／尿道平滑肌）與 α1D（膀胱逼尿肌／神經）受體，較不易阻斷血管 α1B 而大幅減少姿勢性低血壓，為良性攝護腺肥大（BPH）首選用藥；高頻考點尚包含白內障術中虹膜鬆脫症候群（IFIS）。",
+      "moexUrl": "https://wwwq.moex.gov.tw/exam/wFrmExamQandASearch.aspx?y=2024&e=113020"
+    },
+    {
+      "id": "NE_113-1_PH_24",
+      "exam": "113-1",
+      "year": 113,
+      "session": 1,
+      "track": "pharmacist",
+      "trackLabel": "藥師(一) 藥理學與藥物化學",
+      "subjectCode": "113020",
+      "qnum": 24,
+      "tag": "113-1 藥師(一)｜Q24",
+      "chapter": "Ch.07",
+      "vol": 2,
+      "eventId": "E12",
+      "codexIds": [
+        21,
+        26,
+        41
+      ],
+      "topic": "副交感藥物治療青光眼與散瞳禁忌",
+      "stem": "下列副交感神經藥物中，何者最不適合用於治療青光眼（glaucoma）？",
+      "options": {
+        "A": "pilocarpine",
+        "B": "carbachol",
+        "C": "echothiophate",
+        "D": "scopolamine"
+      },
+      "originalAnswer": "D",
+      "acceptedAnswers": [
+        "D"
+      ],
+      "revisionNote": "",
+      "optionExplanations": {
+        "A": "（錯誤）Pilocarpine 為直接作用型蕈毒鹼生物鹼致效劑，收縮瞳孔括約肌與睫狀肌以拉開前房隅角與小樑網、促進房水排出，為急性隅角閉鎖性與開放性青光眼之重要縮瞳藥。",
+        "B": "（錯誤）Carbachol 為抗膽鹼酯酶水解之直接作用型膽鹼酯致效劑，局部眼科使用可產生強效縮瞳並增加房水流出以降低眼壓。",
+        "C": "（錯誤）Echothiophate 為長效不可逆有機磷類乙醯膽鹼酯酶抑制劑，點眼可間接提升眼內 ACh 濃度、促進房水排出，用於特定難治型隅角開放性青光眼。",
+        "D": "（正解）Scopolamine 為抗蕈毒鹼藥物（M 受體拮抗劑），會麻痺瞳孔括約肌與睫狀肌造成散瞳，反而使虹膜推擠阻塞前房隅角與小樑網、導致眼壓急劇飆升，故最不適合（且禁用於隅角閉鎖性）青光眼。"
+      },
+      "coreSummary": "青光眼用副交感藥物須「擬膽鹼縮瞳」以拉開小樑網促房水排出（pilocarpine、carbachol、echothiophate）；抗蕈毒鹼散瞳劑（atropine、scopolamine）則會堵死前房隅角使眼壓暴衝，為急性青光眼大忌。",
+      "moexUrl": "https://wwwq.moex.gov.tw/exam/wFrmExamQandASearch.aspx?y=2024&e=113020"
+    },
+    {
+      "id": "NE_113-1_PH_25",
+      "exam": "113-1",
+      "year": 113,
+      "session": 1,
+      "track": "pharmacist",
+      "trackLabel": "藥師(一) 藥理學與藥物化學",
+      "subjectCode": "113020",
+      "qnum": 25,
+      "tag": "113-1 藥師(一)｜Q25",
+      "chapter": "Ch.08",
+      "vol": 3,
+      "eventId": "E23",
+      "codexIds": [
+        46,
+        47
+      ],
+      "topic": "Varenicline 與 α4β2 戒菸機轉",
+      "stem": "下列何種藥物為α4β2 尼古丁受體部分致效劑（partial agonist），可用於戒菸？",
+      "options": {
+        "A": "bethanechol",
+        "B": "varenicline",
+        "C": "methacholine",
+        "D": "scopolamine"
+      },
+      "originalAnswer": "B",
+      "acceptedAnswers": [
+        "B"
+      ],
+      "revisionNote": "",
+      "optionExplanations": {
+        "A": "（錯誤）Bethanechol 為選擇性蕈毒鹼（M）受體致效劑，對尼古丁受體幾乎無活性，臨床用於治療非阻塞性尿滯留與腸麻痺。",
+        "B": "（正解）Varenicline 為中樞 α4β2 尼古丁乙醯膽鹼受體之高親和力部分致效劑（partial agonist），能藉適度致效緩解戒菸渴求與戒斷不適，並同時競爭拮抗外來尼古丁結合、減弱吸菸獎賞效應，為戒菸一線藥物。",
+        "C": "（錯誤）Methacholine 為偏向 M 受體的直接擬膽鹼膽鹼酯，臨床主要用於吸入性支氣管激發試驗以協助診斷氣喘。",
+        "D": "（錯誤）Scopolamine 為中樞可穿透之抗蕈毒鹼藥物，主要用於預防動暈症與抗痙攣，與 α4β2 尼古丁受體無關。"
+      },
+      "coreSummary": "中樞成癮獎賞路徑的核心尼古丁受體亞型為 (α4)2(β2)3；Varenicline 以「部分致效劑」雙重機制（低度活化解癮＋卡位阻斷尼古丁快感）成為實證療效最佳的一線戒菸藥之一。",
+      "moexUrl": "https://wwwq.moex.gov.tw/exam/wFrmExamQandASearch.aspx?y=2024&e=113020"
+    },
+    {
+      "id": "NE_113-1_PH_30",
+      "exam": "113-1",
+      "year": 113,
+      "session": 1,
+      "track": "pharmacist",
+      "trackLabel": "藥師(一) 藥理學與藥物化學",
+      "subjectCode": "113020",
+      "qnum": 30,
+      "tag": "113-1 藥師(一)｜Q30",
+      "chapter": "Ch.08",
+      "vol": 3,
+      "eventId": "E28",
+      "codexIds": [
+        15,
+        56,
+        72
+      ],
+      "topic": "肉毒桿菌毒素之臨床適應症辨析",
+      "stem": "肉毒桿菌毒素（botulinum toxin）除了可用於消除皺紋外，尚有許多其他的臨床用途，下列何者不是肉毒桿菌毒素的臨床適應症？",
+      "options": {
+        "A": "膀胱過動（overactive bladder）引起尿失禁",
+        "B": "腦性麻痺（cerebral palsy）所致下肢痙攣",
+        "C": "藥物引起之肌肉無力（muscle weakness）",
+        "D": "偏頭痛（migraine）"
+      },
+      "originalAnswer": "C",
+      "acceptedAnswers": [
+        "C"
+      ],
+      "revisionNote": "",
+      "optionExplanations": {
+        "A": "（錯誤）膀胱壁逼尿肌注射肉毒桿菌毒素 A 型可切割突觸前 SNAP-25、抑制 ACh 釋放以降低膀胱過度收縮，為難治型膀胱過動症（OAB）核准適應症。",
+        "B": "（錯誤）肉毒桿菌毒素局部注射可阻斷運動神經終板 ACh 胞吐、造成局部肌肉鬆弛，臨床廣泛用於治療腦性麻痺或中風後之下肢局部痙攣（spasticity）。",
+        "C": "（正解）肉毒桿菌毒素本質是抑制神經肌肉接合處 ACh 釋放、引發弛緩性麻痺；用於肌肉無力（如藥物性肌無力、重症肌無力）患者不僅無效，更會嚴重加劇肌無力甚至導致呼吸衰竭，絕非適應症。",
+        "D": "（錯誤）肉毒桿菌毒素 A 型可抑制三叉神經痛覺纖維釋放 CGRP、Substance P 與麩胺酸，減輕周邊與中樞敏感化，已核准用於慢性偏頭痛（每月 ≥15 天）的預防治療。"
+      },
+      "coreSummary": "肉毒桿菌毒素藉由切割突觸前 SNARE 蛋白（A 型切 SNAP-25、B 型切 synaptobrevin/VAMP）阻斷 ACh 與痛覺胜肽釋放，臨床適用於肌肉過張／過動疾病（痙攣、OAB、斜視）與慢性偏頭痛預防，但禁用於既有肌無力疾患。",
+      "moexUrl": "https://wwwq.moex.gov.tw/exam/wFrmExamQandASearch.aspx?y=2024&e=113020"
+    },
+    {
+      "id": "NE_113-1_PH_31",
+      "exam": "113-1",
+      "year": 113,
+      "session": 1,
+      "track": "pharmacist",
+      "trackLabel": "藥師(一) 藥理學與藥物化學",
+      "subjectCode": "113020",
+      "qnum": 31,
+      "tag": "113-1 藥師(一)｜Q31",
+      "chapter": "Ch.09",
+      "vol": 4,
+      "eventId": "E31",
+      "codexIds": [
+        9,
+        61
+      ],
+      "topic": "腎上腺素併用局部麻醉劑之藥理機轉",
+      "stem": "臨床上進行局部麻醉時，常會將局部麻醉劑併用適量腎上腺素（epinephrine），下列何者不是其併用之好處？",
+      "options": {
+        "A": "可促進局部麻醉劑被神經細胞吸收",
+        "B": "使麻醉劑蓄積在局部組織而延長藥效",
+        "C": "與局部麻醉劑結合而保護其不被分解",
+        "D": "進行脊髓麻醉時，腎上腺素可產生止痛作用"
+      },
+      "originalAnswer": "C",
+      "acceptedAnswers": [
+        "C"
+      ],
+      "revisionNote": "",
+      "optionExplanations": {
+        "A": "（錯誤）腎上腺素經由 α1 受體收縮局部微血管、減少血流沖刷，使局部組織維持高濃度麻醉劑梯度，有助於促進神經細胞對局部麻醉劑之吸收與阻斷深度。",
+        "B": "（錯誤）α1 介導的局部血管收縮可延緩局部麻醉劑進入全身血液循環，使藥物滯留於作用部位而顯著延長麻醉時間並降低全身毒性（但手指、腳趾、鼻、耳等末梢部位禁用以防壞死）。",
+        "C": "（正解）腎上腺素並不會與局部麻醉劑形成化學複合物來「保護其不被酵素分解」；其延長局麻藥效的根本機制為局部 α1 血管收縮減少全身吸收清除，而非直接抑制酯酶或肝臟代謝。",
+        "D": "（錯誤）於脊髓（蜘蛛膜下腔或硬膜外）麻醉併用時，腎上腺素可活化脊髓背角 α2 腎上腺素受體，抑制痛覺神經傳導物質釋放而產生協同止痛效果。"
+      },
+      "coreSummary": "局部麻醉劑併用腎上腺素（epinephrine）的核心機轉有二：周邊 α1 血管收縮（減少全身吸收、蓄積局部、促神經攝取並延長藥效／減毒性）及脊髓背角 α2 直接止痛；與「結合保護免於分解」無關。",
+      "moexUrl": "https://wwwq.moex.gov.tw/exam/wFrmExamQandASearch.aspx?y=2024&e=113020"
+    },
+    {
+      "id": "NE_113-1_PH_39",
+      "exam": "113-1",
+      "year": 113,
+      "session": 1,
+      "track": "pharmacist",
+      "trackLabel": "藥師(一) 藥理學與藥物化學",
+      "subjectCode": "113020",
+      "qnum": 39,
+      "tag": "113-1 藥師(一)｜Q39",
+      "chapter": "Ch.09",
+      "vol": 4,
+      "eventId": "E34",
+      "codexIds": [
+        14,
+        67
+      ],
+      "topic": "Yohimbe 拮抗 α2 受體促交感活性",
+      "stem": "許多天然物或中草藥都具有中樞神經藥理活性，下列何者具有拮抗α2-adrenergic receptor 作用，進而使得交感神經活性增加？",
+      "options": {
+        "A": "resveratrol",
+        "B": "yohimbe",
+        "C": "milk thistle",
+        "D": "curcumin"
+      },
+      "originalAnswer": "B",
+      "acceptedAnswers": [
+        "B"
+      ],
+      "revisionNote": "",
+      "optionExplanations": {
+        "A": "（錯誤）Resveratrol（白藜蘆醇）為多酚類植化素，主要與抗氧化、抗發炎及活化 SIRT1 路徑有關，不具 α2 腎上腺素受體拮抗活性。",
+        "B": "（正解）Yohimbe（育亨賓樹皮）所含生物鹼 yohimbine 為選擇性 α2 腎上腺素受體拮抗劑，可穿過血腦障壁阻斷中樞及周邊突觸前 α2 自體受體，解除對正腎上腺素釋放的負回饋煞車，進而增加交感神經活性與血壓。",
+        "C": "（錯誤）Milk thistle（水飛薊，活性成分 silymarin）主要用於肝臟保護與抗氧化，與腎上腺素受體調控無關。",
+        "D": "（錯誤）Curcumin（薑黃素）主要表現抗發炎與抗氧化活性，不具 α2 腎上腺素受體拮抗作用。"
+      },
+      "coreSummary": "突觸前 α2 自體受體屬交感神經負回饋煞車；選擇性 α2 拮抗劑 yohimbine（源自天然物 yohimbe）切斷負回饋後會大幅增加正腎上腺素釋放與中樞交感輸出，使血壓與心率升高。",
+      "moexUrl": "https://wwwq.moex.gov.tw/exam/wFrmExamQandASearch.aspx?y=2024&e=113020"
+    },
+    {
+      "id": "NE_113-1_PH_48",
+      "exam": "113-1",
+      "year": 113,
+      "session": 1,
+      "track": "pharmacist",
+      "trackLabel": "藥師(一) 藥理學與藥物化學",
+      "subjectCode": "113020",
+      "qnum": 48,
+      "tag": "113-1 藥師(一)｜Q48",
+      "chapter": "Ch.09",
+      "vol": 4,
+      "eventId": "E36",
+      "codexIds": [
+        72
+      ],
+      "topic": "Triptans 與 Indole 結構藥化",
+      "stem": "下列血清胺（serotonin）受體作用藥物，何者不具 indole 結構？",
+      "options": {
+        "A": "rizatriptan",
+        "B": "zolmitriptan",
+        "C": "granisetron",
+        "D": "sumatriptan"
+      },
+      "originalAnswer": "C",
+      "acceptedAnswers": [
+        "C"
+      ],
+      "revisionNote": "",
+      "optionExplanations": {
+        "A": "（錯誤）Rizatriptan 為偏頭痛急性用藥 5-HT1B/1D 受體致效劑，屬色胺（tryptamine）衍生物，核心骨架為 indole（吲哚）環。",
+        "B": "（錯誤）Zolmitriptan 亦屬偏頭痛 triptans 家族（5-HT1B/1D 致效劑），完整保留血清素之 indole 雙環骨架。",
+        "C": "（正解）Granisetron 為化療止吐用 5-HT3 受體拮抗劑，其核心雜環為含兩個相鄰氮原子的 **indazole（吲唑）** 環，而非僅含單一氮原子的 indole 環。",
+        "D": "（錯誤）Sumatriptan 為第一代偏頭痛代表藥（5-HT1B/1D 致效劑），係直接修飾內生性血清素而得，結構核心即為 indole 環。"
+      },
+      "coreSummary": "所有偏頭痛急性用藥 triptans（sumatriptan、rizatriptan、zolmitriptan 等）皆源自血清素色胺骨架，必定具備 indole 雙環；而 5-HT3 止吐藥 granisetron 的核心為雙氮 indazole 環，為藥化高頻結構對比題。",
+      "moexUrl": "https://wwwq.moex.gov.tw/exam/wFrmExamQandASearch.aspx?y=2024&e=113020"
+    },
+    {
+      "id": "NE_113-1_PH_50",
+      "exam": "113-1",
+      "year": 113,
+      "session": 1,
+      "track": "pharmacist",
+      "trackLabel": "藥師(一) 藥理學與藥物化學",
+      "subjectCode": "113020",
+      "qnum": 50,
+      "tag": "113-1 藥師(一)｜Q50",
+      "chapter": "Ch.07",
+      "vol": 2,
+      "eventId": "E16",
+      "codexIds": [
+        34
+      ],
+      "topic": "石蒜屬阿茲海默症藥 Galantamine 藥化",
+      "stem": "小美看了罹患失智症外婆的藥袋，裡面有個藥名讓她想起藥物化學課有介紹過。該藥結構類似嗎啡，可從石蒜屬植物抽取得到。請問此藥為下列何者？",
+      "options": {
+        "A": "donepezil",
+        "B": "rivastigmine",
+        "C": "memantine",
+        "D": "galantamine"
+      },
+      "originalAnswer": "D",
+      "acceptedAnswers": [
+        "D"
+      ],
+      "revisionNote": "",
+      "optionExplanations": {
+        "A": "（錯誤）Donepezil 為全合成之苯并環戊酮-哌啶（piperidine）類選擇性中樞 AChE 抑制劑，並非萃取自石蒜屬植物或具類嗎啡骨架。",
+        "B": "（錯誤）Rivastigmine 為合成之胺甲酸酯（carbamate）類偽不可逆 AChE／BuChE 抑制劑，結構源於 physostigmine 改造，非石蒜屬萃取物。",
+        "C": "（錯誤）Memantine 為金剛烷胺（adamantane）結構之 NMDA 受體非競爭性拮抗劑，用於中重度阿茲海默症，非植物來源之類嗎啡生物鹼。",
+        "D": "（正解）Galantamine 可萃取自石蒜科植物（如雪花蓮 *Galanthus*、石蒜屬 *Lycoris*），為具類似嗎啡多環結構之三級胺生物鹼，可穿透血腦障壁並兼具「可逆性競爭抑制 AChE」與「正向異位調節中樞尼古丁受體」雙重機轉。"
+      },
+      "coreSummary": "阿茲海默症三雄中樞 AChE 抑制劑藥化辨析：Donepezil 為合成 piperidine 類、Rivastigmine 為合成 carbamate 類（亦抑 BuChE），唯獨 Galantamine 為石蒜科植物生物鹼、結構似嗎啡並兼正向調節尼古丁受體。",
+      "moexUrl": "https://wwwq.moex.gov.tw/exam/wFrmExamQandASearch.aspx?y=2024&e=113020"
+    },
+    {
+      "id": "NE_113-1_PH_53",
+      "exam": "113-1",
+      "year": 113,
+      "session": 1,
+      "track": "pharmacist",
+      "trackLabel": "藥師(一) 藥理學與藥物化學",
+      "subjectCode": "113020",
+      "qnum": 53,
+      "tag": "113-1 藥師(一)｜Q53",
+      "chapter": "Ch.09",
+      "vol": 4,
+      "eventId": "E36",
+      "codexIds": [
+        70,
+        72
+      ],
+      "topic": "偏頭痛急性首選 Sumatriptan 辨析",
+      "stem": "下列何者為偏頭痛（migraine）的首選用藥？",
+      "options": {
+        "A": "sumatriptan",
+        "B": "timolol",
+        "C": "tapentadol",
+        "D": "pregabalin"
+      },
+      "originalAnswer": "A",
+      "acceptedAnswers": [
+        "A"
+      ],
+      "revisionNote": "",
+      "optionExplanations": {
+        "A": "（正解）Sumatriptan 為選擇性 5-HT1B/1D 受體致效劑，可收縮擴張的腦膜血管並抑制三叉神經釋放 CGRP 等血管擴張胜肽，是中重度偏頭痛急性發作之標準首選用藥（心血管疾病與孕婦禁用）。",
+        "B": "（錯誤）Timolol（與 propranolol 同屬無 ISA 之 β 阻斷劑）僅用於偏頭痛之「長期預防」，無法於急性頭痛發作時立即止痛，故非急性首選。",
+        "C": "（錯誤）Tapentadol 為 μ 鴉片受體致效劑兼正腎上腺素再回收抑制劑，鴉片類藥物易造成反彈／藥物過度使用性頭痛與成癮，不建議作為偏頭痛首選。",
+        "D": "（錯誤）Pregabalin 作用於鈣離子通道 α2δ 次單元，主治神經病變痛與局部癲癇，並非偏頭痛治療首選（偏頭痛預防常用之抗癲癇藥為 topiramate 或 valproate）。"
+      },
+      "coreSummary": "偏頭痛用藥必分「急性止痛」與「長期預防」：中重度急性首選為 5-HT1B/1D 致效劑 sumatriptan（心血管疾病禁用）；無 ISA 之 β 阻斷劑（propranolol、timolol、metoprolol）則用於日常預防。",
+      "moexUrl": "https://wwwq.moex.gov.tw/exam/wFrmExamQandASearch.aspx?y=2024&e=113020"
+    },
+    {
+      "id": "NE_113-1_PH_57",
+      "exam": "113-1",
+      "year": 113,
+      "session": 1,
+      "track": "pharmacist",
+      "trackLabel": "藥師(一) 藥理學與藥物化學",
+      "subjectCode": "113020",
+      "qnum": 57,
+      "tag": "113-1 藥師(一)｜Q57",
+      "chapter": "Ch.09",
+      "vol": 4,
+      "eventId": "E33",
+      "codexIds": [
+        63,
+        65
+      ],
+      "topic": "Phenylephrine 低口服可用率藥化",
+      "stem": "下列導致 phenylephrine 口服可用率低於 10%之原因，何者錯誤？",
+      "options": {
+        "A": "易受 COMT 代謝",
+        "B": "分子具親水性",
+        "C": "於腸道進行 glucuronidation",
+        "D": "於腸道進行 sulfation"
+      },
+      "originalAnswer": "A",
+      "acceptedAnswers": [
+        "A"
+      ],
+      "revisionNote": "",
+      "optionExplanations": {
+        "A": "（正解）此敘述錯誤。COMT 專一作用於具「鄰位雙酚羥基（3,4-dihydroxy catechol 環）」之兒茶酚胺；phenylephrine 苯環僅於間位（3 位）具單一羥基、缺少 4 位羥基，因此**不會被 COMT 代謝**。",
+        "B": "（錯誤）Phenylephrine 具酚羥基、β-羥基及質子化胺基，分子親水性偏高，限制其被動擴散穿越胃腸道細胞膜，為口服生體可用率偏低的原因之一。",
+        "C": "（錯誤）Phenylephrine 苯環 3 位之酚羥基在腸壁與肝臟首渡代謝中易經由 UGT 酵素進行葡萄醣醛酸化（glucuronidation）而失活。",
+        "D": "（錯誤）Phenylephrine 經口吸收通過腸道黏膜時，其酚羥基會遭遇廣泛的硫酸化（sulfation，及腸壁 MAO 氧化去胺），造成顯著首渡效應與極低口服生體可用率。"
+      },
+      "coreSummary": "兒茶酚胺代謝 SAR 鐵律：須同時具備 3,4-鄰位雙酚羥基才會被 COMT 甲基化！Phenylephrine 僅有單一 3-OH（單酚環）故「抗 COMT」，但其低口服生體可用率源於親水性與腸壁廣泛 Phase II 結合（sulfation、glucuronidation）及 MAO 代謝。",
+      "moexUrl": "https://wwwq.moex.gov.tw/exam/wFrmExamQandASearch.aspx?y=2024&e=113020"
+    }
+  ]
+}

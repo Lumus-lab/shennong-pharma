@@ -152,9 +152,10 @@
     }
     expansionsCfg = expansions;
 
-    const [codex, endings] = await Promise.all([
+    const [codex, endings, nationalExam] = await Promise.all([
       loadJson('data/codex_entries.json'),
-      loadJson('data/endings.json')
+      loadJson('data/endings.json'),
+      loadJson('data/national_exam_bank.json').catch(() => ({ meta: {}, questions: [] }))
     ]);
 
     return {
@@ -162,6 +163,7 @@
       deck: { roguelike: { prologuePool: [], bossPool: [], routes: {} }, story: { chapters: [] } },
       codex,
       endings,
+      nationalExam,
       expansions
     };
   }
@@ -182,7 +184,7 @@
   }
 
   function showScreen(screenId) {
-    ['screen-title', 'screen-play', 'screen-ending'].forEach((id) => {
+    ['screen-title', 'screen-play', 'screen-ending', 'screen-national-exam'].forEach((id) => {
       const el = document.getElementById(id);
       if (el) {
         const active = id === screenId;
@@ -266,6 +268,51 @@
       }
     }
     global.TaixuCodex.refreshCounters();
+    if (global.TaixuNationalExam) {
+      global.TaixuNationalExam.refreshCounters();
+      updateNeSetupPreview();
+    }
+  }
+
+  function getNeSetupOptions() {
+    const trackEl = document.querySelector('input[name="ne-track"]:checked');
+    const periodEl = document.querySelector('input[name="ne-period"]:checked');
+    const chapterEl = document.querySelector('input[name="ne-chapter"]:checked');
+    const runModeEl = document.querySelector('input[name="ne-run-mode"]:checked');
+    const rawRun = runModeEl ? runModeEl.value : 'practice';
+    return {
+      track: trackEl ? trackEl.value : 'all',
+      period: periodEl ? periodEl.value : 'all',
+      chapter: chapterEl ? chapterEl.value : 'all',
+      mode: rawRun === 'mock' ? 'mock' : 'practice',
+      status: rawRun === 'review_wrong' ? 'review_wrong' : 'all'
+    };
+  }
+
+  function updateNeSetupPreview() {
+    const pill = document.getElementById('ne-setup-match-count');
+    if (!pill || !global.TaixuNationalExam) return;
+    const opts = getNeSetupOptions();
+    const matched = global.TaixuNationalExam.filterQuestions({
+      track: opts.track,
+      period: opts.period,
+      chapter: opts.chapter,
+      status: opts.status
+    });
+    const st = global.TaixuNationalExam.getStatsSummary(matched);
+    pill.textContent = `符合條件：共 ${st.total} 題（醫師 ${st.physician} ＋ 藥師 ${st.pharmacist}）`;
+  }
+
+  function openNationalExamArena(overrideOpts) {
+    if (!global.TaixuNationalExam) return;
+    if (global.TaixuState.getRun()) {
+      global.TaixuState.saveRun();
+    }
+    const seedEl = document.getElementById('input-seed');
+    const seed = (seedEl && seedEl.value.trim()) || global.TaixuRNG.generateSeedCode();
+    const opts = Object.assign({ seed }, getNeSetupOptions(), overrideOpts || {});
+    showScreen('screen-national-exam');
+    global.TaixuNationalExam.startSession(opts);
   }
 
   function showEndingScreen(summary) {
@@ -282,7 +329,7 @@
               : summary.storyScope === 'part2'
                 ? '下篇直入（三四卷）'
                 : '全四卷大貫通'
-          }${summary.storyVariantMode === 'all' ? '・全考古全刷' : summary.storyVariantMode === 'core_only' ? '・純劇情線' : ''}`
+          }${summary.storyVariantMode === 'all' ? '・全考古全刷' : summary.storyVariantMode === 'national_only' ? '・國考真題專刷' : summary.storyVariantMode === 'core_only' ? '・純劇情線' : ''}`
         : `Roguelike 速行篇 (${summary.route || '混戰'})`;
     document.getElementById('ending-subtitle').textContent = `${scopeName}｜天機籤號：${summary.seed}`;
     document.getElementById('ending-narrative').innerHTML = `<p>${fmtMd(summary.ending.narrative)}</p><p style="color:var(--ink-secondary);margin-top:8px;">${fmtMd(summary.ending.summary)}</p>`;
@@ -318,12 +365,23 @@
     const modeRadios = document.querySelectorAll('input[name="game-mode"]');
     const routeBox = document.getElementById('roguelike-route-box');
     const storyScopeBox = document.getElementById('story-scope-box');
+    const neSetupBox = document.getElementById('national-exam-setup-box');
+    const startBtn = document.getElementById('btn-start-new');
+
     modeRadios.forEach((radio) => {
       radio.addEventListener('change', () => {
-        document.getElementById('card-mode-roguelike').classList.toggle('selected', radio.value === 'roguelike' && radio.checked);
-        document.getElementById('card-mode-story').classList.toggle('selected', radio.value === 'story' && radio.checked);
-        if (routeBox) routeBox.hidden = radio.value !== 'roguelike';
-        if (storyScopeBox) storyScopeBox.hidden = radio.value !== 'story';
+        const val = radio.value;
+        document.getElementById('card-mode-roguelike').classList.toggle('selected', val === 'roguelike' && radio.checked);
+        document.getElementById('card-mode-story').classList.toggle('selected', val === 'story' && radio.checked);
+        const neCard = document.getElementById('card-mode-national');
+        if (neCard) neCard.classList.toggle('selected', val === 'national' && radio.checked);
+        if (routeBox) routeBox.hidden = val !== 'roguelike';
+        if (storyScopeBox) storyScopeBox.hidden = val !== 'story';
+        if (neSetupBox) neSetupBox.hidden = val !== 'national';
+        if (startBtn) {
+          startBtn.textContent = val === 'national' ? '進入國考實戰殿' : '踏入太虛試煉';
+        }
+        if (val === 'national') updateNeSetupPreview();
       });
     });
 
@@ -354,6 +412,9 @@
           const inp = chip.querySelector('input');
           chip.classList.toggle('selected', Boolean(inp && inp.checked));
         });
+        if (radio.name && radio.name.startsWith('ne-')) {
+          updateNeSetupPreview();
+        }
       });
     });
 
@@ -362,10 +423,16 @@
       document.getElementById('input-seed').value = global.TaixuRNG.generateSeedCode();
     });
 
-    // Start new game (with on-demand module loading)
-    const startBtn = document.getElementById('btn-start-new');
+    // Start new game (with on-demand module loading or Mode C National Exam)
     startBtn.addEventListener('click', async () => {
       const modeEl = document.querySelector('input[name="game-mode"]:checked');
+      const mode = modeEl ? modeEl.value : 'roguelike';
+
+      if (mode === 'national') {
+        openNationalExamArena();
+        return;
+      }
+
       const routeEl = document.querySelector('input[name="rogue-route"]:checked');
       const scopeEl = document.querySelector('input[name="story-scope"]:checked');
       const lenEl = document.querySelector('input[name="rogue-length"]:checked');
@@ -373,7 +440,6 @@
       const storyVarEl = document.querySelector('input[name="story-variant-mode"]:checked');
       const seedEl = document.getElementById('input-seed');
 
-      const mode = modeEl ? modeEl.value : 'roguelike';
       const route = routeEl ? routeEl.value : 'all_mixed';
       const storyScope = scopeEl ? scopeEl.value : 'full';
       const storyVariantMode = storyVarEl ? storyVarEl.value : 'compact';
@@ -440,6 +506,13 @@
       showScreen('screen-title');
       refreshTitleScreen();
     });
+
+    const openNeBtn = document.getElementById('btn-open-ne');
+    if (openNeBtn) {
+      openNeBtn.addEventListener('click', () => {
+        openNationalExamArena({ track: 'all', period: 'all', chapter: 'all', mode: 'practice', status: 'all' });
+      });
+    }
 
     document.getElementById('btn-open-codex').addEventListener('click', () => {
       global.TaixuCodex.open('cards');
@@ -540,6 +613,12 @@
       gameBundle = await loadInitialMetadata();
       global.TaixuCodex.init(gameBundle.codex, gameBundle.endings);
       global.TaixuEngine.init(gameBundle, showEndingScreen);
+      if (global.TaixuNationalExam) {
+        global.TaixuNationalExam.init(gameBundle.nationalExam, gameBundle.codex, () => {
+          showScreen('screen-title');
+          refreshTitleScreen();
+        });
+      }
       bindUi();
       refreshTitleScreen();
       showScreen('screen-title');

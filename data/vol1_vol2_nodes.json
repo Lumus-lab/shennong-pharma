@@ -2255,6 +2255,206 @@
               ]
             }
           ]
+        },
+        {
+          "variantId": "NE003",
+          "variantType": "past_exam",
+          "examSource": "national_exam",
+          "examTrack": "physician",
+          "examTag": "115-2 醫師國考｜Q67",
+          "nationalExamId": "NE_115-2_MD_67",
+          "steps": [
+            {
+              "id": "ne_ne_115-2_md_67",
+              "speaker": "suling",
+              "speakerName": "蘇苓師妹",
+              "speakerTag": "七轉玲瓏台・國考真題",
+              "text": "七轉玲瓏台上氣道靈脈驟然收緊，四枚不同宗譜的受體玉鎖同時亮起。蘇苓師妹輕點肺經星圖問道：「師兄，這是基礎卻絕不能失分的 **115 年第二次醫師(一) 國考第 67 題**——活化下列何種受體（receptor）能夠最有效地幫助支氣管擴張？」",
+              "choices": [
+                {
+                  "id": "ne_ne_115-2_md_67_b",
+                  "label": "β2 adrenergic receptor",
+                  "sublabel": "（正解）支氣管平滑肌大量表現 β2 腎上腺素受體（偶聯 Gs 蛋白），活化後經腺苷酸環化酶升高胞內 cAMP、活化 PKA 並磷酸化抑制肌球蛋白輕鏈激酶（MLCK），能最有效地舒張氣道平滑肌而達支氣管擴張。",
+                  "outcome": "correct",
+                  "feedback": {
+                    "speakerName": "蘇苓師妹",
+                    "text": "「乾淨俐落！支氣管平滑肌上的 β2 受體走 Gs 路徑拉高 cAMP、鎖住 MLCK，瞬間敞開氣道！記住口訣『一顆心 β1、兩葉肺 β2』，而 M3 活化反會讓氣管絞縮喔！」",
+                    "delta": {
+                      "yin": 1,
+                      "yang": 1
+                    }
+                  },
+                  "nextStepId": "__EVENT_COMPLETE__"
+                },
+                {
+                  "id": "ne_ne_115-2_md_67_a",
+                  "label": "α1 adrenergic receptor",
+                  "sublabel": "（錯誤）α1 腎上腺素受體偶聯 Gq 蛋白（IP3/DAG → Ca²⁺↑），主要促使血管平滑肌、虹膜開大肌與攝護腺收縮，在氣管平滑肌分布稀少且不具支氣管擴張作用。",
+                  "outcome": "wrong",
+                  "feedback": {
+                    "speakerName": "蘇苓師妹",
+                    "text": "「不對喔！α1 走的是 Gq 收縮路徑，專管血管縮緊與升壓，幫不了支氣管擴張！」",
+                    "delta": {
+                      "yin": 1
+                    }
+                  }
+                },
+                {
+                  "id": "ne_ne_115-2_md_67_c",
+                  "label": "M3 cholinergic receptor",
+                  "sublabel": "（錯誤）M3 蕈毒鹼受體偶聯 Gq 蛋白，活化後會引起支氣管平滑肌收縮與呼吸道黏液分泌增加；臨床須「拮抗」M3（如 ipratropium、tiotropium）才能幫助支氣管擴張。",
+                  "outcome": "wrong",
+                  "feedback": {
+                    "speakerName": "弘岳真人",
+                    "text": "「糟糕，開錯鎖啦！活化 M3 會讓支氣管平滑肌猛烈收縮還狂吐黏液，想擴張氣管必須『阻斷』M3 或『活化』β2！」",
+                    "delta": {
+                      "yin": 1
+                    }
+                  }
+                },
+                {
+                  "id": "ne_ne_115-2_md_67_d",
+                  "label": "serotonin 5-HT3 receptor",
+                  "sublabel": "（錯誤）血清素 5-HT3 受體為配體閘控陽離子通道，主要分布於迷走神經末梢與延腦化學受體觸發區（CTZ），參與噁心嘔吐反射，無支氣管擴張功能。",
+                  "outcome": "wrong",
+                  "feedback": {
+                    "speakerName": "蘇苓師妹",
+                    "text": "「偏題啦！5-HT3 受體主司化療嘔吐反射（ondansetron 的標靶），跟支氣管擴張無關喔！」",
+                    "delta": {
+                      "yin": 1
+                    }
+                  }
+                }
+              ],
+              "vitals": {
+                "subject": "國考真題實戰測脈（115-2）",
+                "hr": 76,
+                "sbp": 118,
+                "dbp": 76,
+                "iop": 15,
+                "tempC": 36.8,
+                "potassium": 4.2,
+                "rhythm": "normal",
+                "rhythmText": "竇性節律（國考實戰態）",
+                "pupilMm": 3.5,
+                "ciliary": "適度平衡",
+                "airway": 100,
+                "secretion": "正常潤澤",
+                "nmj": 50,
+                "nmjLabel": "穩健有力",
+                "tofPattern": "normal",
+                "tofNote": "TOF 100%（無衰減）",
+                "badges": [
+                  "115-2 醫師國考｜Q67"
+                ]
+              },
+              "unlockCodex": [
+                14,
+                12,
+                17
+              ]
+            }
+          ]
+        },
+        {
+          "variantId": "NE004",
+          "variantType": "past_exam",
+          "examSource": "national_exam",
+          "examTrack": "pharmacist",
+          "examTag": "115-2 藥師國考｜Q1",
+          "nationalExamId": "NE_115-2_PH_1",
+          "steps": [
+            {
+              "id": "ne_ne_115-2_ph_1",
+              "speaker": "hongyue",
+              "speakerName": "弘岳真人",
+              "speakerTag": "七轉玲瓏台・國考真題",
+              "text": "七轉玲瓏台靈光四射，呈現四道細胞訊號傳遞法陣：一為酪胺酸激酶連環、二為七次穿膜 G 蛋白轉輪、唯有一座五聚體直通靈門瞬間電閃。弘岳真人開卷第一問：「且看 **115 年第二次藥師(一) 國考第 1 題**——下列何種受體（receptor）的直接訊息傳遞路徑不需要透過酵素的參與，即可引發其受體所在細胞的功能改變？」",
+              "choices": [
+                {
+                  "id": "ne_ne_115-2_ph_1_c",
+                  "label": "菸鹼性乙醯膽鹼（nicotinic acetylcholine）受體－骨骼肌細胞收縮",
+                  "sublabel": "（正解）骨骼肌終板的菸鹼性乙醯膽鹼受體（N_M）為五聚體配體閘控離子通道（ligand-gated ion channel），兩分子 ACh 結合後通道構型直接開啟，Na⁺ 迅速內流去極化觸發動作電位與肌肉收縮，全程不需透過任何酵素催化。",
+                  "outcome": "correct",
+                  "feedback": {
+                    "speakerName": "弘岳真人",
+                    "text": "「開門見紅！骨骼肌菸鹼受體（N_M）本體就是一座五聚體配體閘控離子通道，雙 ACh 一扣便直開鈉門、毫秒動肌，完全省去酵素催化！反觀胰島素靠 RTK、α1 靠 PLC、β1 靠腺苷酸環化酶，無一不仰賴酵素接力。」",
+                    "delta": {
+                      "yin": 1,
+                      "yang": 1
+                    }
+                  },
+                  "nextStepId": "__EVENT_COMPLETE__"
+                },
+                {
+                  "id": "ne_ne_115-2_ph_1_a",
+                  "label": "胰島素（insulin）受體－骨骼肌細胞攝取葡萄糖",
+                  "sublabel": "（錯誤）胰島素受體屬於受體酪胺酸激酶（receptor tyrosine kinase, RTK），結合胰島素後須先啟動酪胺酸激酶自體磷酸化及下游 PI3K/Akt 酵素級聯，才能促使 GLUT4 移位至細胞膜攝取葡萄糖。",
+                  "outcome": "wrong",
+                  "feedback": {
+                    "speakerName": "蘇苓師妹",
+                    "text": "「看錯法陣了！胰島素受體本身即具酪胺酸激酶（RTK）活性，還得催動 PI3K/Akt 一連串酵素才能搬出 GLUT4。」",
+                    "delta": {
+                      "yin": 1
+                    }
+                  }
+                },
+                {
+                  "id": "ne_ne_115-2_ph_1_b",
+                  "label": "alpha1 交感性（alpha1 adrenergic）受體－動脈平滑肌細胞收縮",
+                  "sublabel": "（錯誤）α1 交感性受體為 Gq 偶聯之 GPCR，必須活化磷脂酶 C（PLC）水解 PIP2 產生 IP3 與 DAG，透過第二訊使酵素級聯升高 Ca²⁺ 才能使動脈平滑肌收縮。",
+                  "outcome": "wrong",
+                  "feedback": {
+                    "speakerName": "陸離師兄",
+                    "text": "「α1 受體走的是 Gq 路徑，非得先喚醒磷脂酶 C（PLC）切出 IP3 與 DAG 不可，怎會不需酵素？」",
+                    "delta": {
+                      "yin": 1
+                    }
+                  }
+                },
+                {
+                  "id": "ne_ne_115-2_ph_1_d",
+                  "label": "beta1 交感性（beta1 adrenergic）受體－心肌細胞收縮",
+                  "sublabel": "（錯誤）β1 交感性受體為 Gs 偶聯之 GPCR，必須活化腺苷酸環化酶（adenylyl cyclase）生成 cAMP 並進一步活化蛋白激酶 A（PKA），方能增強心肌收縮力。",
+                  "outcome": "wrong",
+                  "feedback": {
+                    "speakerName": "蘇苓師妹",
+                    "text": "「β1 受體屬 Gs 偶聯 GPCR，必先催動腺苷酸環化酶生出 cAMP 再啟 PKA，離不開酵素之助！」",
+                    "delta": {
+                      "yin": 1
+                    }
+                  }
+                }
+              ],
+              "vitals": {
+                "subject": "國考真題實戰測脈（115-2）",
+                "hr": 76,
+                "sbp": 118,
+                "dbp": 76,
+                "iop": 15,
+                "tempC": 36.8,
+                "potassium": 4.2,
+                "rhythm": "normal",
+                "rhythmText": "竇性節律（國考實戰態）",
+                "pupilMm": 3.5,
+                "ciliary": "適度平衡",
+                "airway": 100,
+                "secretion": "正常潤澤",
+                "nmj": 50,
+                "nmjLabel": "穩健有力",
+                "tofPattern": "normal",
+                "tofNote": "TOF 100%（無衰減）",
+                "badges": [
+                  "115-2 藥師國考｜Q1"
+                ]
+              },
+              "unlockCodex": [
+                12,
+                13,
+                4
+              ]
+            }
+          ]
         }
       ]
     },
@@ -4374,6 +4574,105 @@
               ]
             }
           ]
+        },
+        {
+          "variantId": "NE056",
+          "variantType": "past_exam",
+          "examSource": "national_exam",
+          "examTrack": "pharmacist",
+          "examTag": "113-2 藥師國考｜Q25",
+          "nationalExamId": "NE_113-2_PH_25",
+          "steps": [
+            {
+              "id": "ne_ne_113-2_ph_25",
+              "speaker": "hongyue",
+              "speakerName": "弘岳真人",
+              "speakerTag": "四象鼎爐・國考真題",
+              "text": "太陰煉丹房內四象鼎爐同時升火，爐中並列 `Acetylcholine`、`Methacholine`、`Carbachol`、`Bethanechol` 四味膽鹼酯（**113 年第二次藥師(一) 國考第 25 題**）。弘岳真人指著爐心考問：「下列直接作用型擬膽鹼藥物（cholinomimetics）中，何者最易被 cholinesterase 水解而失去活性？」",
+              "choices": [
+                {
+                  "id": "ne_ne_113-2_ph_25_d",
+                  "label": "acetylcholine",
+                  "sublabel": "（正解）Acetylcholine（乙醯膽鹼）結構毫無 β-甲基立體障礙或胺甲醯基保護，在突觸間隙約 150 微秒即遭真性 AChE 瞬間水解，亦極易被血漿 BuChE 破壞，為四大膽鹼酯中最易失活者。",
+                  "outcome": "correct",
+                  "feedback": {
+                    "speakerName": "弘岳真人",
+                    "text": "「煉丹真傳記牢了！原型 **`Acetylcholine`** 既無 β-甲基護體、又沒換上胺甲醯基鎧甲，遇上真性 `AChE` 催化三聯體（`Glu-His-Ser`）不到 `150 微秒` 就灰飛煙滅，在四象膽鹼酯中壽命最短、最易遭水解！」",
+                    "delta": {
+                      "yin": 1,
+                      "yang": 1
+                    }
+                  },
+                  "nextStepId": "__EVENT_COMPLETE__"
+                },
+                {
+                  "id": "ne_ne_113-2_ph_25_a",
+                  "label": "methacholine",
+                  "sublabel": "（錯誤）Methacholine 在 β 碳導入甲基產生立體障礙，使真性 AChE 水解速率遠慢於乙醯膽鹼，且幾乎不被血漿假性膽鹼酯酶（BuChE）分解。",
+                  "outcome": "wrong",
+                  "feedback": {
+                    "speakerName": "蘇苓師妹",
+                    "text": "「`Methacholine` 靠著一顆 β-甲基立體擋箭，已大幅減慢水解並避開血漿 `BuChE`，遠比原版耐撐得多！」",
+                    "delta": {
+                      "yin": 1
+                    }
+                  }
+                },
+                {
+                  "id": "ne_ne_113-2_ph_25_b",
+                  "label": "carbachol",
+                  "sublabel": "（錯誤）Carbachol 將乙醯酯改造為胺甲醯酯（carbamate ester），分子穩定性大幅提高，幾乎完全抵抗 AChE 與 BuChE 水解。",
+                  "outcome": "wrong",
+                  "feedback": {
+                    "speakerName": "陸離師兄",
+                    "text": "「`Carbachol` 把乙醯基換成胺甲醯基（`carbamate`），幾乎對 `ChE` 水解刀槍不入，絕不是最易分解的！」",
+                    "delta": {
+                      "yin": 1
+                    }
+                  }
+                },
+                {
+                  "id": "ne_ne_113-2_ph_25_c",
+                  "label": "bethanechol",
+                  "sublabel": "（錯誤）Bethanechol 兼具 β-甲基與胺甲醯酯雙重保護改造，完全耐受膽鹼酯酶水解且高度選擇性作用於 M 受體，可口服給藥。",
+                  "outcome": "wrong",
+                  "feedback": {
+                    "speakerName": "弘岳真人",
+                    "text": "「`Bethanechol` 同時穿了 β-甲基跟胺甲醯基兩層神甲，穩到能直接吞下肚口服，怎麼可能最易被水解！」",
+                    "delta": {
+                      "yin": 1
+                    }
+                  }
+                }
+              ],
+              "vitals": {
+                "subject": "國考真題實戰測脈（113-2）",
+                "hr": 76,
+                "sbp": 118,
+                "dbp": 76,
+                "iop": 15,
+                "tempC": 36.8,
+                "potassium": 4.2,
+                "rhythm": "normal",
+                "rhythmText": "竇性節律（國考實戰態）",
+                "pupilMm": 3.5,
+                "ciliary": "適度平衡",
+                "airway": 100,
+                "secretion": "正常潤澤",
+                "nmj": 50,
+                "nmjLabel": "穩健有力",
+                "tofPattern": "normal",
+                "tofNote": "TOF 100%（無衰減）",
+                "badges": [
+                  "113-2 藥師國考｜Q25"
+                ]
+              },
+              "unlockCodex": [
+                20,
+                21
+              ]
+            }
+          ]
         }
       ]
     },
@@ -5670,6 +5969,304 @@
               ]
             }
           ]
+        },
+        {
+          "variantId": "NE001",
+          "variantType": "past_exam",
+          "examSource": "national_exam",
+          "examTrack": "physician",
+          "examTag": "115-2 醫師國考｜Q53",
+          "nationalExamId": "NE_115-2_MD_53",
+          "steps": [
+            {
+              "id": "ne_ne_115-2_md_53",
+              "speaker": "hongyue",
+              "speakerName": "弘岳真人",
+              "speakerTag": "百草堂診間・國考真題",
+              "text": "百草堂內同時候診著三名修士：一人口枯唇裂罹患乾燥症、一人眼壓高漲急閉青光、一人則頻尿急迫患膀胱過動。弘岳真人輕叩藥案：「這道 **115 年第二次醫師(一) 國考第 53 題** 正考你分清太陰潤燥之功與膀胱陰陽——下列關於 pilocarpine 的敘述，何者最不適當？」",
+              "choices": [
+                {
+                  "id": "ne_ne_115-2_md_53_d",
+                  "label": "口服可治療膀胱過動症",
+                  "sublabel": "（正解）此敘述最不適當。Pilocarpine 活化膀胱逼尿肌 M3 受體會促使逼尿肌強力收縮、增加尿意與排尿頻率，反而會嚴重惡化膀胱過動症（OAB）；治療 OAB 應選用 M3 拮抗劑或 β3 致效劑，擬膽鹼藥（如 bethanechol）則是針對「尿滯留」而非過動。",
+                  "outcome": "correct",
+                  "feedback": {
+                    "speakerName": "弘岳真人",
+                    "text": "「明辨秋毫！Pilocarpine 能催動唾液潤枯泉、收縮睫狀體與瞳孔呱約肌開通房水，卻也會讓膀胱逼尿肌猛縮——拿它治膀胱過動症無異火上加油！治過動要用抗 M 或 β3，擬膽鹼只救非阻塞性尿滯留。」",
+                    "delta": {
+                      "yin": 1,
+                      "yang": 1
+                    }
+                  },
+                  "nextStepId": "__EVENT_COMPLETE__"
+                },
+                {
+                  "id": "ne_ne_115-2_md_53_a",
+                  "label": "口服使用易產生腹瀉的副作用",
+                  "sublabel": "（錯誤）此敘述正確，非本題所選。Pilocarpine 為直接作用型蕈毒鹼致效劑，口服時會活化腸道平滑肌與腺體 M3 受體，增強蠕動與分泌，常見腹瀉、腹絞痛、多汗與流涎等副交感過度刺激副作用。",
+                  "outcome": "wrong",
+                  "feedback": {
+                    "speakerName": "蘇苓師妹",
+                    "text": "「不對！Pilocarpine 口服時會大催腸道 M3 蠕動分泌，腹瀉、多汗、流口水正是它最常見的副交感副作用，此項無誤。」",
+                    "delta": {
+                      "yin": 1
+                    }
+                  }
+                },
+                {
+                  "id": "ne_ne_115-2_md_53_b",
+                  "label": "可刺激睫狀體（ciliary body）收縮，幫助房水（aqueous humor）排出，因此可用於治療青光眼（glaucoma）",
+                  "sublabel": "（錯誤）此敘述正確，非本題所選。Pilocarpine 點眼可刺激虹膜瞳孔括約肌與睫狀體平滑肌（M3）收縮，拉開前房隅角並打開小樑網房水流出通道，有效降低眼壓，用於治療青光眼（尤其是急閉青光眼）。",
+                  "outcome": "wrong",
+                  "feedback": {
+                    "speakerName": "陸離師兄",
+                    "text": "「這可是 pilocarpine 的看家本領！收縮睫狀體與瞳孔呱約肌能拉開小樑網助房水排出降眼壓，此項完全正確。」",
+                    "delta": {
+                      "yin": 1
+                    }
+                  }
+                },
+                {
+                  "id": "ne_ne_115-2_md_53_c",
+                  "label": "可刺激唾液分泌，可用於緩解 Sjögren syndrome 病患的症狀",
+                  "sublabel": "（錯誤）此敘述正確，非本題所選。口服 pilocarpine（與 cevimeline）藉由活化唾液腺與淚腺 M3 受體顯著促進外分泌，是修格蘭氏症候群（Sjögren syndrome）口乾症的標準治療用藥。",
+                  "outcome": "wrong",
+                  "feedback": {
+                    "speakerName": "弘岳真人",
+                    "text": "「沒錯呀！催生唾液緩解修格蘭氏症候群（Sjögren syndrome）正是口服 pilocarpine 的招牌適應症，快找那項把膀胱過動跟尿滯留搞混的選項！」",
+                    "delta": {
+                      "yin": 1
+                    }
+                  }
+                }
+              ],
+              "vitals": {
+                "subject": "國考真題實戰測脈（115-2）",
+                "hr": 76,
+                "sbp": 118,
+                "dbp": 76,
+                "iop": 15,
+                "tempC": 36.8,
+                "potassium": 4.2,
+                "rhythm": "normal",
+                "rhythmText": "竇性節律（國考實戰態）",
+                "pupilMm": 3.5,
+                "ciliary": "適度平衡",
+                "airway": 100,
+                "secretion": "正常潤澤",
+                "nmj": 50,
+                "nmjLabel": "穩健有力",
+                "tofPattern": "normal",
+                "tofNote": "TOF 100%（無衰減）",
+                "badges": [
+                  "115-2 醫師國考｜Q53"
+                ]
+              },
+              "unlockCodex": [
+                24,
+                25,
+                26
+              ]
+            }
+          ]
+        },
+        {
+          "variantId": "NE010",
+          "variantType": "past_exam",
+          "examSource": "national_exam",
+          "examTrack": "pharmacist",
+          "examTag": "115-2 藥師國考｜Q28",
+          "nationalExamId": "NE_115-2_PH_28",
+          "steps": [
+            {
+              "id": "ne_ne_115-2_ph_28",
+              "speaker": "suling",
+              "speakerName": "蘇苓師妹",
+              "speakerTag": "乾燥診間・國考真題",
+              "text": "百草堂乾燥診間內，一位患修格蘭氏症候群的女修咽乾舌燥、吞嚥困難，案上四枚膽鹼系藥丸並陳。蘇苓師妹柔聲提問：「師兄，請斷這道 **115 年第二次藥師(一) 國考第 28 題**——下列何者屬於毒蕈鹼受體致效劑（muscarinic agonist），可用於治療修格蘭氏症候群（Sjögren syndrome）病人之口乾症？」",
+              "choices": [
+                {
+                  "id": "ne_ne_115-2_ph_28_b",
+                  "label": "pilocarpine",
+                  "sublabel": "（正解）Pilocarpine 為天然植物生物鹼類直接作用型蕈毒鹼受體致效劑（三級胺），口服可有效活化唾液腺與淚腺 M3 受體促進分泌，為治療修格蘭氏症候群（Sjögren syndrome）及頭頸部放療後口乾症之標準用藥（同適應症另具 M3 選擇性之 cevimeline）。",
+                  "outcome": "correct",
+                  "feedback": {
+                    "speakerName": "蘇苓師妹",
+                    "text": "「一舉潤澤枯泉！Pilocarpine 直叩唾液腺 M3 受體催津生液，和 M3 選擇性的 cevimeline 並列乾燥症雙璧；至於 pyridostigmine 是間接護酶救肌無力、lobeline 走菸鹼路、atropine 更是會乾到冒煙呢！」",
+                    "delta": {
+                      "yin": 1,
+                      "yang": 1
+                    }
+                  },
+                  "nextStepId": "__EVENT_COMPLETE__"
+                },
+                {
+                  "id": "ne_ne_115-2_ph_28_a",
+                  "label": "pyridostigmine",
+                  "sublabel": "（錯誤）Pyridostigmine 為四級銨可逆性乙醯膽鹼酯酶抑制劑（屬於間接擬膽鹼藥，非直接蕈毒鹼受體致效劑），臨床主要用於治療重症肌無力（MG）。",
+                  "outcome": "wrong",
+                  "feedback": {
+                    "speakerName": "蘇苓師妹",
+                    "text": "「師兄細讀題目喔！Pyridostigmine 是間接抑制 AChE 的重症肌無力用藥，並非直接型的蕈毒鹼受體致效劑！」",
+                    "delta": {
+                      "yin": 1
+                    }
+                  }
+                },
+                {
+                  "id": "ne_ne_115-2_ph_28_c",
+                  "label": "lobeline",
+                  "sublabel": "（錯誤）Lobeline 為山梗菜生物鹼，屬於菸鹼性受體（nAChR）調節劑／部分致效劑（作用似尼古丁），並非用於治療口乾症的蕈毒鹼受體致效劑。",
+                  "outcome": "wrong",
+                  "feedback": {
+                    "speakerName": "弘岳真人",
+                    "text": "「認錯生物鹼啦！Lobeline 作用在菸鹼性受體（nAChR），不是刺激唾液腺的蕈毒鹼致效劑！」",
+                    "delta": {
+                      "yin": 1
+                    }
+                  }
+                },
+                {
+                  "id": "ne_ne_115-2_ph_28_d",
+                  "label": "atropine",
+                  "sublabel": "（錯誤）Atropine 為競爭性蕈毒鹼受體拮抗劑，會強烈阻斷唾液腺 M3 受體導致嚴重口乾，與治療修格蘭氏症候群完全背道而馳。",
+                  "outcome": "wrong",
+                  "feedback": {
+                    "speakerName": "蘇苓師妹",
+                    "text": "「萬萬不可給 atropine！它是抗蕈毒鹼藥，服下只會讓口乾症雪上加霜！」",
+                    "delta": {
+                      "yin": 1
+                    }
+                  }
+                }
+              ],
+              "vitals": {
+                "subject": "國考真題實戰測脈（115-2）",
+                "hr": 76,
+                "sbp": 118,
+                "dbp": 76,
+                "iop": 15,
+                "tempC": 36.8,
+                "potassium": 4.2,
+                "rhythm": "normal",
+                "rhythmText": "竇性節律（國考實戰態）",
+                "pupilMm": 3.5,
+                "ciliary": "適度平衡",
+                "airway": 100,
+                "secretion": "正常潤澤",
+                "nmj": 50,
+                "nmjLabel": "穩健有力",
+                "tofPattern": "normal",
+                "tofNote": "TOF 100%（無衰減）",
+                "badges": [
+                  "115-2 藥師國考｜Q28"
+                ]
+              },
+              "unlockCodex": [
+                24,
+                22
+              ]
+            }
+          ]
+        },
+        {
+          "variantId": "NE061",
+          "variantType": "past_exam",
+          "examSource": "national_exam",
+          "examTrack": "physician",
+          "examTag": "113-1 醫師國考｜Q68",
+          "nationalExamId": "NE_113-1_MD_68",
+          "steps": [
+            {
+              "id": "ne_ne_113-1_md_68",
+              "speaker": "luli",
+              "speakerName": "陸離師兄",
+              "speakerTag": "百草堂診間・國考真題",
+              "text": "百草堂住院病房傳來急報，一名術後病患腹部鼓脹如鼓卻無機械阻塞，X 光顯見結腸嚴重擴張（**113 年第一次醫師(一) 國考第 68 題**）。陸離師兄翻開藥典問道：「下列藥物中，何者最適合用於改善住院病人急性結腸假性阻塞（acute colonic pseudo-obstruction）的症狀？」",
+              "choices": [
+                {
+                  "id": "ne_ne_113-1_md_68_c",
+                  "label": "neostigmine",
+                  "sublabel": "（正解）急性結腸假性阻塞（Ogilvie 症候群）源於結腸副交感張力不足、交感過度優勢所致之非機械性擴張；靜脈給予可逆性乙醯膽鹼酯酶抑制劑 neostigmine 可提升突觸 ACh、活化腸壁 M3 受體，迅速誘發結腸推進性蠕動以減壓。",
+                  "outcome": "correct",
+                  "feedback": {
+                    "speakerName": "陸離師兄",
+                    "text": "「漂亮解局！急性結腸假性阻塞（Ogilvie 症候群）就是結腸副交感靈氣斷流，靜注四級胺 AChE 抑制劑 **`Neostigmine`** 迅速拉升突觸乙醯膽鹼、啟動 `M3` 推動大腸排氣減壓——不過床邊務必備好 `Atropine` 提防迷走過度導致的心搏過緩！」",
+                    "delta": {
+                      "yin": 1,
+                      "yang": 1
+                    }
+                  },
+                  "nextStepId": "__EVENT_COMPLETE__"
+                },
+                {
+                  "id": "ne_ne_113-1_md_68_a",
+                  "label": "sucralfate",
+                  "sublabel": "（錯誤）Sucralfate 為胃黏膜保護劑，於酸性環境形成凝膠覆蓋潰瘍表面，用於消化性潰瘍治療，無促腸蠕動效果且可能引起便秘。",
+                  "outcome": "wrong",
+                  "feedback": {
+                    "speakerName": "蘇苓師妹",
+                    "text": "「`Sucralfate` 只會在胃裡結成保護膏封潰瘍，進到腸子反而容易讓人便秘，絕不是通大腸的藥。」",
+                    "delta": {
+                      "yin": 1
+                    }
+                  }
+                },
+                {
+                  "id": "ne_ne_113-1_md_68_b",
+                  "label": "bismuth",
+                  "sublabel": "（錯誤）Bismuth（如 bismuth subsalicylate）具黏膜保護、抗分泌與抑菌作用，用於旅行者腹瀉與幽門螺旋桿菌治療，不適用於腸道假性阻塞。",
+                  "outcome": "wrong",
+                  "feedback": {
+                    "speakerName": "陸離師兄",
+                    "text": "「`Bismuth` 是止瀉護胃與殺幽門桿菌的藥，拿來給結腸假性阻塞病患反而適得其反啊！」",
+                    "delta": {
+                      "yin": 1
+                    }
+                  }
+                },
+                {
+                  "id": "ne_ne_113-1_md_68_d",
+                  "label": "metoclopramide",
+                  "sublabel": "（錯誤）Metoclopramide（D2 拮抗劑兼 5-HT4 致效劑）主要促進胃排空與近端小腸等上消化道蠕動，對遠端結腸運動幾乎無效，故無法有效解除急性結腸假性阻塞。",
+                  "outcome": "wrong",
+                  "feedback": {
+                    "speakerName": "蘇苓師妹",
+                    "text": "「師弟別被促蠕動名號騙了！`Metoclopramide` 的火力只停在胃跟十二指腸上段，到了結腸幾乎使不上力！」",
+                    "delta": {
+                      "yin": 1
+                    }
+                  }
+                }
+              ],
+              "vitals": {
+                "subject": "國考真題實戰測脈（113-1）",
+                "hr": 76,
+                "sbp": 118,
+                "dbp": 76,
+                "iop": 15,
+                "tempC": 36.8,
+                "potassium": 4.2,
+                "rhythm": "normal",
+                "rhythmText": "竇性節律（國考實戰態）",
+                "pupilMm": 3.5,
+                "ciliary": "適度平衡",
+                "airway": 100,
+                "secretion": "正常潤澤",
+                "nmj": 50,
+                "nmjLabel": "穩健有力",
+                "tofPattern": "normal",
+                "tofNote": "TOF 100%（無衰減）",
+                "badges": [
+                  "113-1 醫師國考｜Q68"
+                ]
+              },
+              "unlockCodex": [
+                25,
+                32
+              ]
+            }
+          ]
         }
       ]
     },
@@ -6177,6 +6774,106 @@
               "unlockCodex": [
                 26,
                 72
+              ]
+            }
+          ]
+        },
+        {
+          "variantId": "NE066",
+          "variantType": "past_exam",
+          "examSource": "national_exam",
+          "examTrack": "pharmacist",
+          "examTag": "113-1 藥師國考｜Q24",
+          "nationalExamId": "NE_113-1_PH_24",
+          "steps": [
+            {
+              "id": "ne_ne_113-1_ph_24",
+              "speaker": "suling",
+              "speakerName": "蘇苓師妹",
+              "speakerTag": "明目館暗房・國考真題",
+              "text": "明目館眼科暗房中擺著四瓶副交感點眼靈液，案前坐著眼壓高企的青光眼病患（**113 年第一次藥師(一) 國考第 24 題**）。蘇苓師妹連忙攔住藥童問道：「下列副交感神經藥物中，何者最不適合用於治療青光眼（glaucoma）？」",
+              "choices": [
+                {
+                  "id": "ne_ne_113-1_ph_24_d",
+                  "label": "scopolamine",
+                  "sublabel": "（正解）Scopolamine 為抗蕈毒鹼藥物（M 受體拮抗劑），會麻痺瞳孔括約肌與睫狀肌造成散瞳，反而使虹膜推擠阻塞前房隅角與小樑網、導致眼壓急劇飆升，故最不適合（且禁用於隅角閉鎖性）青光眼。",
+                  "outcome": "correct",
+                  "feedback": {
+                    "speakerName": "蘇苓師妹",
+                    "text": "「好險攔住了！前三味都是『擬膽鹼縮瞳派』，靠拉緊瞳孔括約肌與睫狀肌打開小樑網洩洪降壓；唯獨 **`Scopolamine`** 是抗蕈毒鹼『散瞳派』，一點進去虹膜堆疊堵死隅角，眼壓瞬間爆表！」",
+                    "delta": {
+                      "yin": 1,
+                      "yang": 1
+                    }
+                  },
+                  "nextStepId": "__EVENT_COMPLETE__"
+                },
+                {
+                  "id": "ne_ne_113-1_ph_24_a",
+                  "label": "pilocarpine",
+                  "sublabel": "（錯誤）Pilocarpine 為直接作用型蕈毒鹼生物鹼致效劑，收縮瞳孔括約肌與睫狀肌以拉開前房隅角與小樑網、促進房水排出，為急性隅角閉鎖性與開放性青光眼之重要縮瞳藥。",
+                  "outcome": "wrong",
+                  "feedback": {
+                    "speakerName": "蘇苓師妹",
+                    "text": "「`Pilocarpine` 可是急閉青光眼縮瞳洩洪的當家王牌，怎會不適合呢？」",
+                    "delta": {
+                      "yin": 1
+                    }
+                  }
+                },
+                {
+                  "id": "ne_ne_113-1_ph_24_b",
+                  "label": "carbachol",
+                  "sublabel": "（錯誤）Carbachol 為抗膽鹼酯酶水解之直接作用型膽鹼酯致效劑，局部眼科使用可產生強效縮瞳並增加房水流出以降低眼壓。",
+                  "outcome": "wrong",
+                  "feedback": {
+                    "speakerName": "陸離師兄",
+                    "text": "「`Carbachol` 帶有胺甲醯基耐水解，同樣能直接啟動 `M3` 縮瞳促房水排出，可用於青光眼喔！」",
+                    "delta": {
+                      "yin": 1
+                    }
+                  }
+                },
+                {
+                  "id": "ne_ne_113-1_ph_24_c",
+                  "label": "echothiophate",
+                  "sublabel": "（錯誤）Echothiophate 為長效不可逆有機磷類乙醯膽鹼酯酶抑制劑，點眼可間接提升眼內 ACh 濃度、促進房水排出，用於特定難治型隅角開放性青光眼。",
+                  "outcome": "wrong",
+                  "feedback": {
+                    "speakerName": "弘岳真人",
+                    "text": "「`Echothiophate` 雖是長效有機磷 AChE 抑制劑（須防白內障），但機轉上仍是增進眼內 ACh 降眼壓的青光眼用藥，不是禁忌散瞳劑！」",
+                    "delta": {
+                      "yin": 1
+                    }
+                  }
+                }
+              ],
+              "vitals": {
+                "subject": "國考真題實戰測脈（113-1）",
+                "hr": 76,
+                "sbp": 118,
+                "dbp": 76,
+                "iop": 15,
+                "tempC": 36.8,
+                "potassium": 4.2,
+                "rhythm": "normal",
+                "rhythmText": "竇性節律（國考實戰態）",
+                "pupilMm": 3.5,
+                "ciliary": "適度平衡",
+                "airway": 100,
+                "secretion": "正常潤澤",
+                "nmj": 50,
+                "nmjLabel": "穩健有力",
+                "tofPattern": "normal",
+                "tofNote": "TOF 100%（無衰減）",
+                "badges": [
+                  "113-1 藥師國考｜Q24"
+                ]
+              },
+              "unlockCodex": [
+                21,
+                26,
+                41
               ]
             }
           ]
@@ -8631,6 +9328,501 @@
               ]
             }
           ]
+        },
+        {
+          "variantId": "NE018",
+          "variantType": "past_exam",
+          "examSource": "national_exam",
+          "examTrack": "physician",
+          "examTag": "115-1 醫師國考｜Q73",
+          "nationalExamId": "NE_115-1_MD_73",
+          "steps": [
+            {
+              "id": "ne_ne_115-1_md_73",
+              "speaker": "luli",
+              "speakerName": "陸離師兄",
+              "speakerTag": "靈樞神智台・國考真題",
+              "text": "靈樞神智台上擺著四枚護神靈丹，其中三枚氣息皆同源於太陰護酶法門，唯有一枚另闢蹊徑。陸離師兄抱拳笑道：「師弟接招！這是 **115 年第一次醫師(一) 國考第 73 題**——下列治療阿茲海默症（Alzheimer disease）的藥物，何者的藥理作用機制與其他三個藥物不同？」",
+              "choices": [
+                {
+                  "id": "ne_ne_115-1_md_73_a",
+                  "label": "memantine",
+                  "sublabel": "（正解）Memantine 屬於非競爭性、電壓依賴性 NMDA 麩胺酸受體拮抗劑，藉由阻斷過度活化所致的 Ca²⁺ 內流來減少興奮性神經毒性（多用於中重度阿茲海默症），作用機轉與其餘三種膽鹼酯酶抑制劑完全不同。",
+                  "outcome": "correct",
+                  "feedback": {
+                    "speakerName": "陸離師兄",
+                    "text": "「痛快！Donepezil、rivastigmine、galantamine 號稱失智護酶三雄，全都靠抑制中樞 AChE 來保住乙醯膽鹼；唯獨 memantine 是鎮壓 NMDA 麩胺酸受體的守門大將，擋下過量鈣離子內流所致的興奮性毒性！」",
+                    "delta": {
+                      "yin": 1,
+                      "yang": 1
+                    }
+                  },
+                  "nextStepId": "__EVENT_COMPLETE__"
+                },
+                {
+                  "id": "ne_ne_115-1_md_73_b",
+                  "label": "donepezil",
+                  "sublabel": "（錯誤）Donepezil 為可穿透血腦障壁之高選擇性、可逆性中樞乙醯膽鹼酯酶抑制劑（AChEI），藉由減少突觸間隙 ACh 水解來改善阿茲海默症認知功能。",
+                  "outcome": "wrong",
+                  "feedback": {
+                    "speakerName": "陸離師兄",
+                    "text": "「抓錯人啦！Donepezil 正是標準的可逆性中樞 AChE 抑制劑，跟 rivastigmine、galantamine 可是同門三兄弟！」",
+                    "delta": {
+                      "yin": 1
+                    }
+                  }
+                },
+                {
+                  "id": "ne_ne_115-1_md_73_c",
+                  "label": "rivastigmine",
+                  "sublabel": "（錯誤）Rivastigmine 為氨基甲酸酯類（carbamate）偽不可逆中樞膽鹼酯酶抑制劑，同時抑制 AChE 與 BuChE（另有經皮貼片劑型），與 donepezil、galantamine 同屬提升腦內 ACh 路徑。",
+                  "outcome": "wrong",
+                  "feedback": {
+                    "speakerName": "弘岳真人",
+                    "text": "「不對喔！Rivastigmine 屬於氨基甲酸酯類中樞膽鹼酯酶抑制劑，同樣在守護腦內乙醯膽鹼，再挑那顆走麩胺酸路線的丹藥！」",
+                    "delta": {
+                      "yin": 1
+                    }
+                  }
+                },
+                {
+                  "id": "ne_ne_115-1_md_73_d",
+                  "label": "galantamine",
+                  "sublabel": "（錯誤）Galantamine 為可逆性中樞乙醯膽鹼酯酶抑制劑（AChEI），並兼具菸鹼性乙醯膽鹼受體（nAChR）正向異位調節作用，與 donepezil、rivastigmine 同屬中樞 AChEI 家族。",
+                  "outcome": "wrong",
+                  "feedback": {
+                    "speakerName": "蘇苓師妹",
+                    "text": "「看走眼了！Galantamine 也是正港的中樞 AChE 抑制劑（還兼調菸鹼受體），另有一顆根本不走膽鹼路線！」",
+                    "delta": {
+                      "yin": 1
+                    }
+                  }
+                }
+              ],
+              "vitals": {
+                "subject": "國考真題實戰測脈（115-1）",
+                "hr": 76,
+                "sbp": 118,
+                "dbp": 76,
+                "iop": 15,
+                "tempC": 36.8,
+                "potassium": 4.2,
+                "rhythm": "normal",
+                "rhythmText": "竇性節律（國考實戰態）",
+                "pupilMm": 3.5,
+                "ciliary": "適度平衡",
+                "airway": 100,
+                "secretion": "正常潤澤",
+                "nmj": 50,
+                "nmjLabel": "穩健有力",
+                "tofPattern": "normal",
+                "tofNote": "TOF 100%（無衰減）",
+                "badges": [
+                  "115-1 醫師國考｜Q73"
+                ]
+              },
+              "unlockCodex": [
+                34,
+                32
+              ]
+            }
+          ]
+        },
+        {
+          "variantId": "NE025",
+          "variantType": "past_exam",
+          "examSource": "national_exam",
+          "examTrack": "physician",
+          "examTag": "114-2 醫師國考｜Q65",
+          "nationalExamId": "NE_114-2_MD_65",
+          "steps": [
+            {
+              "id": "ne_ne_114-2_md_65",
+              "speaker": "hongyue",
+              "speakerName": "弘岳真人",
+              "speakerTag": "靈樞肌力診台・國考真題",
+              "text": "急診室靈樞脈象儀嗡然低鳴，病榻上數名弟子分患肌無力、術後腹脹腸停、尿液滯留與心跳慢至每分鐘 38 下！弘岳真人手按一瓶四級胺 `Neostigmine`，考較 **114 年第二次醫師(一) 國考第 65 題**：「Neostigmine 最不適合用於下列何種疾病的治療？」",
+              "choices": [
+                {
+                  "id": "ne_ne_114-2_md_65_c",
+                  "label": "心搏過緩（bradycardia）",
+                  "sublabel": "（正解，最不適合）Neostigmine 增加迷走神經末梢 ACh 並活化心臟竇房結與房室結之 M₂ 受體（Gi 偶聯，開啟 I_K,ACh 鉀通道並降低 cAMP），反而會「減慢心率」與抑制房室傳導、加重心搏過緩，故絕不適用於治療心搏過緩（心搏過緩急救應選用抗蕈毒鹼劑 atropine）。",
+                  "outcome": "correct",
+                  "feedback": {
+                    "speakerName": "弘岳真人",
+                    "text": "「老夫欣慰！`Neostigmine` 能助肌無力重振 N_M 氣力、也能逼迫腸道與膀胱逼尿肌收縮、鬆開內呱約肌排尿；唯獨碰上心跳本就緩慢的病人，它再往心脈 M₂ 受體上潑一盆迷走冷水，只會讓心搏過緩雪上加霜！心搏過緩該請 `Atropine` 出馬才是！」",
+                    "delta": {
+                      "yin": 1,
+                      "yang": 1
+                    }
+                  },
+                  "nextStepId": "__EVENT_COMPLETE__"
+                },
+                {
+                  "id": "ne_ne_114-2_md_65_a",
+                  "label": "重症肌無力（myasthenia gravis）",
+                  "sublabel": "（錯誤，為主要適應症）Neostigmine 為四級胺可逆性乙醯膽鹼酯酶抑制劑（AChEI），可增加神經肌肉接合處 ACh 濃度並具弱直接刺激骨骼肌 N_M 受體作用，臨床常用於重症肌無力（myasthenia gravis）之症狀治療。",
+                  "outcome": "wrong",
+                  "feedback": {
+                    "speakerName": "蘇苓師妹",
+                    "text": "「重症肌無力正是 `Neostigmine` 的看家本領——留住終板 ACh 又兼直刺 N_M 受體，豈會不適合？」",
+                    "delta": {
+                      "yin": 1
+                    }
+                  }
+                },
+                {
+                  "id": "ne_ne_114-2_md_65_b",
+                  "label": "術後癱瘓性腸阻塞（paralytic ileus）",
+                  "sublabel": "（錯誤，為典型適應症）Neostigmine 增強副交感 M₃ 受體活性，能促進胃腸道平滑肌蠕動，適用於無機械性阻塞之術後癱瘓性腸阻塞（paralytic ileus）或急性假性結腸阻塞。",
+                  "outcome": "wrong",
+                  "feedback": {
+                    "speakerName": "陸離師兄",
+                    "text": "「只要排除機械性腸梗阻，術後癱瘓性腸阻塞正好借 `Neostigmine` 催動 M₃ 腸蠕動通腑氣！」",
+                    "delta": {
+                      "yin": 1
+                    }
+                  }
+                },
+                {
+                  "id": "ne_ne_114-2_md_65_d",
+                  "label": "術後之尿液滯留（urinary retention）",
+                  "sublabel": "（錯誤，為典型適應症）Neostigmine 活化膀胱逼尿肌 M₃ 受體使膀胱收縮、同時協助膀胱內括約肌舒張，適用於無機械性尿道阻塞之術後尿液滯留。",
+                  "outcome": "wrong",
+                  "feedback": {
+                    "speakerName": "蘇苓師妹",
+                    "text": "「錯啦！術後尿液滯留（無阻塞者）正需 `Neostigmine` 催動膀胱逼尿肌收縮、連帶舒張內呱約肌洩洪，它完全適合作此用途！」",
+                    "delta": {
+                      "yin": 1
+                    }
+                  }
+                }
+              ],
+              "vitals": {
+                "subject": "國考真題實戰測脈（114-2）",
+                "hr": 76,
+                "sbp": 118,
+                "dbp": 76,
+                "iop": 15,
+                "tempC": 36.8,
+                "potassium": 4.2,
+                "rhythm": "normal",
+                "rhythmText": "竇性節律（國考實戰態）",
+                "pupilMm": 3.5,
+                "ciliary": "適度平衡",
+                "airway": 100,
+                "secretion": "正常潤澤",
+                "nmj": 50,
+                "nmjLabel": "穩健有力",
+                "tofPattern": "normal",
+                "tofNote": "TOF 100%（無衰減）",
+                "badges": [
+                  "114-2 醫師國考｜Q65"
+                ]
+              },
+              "unlockCodex": [
+                25,
+                32,
+                33
+              ]
+            }
+          ]
+        },
+        {
+          "variantId": "NE032",
+          "variantType": "past_exam",
+          "examSource": "national_exam",
+          "examTrack": "pharmacist",
+          "examTag": "114-2 藥師國考｜Q25",
+          "nationalExamId": "NE_114-2_PH_25",
+          "steps": [
+            {
+              "id": "ne_ne_114-2_ph_25",
+              "speaker": "hongyue",
+              "speakerName": "弘岳真人",
+              "speakerTag": "靈樞肌力台・MG 與 LEMS 雙危鑑別",
+              "text": "診台前一名近端四肢無力、反覆用力後肌力反倒略增的弟子經查竟是突觸前 P/Q 型鈣通道受自體抗體圍攻（LEMS），而非典型突觸後重症肌無力！弘岳真人展開 **114 年第二次藥師(一) 國考第 25 題** 問你：「下列何者屬於乙醯膽鹼釋放調控劑（acetylcholine release modulator），可用於治療藍伯－伊頓肌無力症候群（Lambert-Eaton myasthenic syndrome）？」",
+              "choices": [
+                {
+                  "id": "ne_ne_114-2_ph_25_a",
+                  "label": "amifampridine",
+                  "sublabel": "（正解）Amifampridine（3,4-diaminopyridine, 3,4-DAP）為突觸前乙醯膽鹼釋放調控劑，機轉係阻斷神經末梢電壓閘控鉀離子通道（K_v），延長動作電位再極化時間，使更多 Ca²⁺ 經殘存之 P/Q 型鈣通道內流並促進 ACh 囊泡釋放，臨床專用於治療自體抗體攻擊突觸前 P/Q 型鈣通道所致的藍伯－伊頓肌無力症候群（LEMS）。",
+                  "outcome": "correct",
+                  "feedback": {
+                    "speakerName": "弘岳真人",
+                    "text": "「深得要領！`Amifampridine（3,4-DAP）` 巧封突觸前電壓閘控鉀通道，刻意拖長動作電位去極化時窗，逼出更多鈣離子湧入以推動 ACh 囊泡傾瀉，正中 LEMS 病根！」",
+                    "delta": {
+                      "yin": 1,
+                      "yang": 1
+                    }
+                  },
+                  "nextStepId": "__EVENT_COMPLETE__"
+                },
+                {
+                  "id": "ne_ne_114-2_ph_25_b",
+                  "label": "atropine",
+                  "sublabel": "（錯誤）Atropine 為競爭性蕈毒鹼受體拮抗劑，作用於副交感末梢與中樞 M 受體，與運動神經末梢 ACh 釋放無關。",
+                  "outcome": "wrong",
+                  "feedback": {
+                    "speakerName": "陸離師兄",
+                    "text": "「`Atropine` 專門封鎖副交感 M 受體，碰都不碰運動神經終板的 ACh 釋放，豈能治 LEMS？」",
+                    "delta": {
+                      "yin": 1
+                    }
+                  }
+                },
+                {
+                  "id": "ne_ne_114-2_ph_25_c",
+                  "label": "echothiophate",
+                  "sublabel": "（錯誤）Echothiophate 為不可逆長效有機磷類 AChE 抑制劑，藉由抑制酵素減少 ACh 分解（曾用於青光眼點眼），並非 ACh 釋放調控劑。",
+                  "outcome": "wrong",
+                  "feedback": {
+                    "speakerName": "弘岳真人",
+                    "text": "「`Echothiophate` 是長效不可逆有機磷抑酶毒劑，既非釋放調控劑，亦非 LEMS 用藥。」",
+                    "delta": {
+                      "yin": 1
+                    }
+                  }
+                },
+                {
+                  "id": "ne_ne_114-2_ph_25_d",
+                  "label": "bethanechol",
+                  "sublabel": "（錯誤）Bethanechol 為直接選擇性蕈毒鹼受體致效劑（抗 AChE 水解、幾乎無菸鹼活性），用於術後尿滯留與胃輕癱，對骨骼肌神經肌肉接合處無效。",
+                  "outcome": "wrong",
+                  "feedback": {
+                    "speakerName": "蘇苓師妹",
+                    "text": "「`Bethanechol` 專挑 M 受體催膀胱與腸道，對骨骼肌 N_M 幾乎毫無親和力，更不會調控突觸前 ACh 釋放！」",
+                    "delta": {
+                      "yin": 1
+                    }
+                  }
+                }
+              ],
+              "vitals": {
+                "subject": "國考真題實戰測脈（114-2）",
+                "hr": 76,
+                "sbp": 118,
+                "dbp": 76,
+                "iop": 15,
+                "tempC": 36.8,
+                "potassium": 4.2,
+                "rhythm": "normal",
+                "rhythmText": "竇性節律（國考實戰態）",
+                "pupilMm": 3.5,
+                "ciliary": "適度平衡",
+                "airway": 100,
+                "secretion": "正常潤澤",
+                "nmj": 50,
+                "nmjLabel": "穩健有力",
+                "tofPattern": "normal",
+                "tofNote": "TOF 100%（無衰減）",
+                "badges": [
+                  "114-2 藥師國考｜Q25"
+                ]
+              },
+              "unlockCodex": [
+                34
+              ]
+            }
+          ]
+        },
+        {
+          "variantId": "NE054",
+          "variantType": "past_exam",
+          "examSource": "national_exam",
+          "examTrack": "pharmacist",
+          "examTag": "113-2 藥師國考｜Q23",
+          "nationalExamId": "NE_113-2_PH_23",
+          "steps": [
+            {
+              "id": "ne_ne_113-2_ph_23",
+              "speaker": "luli",
+              "speakerName": "陸離師兄",
+              "speakerTag": "靈樞神智台・國考真題",
+              "text": "靈樞神智台並列四面神經與眼科病案牌，案上擺滿擬膽鹼丹方（**113 年第二次藥師(一) 國考第 23 題**）。陸離師兄敲敲棋盤發問：「下列何者不是擬副交感神經興奮藥物（cholinomimetic drug）的治療用途？」",
+              "choices": [
+                {
+                  "id": "ne_ne_113-2_ph_23_d",
+                  "label": "帕金森氏症（Parkinson disease）",
+                  "sublabel": "（正解）巴金森氏症（原題作帕金森氏症）源於黑質紋狀體多巴胺不足、導致紋狀體乙醯膽鹼相對過盛；治療須搭配中樞「抗蕈毒鹼藥物」（如 benztropine、trihexyphenidyl）抑制膽鹼活性，給予擬膽鹼藥反而會惡化震顫與僵硬。",
+                  "outcome": "correct",
+                  "feedback": {
+                    "speakerName": "陸離師兄",
+                    "text": "「黑白分明！阿茲海默症腦中缺 `ACh` 要用中樞 `AChEI` 補氣；**巴金森氏症**卻因多巴胺枯竭導致紋狀體 `ACh` 相對過旺，得靠中樞**抗膽鹼藥**（`Benztropine`、`Trihexyphenidyl`）壓火，絕不可再火上澆油給擬膽鹼藥！」",
+                    "delta": {
+                      "yin": 1,
+                      "yang": 1
+                    }
+                  },
+                  "nextStepId": "__EVENT_COMPLETE__"
+                },
+                {
+                  "id": "ne_ne_113-2_ph_23_a",
+                  "label": "青光眼（glaucoma）",
+                  "sublabel": "（錯誤）青光眼屬於擬副交感藥物之經典適應症，如直接擬膽鹼藥 pilocarpine、carbachol 與間接抑制劑 echothiophate 皆可縮瞳並拉開小樑網以促進房水排出降眼壓。",
+                  "outcome": "wrong",
+                  "feedback": {
+                    "speakerName": "蘇苓師妹",
+                    "text": "「青光眼靠 `Pilocarpine` 縮瞳打開小樑網降眼壓，正是擬膽鹼藥的看家適應症啊！」",
+                    "delta": {
+                      "yin": 1
+                    }
+                  }
+                },
+                {
+                  "id": "ne_ne_113-2_ph_23_b",
+                  "label": "重症肌無力（myasthenia gravis）",
+                  "sublabel": "（錯誤）重症肌無力屬於間接擬膽鹼藥物（四級胺 AChE 抑制劑如 pyridostigmine、neostigmine、edrophonium）的核心適應症，用以提高神經肌肉接合處 ACh 濃度改善肌力。",
+                  "outcome": "wrong",
+                  "feedback": {
+                    "speakerName": "陸離師兄",
+                    "text": "「重症肌無力全仗 `Pyridostigmine` 這類間接擬膽鹼藥拉抬終板 `ACh` 撐起肌力，怎麼會不是用途呢？」",
+                    "delta": {
+                      "yin": 1
+                    }
+                  }
+                },
+                {
+                  "id": "ne_ne_113-2_ph_23_c",
+                  "label": "阿茲海默症（Alzheimer disease）",
+                  "sublabel": "（錯誤）阿茲海默症屬於中樞可穿透型 AChE 抑制劑（donepezil、rivastigmine、galantamine）的治療用途，可彌補腦內膽鹼神經退化。",
+                  "outcome": "wrong",
+                  "feedback": {
+                    "speakerName": "弘岳真人",
+                    "text": "「阿茲海默症用的是 `Donepezil`、`Rivastigmine`、`Galantamine` 等中樞擬膽鹼 AChE 抑制劑，別跟隔壁的巴金森氏症搞反囉！」",
+                    "delta": {
+                      "yin": 1
+                    }
+                  }
+                }
+              ],
+              "vitals": {
+                "subject": "國考真題實戰測脈（113-2）",
+                "hr": 76,
+                "sbp": 118,
+                "dbp": 76,
+                "iop": 15,
+                "tempC": 36.8,
+                "potassium": 4.2,
+                "rhythm": "normal",
+                "rhythmText": "竇性節律（國考實戰態）",
+                "pupilMm": 3.5,
+                "ciliary": "適度平衡",
+                "airway": 100,
+                "secretion": "正常潤澤",
+                "nmj": 50,
+                "nmjLabel": "穩健有力",
+                "tofPattern": "normal",
+                "tofNote": "TOF 100%（無衰減）",
+                "badges": [
+                  "113-2 藥師國考｜Q23"
+                ]
+              },
+              "unlockCodex": [
+                26,
+                33,
+                34
+              ]
+            }
+          ]
+        },
+        {
+          "variantId": "NE072",
+          "variantType": "past_exam",
+          "examSource": "national_exam",
+          "examTrack": "pharmacist",
+          "examTag": "113-1 藥師國考｜Q50",
+          "nationalExamId": "NE_113-1_PH_50",
+          "steps": [
+            {
+              "id": "ne_ne_113-1_ph_50",
+              "speaker": "suling",
+              "speakerName": "蘇苓師妹",
+              "speakerTag": "靈樞神智台・國考真題",
+              "text": "靈樞神智台前，一位藥學小女修拿著外婆的失智症藥袋前來請益（**113 年第一次藥師(一) 國考第 50 題**）。蘇苓師妹微笑轉述考題：「小美看了罹患失智症外婆的藥袋，裡面有個藥名讓她想起藥物化學課有介紹過。該藥結構類似嗎啡，可從石蒜屬植物抽取得到。請問此藥為下列何者？」",
+              "choices": [
+                {
+                  "id": "ne_ne_113-1_ph_50_d",
+                  "label": "galantamine",
+                  "sublabel": "（正解）Galantamine 可萃取自石蒜科植物（如雪花蓮 *Galanthus*、石蒜屬 *Lycoris*），為具類似嗎啡多環結構之三級胺生物鹼，可穿透血腦障壁並兼具「可逆性競爭抑制 AChE」與「正向異位調節中樞尼古丁受體」雙重機轉。",
+                  "outcome": "correct",
+                  "feedback": {
+                    "speakerName": "蘇苓師妹",
+                    "text": "「答對囉！**`Galantamine`** 正是從雪花蓮與石蒜屬植物萃出的三級胺生物鹼，多環骨架神似嗎啡，進腦後除了可逆抑制 `AChE`，還能順道正向異位調節中樞尼古丁受體，雙管齊下護神智！」",
+                    "delta": {
+                      "yin": 1,
+                      "yang": 1
+                    }
+                  },
+                  "nextStepId": "__EVENT_COMPLETE__"
+                },
+                {
+                  "id": "ne_ne_113-1_ph_50_a",
+                  "label": "donepezil",
+                  "sublabel": "（錯誤）Donepezil 為全合成之苯并環戊酮-哌啶（piperidine）類選擇性中樞 AChE 抑制劑，並非萃取自石蒜屬植物或具類嗎啡骨架。",
+                  "outcome": "wrong",
+                  "feedback": {
+                    "speakerName": "蘇苓師妹",
+                    "text": "「`Donepezil` 是實驗室全合成的 `piperidine` 類中樞 AChE 抑制劑，不是從石蒜屬花草抽出來的喔！」",
+                    "delta": {
+                      "yin": 1
+                    }
+                  }
+                },
+                {
+                  "id": "ne_ne_113-1_ph_50_b",
+                  "label": "rivastigmine",
+                  "sublabel": "（錯誤）Rivastigmine 為合成之胺甲酸酯（carbamate）類偽不可逆 AChE／BuChE 抑制劑，結構源於 physostigmine 改造，非石蒜屬萃取物。",
+                  "outcome": "wrong",
+                  "feedback": {
+                    "speakerName": "陸離師兄",
+                    "text": "「`Rivastigmine` 是模仿毒扁豆鹼打造的合成胺甲酸酯（carbamate），沒有類嗎啡的多環骨架呢。」",
+                    "delta": {
+                      "yin": 1
+                    }
+                  }
+                },
+                {
+                  "id": "ne_ne_113-1_ph_50_c",
+                  "label": "memantine",
+                  "sublabel": "（錯誤）Memantine 為金剛烷胺（adamantane）結構之 NMDA 受體非競爭性拮抗劑，用於中重度阿茲海默症，非植物來源之類嗎啡生物鹼。",
+                  "outcome": "wrong",
+                  "feedback": {
+                    "speakerName": "弘岳真人",
+                    "text": "「`Memantine` 結構像座立體鑽石籠（金剛烷胺），而且它是擋 `NMDA` 受體的藥，非植物類嗎啡生物鹼喔！」",
+                    "delta": {
+                      "yin": 1
+                    }
+                  }
+                }
+              ],
+              "vitals": {
+                "subject": "國考真題實戰測脈（113-1）",
+                "hr": 76,
+                "sbp": 118,
+                "dbp": 76,
+                "iop": 15,
+                "tempC": 36.8,
+                "potassium": 4.2,
+                "rhythm": "normal",
+                "rhythmText": "竇性節律（國考實戰態）",
+                "pupilMm": 3.5,
+                "ciliary": "適度平衡",
+                "airway": 100,
+                "secretion": "正常潤澤",
+                "nmj": 50,
+                "nmjLabel": "穩健有力",
+                "tofPattern": "normal",
+                "tofNote": "TOF 100%（無衰減）",
+                "badges": [
+                  "113-1 藥師國考｜Q50"
+                ]
+              },
+              "unlockCodex": [
+                34
+              ]
+            }
+          ]
         }
       ]
     },
@@ -9100,6 +10292,106 @@
                 ]
               },
               "unlockCodex": [
+                35,
+                36
+              ]
+            }
+          ]
+        },
+        {
+          "variantId": "NE038",
+          "variantType": "past_exam",
+          "examSource": "national_exam",
+          "examTrack": "physician",
+          "examTag": "114-1 醫師國考｜Q65",
+          "nationalExamId": "NE_114-1_MD_65",
+          "steps": [
+            {
+              "id": "ne_ne_114-1_md_65",
+              "speaker": "hongyue",
+              "speakerName": "弘岳真人",
+              "speakerTag": "百毒急診殿・有機磷重災區",
+              "text": "百毒急診殿內，身中農藥毒霧的農夫四肢震顫、呼吸漸弱，案頭並置著 `2-PAM` 與 `DAM` 兩瓶肟劑。弘岳真人拂袖展開 **114 年第一次醫師(一) 國考第 65 題** 試卷沉聲問道：「下列關於 pralidoxime 的敘述，何者最不適當？」",
+              "choices": [
+                {
+                  "id": "ne_ne_114-1_md_65_c",
+                  "label": "與 diacetylmonoxime 相比，其中樞神經系統的穿透力較強",
+                  "sublabel": "（正解，敘述最不適當）Pralidoxime 結構帶有永久正電之四級銨基團（quaternary ammonium），極性高而難以穿透血腦障壁（BBB），僅主要恢復周邊（尤其骨骼肌神經肌肉接合處）AChE 活性；反觀 diacetylmonoxime（DAM）不帶電荷、脂溶性高，中樞神經系統穿透力遠強於 pralidoxime，本選項恰好寫反。",
+                  "outcome": "correct",
+                  "feedback": {
+                    "speakerName": "弘岳真人",
+                    "text": "「善哉！四級銨不渡血腦障壁乃本門鐵律！`Pralidoxime（2-PAM）` 身懷永久正電四級銨，只能留在周邊搶救骨骼肌 N_M 麻痺；真正能穿過 BBB 直入紫府中樞的是不帶電的 `Diacetylmonoxime（DAM）`，選項 C 恰好顛倒陰陽！」",
+                    "delta": {
+                      "yin": 1,
+                      "yang": 1
+                    }
+                  },
+                  "nextStepId": "__EVENT_COMPLETE__"
+                },
+                {
+                  "id": "ne_ne_114-1_md_65_a",
+                  "label": "可幫助被磷酸化的 acetylcholinesterase 恢復活性",
+                  "sublabel": "（錯誤，敘述正確）Pralidoxime（2-PAM）具高親核性肟基（oxime），可結合至有機磷磷酸化之乙醯膽鹼酯酶（AChE）陰離子位點，在酵素發生不可逆老化（aging）前脫除磷酸基，使 AChE 重新恢復活性。",
+                  "outcome": "wrong",
+                  "feedback": {
+                    "speakerName": "蘇苓師妹",
+                    "text": "「此言不虛！在有機磷尚未『老化（aging）』之前，2-PAM 確實能憑藉親核肟基將磷酸基剝離，讓 AChE 死灰復燃。」",
+                    "delta": {
+                      "yin": 1
+                    }
+                  }
+                },
+                {
+                  "id": "ne_ne_114-1_md_65_b",
+                  "label": "不可作為 carbamate 類 cholinesterase 抑制劑的解毒劑",
+                  "sublabel": "（錯誤，敘述正確）Carbamate 類膽鹼酯酶抑制劑（如 physostigmine、neostigmine、carbaryl）屬可逆性胺甲醯化結合，可自行水解恢復，2-PAM 對其無再生效益，且於部分 carbamate（如 carbaryl）中毒時反可能加重毒性，故不作為 carbamate 中毒解毒劑。",
+                  "outcome": "wrong",
+                  "feedback": {
+                    "speakerName": "陸離師兄",
+                    "text": "「這點亦正確。Carbamate 類屬可逆抑制且 2-PAM 對其無效（遇 carbaryl 甚至可能添亂），故單以 Atropine 護體即可，不給 2-PAM。」",
+                    "delta": {
+                      "yin": 1
+                    }
+                  }
+                },
+                {
+                  "id": "ne_ne_114-1_md_65_d",
+                  "label": "過量時可能導致肌肉無力",
+                  "sublabel": "（錯誤，敘述正確）高劑量或過量給與 pralidoxime 時，藥物本身具輕度 AChE 抑制與神經肌肉阻斷作用，可能引發肌肉無力、複視、頭暈或血壓上升。",
+                  "outcome": "wrong",
+                  "feedback": {
+                    "speakerName": "蘇苓師妹",
+                    "text": "「過猶不及！高劑量 2-PAM 本身便具微弱神經肌肉阻斷與抑酶之性，確實會反致肌力軟弱，再細察何者違背 BBB 鐵律。」",
+                    "delta": {
+                      "yin": 1
+                    }
+                  }
+                }
+              ],
+              "vitals": {
+                "subject": "國考真題實戰測脈（114-1）",
+                "hr": 76,
+                "sbp": 118,
+                "dbp": 76,
+                "iop": 15,
+                "tempC": 36.8,
+                "potassium": 4.2,
+                "rhythm": "normal",
+                "rhythmText": "竇性節律（國考實戰態）",
+                "pupilMm": 3.5,
+                "ciliary": "適度平衡",
+                "airway": 100,
+                "secretion": "正常潤澤",
+                "nmj": 50,
+                "nmjLabel": "穩健有力",
+                "tofPattern": "normal",
+                "tofNote": "TOF 100%（無衰減）",
+                "badges": [
+                  "114-1 醫師國考｜Q65"
+                ]
+              },
+              "unlockCodex": [
+                3,
                 35,
                 36
               ]

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>太虛神農紀：雙極靈樞｜自主神經藥理學互動輕小說</title>
-  <meta name="description" content="改編自《太虛神農紀：雙極天道與百草靈樞》全四卷（Ch.06–Ch.09）之純前端自主神經藥理學互動劇情遊戲，全題庫統一四選一（含主線、24 危機補救與歷屆藥理考古對話變體），涵蓋 75 項核心考點、SVG 內景脈象儀與靈樞丹譜圖鑑。">
+  <meta name="description" content="改編自《太虛神農紀：雙極天道與百草靈樞》全四卷（Ch.06–Ch.09）之純前端自主神經藥理學互動劇情遊戲與國考實戰系統，全題庫統一四選一（共 284 題，含 83 主線、24 危機補救、103 校內考古與 74 題近三年 113–115 醫師／藥師國考真題），涵蓋 75 項核心考點、SVG 內景脈象儀與靈樞丹譜圖鑑。">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@500;700;900&display=swap" rel="stylesheet">
@@ -48,6 +48,11 @@
         <button type="button" class="btn-tool" id="btn-toggle-monitor-mobile" hidden aria-expanded="false">
           <span class="tool-dot" id="mobile-monitor-dot"></span>
           <span>內景脈象</span>
+        </button>
+
+        <button type="button" class="btn-tool" id="btn-open-ne" title="進入 113–115 年醫師／藥師國考自主神經歷屆實戰殿">
+          <span>國考實戰殿</span>
+          <span class="badge-count badge-count-exam" id="ne-progress-badge">0/0</span>
         </button>
 
         <button type="button" class="btn-tool" id="btn-open-codex">
@@ -109,10 +114,10 @@
         </div>
 
         <div class="hero-copy">
-          <p class="hero-kicker">太虛醫宗・自主神經藥理實戰系統（全四卷 Ch.06–09・統一四選一）</p>
+          <p class="hero-kicker">太虛醫宗・自主神經藥理實戰系統（全四卷 Ch.06–09・含近 3 年醫／藥師國考）</p>
           <h1 class="hero-title">《太虛神農紀：雙極靈樞》</h1>
           <p class="hero-desc">
-            身懷陰陽雙極靈根的<strong>林玄</strong>，與掌律長老<strong>弘岳真人</strong>、熱血誘答王<strong>陸離</strong>及毒舌藥童<strong>蘇苓</strong>，從總論築基與太陰擬膽鹼，直入玄冥抗膽鹼肌鬆解痙與太陽擬交感破陽止戈！全書 37 關主線、24 道危機補救與 103 題歷屆藥理考古對話變體已<strong>全數統一為嚴謹四選一</strong>（共 210 題），選錯丹方會真實演繹惡性高熱、燒傷高血鉀或嗜鉻危象，唯靠精準機制補救方能破關！
+            身懷陰陽雙極靈根的<strong>林玄</strong>，與掌律長老<strong>弘岳真人</strong>、熱血誘答王<strong>陸離</strong>及毒舌藥童<strong>蘇苓</strong>，從總論築基與太陰擬膽鹼，直入玄冥抗膽鹼肌鬆解痙與太陽擬交感破陽止戈！全書 37 關主線（83 題）、24 道危機補救、103 題歷屆藥理考古與 <strong>74 題近三年（113–115 年）醫師(一)／藥師(一) 國考真題</strong>已<strong>全數統一為嚴謹四選一</strong>（共 284 題），並新增專屬「國考歷屆實戰殿」支援原題精練、擬真模考與四選項詳解！
           </p>
 
           <div class="meta-stats-bar" id="title-meta-stats">
@@ -123,6 +128,10 @@
             <div class="meta-stat">
               <span class="meta-stat-num" id="stat-endings-count">0 / 9</span>
               <span class="meta-stat-lbl">修煉結局收集</span>
+            </div>
+            <div class="meta-stat">
+              <span class="meta-stat-num" id="stat-ne-count">0 / 0</span>
+              <span class="meta-stat-lbl">國考真題精熟</span>
             </div>
             <div class="meta-stat">
               <span class="meta-stat-num" id="stat-wrong-count">0</span>
@@ -136,7 +145,7 @@
       <section class="setup-panel" aria-labelledby="setup-heading">
         <div class="setup-header">
           <h2 id="setup-heading">擇定修煉法門與天機籤號</h2>
-          <p class="setup-sub">短局速行與長篇連貫章回「分別自動保存」，切換遊玩也不互相覆蓋進度。</p>
+          <p class="setup-sub">速行、長篇與國考實戰「分別自動保存」，切換遊玩互不覆蓋進度，錯題與丹譜跨模式互通。</p>
         </div>
 
         <div class="mode-grid" role="radiogroup" aria-label="遊玩模式選擇">
@@ -147,7 +156,7 @@
               <span class="mode-seal">速行篇</span>
             </div>
             <h3>太虛試煉・Roguelike 速行篇</h3>
-            <p>依所選修煉路線抽出序章 ＋ 4 或 6 場高危臨床病案／考古變體 ＋ 1 場急症 Boss 戰。適合零碎時間分卷專攻或歷屆考古混抽刷題。</p>
+            <p>依修煉路線抽出序章 ＋ 4 或 6 場臨床病案／歷屆國考變體 ＋ 1 場急症 Boss 戰，適合零碎時間分卷專攻或國考混抽。</p>
           </label>
 
           <label class="mode-card" id="card-mode-story">
@@ -157,7 +166,17 @@
               <span class="mode-seal">章回篇</span>
             </div>
             <h3>神農紀實・連貫章回篇</h3>
-            <p>完整貫通 Ch.06–09 全十章 37 關（覆蓋全部 75 項考點），可擇主線＋加抽考古、全題庫 186 題全刷或純主線；支援自由接診與隨時斷點續玩。</p>
+            <p>完整貫通 Ch.06–09 全十章 37 關（75 項考點），可選主線加抽考古、全題庫全刷、國考真題專刷或純劇情線，支援自由接診。</p>
+          </label>
+
+          <label class="mode-card" id="card-mode-national">
+            <input type="radio" name="game-mode" value="national">
+            <div class="mode-card-head">
+              <span class="mode-tag mode-tag-exam">模式 C・113–115 六場國考</span>
+              <span class="mode-seal mode-seal-exam">國考殿</span>
+            </div>
+            <h3>國考歷屆實戰殿・醫／藥師真題</h3>
+            <p>完整收錄近 3 年（113–115 年）醫師(一) 與藥師(一) 自主神經原題與考選部更正答案；支援篩選精練、擬真模考與四選項詳解。<strong id="ne-card-total-count"></strong></p>
           </label>
         </div>
 
@@ -211,6 +230,10 @@
               <input type="radio" name="rogue-variant-mode" value="past_exam">
               <span>歷屆考古對話變體優先</span>
             </label>
+            <label class="sub-chip">
+              <input type="radio" name="rogue-variant-mode" value="national_exam">
+              <span>近 3 年醫／藥師國考真題優先</span>
+            </label>
           </div>
         </div>
 
@@ -238,12 +261,100 @@
               <span>標準章回（主線＋每關隨機加抽 1 題考古）</span>
             </label>
             <label class="sub-chip">
+              <input type="radio" name="story-variant-mode" value="national_only">
+              <span>國考真題專刷（主線＋113–115 醫／藥師國考）</span>
+            </label>
+            <label class="sub-chip">
               <input type="radio" name="story-variant-mode" value="all">
-              <span>全考古全刷（主線 83 ＋ 考古 103 題全過）</span>
+              <span>全考古全刷（主線＋段考＋近 3 年國考全過）</span>
             </label>
             <label class="sub-chip">
               <input type="radio" name="story-variant-mode" value="core_only">
               <span>純原著劇情線（83 主線題）</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- 模式 C 國考歷屆實戰設定 -->
+        <div class="route-box" id="national-exam-setup-box" hidden>
+          <div class="ne-setup-header-row">
+            <span class="field-label" style="margin:0;">設定 113–115 年醫師(一)／藥師(一) 國考實戰篩選條件：</span>
+            <span class="ne-match-pill" id="ne-setup-match-count">載入國考題庫中…</span>
+          </div>
+
+          <div class="sub-option-row" data-chip-group="ne-track">
+            <span class="sub-opt-lbl">報考類科：</span>
+            <label class="sub-chip selected">
+              <input type="radio" name="ne-track" value="all" checked>
+              <span>醫師＋藥師全部</span>
+            </label>
+            <label class="sub-chip">
+              <input type="radio" name="ne-track" value="physician">
+              <span>僅醫師(一) 醫學(二)</span>
+            </label>
+            <label class="sub-chip">
+              <input type="radio" name="ne-track" value="pharmacist">
+              <span>僅藥師(一) 藥學(一)</span>
+            </label>
+          </div>
+
+          <div class="sub-option-row" data-chip-group="ne-period">
+            <span class="sub-opt-lbl">年度場次：</span>
+            <label class="sub-chip selected">
+              <input type="radio" name="ne-period" value="all" checked>
+              <span>近 3 年全部（113–115）</span>
+            </label>
+            <label class="sub-chip">
+              <input type="radio" name="ne-period" value="115">
+              <span>115 年（2026）</span>
+            </label>
+            <label class="sub-chip">
+              <input type="radio" name="ne-period" value="114">
+              <span>114 年（2025）</span>
+            </label>
+            <label class="sub-chip">
+              <input type="radio" name="ne-period" value="113">
+              <span>113 年（2024）</span>
+            </label>
+          </div>
+
+          <div class="sub-option-row" data-chip-group="ne-chapter">
+            <span class="sub-opt-lbl">章節範圍：</span>
+            <label class="sub-chip selected">
+              <input type="radio" name="ne-chapter" value="all" checked>
+              <span>全部自主神經（Ch.06–09）</span>
+            </label>
+            <label class="sub-chip">
+              <input type="radio" name="ne-chapter" value="Ch.06">
+              <span>Ch.06 總論與受體</span>
+            </label>
+            <label class="sub-chip">
+              <input type="radio" name="ne-chapter" value="Ch.07">
+              <span>Ch.07 擬膽鹼與 AChEI</span>
+            </label>
+            <label class="sub-chip">
+              <input type="radio" name="ne-chapter" value="Ch.08">
+              <span>Ch.08 抗膽鹼・肌鬆解痙</span>
+            </label>
+            <label class="sub-chip">
+              <input type="radio" name="ne-chapter" value="Ch.09">
+              <span>Ch.09 擬交感・α/β 阻斷</span>
+            </label>
+          </div>
+
+          <div class="sub-option-row" data-chip-group="ne-run-mode">
+            <span class="sub-opt-lbl">實戰模式：</span>
+            <label class="sub-chip selected">
+              <input type="radio" name="ne-run-mode" value="practice" checked>
+              <span>逐題精練（即時批改＋四選項詳解）</span>
+            </label>
+            <label class="sub-chip">
+              <input type="radio" name="ne-run-mode" value="mock">
+              <span>擬真模考（亂數計時・交卷計分與弱點診斷）</span>
+            </label>
+            <label class="sub-chip">
+              <input type="radio" name="ne-run-mode" value="review_wrong">
+              <span>只刷未答／答錯／標記題</span>
             </label>
           </div>
         </div>
@@ -522,6 +633,140 @@
         </div>
       </section>
     </main>
+
+    <!-- 畫面四：國考歷屆實戰殿（模式 C：113–115 年醫師／藥師國考自主神經真題） -->
+    <div class="screen screen-national-exam" id="screen-national-exam" hidden>
+      <section class="status-ribbon ne-ribbon" aria-label="國考實戰狀態列">
+        <div class="status-cluster">
+          <span class="ne-mode-badge is-practice" id="ne-mode-badge">逐題精練模式</span>
+          <span class="ne-scope-summary" id="ne-scope-summary">醫＋藥全部｜113–115 年｜Ch.06–09</span>
+        </div>
+        <div class="status-cluster">
+          <span class="progress-badge" id="ne-hud-progress">已答 0 / 0</span>
+          <span class="progress-badge ne-acc-badge" id="ne-hud-acc">正確 0/0 (0%)</span>
+          <span class="seed-chip"><span class="seed-label">計時</span><code id="ne-timer-value">00:00</code></span>
+          <button type="button" class="btn-tool" id="btn-ne-toggle-filter">篩選／切換</button>
+          <button type="button" class="btn-primary ne-submit-btn" id="btn-ne-submit-mock" hidden>交卷計分</button>
+          <button type="button" class="btn-tool" id="btn-ne-back-home">返回首頁</button>
+        </div>
+      </section>
+
+      <!-- 即時篩選列（可收合） -->
+      <section class="ne-inline-filters" id="ne-inline-filters" hidden aria-label="國考題庫即時篩選">
+        <div class="ne-filter-grid">
+          <label class="ne-filter-field">
+            <span>實戰模式</span>
+            <select id="ne-inline-mode">
+              <option value="practice">逐題精練（即時詳解）</option>
+              <option value="mock">擬真模考（亂數交卷）</option>
+            </select>
+          </label>
+          <label class="ne-filter-field">
+            <span>報考類科</span>
+            <select id="ne-inline-track">
+              <option value="all">醫師(一) ＋ 藥師(一)</option>
+              <option value="physician">僅醫師(一) 醫學(二)</option>
+              <option value="pharmacist">僅藥師(一) 藥學(一)</option>
+            </select>
+          </label>
+          <label class="ne-filter-field">
+            <span>年度／場次</span>
+            <select id="ne-inline-period">
+              <option value="all">近 3 年全部（113–115）</option>
+              <option value="115">115 年全部（2026）</option>
+              <option value="115-2">115-2（115 年第二次）</option>
+              <option value="115-1">115-1（115 年第一次）</option>
+              <option value="114">114 年全部（2025）</option>
+              <option value="114-2">114-2（114 年第二次）</option>
+              <option value="114-1">114-1（114 年第一次）</option>
+              <option value="113">113 年全部（2024）</option>
+              <option value="113-2">113-2（113 年第二次）</option>
+              <option value="113-1">113-1（113 年第一次）</option>
+            </select>
+          </label>
+          <label class="ne-filter-field">
+            <span>章節分類</span>
+            <select id="ne-inline-chapter">
+              <option value="all">全部章節 (Ch.06–09)</option>
+              <option value="Ch.06">Ch.06 總論與受體</option>
+              <option value="Ch.07">Ch.07 擬膽鹼與 AChEI</option>
+              <option value="Ch.08">Ch.08 抗膽鹼・肌鬆解痙</option>
+              <option value="Ch.09">Ch.09 擬交感・α/β 阻斷</option>
+            </select>
+          </label>
+          <label class="ne-filter-field">
+            <span>作答狀態</span>
+            <select id="ne-inline-status">
+              <option value="all">全部題目</option>
+              <option value="review_wrong">未答／曾答錯／已標記</option>
+              <option value="unanswered">僅未作答</option>
+              <option value="wrong">僅上次答錯</option>
+              <option value="flagged">僅標記複習 ★</option>
+            </select>
+          </label>
+          <label class="ne-filter-field ne-filter-search">
+            <span>關鍵字搜尋</span>
+            <input type="search" id="ne-inline-search" placeholder="藥名、受體或症狀（如 clonidine, IFIS）">
+          </label>
+        </div>
+      </section>
+
+      <!-- 模考成績單（交卷後顯示） -->
+      <section class="ne-mock-report" id="ne-mock-report" hidden aria-live="polite"></section>
+
+      <div class="ne-layout">
+        <!-- 主題目卡片 -->
+        <main class="ne-stage">
+          <div class="ne-empty-state" id="ne-empty-state" hidden></div>
+
+          <article class="scene-card ne-question-card" id="ne-question-card">
+            <header class="ne-card-top">
+              <div class="ne-q-meta" id="ne-q-meta"></div>
+              <div class="ne-card-top-right">
+                <span class="ne-q-counter" id="ne-q-counter">第 1 / 1 題</span>
+                <button type="button" class="btn-tool ne-flag-btn" id="btn-ne-flag" title="快捷鍵 F 標記複習">☆ 標記複習</button>
+              </div>
+            </header>
+
+            <h2 class="ne-q-topic" id="ne-q-topic"></h2>
+            <div class="ne-q-stem" id="ne-q-stem"></div>
+
+            <div class="choices-area ne-options-area" id="ne-q-options"></div>
+
+            <div class="ne-inline-tools">
+              <button type="button" class="btn-secondary" id="btn-ne-toggle-explain" hidden>直接查看詳解</button>
+              <span class="ne-shortcut-hint">快捷鍵：<code>A–D</code> 或 <code>1–4</code> 作答｜<code>← / →</code> 換題｜<code>F</code> 標記</span>
+            </div>
+
+            <section class="feedback-panel ne-explain-panel" id="ne-explain-panel" hidden aria-live="polite"></section>
+
+            <footer class="ne-nav-footer">
+              <button type="button" class="btn-secondary" id="btn-ne-prev">← 上一題</button>
+              <button type="button" class="btn-primary" id="btn-ne-next">下一題 →</button>
+            </footer>
+          </article>
+        </main>
+
+        <!-- 右側題號矩陣與進度總覽 -->
+        <aside class="ne-sidebar" aria-label="國考題號導覽與精熟進度">
+          <div class="ne-side-head">
+            <h3>題號矩陣導覽</h3>
+            <div class="ne-side-summary" id="ne-side-summary"></div>
+          </div>
+          <div class="ne-legend">
+            <span><i class="ne-dot is-ok"></i>答對</span>
+            <span><i class="ne-dot is-err"></i>答錯</span>
+            <span><i class="ne-dot is-mock-ans"></i>已選</span>
+            <span><i class="ne-dot is-flag"></i>標記</span>
+          </div>
+          <div class="ne-nav-grid" id="ne-nav-grid"></div>
+          <div class="ne-side-footer">
+            <p class="ne-source-note">資料來源：中華民國考選部「考畢試題查詢平臺」（113–115 年官方試題、標準答案與更正答案全核對）。</p>
+            <button type="button" class="btn-del-save ne-reset-btn" id="btn-ne-reset-progress">重置國考刷題紀錄</button>
+          </div>
+        </aside>
+      </div>
+    </div>
   </div>
 
   <!-- 靈樞丹譜圖鑑抽屜 -->
@@ -573,6 +818,7 @@
   <script src="js/pulseMonitor.js"></script>
   <script src="js/codex.js"></script>
   <script src="js/engine.js"></script>
+  <script src="js/nationalExam.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

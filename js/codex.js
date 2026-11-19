@@ -126,6 +126,34 @@
     document.getElementById('codex-drawer').hidden = false;
   }
 
+  function openCard(num) {
+    const targetNum = Number(num);
+    if (!Number.isNaN(targetNum)) {
+      global.TaixuState.unlockCodexIds([targetNum]);
+    }
+    activeVol = 'all';
+    activeScroll = 'all';
+    searchQuery = '';
+    const searchEl = document.getElementById('codex-search');
+    if (searchEl) searchEl.value = '';
+    document.querySelectorAll('#vol-filters .filter-chip').forEach((c) => {
+      c.classList.toggle('active', c.getAttribute('data-vol') === 'all');
+    });
+    document.querySelectorAll('#scroll-filters .filter-chip').forEach((c) => {
+      c.classList.toggle('active', c.getAttribute('data-scroll') === 'all');
+    });
+    open('cards');
+    const content = document.getElementById('codex-content');
+    if (content && !Number.isNaN(targetNum)) {
+      const cardEl = content.querySelector(`[data-codex-num="${targetNum}"]`);
+      if (cardEl) {
+        cardEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        cardEl.classList.add('codex-highlight');
+        setTimeout(() => cardEl.classList.remove('codex-highlight'), 1800);
+      }
+    }
+  }
+
   function close() {
     document.getElementById('codex-backdrop').hidden = true;
     document.getElementById('codex-drawer').hidden = true;
@@ -182,6 +210,7 @@
       const isUnlocked = unlockedSet.has(entry.num);
       const card = document.createElement('article');
       card.className = `codex-card ${isUnlocked ? 'unlocked' : 'locked'}`;
+      card.setAttribute('data-codex-num', String(entry.num));
 
       const scrollName = SCROLL_LABELS[entry.scroll] || entry.scroll;
       if (!isUnlocked) {
@@ -334,6 +363,7 @@
   global.TaixuCodex = {
     init,
     open,
+    openCard,
     close,
     refreshCounters
   };

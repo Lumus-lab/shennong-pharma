@@ -138,11 +138,67 @@
       metaState.wrongNotes.unshift(
         Object.assign({ count: 1, timestamp: Date.now() }, note)
       );
-      if (metaState.wrongNotes.length > 120) {
-        metaState.wrongNotes.length = 120;
+      if (metaState.wrongNotes.length > 250) {
+        metaState.wrongNotes.length = 250;
       }
     }
     saveMeta();
+  }
+
+  const NE_PROGRESS_KEY = 'taixu_shennong_ne_v1';
+
+  function defaultNeProgress() {
+    return {
+      records: {},
+      flagged: []
+    };
+  }
+
+  let neProgress = Object.assign(defaultNeProgress(), safeReadStorage(NE_PROGRESS_KEY, {}));
+  if (!neProgress.records || typeof neProgress.records !== 'object') neProgress.records = {};
+  if (!Array.isArray(neProgress.flagged)) neProgress.flagged = [];
+
+  function saveNeProgress() {
+    safeWriteStorage(NE_PROGRESS_KEY, neProgress);
+  }
+
+  function getNeProgress() {
+    return neProgress;
+  }
+
+  function recordNeAnswer(qId, picked, isCorrect) {
+    if (!qId) return;
+    const prev = neProgress.records[qId] || { attempts: 0, correctCount: 0, wrongCount: 0 };
+    neProgress.records[qId] = {
+      picked,
+      lastCorrect: Boolean(isCorrect),
+      mastered: Boolean(isCorrect),
+      attempts: (prev.attempts || 0) + 1,
+      correctCount: (prev.correctCount || 0) + (isCorrect ? 1 : 0),
+      wrongCount: (prev.wrongCount || 0) + (isCorrect ? 0 : 1),
+      updatedAt: Date.now()
+    };
+    saveNeProgress();
+  }
+
+  function toggleNeFlag(qId) {
+    if (!qId) return false;
+    const idx = neProgress.flagged.indexOf(qId);
+    let nowFlagged = false;
+    if (idx === -1) {
+      neProgress.flagged.push(qId);
+      nowFlagged = true;
+    } else {
+      neProgress.flagged.splice(idx, 1);
+      nowFlagged = false;
+    }
+    saveNeProgress();
+    return nowFlagged;
+  }
+
+  function resetNeProgress() {
+    neProgress = defaultNeProgress();
+    saveNeProgress();
   }
 
   function unlockEnding(endingId) {
@@ -506,6 +562,10 @@
     grantPouchItem,
     hasPouchItem,
     applyDelta,
-    updateVitals
+    updateVitals,
+    getNeProgress,
+    recordNeAnswer,
+    toggleNeFlag,
+    resetNeProgress
   };
 })(window);

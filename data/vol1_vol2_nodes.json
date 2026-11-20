@@ -273,7 +273,9 @@
                 2
               ]
             }
-          ]
+          ],
+          "examSource": "school_exam",
+          "schoolExamId": "SE010"
         },
         {
           "variantId": "P02",
@@ -368,7 +370,9 @@
                 2
               ]
             }
-          ]
+          ],
+          "examSource": "school_exam",
+          "schoolExamId": "SE005"
         }
       ]
     },
@@ -829,7 +833,9 @@
                 4
               ]
             }
-          ]
+          ],
+          "examSource": "school_exam",
+          "schoolExamId": "SE006"
         },
         {
           "variantId": "P04",
@@ -924,7 +930,9 @@
                 5
               ]
             }
-          ]
+          ],
+          "examSource": "school_exam",
+          "schoolExamId": "SE008"
         }
       ]
     },
@@ -1302,7 +1310,9 @@
                 11
               ]
             }
-          ]
+          ],
+          "examSource": "school_exam",
+          "schoolExamId": "SE004"
         },
         {
           "variantId": "P06",
@@ -1398,7 +1408,9 @@
                 11
               ]
             }
-          ]
+          ],
+          "examSource": "school_exam",
+          "schoolExamId": "SE002"
         }
       ]
     },
@@ -1684,7 +1696,9 @@
                 9
               ]
             }
-          ]
+          ],
+          "examSource": "school_exam",
+          "schoolExamId": "SE026"
         },
         {
           "variantId": "P08",
@@ -1781,7 +1795,9 @@
                 12
               ]
             }
-          ]
+          ],
+          "examSource": "school_exam",
+          "schoolExamId": "SE089"
         }
       ]
     },
@@ -1972,7 +1988,7 @@
         {
           "variantId": "P09",
           "variantType": "past_exam",
-          "examTag": "112 藥理考古｜1022-02",
+          "examTag": "112・114 連考高頻｜1022-02",
           "pastExamId": "1022_Pharm1-2",
           "steps": [
             {
@@ -2063,7 +2079,9 @@
                 13
               ]
             }
-          ]
+          ],
+          "examSource": "school_exam",
+          "schoolExamId": "SE001"
         },
         {
           "variantId": "P10",
@@ -2159,7 +2177,9 @@
                 13
               ]
             }
-          ]
+          ],
+          "examSource": "school_exam",
+          "schoolExamId": "SE011"
         },
         {
           "variantId": "P11",
@@ -2254,7 +2274,9 @@
                 14
               ]
             }
-          ]
+          ],
+          "examSource": "school_exam",
+          "schoolExamId": "SE012"
         },
         {
           "variantId": "NE003",
@@ -2926,7 +2948,9 @@
                 15
               ]
             }
-          ]
+          ],
+          "examSource": "school_exam",
+          "schoolExamId": "SE007"
         },
         {
           "variantId": "P13",
@@ -3022,7 +3046,9 @@
                 19
               ]
             }
-          ]
+          ],
+          "examSource": "school_exam",
+          "schoolExamId": "SE053"
         },
         {
           "variantId": "NE078",
@@ -3619,7 +3645,9 @@
                 16
               ]
             }
-          ]
+          ],
+          "examSource": "school_exam",
+          "schoolExamId": "SE003"
         }
       ]
     },
@@ -3906,7 +3934,9 @@
                 18
               ]
             }
-          ]
+          ],
+          "examSource": "school_exam",
+          "schoolExamId": "SE009"
         },
         {
           "variantId": "P16",
@@ -4002,7 +4032,9 @@
                 17
               ]
             }
-          ]
+          ],
+          "examSource": "school_exam",
+          "schoolExamId": "SE033"
         },
         {
           "variantId": "P17",
@@ -4097,7 +4129,9 @@
                 17
               ]
             }
-          ]
+          ],
+          "examSource": "school_exam",
+          "schoolExamId": "SE024"
         },
         {
           "variantId": "P18",
@@ -4192,7 +4226,9 @@
                 17
               ]
             }
-          ]
+          ],
+          "examSource": "school_exam",
+          "schoolExamId": "SE017"
         }
       ]
     },
@@ -4497,7 +4533,9 @@
                 21
               ]
             }
-          ]
+          ],
+          "examSource": "school_exam",
+          "schoolExamId": "SE034"
         },
         {
           "variantId": "P20",
@@ -4592,12 +4630,14 @@
                 20
               ]
             }
-          ]
+          ],
+          "examSource": "school_exam",
+          "schoolExamId": "SE035"
         },
         {
           "variantId": "P21",
           "variantType": "past_exam",
-          "examTag": "113 藥理考古｜1022-18",
+          "examTag": "113・114 連考高頻｜1022-26",
           "pastExamId": "1022_Pharm1-18",
           "steps": [
             {
@@ -4687,7 +4727,9 @@
                 20
               ]
             }
-          ]
+          ],
+          "examSource": "school_exam",
+          "schoolExamId": "SE015"
         },
         {
           "variantId": "P22",
@@ -4782,7 +4824,9 @@
                 20
               ]
             }
-          ]
+          ],
+          "examSource": "school_exam",
+          "schoolExamId": "SE027"
         },
         {
           "variantId": "P23",
@@ -4877,7 +4921,9 @@
                 20
               ]
             }
-          ]
+          ],
+          "examSource": "school_exam",
+          "schoolExamId": "SE028"
         },
         {
           "variantId": "P24",
@@ -4972,7 +5018,9 @@
                 20
               ]
             }
-          ]
+          ],
+          "examSource": "school_exam",
+          "schoolExamId": "SE016"
         },
         {
           "variantId": "NE056",
@@ -5399,7 +5447,7 @@
         {
           "variantId": "P25",
           "variantType": "past_exam",
-          "examTag": "112 藥理考古｜1022-04",
+          "examTag": "112・113・114 三年必考｜1022-04",
           "pastExamId": "1022_Pharm1-4",
           "steps": [
             {
@@ -5407,7 +5455,7 @@
               "speaker": "hongyue",
               "speakerName": "弘岳真人",
               "speakerTag": "毒瞳機制辨析",
-              "text": "毒菇之夜寒潭閃過一雙如針尖縮小的眼眸（**112 學年度 `1022_Pharm1-4`**）。\n弘岳真人：「膽鹼酯酶抑制劑（Cholinesterase inhibitor）中毒時患者多見明顯**縮瞳（Miosis）**，此效應係因大量累積的 `ACh` 過度活化眼睛虹膜的何種受體所致？」",
+              "text": "毒菇之夜寒潭閃過一雙如針尖縮小的眼眸（**112・113・114 三年必考**｜`1022_Pharm1-4`；114 年情境改以**沙林毒氣中毒**命題）。\n弘岳真人：「無論有機磷農藥、膽鹼酯酶抑制劑或軍用毒氣沙林中毒，患者多見明顯**縮瞳（Miosis）**，此效應係因大量累積的 `ACh` 過度活化眼睛虹膜的何種受體所致？」",
               "choices": [
                 {
                   "id": "pe_1022_4_a",
@@ -5483,102 +5531,7 @@
                 "tofNote": "中樞/周邊 ACh 累積",
                 "badges": [
                   "針尖縮瞳 1.2 mm",
-                  "112 考古｜1022-04"
-                ]
-              },
-              "unlockCodex": [
-                22
-              ]
-            }
-          ]
-        },
-        {
-          "variantId": "P26",
-          "variantType": "past_exam",
-          "examTag": "114 藥理考古｜1022-28",
-          "pastExamId": "1022_Pharm1-28",
-          "steps": [
-            {
-              "id": "pe_1022_pharm1_28",
-              "speaker": "suling",
-              "speakerName": "蘇苓師妹",
-              "speakerTag": "沙林毒氣縮瞳機制",
-              "text": "瘴霧中一名兵士疑吸入**沙林毒氣（Sarin nerve gas）**，雙瞳縮如針孔、冷汗不止（**114 學年度 `1022_Pharm1-28`**）。\n蘇苓：「考你即時判讀：沙林毒氣誘發強烈縮瞳，主要係活化下列哪個虹膜構造與受體？」",
-              "choices": [
-                {
-                  "id": "pe_1022_28_b",
-                  "label": "虹膜環狀肌的蕈毒鹼受體（M3 受體）",
-                  "sublabel": "沙林不可逆抑制 AChE → 突觸間隙 ACh 劇增 → 過度活化環狀括約肌 M3 受體縮瞳",
-                  "outcome": "correct",
-                  "feedback": {
-                    "speakerName": "弘岳真人",
-                    "text": "「絲毫不錯！不論有機磷農藥還是軍用毒氣沙林，縮瞳本源皆為過度激發**虹膜環狀肌之蕈毒鹼（`M3`）受體**，故點眼或全身 `Atropine` 能立即逆轉此徵！」",
-                    "delta": {
-                      "yin": 1
-                    }
-                  },
-                  "nextStepId": "__EVENT_COMPLETE__"
-                },
-                {
-                  "id": "pe_1022_28_a",
-                  "label": "虹膜環狀肌的菸鹼受體",
-                  "sublabel": "虹膜環狀平滑肌係藉 M3 蕈毒鹼受體受副交感調控，非菸鹼受體",
-                  "outcome": "wrong",
-                  "feedback": {
-                    "speakerName": "蘇苓師妹",
-                    "text": "「沙林雖會同時炸翻骨骼肌 N_M 受體，但眼睛縮瞳那關是通過平滑肌 `M3` 蕈毒鹼受體走的！」",
-                    "delta": {
-                      "yin": 1
-                    }
-                  }
-                },
-                {
-                  "id": "pe_1022_28_c",
-                  "label": "虹膜輻射肌的 α 受體",
-                  "sublabel": "活化輻射肌 α1 會散瞳（Mydriasis），僅有被 Tamsulosin 阻斷時才會促發縮瞳",
-                  "outcome": "wrong",
-                  "feedback": {
-                    "speakerName": "陸離師兄",
-                    "text": "「輻射肌 α1 活化可是會大眼睛散瞳的喔！」",
-                    "delta": {
-                      "yang": 1
-                    }
-                  }
-                },
-                {
-                  "id": "pe_1022_28_d",
-                  "label": "虹膜輻射肌的 β 受體",
-                  "sublabel": "輻射肌收縮與否不由 β 受體主掌縮瞳反應",
-                  "outcome": "wrong",
-                  "feedback": {
-                    "speakerName": "蘇苓師妹",
-                    "text": "「錯錯錯，別亂把眼球肌套上 β 受體！」",
-                    "delta": {
-                      "yang": 1
-                    }
-                  }
-                }
-              ],
-              "vitals": {
-                "subject": "沙林毒氣疑似暴露者",
-                "hr": 48,
-                "sbp": 98,
-                "dbp": 60,
-                "iop": 12,
-                "tempC": 36.5,
-                "potassium": 4.2,
-                "rhythm": "brady",
-                "rhythmText": "神經毒氣急性迷走風暴",
-                "pupilMm": 1.0,
-                "ciliary": "近視痙攣",
-                "airway": 58,
-                "secretion": "氣道大量分泌",
-                "nmj": 25,
-                "nmjLabel": "肌束震顫",
-                "tofPattern": "depolarized",
-                "tofNote": "AChE 不可逆抑制",
-                "badges": [
-                  "沙林縮瞳｜1022-28"
+                  "112・113・114 三年必考"
                 ]
               },
               "unlockCodex": [
@@ -5586,7 +5539,9 @@
                 35
               ]
             }
-          ]
+          ],
+          "examSource": "school_exam",
+          "schoolExamId": "SE013"
         },
         {
           "variantId": "P27",
@@ -5682,7 +5637,9 @@
                 32
               ]
             }
-          ]
+          ],
+          "examSource": "school_exam",
+          "schoolExamId": "SE030"
         }
       ]
     },
@@ -6085,7 +6042,9 @@
                 24
               ]
             }
-          ]
+          ],
+          "examSource": "school_exam",
+          "schoolExamId": "SE036"
         },
         {
           "variantId": "P29",
@@ -6180,7 +6139,9 @@
                 24
               ]
             }
-          ]
+          ],
+          "examSource": "school_exam",
+          "schoolExamId": "SE042"
         },
         {
           "variantId": "P30",
@@ -6275,12 +6236,14 @@
                 24
               ]
             }
-          ]
+          ],
+          "examSource": "school_exam",
+          "schoolExamId": "SE040"
         },
         {
           "variantId": "P31",
           "variantType": "past_exam",
-          "examTag": "113 學年度｜1029-29",
+          "examTag": "113・114 連考高頻｜1029-43",
           "pastExamId": "1029_Pharm2-29",
           "steps": [
             {
@@ -6371,7 +6334,9 @@
                 25
               ]
             }
-          ]
+          ],
+          "examSource": "school_exam",
+          "schoolExamId": "SE022"
         },
         {
           "variantId": "P32",
@@ -6466,7 +6431,9 @@
                 24
               ]
             }
-          ]
+          ],
+          "examSource": "school_exam",
+          "schoolExamId": "SE018"
         },
         {
           "variantId": "NE001",
@@ -7180,7 +7147,9 @@
                 26
               ]
             }
-          ]
+          ],
+          "examSource": "school_exam",
+          "schoolExamId": "SE025"
         },
         {
           "variantId": "P34",
@@ -7277,7 +7246,9 @@
                 43
               ]
             }
-          ]
+          ],
+          "examSource": "school_exam",
+          "schoolExamId": "SE037"
         },
         {
           "variantId": "P35",
@@ -7374,7 +7345,9 @@
                 72
               ]
             }
-          ]
+          ],
+          "examSource": "school_exam",
+          "schoolExamId": "SE067"
         },
         {
           "variantId": "NE066",
@@ -8047,7 +8020,9 @@
                 30
               ]
             }
-          ]
+          ],
+          "examSource": "school_exam",
+          "schoolExamId": "SE041"
         },
         {
           "variantId": "P37",
@@ -8142,7 +8117,9 @@
                 30
               ]
             }
-          ]
+          ],
+          "examSource": "school_exam",
+          "schoolExamId": "SE019"
         },
         {
           "variantId": "NE124",
@@ -8549,7 +8526,9 @@
                 44
               ]
             }
-          ]
+          ],
+          "examSource": "school_exam",
+          "schoolExamId": "SE060"
         },
         {
           "variantId": "P39",
@@ -8645,7 +8624,9 @@
                 40
               ]
             }
-          ]
+          ],
+          "examSource": "school_exam",
+          "schoolExamId": "SE044"
         }
       ]
     },
@@ -8975,7 +8956,7 @@
         {
           "variantId": "P40",
           "variantType": "past_exam",
-          "examTag": "111 學年度｜1029-12",
+          "examTag": "111・113・114 三年必考｜1029-12",
           "pastExamId": "1029_Pharm2-12",
           "steps": [
             {
@@ -9065,7 +9046,9 @@
                 32
               ]
             }
-          ]
+          ],
+          "examSource": "school_exam",
+          "schoolExamId": "SE014"
         },
         {
           "variantId": "P41",
@@ -9161,7 +9144,9 @@
                 32
               ]
             }
-          ]
+          ],
+          "examSource": "school_exam",
+          "schoolExamId": "SE032"
         }
       ]
     },
@@ -9938,7 +9923,9 @@
                 33
               ]
             }
-          ]
+          ],
+          "examSource": "school_exam",
+          "schoolExamId": "SE043"
         },
         {
           "variantId": "P43",
@@ -10033,7 +10020,9 @@
                 33
               ]
             }
-          ]
+          ],
+          "examSource": "school_exam",
+          "schoolExamId": "SE031"
         },
         {
           "variantId": "P44",
@@ -10128,7 +10117,9 @@
                 34
               ]
             }
-          ]
+          ],
+          "examSource": "school_exam",
+          "schoolExamId": "SE021"
         },
         {
           "variantId": "P45",
@@ -10223,7 +10214,9 @@
                 33
               ]
             }
-          ]
+          ],
+          "examSource": "school_exam",
+          "schoolExamId": "SE023"
         },
         {
           "variantId": "NE018",
@@ -11116,6 +11109,105 @@
               ]
             }
           ]
+        },
+        {
+          "variantId": "P104",
+          "variantType": "past_exam",
+          "examSource": "school_exam",
+          "examTag": "112 藥理考古｜1029-18",
+          "pastExamId": "1029_Pharm2-18",
+          "schoolExamId": "SE039",
+          "steps": [
+            {
+              "id": "pe_1029_pharm2_18",
+              "speaker": "hongyue",
+              "speakerName": "弘岳真人",
+              "speakerTag": "肌無力用藥辨偽",
+              "text": "藥王殿案頭展開一卷 **112 學年度（`1029_Pharm2-18`）** 重症肌無力試問。\n弘岳真人：「面對眼瞼下垂、午後倦怠加劇的**重症肌無力（Myasthenia gravis）**患者，下列關於其病理與用藥之敘述，何者有誤（False）？」",
+              "choices": [
+                {
+                  "id": "pe_1029_18_a",
+                  "label": "適合用 Bethanechol 作為常規治療藥物",
+                  "sublabel": "Bethanechol 幾乎無菸鹼受體（N_M）活性，無法改善骨骼肌無力，且會引發多餘蕈毒鹼副作用",
+                  "outcome": "correct",
+                  "feedback": {
+                    "speakerName": "弘岳真人",
+                    "text": "「一針見血！`Bethanechol` 因 β-甲基修飾專攻平滑肌 **`M3` 受體**，對骨骼肌 **`N_M` 受體**幾乎零作用，**絕不適用於重症肌無力**！正確主力為 `Pyridostigmine / Neostigmine` 等間接型膽鹼酯酶抑制劑。」",
+                    "delta": {
+                      "yin": 1,
+                      "yang": 1
+                    }
+                  },
+                  "nextStepId": "__EVENT_COMPLETE__"
+                },
+                {
+                  "id": "pe_1029_18_b",
+                  "label": "適合用膽鹼酯酶抑制劑（Cholinesterase inhibitors）作為治療",
+                  "sublabel": "Pyridostigmine 與 Neostigmine 減少 ACh 水解、增加 NMJ 乙醯膽鹼濃度，為第一線對症治療",
+                  "outcome": "wrong",
+                  "feedback": {
+                    "speakerName": "蘇苓師妹",
+                    "text": "「`Pyridostigmine` 跟 `Neostigmine` 就是重症肌無力的第一線主力藥物呀，這句敘述完全正確喔！」",
+                    "delta": {
+                      "yin": 1
+                    }
+                  }
+                },
+                {
+                  "id": "pe_1029_18_c",
+                  "label": "可利用短效 Edrophonium（Tensilon test）進行鑑別診斷",
+                  "sublabel": "Edrophonium 作用極短（約 5–15 分鐘），靜注後肌力短暫顯著改善可輔助診斷 MG",
+                  "outcome": "wrong",
+                  "feedback": {
+                    "speakerName": "陸離師兄",
+                    "text": "「`Edrophonium` 做 Tensilon test 鑑別肌無力危象 vs. 膽鹼性危象可是必考正典，這句沒錯！」",
+                    "delta": {
+                      "yang": 1
+                    }
+                  }
+                },
+                {
+                  "id": "pe_1029_18_d",
+                  "label": "自體抗體會破壞骨骼肌神經肌肉接點的菸鹼受體（N_M）",
+                  "sublabel": "MG 屬於 Type II 過敏反應，抗 AChR 自體抗體結合並破壞終板 N_M 受體",
+                  "outcome": "wrong",
+                  "feedback": {
+                    "speakerName": "蘇苓師妹",
+                    "text": "「骨骼肌上是菸鹼受體（`N_M`）被自體抗體攻擊沒錯喔（如果選項寫成蕈毒鹼受體才是錯的）！」",
+                    "delta": {
+                      "yin": 1
+                    }
+                  }
+                }
+              ],
+              "vitals": {
+                "subject": "重症肌無力門診試脈",
+                "hr": 76,
+                "sbp": 116,
+                "dbp": 74,
+                "iop": 15,
+                "tempC": 36.7,
+                "potassium": 4.1,
+                "rhythm": "normal",
+                "rhythmText": "竇性節律・眼瞼微垂",
+                "pupilMm": 3.5,
+                "ciliary": "適度平衡",
+                "airway": 95,
+                "secretion": "正常潤澤",
+                "nmj": 32,
+                "nmjLabel": "N_M 儲備下降",
+                "tofPattern": "fade",
+                "tofNote": "肌終板疲勞衰減",
+                "badges": [
+                  "112 考古｜1029-18"
+                ]
+              },
+              "unlockCodex": [
+                32,
+                33
+              ]
+            }
+          ]
         }
       ]
     },
@@ -11493,7 +11585,9 @@
                 36
               ]
             }
-          ]
+          ],
+          "examSource": "school_exam",
+          "schoolExamId": "SE038"
         },
         {
           "variantId": "P47",
@@ -11589,7 +11683,9 @@
                 36
               ]
             }
-          ]
+          ],
+          "examSource": "school_exam",
+          "schoolExamId": "SE029"
         },
         {
           "variantId": "NE038",
@@ -12304,7 +12400,9 @@
                 36
               ]
             }
-          ]
+          ],
+          "examSource": "school_exam",
+          "schoolExamId": "SE045"
         },
         {
           "variantId": "P49",
@@ -12400,7 +12498,9 @@
                 36
               ]
             }
-          ]
+          ],
+          "examSource": "school_exam",
+          "schoolExamId": "SE020"
         },
         {
           "variantId": "NE133",

@@ -374,7 +374,9 @@
                 43
               ]
             }
-          ]
+          ],
+          "examSource": "school_exam",
+          "schoolExamId": "SE049"
         },
         {
           "variantId": "P51",
@@ -470,7 +472,9 @@
                 40
               ]
             }
-          ]
+          ],
+          "examSource": "school_exam",
+          "schoolExamId": "SE059"
         }
       ]
     },
@@ -937,12 +941,14 @@
                 41
               ]
             }
-          ]
+          ],
+          "examSource": "school_exam",
+          "schoolExamId": "SE048"
         },
         {
           "variantId": "P53",
           "variantType": "past_exam",
-          "examTag": "114 藥理考古｜1030-04",
+          "examTag": "113・114 連考高頻｜1030-15",
           "pastExamId": "1030_Pharm3-4",
           "steps": [
             {
@@ -1033,7 +1039,9 @@
                 41
               ]
             }
-          ]
+          ],
+          "examSource": "school_exam",
+          "schoolExamId": "SE056"
         },
         {
           "variantId": "P54",
@@ -1129,7 +1137,9 @@
                 72
               ]
             }
-          ]
+          ],
+          "examSource": "school_exam",
+          "schoolExamId": "SE068"
         },
         {
           "variantId": "NE049",
@@ -1932,7 +1942,9 @@
                 42
               ]
             }
-          ]
+          ],
+          "examSource": "school_exam",
+          "schoolExamId": "SE046"
         },
         {
           "variantId": "NE016",
@@ -3404,7 +3416,9 @@
                 63
               ]
             }
-          ]
+          ],
+          "examSource": "school_exam",
+          "schoolExamId": "SE047"
         },
         {
           "variantId": "P57",
@@ -3500,7 +3514,9 @@
                 63
               ]
             }
-          ]
+          ],
+          "examSource": "school_exam",
+          "schoolExamId": "SE058"
         },
         {
           "variantId": "P58",
@@ -3595,7 +3611,9 @@
                 63
               ]
             }
-          ]
+          ],
+          "examSource": "school_exam",
+          "schoolExamId": "SE102"
         },
         {
           "variantId": "NE021",
@@ -4299,7 +4317,9 @@
                 47
               ]
             }
-          ]
+          ],
+          "examSource": "school_exam",
+          "schoolExamId": "SE050"
         },
         {
           "variantId": "P60",
@@ -4394,7 +4414,9 @@
                 47
               ]
             }
-          ]
+          ],
+          "examSource": "school_exam",
+          "schoolExamId": "SE061"
         },
         {
           "variantId": "P61",
@@ -4491,7 +4513,9 @@
                 46
               ]
             }
-          ]
+          ],
+          "examSource": "school_exam",
+          "schoolExamId": "SE066"
         },
         {
           "variantId": "NE034",
@@ -5286,7 +5310,7 @@
         {
           "variantId": "P62",
           "variantType": "past_exam",
-          "examTag": "114 藥理考古｜1030-07",
+          "examTag": "113・114 連考高頻｜1030-18",
           "pastExamId": "1030_Pharm3-7",
           "steps": [
             {
@@ -5377,7 +5401,9 @@
                 51
               ]
             }
-          ]
+          ],
+          "examSource": "school_exam",
+          "schoolExamId": "SE057"
         },
         {
           "variantId": "NE122",
@@ -5852,7 +5878,9 @@
                 50
               ]
             }
-          ]
+          ],
+          "examSource": "school_exam",
+          "schoolExamId": "SE051"
         }
       ]
     },
@@ -6244,7 +6272,7 @@
         {
           "variantId": "P64",
           "variantType": "past_exam",
-          "examTag": "114 藥理考古｜1030-09",
+          "examTag": "113・114 連考高頻｜1030-09",
           "pastExamId": "1030_Pharm3-9",
           "steps": [
             {
@@ -6334,7 +6362,9 @@
                 53
               ]
             }
-          ]
+          ],
+          "examSource": "school_exam",
+          "schoolExamId": "SE052"
         },
         {
           "variantId": "P65",
@@ -6429,7 +6459,9 @@
                 52
               ]
             }
-          ]
+          ],
+          "examSource": "school_exam",
+          "schoolExamId": "SE064"
         },
         {
           "variantId": "NE033",
@@ -7013,7 +7045,9 @@
                 54
               ]
             }
-          ]
+          ],
+          "examSource": "school_exam",
+          "schoolExamId": "SE062"
         },
         {
           "variantId": "NE044",
@@ -7588,7 +7622,9 @@
                 55
               ]
             }
-          ]
+          ],
+          "examSource": "school_exam",
+          "schoolExamId": "SE054"
         },
         {
           "variantId": "P68",
@@ -7685,7 +7721,9 @@
                 55
               ]
             }
-          ]
+          ],
+          "examSource": "school_exam",
+          "schoolExamId": "SE055"
         },
         {
           "variantId": "P69",
@@ -7781,7 +7819,9 @@
                 56
               ]
             }
-          ]
+          ],
+          "examSource": "school_exam",
+          "schoolExamId": "SE063"
         },
         {
           "variantId": "P70",
@@ -7876,7 +7916,9 @@
                 55
               ]
             }
-          ]
+          ],
+          "examSource": "school_exam",
+          "schoolExamId": "SE065"
         },
         {
           "variantId": "NE002",
@@ -9653,7 +9695,9 @@
                 60
               ]
             }
-          ]
+          ],
+          "examSource": "school_exam",
+          "schoolExamId": "SE101"
         },
         {
           "variantId": "P72",
@@ -9749,7 +9793,9 @@
                 60
               ]
             }
-          ]
+          ],
+          "examSource": "school_exam",
+          "schoolExamId": "SE069"
         },
         {
           "variantId": "P73",
@@ -9846,7 +9892,9 @@
                 60
               ]
             }
-          ]
+          ],
+          "examSource": "school_exam",
+          "schoolExamId": "SE099"
         }
       ]
     },
@@ -10151,12 +10199,14 @@
                 61
               ]
             }
-          ]
+          ],
+          "examSource": "school_exam",
+          "schoolExamId": "SE103"
         },
         {
           "variantId": "P75",
           "variantType": "past_exam",
-          "examTag": "114 藥理考古｜1104-11",
+          "examTag": "113・114 連考高頻｜1104-11",
           "pastExamId": "1104_Pharm4-11",
           "steps": [
             {
@@ -10248,7 +10298,9 @@
                 61
               ]
             }
-          ]
+          ],
+          "examSource": "school_exam",
+          "schoolExamId": "SE075"
         },
         {
           "variantId": "P76",
@@ -10345,7 +10397,9 @@
                 61
               ]
             }
-          ]
+          ],
+          "examSource": "school_exam",
+          "schoolExamId": "SE097"
         },
         {
           "variantId": "NE006",
@@ -11122,7 +11176,9 @@
                 64
               ]
             }
-          ]
+          ],
+          "examSource": "school_exam",
+          "schoolExamId": "SE070"
         },
         {
           "variantId": "P78",
@@ -11218,7 +11274,9 @@
                 63
               ]
             }
-          ]
+          ],
+          "examSource": "school_exam",
+          "schoolExamId": "SE083"
         },
         {
           "variantId": "P79",
@@ -11313,7 +11371,9 @@
                 61
               ]
             }
-          ]
+          ],
+          "examSource": "school_exam",
+          "schoolExamId": "SE084"
         },
         {
           "variantId": "P80",
@@ -11410,7 +11470,9 @@
                 63
               ]
             }
-          ]
+          ],
+          "examSource": "school_exam",
+          "schoolExamId": "SE100"
         },
         {
           "variantId": "NE030",
@@ -12807,7 +12869,9 @@
                 62
               ]
             }
-          ]
+          ],
+          "examSource": "school_exam",
+          "schoolExamId": "SE071"
         },
         {
           "variantId": "P82",
@@ -12903,7 +12967,9 @@
                 68
               ]
             }
-          ]
+          ],
+          "examSource": "school_exam",
+          "schoolExamId": "SE085"
         },
         {
           "variantId": "NE015",
@@ -15183,7 +15249,9 @@
                 65
               ]
             }
-          ]
+          ],
+          "examSource": "school_exam",
+          "schoolExamId": "SE104"
         },
         {
           "variantId": "P84",
@@ -15278,7 +15346,9 @@
                 65
               ]
             }
-          ]
+          ],
+          "examSource": "school_exam",
+          "schoolExamId": "SE072"
         },
         {
           "variantId": "P85",
@@ -15374,7 +15444,9 @@
                 65
               ]
             }
-          ]
+          ],
+          "examSource": "school_exam",
+          "schoolExamId": "SE073"
         },
         {
           "variantId": "P86",
@@ -15470,7 +15542,9 @@
                 66
               ]
             }
-          ]
+          ],
+          "examSource": "school_exam",
+          "schoolExamId": "SE074"
         },
         {
           "variantId": "P87",
@@ -15566,7 +15640,9 @@
                 65
               ]
             }
-          ]
+          ],
+          "examSource": "school_exam",
+          "schoolExamId": "SE086"
         },
         {
           "variantId": "P88",
@@ -15662,7 +15738,9 @@
                 66
               ]
             }
-          ]
+          ],
+          "examSource": "school_exam",
+          "schoolExamId": "SE087"
         },
         {
           "variantId": "P89",
@@ -15759,7 +15837,9 @@
                 66
               ]
             }
-          ]
+          ],
+          "examSource": "school_exam",
+          "schoolExamId": "SE096"
         },
         {
           "variantId": "P90",
@@ -15855,7 +15935,9 @@
                 65
               ]
             }
-          ]
+          ],
+          "examSource": "school_exam",
+          "schoolExamId": "SE098"
         },
         {
           "variantId": "NE029",
@@ -17119,7 +17201,9 @@
                 68
               ]
             }
-          ]
+          ],
+          "examSource": "school_exam",
+          "schoolExamId": "SE076"
         },
         {
           "variantId": "P92",
@@ -17216,7 +17300,9 @@
                 71
               ]
             }
-          ]
+          ],
+          "examSource": "school_exam",
+          "schoolExamId": "SE078"
         },
         {
           "variantId": "P93",
@@ -17313,7 +17399,9 @@
                 71
               ]
             }
-          ]
+          ],
+          "examSource": "school_exam",
+          "schoolExamId": "SE088"
         },
         {
           "variantId": "P94",
@@ -17409,7 +17497,9 @@
                 69
               ]
             }
-          ]
+          ],
+          "examSource": "school_exam",
+          "schoolExamId": "SE090"
         },
         {
           "variantId": "P95",
@@ -17504,7 +17594,9 @@
                 68
               ]
             }
-          ]
+          ],
+          "examSource": "school_exam",
+          "schoolExamId": "SE093"
         },
         {
           "variantId": "NE014",
@@ -18165,7 +18257,9 @@
                 69
               ]
             }
-          ]
+          ],
+          "examSource": "school_exam",
+          "schoolExamId": "SE077"
         },
         {
           "variantId": "P97",
@@ -18260,7 +18354,9 @@
                 69
               ]
             }
-          ]
+          ],
+          "examSource": "school_exam",
+          "schoolExamId": "SE091"
         },
         {
           "variantId": "NE011",
@@ -19094,12 +19190,14 @@
                 72
               ]
             }
-          ]
+          ],
+          "examSource": "school_exam",
+          "schoolExamId": "SE079"
         },
         {
           "variantId": "P99",
           "variantType": "past_exam",
-          "examTag": "114 藥理考古｜1104-17",
+          "examTag": "113・114 連考高頻｜1104-17",
           "pastExamId": "1104_Pharm4-17",
           "steps": [
             {
@@ -19189,7 +19287,9 @@
                 71
               ]
             }
-          ]
+          ],
+          "examSource": "school_exam",
+          "schoolExamId": "SE081"
         },
         {
           "variantId": "P100",
@@ -19285,7 +19385,9 @@
                 73
               ]
             }
-          ]
+          ],
+          "examSource": "school_exam",
+          "schoolExamId": "SE082"
         },
         {
           "variantId": "P101",
@@ -19382,7 +19484,9 @@
                 71
               ]
             }
-          ]
+          ],
+          "examSource": "school_exam",
+          "schoolExamId": "SE092"
         },
         {
           "variantId": "P102",
@@ -19478,7 +19582,9 @@
                 73
               ]
             }
-          ]
+          ],
+          "examSource": "school_exam",
+          "schoolExamId": "SE094"
         },
         {
           "variantId": "NE007",
@@ -22244,6 +22350,106 @@
               ]
             }
           ]
+        },
+        {
+          "variantId": "P105",
+          "variantType": "past_exam",
+          "examSource": "school_exam",
+          "examTag": "112 藥理考古｜1104-27",
+          "pastExamId": "1104_Pharm4-27",
+          "schoolExamId": "SE095",
+          "steps": [
+            {
+              "id": "pe_1104_pharm4_27",
+              "speaker": "hongyue",
+              "speakerName": "弘岳真人",
+              "speakerTag": "三代雙阻斷辨識",
+              "text": "烈火試煉台靈焰騰起，顯現一道 **112 學年度（`1104_Pharm4-27`）** 交感拮抗劑試問。\n弘岳真人：「下列四味交感受體拮抗劑（Adrenoceptor antagonists）之中，何者兼具最顯著的 **`α` 受體阻斷**（血管舒張）作用？」",
+              "choices": [
+                {
+                  "id": "pe_1104_27_b",
+                  "label": "Labetalol（兼具 α1 與非選擇性 β 阻斷之第三代代表）",
+                  "sublabel": "Labetalol（與 Carvedilol）同時阻斷血管 α1 與心臟 β1/β2，臨床常用於高血壓急症與妊娠高血壓",
+                  "outcome": "correct",
+                  "feedback": {
+                    "speakerName": "弘岳真人",
+                    "text": "「妙極！第三代 **`Labetalol`**（以及 `Carvedilol`）乃少數兼具顯著 **`α1` 阻斷**與 `β` 阻斷之雙效名藥，既降周邊血管阻力又不致引發強烈反射心搏過速，孕婦高血壓急症亦常倚重！」",
+                    "delta": {
+                      "yin": 1,
+                      "yang": 1
+                    }
+                  },
+                  "nextStepId": "__EVENT_COMPLETE__"
+                },
+                {
+                  "id": "pe_1104_27_a",
+                  "label": "Atenolol（心臟選擇性 β1 阻斷劑）",
+                  "sublabel": "Atenolol 為親水性第二代 β1 選擇性阻斷劑，不具 α 受體阻斷作用",
+                  "outcome": "wrong",
+                  "feedback": {
+                    "speakerName": "蘇苓師妹",
+                    "text": "「`Atenolol` 是純純的二代水溶性 `β1` 選擇性阻斷劑，碰不到 `α` 受體喔！」",
+                    "delta": {
+                      "yang": 1
+                    }
+                  }
+                },
+                {
+                  "id": "pe_1104_27_c",
+                  "label": "Propranolol（非選擇性 β1/β2 阻斷劑）",
+                  "sublabel": "Propranolol 為第一代原型非選擇性 β 阻斷劑，無 α 阻斷活性",
+                  "outcome": "wrong",
+                  "feedback": {
+                    "speakerName": "陸離師兄",
+                    "text": "「`Propranolol` 連 β2 都一起擋了，反而不擋 α 受體（所以嗜鉻細胞瘤單給它才會釀成無制衡 α 高壓危象）！」",
+                    "delta": {
+                      "yang": 1
+                    }
+                  }
+                },
+                {
+                  "id": "pe_1104_27_d",
+                  "label": "Pindolol（具內在擬交感活性 ISA 之 β 阻斷劑）",
+                  "sublabel": "Pindolol 為部分致效型非選擇性 β 阻斷劑，不具備顯著 α 受體阻斷作用",
+                  "outcome": "wrong",
+                  "feedback": {
+                    "speakerName": "蘇苓師妹",
+                    "text": "「`Pindolol` 的招牌是 `ISA`（部分 β 致效活性，較不易心跳過慢），可不是 α 阻斷劑唷！」",
+                    "delta": {
+                      "yin": 1
+                    }
+                  }
+                }
+              ],
+              "vitals": {
+                "subject": "高血壓急症脈象監測",
+                "hr": 98,
+                "sbp": 182,
+                "dbp": 112,
+                "iop": 16,
+                "tempC": 36.8,
+                "potassium": 4.2,
+                "rhythm": "tachy",
+                "rhythmText": "交感亢進・血壓飆升",
+                "pupilMm": 4.2,
+                "ciliary": "遠視調控",
+                "airway": 100,
+                "secretion": "略為偏乾",
+                "nmj": 50,
+                "nmjLabel": "穩健有力",
+                "tofPattern": "normal",
+                "tofNote": "TOF 100%",
+                "badges": [
+                  "112 考古｜1104-27"
+                ]
+              },
+              "unlockCodex": [
+                67,
+                70,
+                71
+              ]
+            }
+          ]
         }
       ]
     },
@@ -22613,7 +22819,9 @@
                 75
               ]
             }
-          ]
+          ],
+          "examSource": "school_exam",
+          "schoolExamId": "SE080"
         },
         {
           "variantId": "NE062",

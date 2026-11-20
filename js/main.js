@@ -152,9 +152,10 @@
     }
     expansionsCfg = expansions;
 
-    const [codex, endings, nationalExam] = await Promise.all([
+    const [codex, endings, schoolExam, nationalExam] = await Promise.all([
       loadJson('data/codex_entries.json'),
       loadJson('data/endings.json'),
+      loadJson('data/school_exam_bank.json').catch(() => ({ meta: {}, questions: [] })),
       loadJson('data/national_exam_bank.json').catch(() => ({ meta: {}, questions: [] }))
     ]);
 
@@ -163,6 +164,7 @@
       deck: { roguelike: { prologuePool: [], bossPool: [], routes: {} }, story: { chapters: [] } },
       codex,
       endings,
+      schoolExam,
       nationalExam,
       expansions
     };
@@ -184,7 +186,7 @@
   }
 
   function showScreen(screenId) {
-    ['screen-title', 'screen-play', 'screen-ending', 'screen-national-exam'].forEach((id) => {
+    ['screen-title', 'screen-play', 'screen-ending', 'screen-school-exam', 'screen-national-exam'].forEach((id) => {
       const el = document.getElementById(id);
       if (el) {
         const active = id === screenId;
@@ -203,6 +205,12 @@
 
     if (!isPlaying) {
       global.TaixuPulseMonitor.stop();
+    }
+    if (screenId !== 'screen-school-exam' && global.TaixuSchoolExam && typeof global.TaixuSchoolExam.stopSession === 'function') {
+      global.TaixuSchoolExam.stopSession();
+    }
+    if (screenId !== 'screen-national-exam' && global.TaixuNationalExam && typeof global.TaixuNationalExam.stopSession === 'function') {
+      global.TaixuNationalExam.stopSession();
     }
   }
 
@@ -268,10 +276,52 @@
       }
     }
     global.TaixuCodex.refreshCounters();
+    if (global.TaixuSchoolExam) {
+      global.TaixuSchoolExam.refreshCounters();
+      updateSeSetupPreview();
+    }
     if (global.TaixuNationalExam) {
       global.TaixuNationalExam.refreshCounters();
       updateNeSetupPreview();
     }
+  }
+
+  function getSeSetupOptions() {
+    const unitEl = document.querySelector('input[name="se-unit"]:checked');
+    const yearEl = document.querySelector('input[name="se-year"]:checked');
+    const runModeEl = document.querySelector('input[name="se-run-mode"]:checked');
+    const rawRun = runModeEl ? runModeEl.value : 'practice';
+    return {
+      unit: unitEl ? unitEl.value : 'all',
+      year: yearEl ? yearEl.value : 'all',
+      mode: rawRun === 'mock' ? 'mock' : 'practice',
+      status: rawRun === 'review_wrong' ? 'review_wrong' : 'all'
+    };
+  }
+
+  function updateSeSetupPreview() {
+    const pill = document.getElementById('se-setup-match-count');
+    if (!pill || !global.TaixuSchoolExam) return;
+    const opts = getSeSetupOptions();
+    const matched = global.TaixuSchoolExam.filterQuestions({
+      unit: opts.unit,
+      year: opts.year,
+      status: opts.status
+    });
+    const st = global.TaixuSchoolExam.getStatsSummary(matched);
+    pill.textContent = `符合條件：共 ${st.total} 題（含 ${st.highFreq} 題跨年連考高頻）`;
+  }
+
+  function openSchoolExamArena(overrideOpts) {
+    if (!global.TaixuSchoolExam) return;
+    if (global.TaixuState.getRun()) {
+      global.TaixuState.saveRun();
+    }
+    const seedEl = document.getElementById('input-seed');
+    const seed = (seedEl && seedEl.value.trim()) || global.TaixuRNG.generateSeedCode();
+    const opts = Object.assign({ seed }, getSeSetupOptions(), overrideOpts || {});
+    showScreen('screen-school-exam');
+    global.TaixuSchoolExam.startSession(opts);
   }
 
   function getNeSetupOptions() {
@@ -321,6 +371,19 @@
     showScreen('screen-ending');
     document.getElementById('ending-seal').innerHTML = fmtInline(summary.ending.seal || '太虛印可');
     document.getElementById('ending-title').innerHTML = fmtInline(summary.ending.title);
+    const storyVarLabelMap = {
+      core_only: '・純原著劇情線（83 題）',
+      school_compact: '・劇情＋校內考古抽題',
+      school_all: '・劇情＋全校內考古專刷',
+      national_only: '・劇情＋全國考真題專刷',
+      all: '・全題庫全刷'
+    };
+    const rogueVarLabelMap = {
+      core_only: '原著劇情優先',
+      school_exam: '校內考古優先',
+      national_exam: '國考真題優先',
+      balanced: '三軌混抽'
+    };
     const scopeName =
       summary.mode === 'story'
         ? `${
@@ -329,8 +392,8 @@
               : summary.storyScope === 'part2'
                 ? '下篇直入（三四卷）'
                 : '全四卷大貫通'
-          }${summary.storyVariantMode === 'all' ? '・全考古全刷' : summary.storyVariantMode === 'national_only' ? '・國考真題專刷' : summary.storyVariantMode === 'core_only' ? '・純劇情線' : ''}`
-        : `Roguelike 速行篇 (${summary.route || '混戰'})`;
+          }${storyVarLabelMap[summary.storyVariantMode] || ''}`
+        : `Roguelike 速行篇 (${summary.route || '混戰'}・${rogueVarLabelMap[summary.rogueVariantMode] || '標準'})`;
     document.getElementById('ending-subtitle').textContent = `${scopeName}｜天機籤號：${summary.seed}`;
     document.getElementById('ending-narrative').innerHTML = `<p>${fmtMd(summary.ending.narrative)}</p><p style="color:var(--ink-secondary);margin-top:8px;">${fmtMd(summary.ending.summary)}</p>`;
 
@@ -361,10 +424,11 @@
   }
 
   function bindUi() {
-    // Mode card toggles
+    // Mode card toggles (4 modes: roguelike / story / school / national)
     const modeRadios = document.querySelectorAll('input[name="game-mode"]');
     const routeBox = document.getElementById('roguelike-route-box');
     const storyScopeBox = document.getElementById('story-scope-box');
+    const seSetupBox = document.getElementById('school-exam-setup-box');
     const neSetupBox = document.getElementById('national-exam-setup-box');
     const startBtn = document.getElementById('btn-start-new');
 
@@ -373,14 +437,25 @@
         const val = radio.value;
         document.getElementById('card-mode-roguelike').classList.toggle('selected', val === 'roguelike' && radio.checked);
         document.getElementById('card-mode-story').classList.toggle('selected', val === 'story' && radio.checked);
+        const seCard = document.getElementById('card-mode-school');
+        if (seCard) seCard.classList.toggle('selected', val === 'school' && radio.checked);
         const neCard = document.getElementById('card-mode-national');
         if (neCard) neCard.classList.toggle('selected', val === 'national' && radio.checked);
         if (routeBox) routeBox.hidden = val !== 'roguelike';
         if (storyScopeBox) storyScopeBox.hidden = val !== 'story';
+        if (seSetupBox) seSetupBox.hidden = val !== 'school';
         if (neSetupBox) neSetupBox.hidden = val !== 'national';
         if (startBtn) {
-          startBtn.textContent = val === 'national' ? '進入國考實戰殿' : '踏入太虛試煉';
+          startBtn.textContent =
+            val === 'school'
+              ? '進入校內考古殿'
+              : val === 'national'
+                ? '進入國考實戰殿'
+                : val === 'story'
+                  ? '展開神農章回'
+                  : '踏入太虛試煉';
         }
+        if (val === 'school') updateSeSetupPreview();
         if (val === 'national') updateNeSetupPreview();
       });
     });
@@ -412,7 +487,9 @@
           const inp = chip.querySelector('input');
           chip.classList.toggle('selected', Boolean(inp && inp.checked));
         });
-        if (radio.name && radio.name.startsWith('ne-')) {
+        if (radio.name && radio.name.startsWith('se-')) {
+          updateSeSetupPreview();
+        } else if (radio.name && radio.name.startsWith('ne-')) {
           updateNeSetupPreview();
         }
       });
@@ -423,10 +500,15 @@
       document.getElementById('input-seed').value = global.TaixuRNG.generateSeedCode();
     });
 
-    // Start new game (with on-demand module loading or Mode C National Exam)
+    // Start new game (Mode A/B on-demand loading, Mode C School Exam, Mode D National Exam)
     startBtn.addEventListener('click', async () => {
       const modeEl = document.querySelector('input[name="game-mode"]:checked');
       const mode = modeEl ? modeEl.value : 'roguelike';
+
+      if (mode === 'school') {
+        openSchoolExamArena();
+        return;
+      }
 
       if (mode === 'national') {
         openNationalExamArena();
@@ -442,8 +524,8 @@
 
       const route = routeEl ? routeEl.value : 'all_mixed';
       const storyScope = scopeEl ? scopeEl.value : 'full';
-      const storyVariantMode = storyVarEl ? storyVarEl.value : 'compact';
-      const rogueVariantMode = rogueVarEl ? rogueVarEl.value : 'balanced';
+      const storyVariantMode = storyVarEl ? storyVarEl.value : 'core_only';
+      const rogueVariantMode = rogueVarEl ? rogueVarEl.value : 'core_only';
       const rogueLength = lenEl ? Number(lenEl.value) : 6;
       const seed = (seedEl && seedEl.value.trim()) || global.TaixuRNG.generateSeedCode();
       if (seedEl) seedEl.value = seed;
@@ -506,6 +588,13 @@
       showScreen('screen-title');
       refreshTitleScreen();
     });
+
+    const openSeBtn = document.getElementById('btn-open-se');
+    if (openSeBtn) {
+      openSeBtn.addEventListener('click', () => {
+        openSchoolExamArena({ unit: 'all', year: 'all', mode: 'practice', status: 'all' });
+      });
+    }
 
     const openNeBtn = document.getElementById('btn-open-ne');
     if (openNeBtn) {
@@ -613,6 +702,12 @@
       gameBundle = await loadInitialMetadata();
       global.TaixuCodex.init(gameBundle.codex, gameBundle.endings);
       global.TaixuEngine.init(gameBundle, showEndingScreen);
+      if (global.TaixuSchoolExam) {
+        global.TaixuSchoolExam.init(gameBundle.schoolExam, gameBundle.codex, () => {
+          showScreen('screen-title');
+          refreshTitleScreen();
+        });
+      }
       if (global.TaixuNationalExam) {
         global.TaixuNationalExam.init(gameBundle.nationalExam, gameBundle.codex, () => {
           showScreen('screen-title');

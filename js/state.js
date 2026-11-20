@@ -201,6 +201,62 @@
     saveNeProgress();
   }
 
+  const SE_PROGRESS_KEY = 'taixu_shennong_se_v1';
+
+  function defaultSeProgress() {
+    return {
+      records: {},
+      flagged: []
+    };
+  }
+
+  let seProgress = Object.assign(defaultSeProgress(), safeReadStorage(SE_PROGRESS_KEY, {}));
+  if (!seProgress.records || typeof seProgress.records !== 'object') seProgress.records = {};
+  if (!Array.isArray(seProgress.flagged)) seProgress.flagged = [];
+
+  function saveSeProgress() {
+    safeWriteStorage(SE_PROGRESS_KEY, seProgress);
+  }
+
+  function getSeProgress() {
+    return seProgress;
+  }
+
+  function recordSeAnswer(qId, picked, isCorrect) {
+    if (!qId) return;
+    const prev = seProgress.records[qId] || { attempts: 0, correctCount: 0, wrongCount: 0 };
+    seProgress.records[qId] = {
+      picked,
+      lastCorrect: Boolean(isCorrect),
+      mastered: Boolean(isCorrect),
+      attempts: (prev.attempts || 0) + 1,
+      correctCount: (prev.correctCount || 0) + (isCorrect ? 1 : 0),
+      wrongCount: (prev.wrongCount || 0) + (isCorrect ? 0 : 1),
+      updatedAt: Date.now()
+    };
+    saveSeProgress();
+  }
+
+  function toggleSeFlag(qId) {
+    if (!qId) return false;
+    const idx = seProgress.flagged.indexOf(qId);
+    let nowFlagged = false;
+    if (idx === -1) {
+      seProgress.flagged.push(qId);
+      nowFlagged = true;
+    } else {
+      seProgress.flagged.splice(idx, 1);
+      nowFlagged = false;
+    }
+    saveSeProgress();
+    return nowFlagged;
+  }
+
+  function resetSeProgress() {
+    seProgress = defaultSeProgress();
+    saveSeProgress();
+  }
+
   function unlockEnding(endingId) {
     if (!endingId) return;
     if (metaState.unlockedEndings.indexOf(endingId) === -1) {
@@ -218,8 +274,8 @@
       mode: isStory ? 'story' : 'roguelike',
       route: config.route || 'all_mixed',
       storyScope: config.storyScope || 'full',
-      storyVariantMode: config.storyVariantMode || 'compact',
-      rogueVariantMode: config.rogueVariantMode || 'balanced',
+      storyVariantMode: config.storyVariantMode || 'core_only',
+      rogueVariantMode: config.rogueVariantMode || 'core_only',
       rogueLength: config.rogueLength || 6,
       seed: String(config.seed || 'TX-4072').trim(),
       yin: 50,
@@ -566,6 +622,10 @@
     getNeProgress,
     recordNeAnswer,
     toggleNeFlag,
-    resetNeProgress
+    resetNeProgress,
+    getSeProgress,
+    recordSeAnswer,
+    toggleSeFlag,
+    resetSeProgress
   };
 })(window);

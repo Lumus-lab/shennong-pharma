@@ -57,8 +57,8 @@
     const mode = opts.mode === 'story' ? 'story' : 'roguelike';
     const route = opts.route || 'all_mixed';
     const storyScope = opts.storyScope || 'full';
-    const storyVariantMode = opts.storyVariantMode || 'compact';
-    const rogueVariantMode = opts.rogueVariantMode || 'balanced';
+    const storyVariantMode = opts.storyVariantMode || 'core_only';
+    const rogueVariantMode = opts.rogueVariantMode || 'core_only';
     const rogueLength = Number(opts.rogueLength) === 8 ? 8 : 6;
     const seed = String(opts.seed || 'TX-4072').trim();
 
@@ -70,41 +70,52 @@
     if (mode === 'roguelike') {
       const rCfg = deckData.roguelike || {};
       const routeCfg = (rCfg.routes && rCfg.routes[route]) || Object.values(rCfg.routes || {})[0] || {};
+      const isSchoolFocus = rogueVariantMode === 'school_exam' || rogueVariantMode === 'past_exam';
+      const isNatFocus = rogueVariantMode === 'national_exam';
       const hasNationalExam = (id) => {
         const ev = nodesData.events[id];
         return Boolean(ev && Array.isArray(ev.variants) && ev.variants.some((v) => v.examSource === 'national_exam'));
       };
+      const hasSchoolExam = (id) => {
+        const ev = nodesData.events[id];
+        return Boolean(
+          ev &&
+            Array.isArray(ev.variants) &&
+            ev.variants.some((v) => v.variantType === 'past_exam' && v.examSource !== 'national_exam')
+        );
+      };
+      const hasFocusedExam = (id) => (isNatFocus ? hasNationalExam(id) : isSchoolFocus ? hasSchoolExam(id) : false);
 
       const pPoolAll = (routeCfg.prologuePool || rCfg.prologuePool || ['E01', 'E02']).filter((id) =>
         Boolean(nodesData.events[id])
       );
       const midPoolAll = (routeCfg.pool || []).filter((id) => Boolean(nodesData.events[id]));
-      const midPoolNat = rogueVariantMode === 'national_exam' ? midPoolAll.filter(hasNationalExam) : [];
-      const pPoolNat = rogueVariantMode === 'national_exam' ? pPoolAll.filter(hasNationalExam) : [];
+      const midPoolFocus = isNatFocus || isSchoolFocus ? midPoolAll.filter(hasFocusedExam) : [];
+      const pPoolFocus = isNatFocus || isSchoolFocus ? pPoolAll.filter(hasFocusedExam) : [];
       const prologueCandidates =
-        pPoolNat.length > 0
-          ? pPoolNat
-          : rogueVariantMode === 'national_exam' && midPoolNat.length > 0
-            ? midPoolNat
+        pPoolFocus.length > 0
+          ? pPoolFocus
+          : (isNatFocus || isSchoolFocus) && midPoolFocus.length > 0
+            ? midPoolFocus
             : pPoolAll;
       const prologueId = rng.pick(prologueCandidates) || Object.keys(nodesData.events)[0];
 
       const midWeights = routeCfg.weights || {};
       const midCount = rogueLength === 8 ? 6 : 4;
       const midPoolFiltered = midPoolAll.filter((id) => id !== prologueId);
-      const midNatFiltered = midPoolNat.filter((id) => id !== prologueId);
-      const midSource = midNatFiltered.length >= midCount ? midNatFiltered : midPoolFiltered;
+      const midFocusFiltered = midPoolFocus.filter((id) => id !== prologueId);
+      const midSource = midFocusFiltered.length >= midCount ? midFocusFiltered : midPoolFiltered;
       const drawnMid = rng.weightedSample(
         midSource,
         midCount,
-        (id) => (midWeights[id] || 1) * (rogueVariantMode === 'national_exam' && hasNationalExam(id) ? 5 : 1)
+        (id) => (midWeights[id] || 1) * ((isNatFocus || isSchoolFocus) && hasFocusedExam(id) ? 5 : 1)
       );
 
       const bossCandidatesAll = (routeCfg.bossPool || rCfg.bossPool || ['E15', 'E16', 'E17', 'E18']).filter((id) =>
         Boolean(nodesData.events[id])
       );
-      const bossCandidatesNat = rogueVariantMode === 'national_exam' ? bossCandidatesAll.filter(hasNationalExam) : [];
-      const bossCandidates = bossCandidatesNat.length > 0 ? bossCandidatesNat : bossCandidatesAll;
+      const bossCandidatesFocus = isNatFocus || isSchoolFocus ? bossCandidatesAll.filter(hasFocusedExam) : [];
+      const bossCandidates = bossCandidatesFocus.length > 0 ? bossCandidatesFocus : bossCandidatesAll;
       const bossId =
         rng.weightedSample(bossCandidates, 1, (id) => midWeights[id] || 1)[0] ||
         bossCandidates[0];
@@ -115,15 +126,20 @@
         const ev = nodesData.events[eid];
         if (ev && ev.variants && ev.variants.length > 0) {
           const coreVariants = ev.variants.filter((v) => v.variantType !== 'past_exam');
-          const pastVariants = ev.variants.filter((v) => v.variantType === 'past_exam');
-          const neVariants = pastVariants.filter((v) => v.examSource === 'national_exam');
+          const schoolVariants = ev.variants.filter((v) => v.variantType === 'past_exam' && v.examSource !== 'national_exam');
+          const neVariants = ev.variants.filter((v) => v.examSource === 'national_exam');
+          const allExamVariants = schoolVariants.concat(neVariants);
           let picked = null;
-          if (rogueVariantMode === 'national_exam' && neVariants.length > 0) {
+          if (rogueVariantMode === 'core_only' && coreVariants.length > 0) {
+            picked = rng.pick(coreVariants);
+          } else if (isNatFocus && neVariants.length > 0) {
             picked = rng.pick(neVariants);
-          } else if ((rogueVariantMode === 'past_exam' || rogueVariantMode === 'national_exam') && pastVariants.length > 0) {
-            picked = rng.pick(pastVariants);
-          } else if (coreVariants.length > 0 && pastVariants.length > 0) {
-            picked = rng.next() < 0.5 ? rng.pick(pastVariants) : rng.pick(coreVariants);
+          } else if (isSchoolFocus && schoolVariants.length > 0) {
+            picked = rng.pick(schoolVariants);
+          } else if ((isNatFocus || isSchoolFocus) && coreVariants.length > 0) {
+            picked = rng.pick(coreVariants);
+          } else if (coreVariants.length > 0 && allExamVariants.length > 0) {
+            picked = rng.next() < 0.5 ? rng.pick(allExamVariants) : rng.pick(coreVariants);
           } else {
             picked = rng.pick(ev.variants);
           }
@@ -140,8 +156,9 @@
         const ev = nodesData.events[eid];
         if (!ev || !ev.variants || ev.variants.length === 0) return;
         const coreVariants = ev.variants.filter((v) => v.variantType !== 'past_exam');
-        const pastVariants = ev.variants.filter((v) => v.variantType === 'past_exam');
-        const neVariants = pastVariants.filter((v) => v.examSource === 'national_exam');
+        const schoolVariants = ev.variants.filter((v) => v.variantType === 'past_exam' && v.examSource !== 'national_exam');
+        const neVariants = ev.variants.filter((v) => v.examSource === 'national_exam');
+        const allExamVariants = schoolVariants.concat(neVariants);
 
         let coreQueue = [];
         if (coreVariants.length > 0) {
@@ -149,17 +166,22 @@
           coreQueue = ev.storyMode === 'all' ? rng.shuffle(coreIds) : [rng.pick(coreIds)];
         }
 
-        if (storyVariantMode === 'core_only' || pastVariants.length === 0) {
+        if (storyVariantMode === 'core_only') {
           resolvedVariants[eid] = coreQueue.length > 0 ? coreQueue : [ev.variants[0].variantId];
+        } else if (storyVariantMode === 'school_compact' || storyVariantMode === 'compact') {
+          const sampledSchool = schoolVariants.length > 0 ? rng.pick(schoolVariants) : null;
+          resolvedVariants[eid] = sampledSchool ? coreQueue.concat([sampledSchool.variantId]) : coreQueue;
+        } else if (storyVariantMode === 'school_all') {
+          const schoolIds = rng.shuffle(schoolVariants.map((v) => v.variantId));
+          resolvedVariants[eid] = coreQueue.concat(schoolIds);
         } else if (storyVariantMode === 'national_only') {
           const neIds = rng.shuffle(neVariants.map((v) => v.variantId));
           resolvedVariants[eid] = coreQueue.concat(neIds);
         } else if (storyVariantMode === 'all') {
-          const pastIds = rng.shuffle(pastVariants.map((v) => v.variantId));
-          resolvedVariants[eid] = coreQueue.concat(pastIds);
+          const allIds = rng.shuffle(allExamVariants.map((v) => v.variantId));
+          resolvedVariants[eid] = coreQueue.concat(allIds);
         } else {
-          const sampledPast = rng.pick(pastVariants);
-          resolvedVariants[eid] = sampledPast ? coreQueue.concat([sampledPast.variantId]) : coreQueue;
+          resolvedVariants[eid] = coreQueue.length > 0 ? coreQueue : [ev.variants[0].variantId];
         }
       });
 
@@ -367,12 +389,13 @@
     if (variantChip) {
       variantChip.hidden = false;
       const isNat = variant.examSource === 'national_exam';
+      const isSchool = variant.variantType === 'past_exam' && !isNat;
       variantChip.textContent = variant.examTag
         ? isNat
           ? `國考真題｜${variant.examTag}`
-          : `變體 ${variant.variantId}｜${variant.examTag}`
-        : `變體 ${variant.variantId}`;
-      variantChip.classList.toggle('is-past-exam', variant.variantType === 'past_exam' && !isNat);
+          : `校內考古｜${variant.examTag}`
+        : `原著劇情｜變體 ${variant.variantId}`;
+      variantChip.classList.toggle('is-past-exam', isSchool);
       variantChip.classList.toggle('is-national-exam', isNat);
     }
 
@@ -1557,7 +1580,8 @@
       ending,
       mode: run.mode,
       storyScope: run.storyScope || 'full',
-      storyVariantMode: run.storyVariantMode || 'compact',
+      storyVariantMode: run.storyVariantMode || 'core_only',
+      rogueVariantMode: run.rogueVariantMode || 'core_only',
       route: run.route,
       seed: run.seed,
       yin: run.yin,

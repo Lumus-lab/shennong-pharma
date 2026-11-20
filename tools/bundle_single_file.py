@@ -17,6 +17,7 @@ JS_ORDER = [
     "js/codex.js",
     "js/engine.js",
     "js/nationalExam.js",
+    "js/schoolExam.js",
     "js/main.js",
 ]
 
@@ -87,12 +88,14 @@ def build_embedded_data() -> dict:
             if extra_ch:
                 merged_deck["story"]["chapters"].extend(extra_ch)
 
+    se_path = ROOT_DIR / "data" / "school_exam_bank.json"
     ne_path = ROOT_DIR / "data" / "national_exam_bank.json"
     return {
         "nodes": merged_nodes,
         "deck": merged_deck,
         "codex": load_json(ROOT_DIR / "data" / "codex_entries.json"),
         "endings": load_json(ROOT_DIR / "data" / "endings.json"),
+        "schoolExam": load_json(se_path) if se_path.exists() else {"meta": {}, "questions": []},
         "nationalExam": load_json(ne_path) if ne_path.exists() else {"meta": {}, "questions": []},
         "expansions": expansions,
     }

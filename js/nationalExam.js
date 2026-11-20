@@ -257,9 +257,13 @@
     });
   }
 
-  function leaveArena() {
+  function stopSession() {
     session.active = false;
     stopTimer();
+  }
+
+  function leaveArena() {
+    stopSession();
     if (typeof onExitCallback === 'function') {
       onExitCallback();
     }
@@ -951,6 +955,7 @@
     getStatsSummary,
     refreshCounters,
     startSession,
+    stopSession,
     leaveArena
   };
 })(window);

@@ -446,7 +446,7 @@ code {
 
 .mode-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 14px;
   margin-bottom: 14px;
 }
@@ -481,6 +481,7 @@ code {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 8px;
   margin-bottom: 6px;
 }
 
@@ -501,6 +502,11 @@ code {
   color: var(--yin-color);
 }
 
+.mode-tag-school {
+  background: var(--cinnabar-soft);
+  color: var(--cinnabar);
+}
+
 .mode-tag-exam {
   background: var(--jade-soft);
   color: var(--jade-ok);
@@ -514,6 +520,13 @@ code {
   border: 1px solid var(--cinnabar);
   padding: 1px 6px;
   border-radius: 3px;
+  flex-shrink: 0;
+}
+
+.mode-seal-school {
+  color: var(--cinnabar);
+  border-color: var(--cinnabar);
+  background: var(--cinnabar-soft);
 }
 
 .mode-seal-exam {
@@ -531,6 +544,13 @@ code {
   margin: 0;
   font-size: 0.84rem;
   color: var(--ink-secondary);
+}
+
+#se-card-total-count {
+  display: inline-block;
+  margin-top: 4px;
+  color: var(--cinnabar);
+  font-weight: 700;
 }
 
 #ne-card-total-count {
@@ -2676,6 +2696,85 @@ code {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+}
+
+/* =========================================================
+   模式 C：校內藥理考古殿（賴弘岳 111–114 去重精煉原題）
+   ========================================================= */
+.badge-count-school {
+  background: var(--cinnabar-soft);
+  color: var(--cinnabar);
+}
+
+.ne-match-pill.is-school {
+  background: var(--cinnabar-soft);
+  color: var(--cinnabar);
+  border-color: hsla(7, 68%, 44%, 0.32);
+}
+
+.ne-mode-badge.is-school-practice {
+  background: var(--cinnabar-soft);
+  color: var(--cinnabar);
+}
+
+.se-acc-badge {
+  background: var(--cinnabar-soft);
+  color: var(--cinnabar);
+  border-color: hsla(7, 68%, 44%, 0.3);
+}
+
+.screen-school-exam .ne-q-stem {
+  border-left-color: var(--cinnabar);
+}
+
+.ne-tag.is-school-prof {
+  background: var(--cinnabar-soft);
+  color: var(--cinnabar);
+  border-color: hsla(7, 68%, 44%, 0.3);
+}
+
+.ne-tag.is-highfreq {
+  background: var(--yang-soft);
+  color: var(--yang-color);
+  border-color: hsla(36, 80%, 35%, 0.42);
+  font-weight: 700;
+}
+
+.se-highfreq-box {
+  margin-bottom: 10px;
+  padding: 9px 12px;
+  border-radius: var(--radius-sm);
+  background: var(--yang-soft);
+  border-left: 3px solid var(--yang-color);
+  font-size: 0.86rem;
+  color: var(--ink-primary);
+}
+
+.se-src-meta {
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+}
+
+.ne-report-seal.is-school {
+  background: var(--cinnabar-soft);
+  color: var(--cinnabar);
+  border-color: var(--cinnabar);
+}
+
+.ne-dot.is-hf {
+  background: var(--yang-color);
+  border-radius: 2px;
+}
+
+.ne-nav-cell.is-hf-cell::before {
+  content: '';
+  position: absolute;
+  left: 3px;
+  bottom: 3px;
+  width: 5px;
+  height: 5px;
+  border-radius: 1.5px;
+  background: var(--yang-color);
 }
 
 /* 響應式：平板／手機 */
